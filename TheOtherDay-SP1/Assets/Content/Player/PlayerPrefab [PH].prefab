@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d6da7fe3a903eb47921e19f714a589e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalAxis: Horizontal
+  horizontalAxis: Horizontal
   movementSpeed: 450
 --- !u!114 &8567838526866476067
 MonoBehaviour:
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ba89866a4b59d4c97d307be2fcd901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useButton: Fire1
+  useButton: Use Button
 --- !u!33 &7533981237017971075
 MeshFilter:
   m_ObjectHideFlags: 0

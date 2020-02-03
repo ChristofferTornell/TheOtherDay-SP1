@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInteractivity : MonoBehaviour
 {
-    [SerializeField] private string useButton = "Fire1";
+    [SerializeField] private string useButton;
 
     private GameObject interactableObject = null;
 

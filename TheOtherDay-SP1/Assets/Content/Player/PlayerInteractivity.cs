@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class PlayerInteractivity : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private string useButton = "Fire1";
+
+    private GameObject interactableObject = null;
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.GetComponent<Interactable>())
+        {
+            interactableObject = collision.gameObject;
+        }
     }
 
-    // Update is called once per frame
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<Interactable>())
+        {
+            interactableObject = null;
+        }
+    }
+
     void Update()
     {
-        
+        if (interactableObject && Input.GetButtonDown(useButton))
+        {
+            Debug.Log("Doing something with " + interactableObject.name);
+            // Do something with the object
+        }
     }
 }

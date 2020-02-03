@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Tooltip("The string name of the axis at Edit -> Project Settings -> Input")]
-    [SerializeField] private string HorizontalAxis;
+    [SerializeField] private string HorizontalAxis = "Horizontal";
 
     [Header("Stats")]
     [Tooltip("Movement speed of the player (recommended value between 350 - 500)")]

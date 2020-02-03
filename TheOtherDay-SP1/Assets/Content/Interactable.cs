@@ -13,13 +13,23 @@ public class Interactable : MonoBehaviour
         OnInteract.Invoke();
     }
 
+    IEnumerator ChangeScene(string sceneName, float changeDelay)
+    {
+        // Scene change effect(s) can be put here
+
+        yield return new WaitForSeconds(changeDelay);
+        SceneManager.LoadScene(sceneName);
+
+        yield return null;
+    }
+
     public void IE_Pickup(GameObject objectToPickup)
     {
         // Add object to Inventoy and remove it from the ground
     }
 
-    public void IE_OpenDoor(string sceneName)
+    public void IE_ChangeScene(string sceneName, float changeDelay)
     {
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(ChangeScene(sceneName, changeDelay));
     }
 }

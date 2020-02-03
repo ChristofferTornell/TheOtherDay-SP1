@@ -1,27 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Events;
-
-[System.Serializable]
-public class InteractEvent : UnityEvent<string, GameObject> { }
 
 public class Interactable : MonoBehaviour
 {
 
-    public InteractEvent OnInteract;
-    // What to have here?
-
-    // On interact, do a list of events
-    // Ability to add events in inspcetor
+    public UnityEvent OnInteract;
 
     public void Interact()
+    {
+        OnInteract.Invoke();
+    }
+
+    public void IE_Pickup(GameObject objectToPickup)
     {
 
     }
 
-    public void TestEvent()
+    public void IE_OpenDoor(string sceneName)
     {
-
+        SceneManager.LoadScene(sceneName);
     }
 }

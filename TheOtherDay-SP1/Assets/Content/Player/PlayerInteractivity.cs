@@ -31,9 +31,10 @@ public class PlayerInteractivity : MonoBehaviour
 
     void Update()
     {
+        // Interact with the Object using the useButton
         if (interactableObject && Input.GetButtonDown(useButton))
         {
-            //interactableObject.GetComponent<Interactable>().OnInteract;
+            interactableObject.GetComponent<Interactable>().Interact();
             Debug.Log("Doing something with " + interactableObject.name);
             // Do something with the object
         }

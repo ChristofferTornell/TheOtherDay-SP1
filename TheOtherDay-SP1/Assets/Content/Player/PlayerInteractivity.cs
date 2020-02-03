@@ -33,6 +33,7 @@ public class PlayerInteractivity : MonoBehaviour
     {
         if (interactableObject && Input.GetButtonDown(useButton))
         {
+            //interactableObject.GetComponent<Interactable>().OnInteract;
             Debug.Log("Doing something with " + interactableObject.name);
             // Do something with the object
         }

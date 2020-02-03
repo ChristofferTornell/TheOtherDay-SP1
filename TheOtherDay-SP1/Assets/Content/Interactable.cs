@@ -6,6 +6,9 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
+    [Space]
+    public float sceneChangeDelay = 2f;
+    [Header("Events")]
     public UnityEvent OnInteract;
 
     public void Interact()
@@ -13,11 +16,12 @@ public class Interactable : MonoBehaviour
         OnInteract.Invoke();
     }
 
-    IEnumerator ChangeScene(string sceneName, float changeDelay)
+    IEnumerator ChangeScene(string sceneName)
     {
         // Scene change effect(s) can be put here
+        // --------------------------------------
 
-        yield return new WaitForSeconds(changeDelay);
+        yield return new WaitForSeconds(sceneChangeDelay);
         SceneManager.LoadScene(sceneName);
 
         yield return null;
@@ -28,8 +32,8 @@ public class Interactable : MonoBehaviour
         // Add object to Inventoy and remove it from the ground
     }
 
-    public void IE_ChangeScene(string sceneName, float changeDelay)
+    public void IE_ChangeScene(string sceneName)
     {
-        StartCoroutine(ChangeScene(sceneName, changeDelay));
+        StartCoroutine(ChangeScene(sceneName));
     }
 }

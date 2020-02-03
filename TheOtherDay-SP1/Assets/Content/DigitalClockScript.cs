@@ -17,11 +17,12 @@ public class DigitalClockScript : MonoBehaviour
     public TextMeshProUGUI hoursDisplay = null;
     public TextMeshProUGUI minutesDisplay = null;
     public Color displayColor;
+    public int displayColorAlpha = 255;
 
     private void Start()
     {
         if (timeFactor <= 0) { timeFactor = 1; }
-        displayColor.a = 255;
+        displayColor.a = displayColorAlpha;
         hoursDisplay.color = displayColor;
         minutesDisplay.color = displayColor;
     }
@@ -39,8 +40,8 @@ public class DigitalClockScript : MonoBehaviour
             minutesDisplay.text = minutes.ToString();
         }
         else { minutesDisplay.text = "0" + minutes.ToString(); }
-       
-        seconds += Time.deltaTime * timeFactor;
+
+        if (!GameController.pause) { seconds += Time.deltaTime * timeFactor; }
 
         if (seconds >= 60)
         {

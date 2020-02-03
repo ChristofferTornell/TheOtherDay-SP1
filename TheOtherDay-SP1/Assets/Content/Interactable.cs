@@ -35,5 +35,6 @@ public class Interactable : MonoBehaviour
     public void IE_ChangeScene(string sceneName)
     {
         StartCoroutine(ChangeScene(sceneName));
+        GameController.Pause(true);
     }
 }

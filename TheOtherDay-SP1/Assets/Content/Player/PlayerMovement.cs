@@ -37,6 +37,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        PlayerInput();
+        if (!GameController.pause) { PlayerInput(); }
     }
 }

@@ -9,12 +9,22 @@ public class ContactImage : MonoBehaviour
     public Image image;
     public string character;
 
-
     private void Start()
     {
-        if (character == "Riley")
+        int ID = checkCharacter(character);
+        image.sprite = global.ContactImages[0];
+    }
+
+    int checkCharacter(string character)
+    {
+        if(character == "Riley")
         {
-            image.sprite = global.ContactImages[0];
+            return 0;
+        }
+
+        else
+        {
+            return 0;
         }
     }
 }

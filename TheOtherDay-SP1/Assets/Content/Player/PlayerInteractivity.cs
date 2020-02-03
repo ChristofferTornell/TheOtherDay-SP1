@@ -8,6 +8,11 @@ public class PlayerInteractivity : MonoBehaviour
 
     private GameObject interactableObject = null;
 
+    private void Start()
+    {
+        if (useButton.Length == 0) { Debug.LogError("The useButton string is empty"); }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<Interactable>())

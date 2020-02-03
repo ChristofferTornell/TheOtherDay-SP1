@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private string horizontalAxis = "Horizontal";
 
     [Header("Stats")]
-    [Tooltip("Movement speed of the player (recommended value between 350 - 500)")]
+    [Tooltip("Movement speed of the player (recommended value around 450)")]
     [SerializeField] private float movementSpeed = 450;
     private Rigidbody2D rb = null;
 

@@ -38,5 +38,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (!GameController.pause) { PlayerInput(); }
+        else { rb.velocity = Vector2.zero; }
     }
 }

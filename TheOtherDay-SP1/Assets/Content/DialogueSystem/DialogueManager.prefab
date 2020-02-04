@@ -618,7 +618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2406047995370010977
 Transform:
   m_ObjectHideFlags: 0
@@ -696,6 +696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDialogue: {fileID: 0}
+  dialogueBoxUI: {fileID: 2406047995370010982}
 --- !u!1001 &2406047994636713506
 PrefabInstance:
   m_ObjectHideFlags: 0

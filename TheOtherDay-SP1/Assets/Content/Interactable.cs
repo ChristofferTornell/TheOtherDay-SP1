@@ -6,24 +6,41 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
+    public bool mouseInteraction = false;
     [Space]
-    public float sceneChangeDelay = 1f;
+    [SerializeField] private float sceneChangeDelay = 1f;
+    public Dialogue dialogue = null;
+    public CharacterData characterdata = null;
     [Header("Events")]
-    public UnityEvent OnInteract;
-    public AudioSource interactSound = null;
+    [SerializeField] private UnityEvent OnInteract;
 
     public void Interact()
     {
-        if (interactSound) interactSound.playOnAwake = false;
-        OnInteract.Invoke();
+        if (!mouseInteraction)
+        {
+            OnInteract.Invoke();
+        }
+        else { Debug.Log(gameObject.name + "can only be interacted with using the mouse"); }
     }
 
-    IEnumerator ChangeScene(string sceneName)
+    private void OnMouseEnter()
+    {
+        // Play highlight effects on the object
+    }
+
+    private void OnMouseDown()
+    {
+        if (mouseInteraction)
+        {
+            Debug.Log("Interacting with " + gameObject.name + " using mouse");
+            OnInteract.Invoke();
+        }
+    }
+
+    private IEnumerator ChangeScene(string sceneName)
     {
         // Scene change effect(s) can be put here
         // --------------------------------------
-
-        if (interactSound) { interactSound.Play(); }
 
         yield return new WaitForSeconds(sceneChangeDelay);
         SceneManager.LoadScene(sceneName);
@@ -31,6 +48,7 @@ public class Interactable : MonoBehaviour
         yield return null;
     }
 
+    // IE = Interactivity Event
     public void IE_Pickup(GameObject objectToPickup)
     {
         Debug.Log("Interactable - Picking up: " + objectToPickup);
@@ -47,18 +65,18 @@ public class Interactable : MonoBehaviour
     // Needs testing
     public void IE_PlayAudio(AudioClip audioClip)
     {
-        if (interactSound)
-        {
-            Debug.Log("Interactable - Playing AudioClip: " + audioClip);
-            interactSound.clip = audioClip;
-            interactSound.Play();
-        }
-        else { Debug.LogError(gameObject.name + ": Cannot play Audio, missing AudioSource"); }
+        // Play interaction audio here <---
+        Debug.Log("Interactable - Playing audio: " + " ->Audio source here<-");
     }
 
     private void IE_PlayScreenEffect()
     {
         // PH, make public when done
+    }
+
+    public void IE_PlayDialogue(Dialogue dialogue)
+    {
+        // Play the dialogue here
     }
 
 }

@@ -9,7 +9,9 @@ using UnityEngine.UI;
 public class Dialogue : ScriptableObject
 {
     [Header ("Customization")]
-    public CharacterData character;
+    public CharacterData speaker;
+    public CharacterData listener;
+
     public enum CharacterEmotion
     {
         normal,
@@ -17,13 +19,15 @@ public class Dialogue : ScriptableObject
         sad
     };
 
-    public CharacterEmotion characterEmotion = CharacterEmotion.normal;
+    public CharacterEmotion speakerEmotion = CharacterEmotion.normal;
+    public CharacterEmotion listenerEmotion = CharacterEmotion.normal;
 
 
     [TextArea(15, 20)]
-    public string dialog = "";
+    public string message = "";
 
     [Header ("Insertables")]
     public Dialogue nextDialogue = null;
     public ChoiceButton[] choiceButtons = null;
 }
+

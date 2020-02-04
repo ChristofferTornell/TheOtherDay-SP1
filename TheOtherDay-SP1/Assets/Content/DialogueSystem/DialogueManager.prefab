@@ -492,6 +492,7 @@ GameObject:
   - component: {fileID: 2406047995323731747}
   - component: {fileID: 2406047995323731744}
   - component: {fileID: 2406047995323731745}
+  - component: {fileID: 2297643206589238417}
   m_Layer: 5
   m_Name: NextDialogueButton
   m_TagString: Untagged
@@ -599,9 +600,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2406047995323731744}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2406047995370010982}
+        m_MethodName: TakeNewDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2297643206589238417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2406047995323731751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17387431bd942144850b96ab49a025b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDialogueInstance: {fileID: 2406047995587537410}
+  currentDialogue: {fileID: 0}
 --- !u!1 &2406047995370010983
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2406047995370010977
 Transform:
   m_ObjectHideFlags: 0
@@ -861,6 +887,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6561d94be3f8ce249bdeba75c6e92cf9, type: 3}
+--- !u!224 &4371121399517140670 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2146713060814842012, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2406047994636713506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3406222398394927610 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
@@ -873,12 +905,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6577add1a9b7b944a9af426507c71b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &4371121399517140670 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2146713060814842012, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-    type: 3}
-  m_PrefabInstance: {fileID: 2406047994636713506}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8967592842964538870
 PrefabInstance:
   m_ObjectHideFlags: 0

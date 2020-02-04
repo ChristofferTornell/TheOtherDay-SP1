@@ -8,9 +8,6 @@ using UnityEngine.UI;
 
 public class Dialogue : ScriptableObject
 {
-    [Header ("Customization")]
-    public CharacterData speaker;
-    public CharacterData listener;
 
     public enum CharacterEmotion
     {
@@ -19,7 +16,11 @@ public class Dialogue : ScriptableObject
         sad
     };
 
+    [Header ("Customization")]
+    public CharacterData speaker;
     public CharacterEmotion speakerEmotion = CharacterEmotion.normal;
+
+    public CharacterData listener;
     public CharacterEmotion listenerEmotion = CharacterEmotion.normal;
 
 

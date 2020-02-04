@@ -2,11 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class sms
-{
-
-}
-
 [CreateAssetMenu(fileName = "New Character", menuName = "Character")]
 public class CharacterData : ScriptableObject
 {

@@ -7,6 +7,5 @@ using TMPro;
 public class Global : MonoBehaviour
 {
     public Sprite[] ContactImages;
-    public TextMeshProUGUI[] NameText;
     public string[] Names;
 }

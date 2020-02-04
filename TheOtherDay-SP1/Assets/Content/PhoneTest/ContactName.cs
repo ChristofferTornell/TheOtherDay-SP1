@@ -11,9 +11,20 @@ public class ContactName : MonoBehaviour
 
     private void Start()
     {
-        if(character == "Riley")
+        int ID = checkCharacter(character);
+        text.text = global.Names[ID];
+    }
+
+    int checkCharacter(string character)
+    {
+        if (character == "Riley")
         {
-            text.text = global.Names[0];
+            return 0;
+        }
+
+        else
+        {
+            return 0;
         }
     }
 }

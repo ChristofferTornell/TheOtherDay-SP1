@@ -12,7 +12,7 @@ public class ContactImage : MonoBehaviour
     private void Start()
     {
         int ID = checkCharacter(character);
-        image.sprite = global.ContactImages[0];
+        image.sprite = global.ContactImages[ID];
     }
 
     int checkCharacter(string character)

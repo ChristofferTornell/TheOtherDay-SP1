@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -140,7 +140,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8362866107939231029}
   - component: {fileID: 7417004440694667413}
-  - component: {fileID: 7775137457076109478}
   - component: {fileID: 3842024675234829881}
   m_Layer: 5
   m_Name: Preview
@@ -176,21 +175,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3400016964832893527}
   m_CullTransparentMesh: 0
---- !u!114 &7775137457076109478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3400016964832893527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cc7ed80499e51f4f9b534acfc8ade9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  global: {fileID: 671075525604245332, guid: 9a42e7dbb0aefec45ad8863a13fa4ca8, type: 3}
-  text: {fileID: 3842024675234829881}
-  character: 
 --- !u!114 &3842024675234829881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,6 +471,7 @@ GameObject:
   - component: {fileID: 4745040496860588259}
   - component: {fileID: 3916324624429318473}
   - component: {fileID: 2289585847919820249}
+  - component: {fileID: 8296731902792872114}
   - component: {fileID: 6234457746887597594}
   m_Layer: 5
   m_Name: Button
@@ -552,6 +537,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8296731902792872114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8311729235898074424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fcaad7c11ff5e44aa8736053a3ac6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 0}
 --- !u!114 &6234457746887597594
 MonoBehaviour:
   m_ObjectHideFlags: 0

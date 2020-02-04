@@ -9,7 +9,7 @@ public class Interactable : MonoBehaviour
     public bool mouseInteraction = false;
     [Space]
     [SerializeField] private float sceneChangeDelay = 1f;
-    // public Dialogue dialogue
+    public Dialogue dialogue = null;
     public CharacterData characterdata = null;
     [Header("Events")]
     [SerializeField] private UnityEvent OnInteract;
@@ -37,7 +37,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    IEnumerator ChangeScene(string sceneName)
+    private IEnumerator ChangeScene(string sceneName)
     {
         // Scene change effect(s) can be put here
         // --------------------------------------
@@ -74,9 +74,9 @@ public class Interactable : MonoBehaviour
         // PH, make public when done
     }
 
-    //public void IE_PlayDialogue(Dialogue dialogue)
-    //{
-    //    // Play the dialogue here
-    //}
+    public void IE_PlayDialogue(Dialogue dialogue)
+    {
+        // Play the dialogue here
+    }
 
 }

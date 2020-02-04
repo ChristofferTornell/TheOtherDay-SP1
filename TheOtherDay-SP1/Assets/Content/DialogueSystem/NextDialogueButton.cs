@@ -9,6 +9,6 @@ public class NextDialogueButton : MonoBehaviour
 
     public void GoToNextDialogue()
     {
-       // currentDialogueInstance.currentDialogue = currentDialogue.nextDialogue;
+        currentDialogueInstance.currentDialogue = currentDialogue.nextDialogue;
     }
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    //public Dialogue currentDialogue = null;
-    //private bool dialogueActive = false;
+    public Dialogue currentDialogue = null;
+    private bool dialogueActive = false;
 
     public static DialogueManager instance;
 

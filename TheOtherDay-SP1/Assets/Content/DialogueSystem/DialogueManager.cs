@@ -12,16 +12,20 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
+        dialogueBoxUI.gameObject.SetActive(false);
         instance = this;
     }
-    void EnterDialogue()
+    public void EnterDialogue(Dialogue initialDialogue)
     {
-        dialogueBoxUI.enabled = true;
+        Debug.Log("Entered dialogue from manager");
+        currentDialogue = initialDialogue;
+        dialogueBoxUI.gameObject.SetActive(true);
+        dialogueBoxUI.InitializeDialogueUI();
     }
 
-    void ExitDialogue()
+    public void ExitDialogue()
     {
-        dialogueBoxUI.enabled = false;
+        dialogueBoxUI.gameObject.SetActive(false);
     }
 
 }

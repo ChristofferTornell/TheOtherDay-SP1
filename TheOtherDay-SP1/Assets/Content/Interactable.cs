@@ -9,7 +9,6 @@ public class Interactable : MonoBehaviour
     public bool mouseInteraction = false;
     [Space]
     [SerializeField] private float sceneChangeDelay = 1f;
-    public Dialogue dialogue = null;
     public CharacterData characterdata = null;
     [Header("Events")]
     [SerializeField] private UnityEvent OnInteract;

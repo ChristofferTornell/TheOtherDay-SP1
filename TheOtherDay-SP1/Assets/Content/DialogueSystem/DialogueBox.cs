@@ -16,14 +16,17 @@ public class DialogueBox : MonoBehaviour
 
     public void InitializeDialogueUI()
     {
+        currentDialogue = DialogueManager.instance.currentDialogue;
         UpdateDialogueUI();
     }
 
     public void TakeNewDialogue()
     {
+        currentDialogue = DialogueManager.instance.currentDialogue;
         ResetDialogueUI();
         UpdateDialogueUI();
     }
+
     public void UpdateDialogueUI()
     {
         textObject.text = currentDialogue.message;

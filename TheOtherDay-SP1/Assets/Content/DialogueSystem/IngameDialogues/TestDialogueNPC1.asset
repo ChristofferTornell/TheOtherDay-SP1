@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
   m_Name: TestDialogueNPC1
   m_EditorClassIdentifier: 
-  character: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
-  characterEmotion: 0
-  dialog: Hello, my name is Bartender. I am a bartender.
+  speaker: {fileID: 11400000, guid: d33bd45ba7ad34940acad0b9a00a5a21, type: 2}
+  speakerEmotion: 0
+  listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  listenerEmotion: 0
+  message: Hello Riley, my name is Erin.
   nextDialogue: {fileID: 0}
   choiceButtons: []

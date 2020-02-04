@@ -4,9 +4,12 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class Dialogue : MonoBehaviour
+[CreateAssetMenu(fileName = "Dialogue", menuName = "ScriptableObjects/DialogueTemplate", order = 2)]
+
+public class Dialogue : ScriptableObject
 {
-    //public CharacterProfile character;
+    [Header ("Customization")]
+    public CharacterData character;
     public enum CharacterEmotion
     {
         normal,
@@ -16,12 +19,11 @@ public class Dialogue : MonoBehaviour
 
     public CharacterEmotion characterEmotion = CharacterEmotion.normal;
 
-    public TextMeshProUGUI textObject;
 
     [TextArea(15, 20)]
     public string dialog = "";
 
-    //public ChoiceButton[] choiceButtons = null;
-    public Button nextButtonObject = null;
+    [Header ("Insertables")]
     public Dialogue nextDialogue = null;
+    public ChoiceButton[] choiceButtons = null;
 }

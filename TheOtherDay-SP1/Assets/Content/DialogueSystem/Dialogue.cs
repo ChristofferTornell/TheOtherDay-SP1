@@ -29,6 +29,6 @@ public class Dialogue : ScriptableObject
 
     [Header ("Insertables")]
     public Dialogue nextDialogue = null;
-    public ChoiceButton[] choiceButtons = null;
+    public ChoiceButtonBlueprint[] choiceButtons = null;
 }
 

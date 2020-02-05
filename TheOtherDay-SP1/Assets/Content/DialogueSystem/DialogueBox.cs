@@ -49,23 +49,27 @@ public class DialogueBox : MonoBehaviour
 
         if (rileySpeaking)
         {
-            //Left alignment
+            textObject.alignment = TextAlignmentOptions.TopLeft;
             leftProfile.profileImage.sprite = currentDialogue.speaker.dialogImage;
-            leftProfile.profileImage.name = currentDialogue.speaker.name;
+            leftProfile.FadeInColor();
+            leftProfile.profileName.text = currentDialogue.speaker.name;
 
             rightProfile.profileImage.sprite = currentDialogue.listener.dialogImage;
-            rightProfile.profileImage.name = currentDialogue.listener.name;
+            rightProfile.FadeOutColor();
+            rightProfile.profileName.text = currentDialogue.listener.name;
+
         }
         else
         {
-            //Right alignment
+            textObject.alignment = TextAlignmentOptions.TopRight;
             leftProfile.profileImage.sprite = currentDialogue.listener.dialogImage;
-            leftProfile.profileImage.name = currentDialogue.listener.name;
+            leftProfile.FadeOutColor();
+            leftProfile.profileName.text = currentDialogue.listener.name;
 
             rightProfile.profileImage.sprite = currentDialogue.speaker.dialogImage;
-            rightProfile.profileImage.name = currentDialogue.speaker.name;
+            rightProfile.FadeInColor();
+            rightProfile.profileName.text = currentDialogue.speaker.name;
         }
-
     }
 
     public void ResetDialogueUI()

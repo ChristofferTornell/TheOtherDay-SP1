@@ -14,6 +14,7 @@ public class HangoverLightEffect : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
+            LightMultiplier.onLightChange(0.4f);
         }
         if (Input.GetKeyDown(KeyCode.K))
         {

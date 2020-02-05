@@ -4,23 +4,38 @@ using UnityEngine;
 
 public class CameraFollowPlayer : MonoBehaviour
 {
-    public GameObject player;
-    public float xOffset;
+    // https://www.youtube.com/watch?v=MMH4kFknQ_c 
 
-    // Camera moves with player
-    // If player reaches edge. Camera should stop as if colliding with the edge
-    // Player should be "pushing" the camera around. A dead zone in the middle were the camera doesnt follow player.
-    // Inspiration: Super Mario: World https://www.youtube.com/watch?v=TCIMPYM0AQg
+    public Transform player;
+    public Transform leftBoundary;
+    public Transform rightBoundary;
+
+    public float smoothTime = 0.1f;
+    private float smoothVelocity = 0;
+
+    private float camWidth, camHeight, sceneMinX, sceneMaxX;
 
     void Start()
     {
-        // Place the camera on the player with offset
-        gameObject.transform.position = new Vector3(player.transform.position.x + xOffset, transform.position.y, -10);
+        // Place the camera on the player
+        gameObject.transform.position = new Vector3(player.position.x, transform.position.y, -10);
+        camHeight = Camera.main.orthographicSize * 2;
+        camWidth = camHeight * Camera.main.aspect;
+
+        sceneMinX = leftBoundary.position.x + (camWidth / 2);
+        sceneMaxX = rightBoundary.position.x - (camWidth / 2);
     }
 
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position = new Vector3(player.transform.position.x + xOffset, transform.position.y, -10);
+        if (player)
+        {
+            float playerX = Mathf.Max(sceneMinX, Mathf.Min(sceneMaxX, player.position.x));;
+
+            float x = Mathf.SmoothDamp(transform.position.x, playerX, ref smoothVelocity, smoothTime);
+
+            transform.position = new Vector3(x, transform.position.y, transform.position.z);
+        }
     }
 }

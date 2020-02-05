@@ -601,7 +601,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2406047995370010982}
+      - m_Target: {fileID: 2297643206589238417}
         m_MethodName: TakeNewDialogue
         m_Mode: 1
         m_Arguments:
@@ -735,6 +735,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftProfile
       objectReference: {fileID: 0}
+    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: m_text
+      value: Riley
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 44.75
+      objectReference: {fileID: 0}
     - target: {fileID: 2146713060814842012, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -849,41 +884,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: m_text
-      value: Riley
-      objectReference: {fileID: 0}
-    - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 44.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6561d94be3f8ce249bdeba75c6e92cf9, type: 3}

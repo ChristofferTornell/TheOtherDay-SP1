@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public Items[] item;
-    public Image image;
-    [Range(0, 2)]
-    public int ID = 0;
+    public Items[] items;
+    public Image[] image;
 
     private void Start()
     {
-        image.sprite = item[ID].sprite;
+        image[0].sprite = items[1].sprite;
     }
 }

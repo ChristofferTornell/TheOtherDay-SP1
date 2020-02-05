@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (!GameController.pause) { PlayerInput(); }
         else { rb.velocity = Vector2.zero; }

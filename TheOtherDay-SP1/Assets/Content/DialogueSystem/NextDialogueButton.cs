@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class NextDialogueButton : MonoBehaviour
 {
-    public DialogueManager currentDialogueInstance;
     //public DialogueBox dialogueBoxUI;
     public Dialogue currentDialogue;
 
+    public void UpdateDialogue()
+    {
+        currentDialogue = DialogueManager.instance.currentDialogue;
+    }
+
     public void GoToNextDialogue()
     {
-        Debug.Log("Pressed button");
-        currentDialogueInstance.currentDialogue = currentDialogue.nextDialogue;
+        Debug.Log("pressed next button");
+        DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;
+        DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
     }
 }

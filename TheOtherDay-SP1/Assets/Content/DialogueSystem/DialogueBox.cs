@@ -22,13 +22,21 @@ public class DialogueBox : MonoBehaviour
 
     public void TakeNewDialogue()
     {
-        currentDialogue = DialogueManager.instance.currentDialogue;
         ResetDialogueUI();
         UpdateDialogueUI();
     }
 
     public void UpdateDialogueUI()
     {
+        if (DialogueManager.instance.currentDialogue == null)
+        {
+            DialogueManager.instance.ExitDialogue();
+            ResetDialogueUI();
+            return;
+        }
+        currentDialogue = DialogueManager.instance.currentDialogue;
+        Debug.Log(currentDialogue);
+        nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
         textObject.text = currentDialogue.message;
         if (currentDialogue.speaker.name == "Riley")
         {
@@ -41,6 +49,7 @@ public class DialogueBox : MonoBehaviour
 
         if (rileySpeaking)
         {
+            //Left alignment
             leftProfile.profileImage.sprite = currentDialogue.speaker.dialogImage;
             leftProfile.profileImage.name = currentDialogue.speaker.name;
 
@@ -49,6 +58,7 @@ public class DialogueBox : MonoBehaviour
         }
         else
         {
+            //Right alignment
             leftProfile.profileImage.sprite = currentDialogue.listener.dialogImage;
             leftProfile.profileImage.name = currentDialogue.listener.name;
 
@@ -61,10 +71,10 @@ public class DialogueBox : MonoBehaviour
     public void ResetDialogueUI()
     {
         currentDialogue = null;
-        textObject = null;
-        nextButtonObject = null;
-        leftProfile = null;
-        rightProfile = null;
+        //textObject.text = "";
+        //nextButtonObject = null;
+        //leftProfile = null;
+       // rightProfile = null;
     }
 
 }

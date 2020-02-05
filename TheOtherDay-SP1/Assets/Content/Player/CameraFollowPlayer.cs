@@ -6,11 +6,11 @@ public class CameraFollowPlayer : MonoBehaviour
 {
     // https://www.youtube.com/watch?v=MMH4kFknQ_c 
 
-    public Transform player;
-    public Transform leftBoundary;
-    public Transform rightBoundary;
+    [Tooltip("The transform (GameObject) the camera will follow")] public Transform player;
+    [Tooltip("A GameObject with Transform that will block the camera from going further left")] public Transform leftBoundary;
+    [Tooltip("A GameObject with Transform that will block the camera from going further right")] public Transform rightBoundary;
 
-    public float smoothTime = 0.1f;
+    [Tooltip("The time it takes for the camera to catch up to the player")] public float smoothTime = 0.1f;
     private float smoothVelocity = 0;
 
     private float camWidth, camHeight, sceneMinX, sceneMaxX;
@@ -27,7 +27,7 @@ public class CameraFollowPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (player)
         {

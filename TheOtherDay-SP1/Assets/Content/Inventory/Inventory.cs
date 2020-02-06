@@ -7,9 +7,14 @@ public class Inventory : MonoBehaviour
 {
     public Items[] items;
     public Image[] image;
+    [Range(0, 2)]
+    public int[] type;
 
     private void Start()
     {
-        image[0].sprite = items[1].sprite;
+        for(int i = 0; i < image.Length; i++)
+        {
+            image[i].sprite = items[type[i]].sprite;
+        }
     }
 }

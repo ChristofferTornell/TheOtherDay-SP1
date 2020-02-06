@@ -10,12 +10,13 @@ public class MessageSquare : MonoBehaviour
     public Image image;
     public TextMeshProUGUI text;
     public TextMeshProUGUI sms;
+    public int which;
 
 
     void Start()
     {
         image.sprite = character.contactImage;
         text.text = character.name;
-        sms.text = character.sms[0];
+        sms.text = character.sms[which];
     }
 }

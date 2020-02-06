@@ -4,8 +4,26 @@ using UnityEngine;
 
 public class HangoverLightEffect : MonoBehaviour
 {
-    public IEnumerator lightExposureEffect(float difference, float lightIncreaseTime, float stabilizationTime)
+    private bool exposureCeilingReached = false;
+
+    public IEnumerator LightExposureEffect(float increase, float lightIncreaseTime, float stabilizationTime)
     {
+        // Increase light over a set time. Then when it reahes ceiling, fade it out to normal levels
+        float t = 0;
+        float minIntensity = LightMultiplier.lightIntensityMultiplier;
+        float maxIntensity = LightMultiplier.lightIntensityMultiplier + increase;
+
+        if (!exposureCeilingReached)
+        {
+            if (t < lightIncreaseTime)
+            {
+                t += Time.deltaTime;
+                LightMultiplier.lightIntensityMultiplier = Mathf.Lerp(minIntensity, maxIntensity, t / lightIncreaseTime);
+                Debug.Log(t / lightIncreaseTime);
+            }
+            else { exposureCeilingReached = true; }
+        }
+        Debug.Log("Done");
         // Increase lightMultiplier by difference / time. Then stabilize the light multiplier to old amount over time. 
         yield return null;
     }
@@ -14,9 +32,7 @@ public class HangoverLightEffect : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
+            StartCoroutine(LightExposureEffect(0.02f, 12f, 1f));
         }
     }
 }

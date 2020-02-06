@@ -7,7 +7,10 @@ public class CharacterData : ScriptableObject
 {
     public new string name;
     public Sprite contactImage;
-    public Sprite dialogImage;
+    public Sprite dialogueImageNormal;
+    public Sprite dialogueImageHappy;
+    public Sprite dialogueImageSad;
+
     public Font font;
     [TextArea(15,20)]
     public string[] sms;

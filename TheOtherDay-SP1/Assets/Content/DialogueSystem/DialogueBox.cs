@@ -13,8 +13,8 @@ public class DialogueBox : MonoBehaviour
     public Button nextButtonObject = null;
     public GameObject choiceButtonLayout = null;
 
-    public DialogueProfile leftProfile = null;
-    public DialogueProfile rightProfile = null;
+    public DialogueProfile rileyProfile = null;
+    public DialogueProfile NPCprofile = null;
     private bool rileySpeaking = true;
 
     public GameObject choiceButton;
@@ -55,6 +55,11 @@ public class DialogueBox : MonoBehaviour
         currentDialogue = DialogueManager.instance.currentDialogue;
         nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
         textObject.text = currentDialogue.message;
+
+        Dialogue.CharacterEmotion rileyEmotion;
+        Dialogue.CharacterEmotion npcEmotion;
+
+
         if (currentDialogue.speaker.name == "Riley")
         {
             rileySpeaking = true;
@@ -66,23 +71,39 @@ public class DialogueBox : MonoBehaviour
 
         if (rileySpeaking)
         {
-            textObject.alignment = TextAlignmentOptions.TopLeft;
-            leftProfile.profileImage.sprite = currentDialogue.speaker.dialogImage;
-            leftProfile.FadeInColor();
 
-            rightProfile.profileImage.sprite = currentDialogue.listener.dialogImage;
-            rightProfile.FadeOutColor();
+            rileyEmotion = currentDialogue.speakerEmotion;
+            npcEmotion = currentDialogue.listenerEmotion;
+            rileyProfile.myCharacter = currentDialogue.speaker;
+            NPCprofile.myCharacter = currentDialogue.listener;
+
+
+            textObject.alignment = TextAlignmentOptions.TopLeft;
+
+            rileyProfile.FadeInColor();
+
+            NPCprofile.FadeOutColor();
 
         }
         else
         {
-            textObject.alignment = TextAlignmentOptions.TopLeft;
-            leftProfile.profileImage.sprite = currentDialogue.listener.dialogImage;
-            leftProfile.FadeOutColor();
+            rileyEmotion = currentDialogue.listenerEmotion;
+            npcEmotion = currentDialogue.speakerEmotion;
+            NPCprofile.myCharacter = currentDialogue.speaker;
+            rileyProfile.myCharacter = currentDialogue.listener;
 
-            rightProfile.profileImage.sprite = currentDialogue.speaker.dialogImage;
-            rightProfile.FadeInColor();
+
+
+            textObject.alignment = TextAlignmentOptions.TopLeft;
+            rileyProfile.FadeOutColor();
+
+            NPCprofile.FadeInColor();
+
         }
+
+        rileyProfile.profileImage.sprite = rileyProfile.SpriteFromMood(rileyEmotion);
+        NPCprofile.profileImage.sprite = NPCprofile.SpriteFromMood(npcEmotion);
+
 
         speakerNameObject.text = currentDialogue.speaker.name;
 
@@ -98,6 +119,7 @@ public class DialogueBox : MonoBehaviour
                     GameObject _choiceButton = Instantiate(choiceButton);
                     _choiceButton.transform.SetParent(choiceButtonLayout.transform);
                     _choiceButton.GetComponent<ChoiceButton>().textObject.text = currentDialogue.choiceButtons[i].buttonText;
+                    _choiceButton.GetComponent<ChoiceButton>().myId = i;
                 }
                 choiceButtonsExist = true;
                 return;

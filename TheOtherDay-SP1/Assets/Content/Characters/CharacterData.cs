@@ -11,10 +11,11 @@ public class CharacterData : ScriptableObject
     public Sprite dialogueImageHappy;
     public Sprite dialogueImageSad;
 
-    public Font font;
+    public TMPro.TMP_FontAsset font;
+    public Color color;
+    [FMODUnity.EventRef] public string typingSound;
+
     [TextArea(15,20)]
     public string[] sms;
-    //public textsound
-    //public textcolor
 
 }

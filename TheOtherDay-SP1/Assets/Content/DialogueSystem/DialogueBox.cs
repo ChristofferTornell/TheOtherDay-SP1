@@ -32,11 +32,12 @@ public class DialogueBox : MonoBehaviour
         UpdateDialogueUI();
     }
 
-    IEnumerator AutotypeText(string inputMessage, float delay)
+    IEnumerator AutotypeText(string inputMessage, float delay, string typingSound)
     {
         for (int i = 0; i < inputMessage.Length; i++)
         {
             textObject.text = inputMessage.Substring(0, i+1);
+            //FMODUnity.RuntimeManager.PlayOneShot(typingSound); IMPLEMENT AUDIO
             yield return new WaitForSeconds(delay);
         }
 
@@ -65,7 +66,7 @@ public class DialogueBox : MonoBehaviour
         nextButtonObject.gameObject.SetActive(true);
         currentDialogue = DialogueManager.instance.currentDialogue;
         nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
-        StartCoroutine(AutotypeText(currentDialogue.message, currentDialogue.typeDelay));
+        StartCoroutine(AutotypeText(currentDialogue.message, currentDialogue.typeDelay, currentDialogue.speaker.typingSound));
 
 
         Dialogue.CharacterEmotion rileyEmotion;
@@ -124,7 +125,6 @@ public class DialogueBox : MonoBehaviour
             if (currentDialogue.choiceButtons.Length > 0)
             {
                 nextButtonObject.gameObject.SetActive(false);
-                Debug.Log("with choice buttons: " + currentDialogue);
 
                 for (int i = 0; i < currentDialogue.choiceButtons.Length; i++)
                 {

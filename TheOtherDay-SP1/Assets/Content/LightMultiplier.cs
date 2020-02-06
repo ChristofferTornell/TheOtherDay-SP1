@@ -15,6 +15,9 @@ public class LightMultiplier : MonoBehaviour
 
     Light2D light2D = null;
     public static float lightIntensityMultiplier = 1;
+
+    private float t = 0;
+
     private void Start()
     {
         if (GetComponent<Light2D>())
@@ -29,10 +32,29 @@ public class LightMultiplier : MonoBehaviour
     {
 
     }
+    public IEnumerator LightExposureEffect(float increase, float lightIncreaseTime, float stabilizationTime)
+    {
+        if (lightIntensityMultiplier < lightIntensityMultiplier + increase)
+        {
+            t += Time.deltaTime;
+            Mathf.Lerp(lightIntensityMultiplier, lightIntensityMultiplier + increase, t);
+            light2D.intensity = light2D.intensity * lightIntensityMultiplier;
+        }
+        // Increase lightMultiplier by difference / time. Then stabilize the light multiplier to old amount over time. 
+        yield return null;
+    }
 
     public void ChangeLight(float amount)
     {
         lightIntensityMultiplier += amount;
         light2D.intensity = light2D.intensity * lightIntensityMultiplier;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            StartCoroutine(LightExposureEffect(1f, 1f, 1f));          
+        }
     }
 }

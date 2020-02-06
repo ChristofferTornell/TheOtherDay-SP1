@@ -47,7 +47,7 @@ public class Interactable : MonoBehaviour
         yield return null;
     }
 
-    // IE = Interactivity Event
+    // IE_ = Interactivity Event
     public void IE_Pickup(GameObject objectToPickup)
     {
         Debug.Log("Interactable - Picking up: " + objectToPickup);

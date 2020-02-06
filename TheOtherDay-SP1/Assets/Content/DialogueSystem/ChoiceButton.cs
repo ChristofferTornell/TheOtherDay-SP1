@@ -6,18 +6,17 @@ using TMPro;
 public class ChoiceButton : MonoBehaviour
 {
     public TextMeshProUGUI textObject;
-
+    public int myId;
     public Dialogue currentDialogue;
 
-    public void UpdateDialogue()
+    public void Start()
     {
         currentDialogue = DialogueManager.instance.currentDialogue;
     }
 
     public void GoToNextDialogue()
     {
-        Debug.Log("pressed next button");
-        DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;
+        DialogueManager.instance.currentDialogue = currentDialogue.choiceButtons[myId].nextDialogue;
         DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
     }
 }

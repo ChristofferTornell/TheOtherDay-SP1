@@ -26,6 +26,7 @@ public class Dialogue : ScriptableObject
 
     [TextArea(15, 20)]
     public string message = "";
+    public float typeDelay = 0.01f;
 
     [Header ("Insertables")]
     public Dialogue nextDialogue = null;

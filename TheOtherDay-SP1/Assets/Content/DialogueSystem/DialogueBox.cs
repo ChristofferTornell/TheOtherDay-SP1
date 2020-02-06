@@ -32,8 +32,19 @@ public class DialogueBox : MonoBehaviour
         UpdateDialogueUI();
     }
 
+    IEnumerator AutotypeText(string inputMessage, float delay)
+    {
+        for (int i = 0; i < inputMessage.Length; i++)
+        {
+            textObject.text = inputMessage.Substring(0, i+1);
+            yield return new WaitForSeconds(delay);
+        }
+
+    }
+
     public void UpdateDialogueUI()
     {
+        StopAllCoroutines();
         if (choiceButtonsExist)
         {
             foreach (Transform child in choiceButtonLayout.transform)
@@ -54,7 +65,8 @@ public class DialogueBox : MonoBehaviour
         nextButtonObject.gameObject.SetActive(true);
         currentDialogue = DialogueManager.instance.currentDialogue;
         nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
-        textObject.text = currentDialogue.message;
+        StartCoroutine(AutotypeText(currentDialogue.message, currentDialogue.typeDelay));
+
 
         Dialogue.CharacterEmotion rileyEmotion;
         Dialogue.CharacterEmotion npcEmotion;

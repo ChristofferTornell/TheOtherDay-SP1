@@ -10,10 +10,15 @@ public class PlayerMovement : MonoBehaviour
     [Header("Stats")]
     [Tooltip("Movement speed of the player (recommended value around 450)")]
     [SerializeField] private float movementSpeed = 450;
+    [SerializeField] private float sprintingSpeed = 500;
     private Rigidbody2D rb = null;
+
+    private float originalMovementSpeed;
 
     void Start()
     {
+        originalMovementSpeed = movementSpeed;
+
         rb = GetComponent<Rigidbody2D>();
         if (horizontalAxis.Length == 0) { Debug.LogError("The horizontalAxis string is empty"); }
     }
@@ -21,6 +26,16 @@ public class PlayerMovement : MonoBehaviour
     void PlayerInput()
     {
         rb.velocity = Vector2.zero;
+
+        // Sprinting
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            movementSpeed = sprintingSpeed;
+        }
+        else
+        {
+            movementSpeed = originalMovementSpeed;
+        }
 
         // Right
         if (Input.GetAxisRaw(horizontalAxis) > 0)

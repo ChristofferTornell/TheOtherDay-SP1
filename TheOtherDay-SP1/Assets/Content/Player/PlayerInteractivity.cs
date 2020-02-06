@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerInteractivity : MonoBehaviour
 {
-    [SerializeField] private string useButton;
+    [SerializeField] private string interactionButton;
 
     private GameObject interactableObject = null;
 
     private void Start()
     {
-        if (useButton.Length == 0) { Debug.LogError("The useButton string is empty"); }
+        if (interactionButton.Length == 0) { Debug.LogError("The useButton string is empty"); }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,7 +32,7 @@ public class PlayerInteractivity : MonoBehaviour
     void Update()
     {
         // Interact with the Object using the useButton
-        if (interactableObject && Input.GetButtonDown(useButton))
+        if (interactableObject && Input.GetButtonDown(interactionButton))
         {
             Debug.Log("Doing something with " + interactableObject.name);
             interactableObject.GetComponent<Interactable>().Interact();

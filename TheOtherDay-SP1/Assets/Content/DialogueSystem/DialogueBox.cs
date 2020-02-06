@@ -18,6 +18,7 @@ public class DialogueBox : MonoBehaviour
     private bool rileySpeaking = true;
 
     public GameObject choiceButton;
+    private bool choiceButtonsExist = false;
 
     public void InitializeDialogueUI()
     {
@@ -33,7 +34,14 @@ public class DialogueBox : MonoBehaviour
 
     public void UpdateDialogueUI()
     {
-        if (DialogueManager.instance.currentDialogue == null)
+        if (choiceButtonsExist)
+        {
+            foreach (Transform child in choiceButtonLayout.transform)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+        if (currentDialogue.nextDialogue == null)
         {
             if (currentDialogue.choiceButtons.Length == 0)
             {
@@ -41,22 +49,10 @@ public class DialogueBox : MonoBehaviour
                 ResetDialogueUI();
                 return;
             }
-            else
-            {
-                nextButtonObject.gameObject.SetActive(false);
-
-                for (int i = 0; i < currentDialogue.choiceButtons.Length; i++)
-                {
-                    GameObject _choiceButton = Instantiate(choiceButton);
-                    _choiceButton.transform.SetParent(choiceButtonLayout.transform);
-                    _choiceButton.GetComponent<ChoiceButton>().textObject.text = currentDialogue.choiceButtons[i].buttonText;
-                }
-                return;
-            }
+            
         }
         nextButtonObject.gameObject.SetActive(true);
         currentDialogue = DialogueManager.instance.currentDialogue;
-        Debug.Log(currentDialogue);
         nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
         textObject.text = currentDialogue.message;
         if (currentDialogue.speaker.name == "Riley")
@@ -89,6 +85,24 @@ public class DialogueBox : MonoBehaviour
         }
 
         speakerNameObject.text = currentDialogue.speaker.name;
+
+        if (currentDialogue.nextDialogue == null)
+        {
+            if (currentDialogue.choiceButtons.Length > 0)
+            {
+                nextButtonObject.gameObject.SetActive(false);
+                Debug.Log("with choice buttons: " + currentDialogue);
+
+                for (int i = 0; i < currentDialogue.choiceButtons.Length; i++)
+                {
+                    GameObject _choiceButton = Instantiate(choiceButton);
+                    _choiceButton.transform.SetParent(choiceButtonLayout.transform);
+                    _choiceButton.GetComponent<ChoiceButton>().textObject.text = currentDialogue.choiceButtons[i].buttonText;
+                }
+                choiceButtonsExist = true;
+                return;
+            }
+        }
 
     }
 

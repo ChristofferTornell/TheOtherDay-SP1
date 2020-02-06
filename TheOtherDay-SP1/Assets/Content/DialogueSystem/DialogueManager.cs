@@ -17,7 +17,6 @@ public class DialogueManager : MonoBehaviour
     }
     public void EnterDialogue(Dialogue initialDialogue)
     {
-        Debug.Log("Entered dialogue from manager");
         currentDialogue = initialDialogue;
         dialogueBoxUI.gameObject.SetActive(true);
         dialogueBoxUI.InitializeDialogueUI();

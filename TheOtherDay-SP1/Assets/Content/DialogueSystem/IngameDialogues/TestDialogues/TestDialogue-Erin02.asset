@@ -14,15 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: d33bd45ba7ad34940acad0b9a00a5a21, type: 2}
   speakerEmotion: 0
+  messageVocalizationSound: 
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   listenerEmotion: 0
   message: Do you want to go to the mall with me?
   typeDelay: 0.01
   nextDialogue: {fileID: 0}
   choiceButtons:
-  - buttonText: Yes, let's go right now!
-    nextDialogue: {fileID: 11400000, guid: 6c3793e83f2097d4d9760e5c853f925b, type: 2}
-  - buttonText: No, I'm busy, sorry...
-    nextDialogue: {fileID: 11400000, guid: 133488d62c037c94abf39e8ed05877a6, type: 2}
-  - buttonText: I'd love to! I can meet you there at 5pm.
-    nextDialogue: {fileID: 11400000, guid: c3545fd538db584418bd8a556da76cbb, type: 2}
+  - buttonText: Let's go right now!
+    nextDialogue: {fileID: 11400000, guid: 034cd72e446c00845adc81a3a6dcd219, type: 2}
+  - buttonText: No, I'm busy.
+    nextDialogue: {fileID: 11400000, guid: e30e4fd384882444f9fa25558a7ee85a, type: 2}
+  - buttonText: I can meet you there later.
+    nextDialogue: {fileID: 11400000, guid: 26f59e5cafd8fbd4295d83264e352a54, type: 2}

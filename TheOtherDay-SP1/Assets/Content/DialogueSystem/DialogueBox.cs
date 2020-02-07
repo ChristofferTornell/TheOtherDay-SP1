@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class DialogueBox : MonoBehaviour
 {
-    //[HideInInspector]
-    public Dialogue currentDialogue = null;
+    [HideInInspector]   public Dialogue currentDialogue = null;
     public TextMeshProUGUI textObject = null;
     public TextMeshProUGUI speakerNameObject = null;
     public Button nextButtonObject = null;
@@ -66,6 +65,8 @@ public class DialogueBox : MonoBehaviour
         nextButtonObject.gameObject.SetActive(true);
         currentDialogue = DialogueManager.instance.currentDialogue;
         nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
+        //FMODUnity.RuntimeManager.PlayOneShot(currentDialogue.messageVocalizationSound); IMPLEMENT AUDIO
+
         StartCoroutine(AutotypeText(currentDialogue.message, currentDialogue.typeDelay, currentDialogue.speaker.typingSound));
 
 
@@ -106,7 +107,6 @@ public class DialogueBox : MonoBehaviour
             rileyProfile.myCharacter = currentDialogue.listener;
 
 
-
             textObject.alignment = TextAlignmentOptions.TopLeft;
             rileyProfile.FadeOutColor();
 
@@ -119,6 +119,11 @@ public class DialogueBox : MonoBehaviour
 
 
         speakerNameObject.text = currentDialogue.speaker.name;
+        speakerNameObject.color = currentDialogue.speaker.color;
+        textObject.font = currentDialogue.speaker.font;
+        textObject.color = currentDialogue.speaker.color;
+        
+
 
         if (currentDialogue.nextDialogue == null)
         {

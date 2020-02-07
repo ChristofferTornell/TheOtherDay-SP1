@@ -19,10 +19,10 @@ public class Dialogue : ScriptableObject
     [Header ("Customization")]
     public CharacterData speaker;
     public CharacterEmotion speakerEmotion = CharacterEmotion.normal;
+    [FMODUnity.EventRef] public string messageVocalizationSound;
 
     public CharacterData listener;
     public CharacterEmotion listenerEmotion = CharacterEmotion.normal;
-
 
     [TextArea(15, 20)]
     public string message = "";

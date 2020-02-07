@@ -23,7 +23,6 @@ public class DialogueProfile : MonoBehaviour
 
     public Sprite SpriteFromMood(Dialogue.CharacterEmotion mood)
     {
-        Debug.Log(myCharacter);
         if (mood == Dialogue.CharacterEmotion.normal)
         {
             return myCharacter.dialogueImageNormal;

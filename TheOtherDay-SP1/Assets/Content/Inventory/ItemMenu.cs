@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ItemMenu : MonoBehaviour
 {
     public Button btn;
+    public GameObject rest;
     public GameObject menu;
     public int ID;
     private int[] type;
@@ -21,8 +22,8 @@ public class ItemMenu : MonoBehaviour
     {
         if(type[ID] != 0)
         {
-            Debug.Log(type[ID]);
             menu.SetActive(true);
+            rest.SetActive(true);
         }
     }
 }

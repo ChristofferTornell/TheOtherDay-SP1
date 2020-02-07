@@ -58,7 +58,7 @@ public class LightMultiplier : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            //StartCoroutine(LightExposureEffect(0.02f, 12f, 1f));
+            StartCoroutine(LightExposureEffect(0.02f, 12f, 1f));
         }
     }
 }

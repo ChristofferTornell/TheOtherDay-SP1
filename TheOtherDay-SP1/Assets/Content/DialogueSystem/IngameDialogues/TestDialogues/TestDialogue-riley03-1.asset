@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: TestDialogue-Erin03-reply3
+  m_Name: TestDialogue-riley03-1
   m_EditorClassIdentifier: 
-  speaker: {fileID: 11400000, guid: d33bd45ba7ad34940acad0b9a00a5a21, type: 2}
-  speakerEmotion: 0
+  speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  speakerEmotion: 1
   messageVocalizationSound: 
-  listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  listener: {fileID: 11400000, guid: d33bd45ba7ad34940acad0b9a00a5a21, type: 2}
   listenerEmotion: 0
-  message: Okay, that sounds good.
+  message: Yes, that sounds great! Let's go right now!
   typeDelay: 0.01
-  nextDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 6c3793e83f2097d4d9760e5c853f925b, type: 2}
   choiceButtons: []

@@ -49,12 +49,6 @@ public class Interactable : MonoBehaviour
     }
 
     // IE_ = Interactivity Event
-    public void IE_Pickup(GameObject objectToPickup)
-    {
-        Debug.Log("Interactable - Picking up: " + objectToPickup);
-        // Add object to Inventoy and remove it from the ground
-    }
-
     public void IE_ChangeScene(string sceneName)
     {
         Debug.Log("Interactable - Changing Scene to: " + sceneName);

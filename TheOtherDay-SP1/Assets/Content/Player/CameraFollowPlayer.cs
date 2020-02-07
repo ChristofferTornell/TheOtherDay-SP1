@@ -18,12 +18,15 @@ public class CameraFollowPlayer : MonoBehaviour
     void Start()
     {
         // Place the camera on the player
-        gameObject.transform.position = new Vector3(player.position.x, transform.position.y, -10);
-        camHeight = Camera.main.orthographicSize * 2;
-        camWidth = camHeight * Camera.main.aspect;
+        if (player)
+        {
+            gameObject.transform.position = new Vector3(player.position.x, transform.position.y, -10);
+            camHeight = Camera.main.orthographicSize * 2;
+            camWidth = camHeight * Camera.main.aspect;
 
-        sceneMinX = leftBoundary.position.x + (camWidth / 2);
-        sceneMaxX = rightBoundary.position.x - (camWidth / 2);
+            sceneMinX = leftBoundary.position.x + (camWidth / 2);
+            sceneMaxX = rightBoundary.position.x - (camWidth / 2);
+        }
     }
 
     // Update is called once per frame

@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // https://www.youtube.com/watch?v=S9h_iu4Zx5I&feature=youtu.be Use additive scene loading
+
     [Tooltip("The string name of the axis at Edit -> Project Settings -> Input")]
     [SerializeField] private string horizontalAxis = "Horizontal";
 
@@ -21,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         if (horizontalAxis.Length == 0) { Debug.LogError("The horizontalAxis string is empty"); }
-    }
+;    }
 
     void PlayerInput()
     {

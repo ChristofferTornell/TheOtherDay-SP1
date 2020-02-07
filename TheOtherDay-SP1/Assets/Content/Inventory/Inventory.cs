@@ -20,21 +20,18 @@ public class Inventory : MonoBehaviour
     {
         for(int i = 0; i < itemSlots.Length; i++)
         {
-            int ID = itemSlots[i].GetComponent<ItemMenu>().ID;
-            if(ID == 0)
+            if(type[i] == 0)
             {
                 Debug.Log("Adding item " + item.name);
-
                 image[i].sprite = item.sprite;
                 switch (item.name)
                 {
-            
                     case "Water Bottle":
-                        itemSlots[i].GetComponent<ItemMenu>().ID = 1;
+                        type[i] = 1;
                     break;
 
                     case "Backpack":
-                        itemSlots[i].GetComponent<ItemMenu>().ID = 1;
+                        type[i] = 2;
                     break;
                 }
                 return;

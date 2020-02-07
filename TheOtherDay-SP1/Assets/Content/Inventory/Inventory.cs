@@ -13,19 +13,22 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        setItems();
+        SetItems();
     }
 
-    public void addItem(Items item)
+    public void INV_AddItem(Items item)
     {
         for(int i = 0; i < itemSlots.Length; i++)
         {
             int ID = itemSlots[i].GetComponent<ItemMenu>().ID;
             if(ID == 0)
             {
+                Debug.Log("Adding item " + item.name);
+
                 image[i].sprite = item.sprite;
                 switch (item.name)
                 {
+            
                     case "Water Bottle":
                         itemSlots[i].GetComponent<ItemMenu>().ID = 1;
                     break;
@@ -39,7 +42,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void setItems()
+    private void SetItems()
     {
         for (int i = 0; i < image.Length; i++)
         {

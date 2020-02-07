@@ -39,6 +39,12 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void INV_RemoveItem(int slot)
+    {
+        type[slot] = 0;
+        image[slot].sprite = items[0].sprite;
+    }
+
     private void SetItems()
     {
         for (int i = 0; i < image.Length; i++)

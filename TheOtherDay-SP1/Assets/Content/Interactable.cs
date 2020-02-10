@@ -7,19 +7,20 @@ using FMODUnity;
 
 public class Interactable : MonoBehaviour
 {
+    public bool Door = false;
     public bool mouseInteraction = false;
     public bool OneTime = false;
     [Space]
     [SerializeField] private float sceneChangeDelay = 1f;
     public CharacterData characterdata = null;
     [Header("Events")]
-    [SerializeField] private UnityEvent OnInteract;
+    [SerializeField] private UnityEvent onInteract;
 
     public void Interact()
     {
         if (!mouseInteraction)
         {
-            OnInteract.Invoke();
+            onInteract.Invoke();
             if (OneTime) { DestroyThis(); }
         }
         else { Debug.Log(gameObject.name + "can only be interacted with using the mouse"); }
@@ -35,7 +36,7 @@ public class Interactable : MonoBehaviour
         if (mouseInteraction)
         {
             Debug.Log("Interacting with " + gameObject.name + " using mouse");
-            OnInteract.Invoke();
+            onInteract.Invoke();
             if (OneTime) { DestroyThis(); }
         }
     }
@@ -51,6 +52,7 @@ public class Interactable : MonoBehaviour
         // --------------------------------------
 
         yield return new WaitForSeconds(sceneChangeDelay);
+
         SceneManager.LoadScene(sceneName);
 
         yield return null;

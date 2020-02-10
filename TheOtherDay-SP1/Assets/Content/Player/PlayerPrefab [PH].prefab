@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 8567838526866476067}
   - component: {fileID: 7533981237017971077}
   - component: {fileID: 6083303559570746255}
-  - component: {fileID: 6291273292708729121}
   - component: {fileID: 418902852}
   m_Layer: 0
   m_Name: PlayerPrefab [PH]
@@ -132,6 +131,7 @@ MonoBehaviour:
   horizontalAxis: Horizontal
   movementSpeed: 275
   sprintingSpeed: 425
+  savedPositions: {fileID: 11400000, guid: 9921ad6c1a8ac764abc348b3a22158a8, type: 2}
 --- !u!114 &8567838526866476067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,18 +192,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 2}
   m_EdgeRadius: 0
---- !u!114 &6291273292708729121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7533981237017971076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cc14bf461b86a0428c8392cf5da1641, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &418902852
 BoxCollider2D:
   m_ObjectHideFlags: 0

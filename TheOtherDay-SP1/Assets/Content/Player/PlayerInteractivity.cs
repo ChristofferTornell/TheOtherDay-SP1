@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInteractivity : MonoBehaviour
 {
     [SerializeField] private string interactionButton;
 
-    private GameObject interactableObject = null;
+    private Interactable interactableObject = null;
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class PlayerInteractivity : MonoBehaviour
     {
         if (collision.GetComponent<Interactable>())
         {
-            interactableObject = collision.gameObject;
+            interactableObject = collision.GetComponent<Interactable>();
         }
     }
 
@@ -35,7 +36,13 @@ public class PlayerInteractivity : MonoBehaviour
         if (interactableObject && Input.GetButtonDown(interactionButton))
         {
             Debug.Log("Doing something with " + interactableObject.name);
-            interactableObject.GetComponent<Interactable>().Interact();
+
+            if (interactableObject.Door)
+            {
+                SavedPositions.NewPosition(GameController.currentScene, new Vector2(interactableObject.transform.position.x, gameObject.transform.position.y));
+            }
+
+            interactableObject.Interact();
             // Do something with the object
         }
     }

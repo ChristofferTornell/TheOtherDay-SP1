@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // https://www.youtube.com/watch?v=S9h_iu4Zx5I&feature=youtu.be Use additive scene loading
-
+    private static PlayerMovement playerInstance;
     public static bool playerMovementLocked = false;
 
     [Tooltip("The string name of the axis at Edit -> Project Settings -> Input")]
@@ -21,13 +21,36 @@ public class PlayerMovement : MonoBehaviour
 
     private float originalMovementSpeed;
 
+    void Awake()
+    {
+        if (playerInstance == null)
+        {
+            DontDestroyOnLoad(this);
+            playerInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         originalMovementSpeed = movementSpeed;
 
         rb = GetComponent<Rigidbody2D>();
         if (horizontalAxis.Length == 0) { Debug.LogError("The horizontalAxis string is empty"); }
-;    }
+
+        SceneManager.sceneUnloaded += OnSceneLoaded;
+    }
+    void OnSceneLoaded(Scene scene)
+    {
+        Vector2 newPosition = SavedPositions.GetPosition(GameController.currentScene);
+        if (newPosition != Vector2.zero)
+        {
+            transform.position = newPosition;
+        }
+    }
 
     void PlayerInput()
     {

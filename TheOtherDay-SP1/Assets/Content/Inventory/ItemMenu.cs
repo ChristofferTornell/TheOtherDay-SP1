@@ -9,7 +9,7 @@ public class ItemMenu : MonoBehaviour
     public GameObject rest;
     public GameObject menu;
     public int ID;
-    private int[] type;s
+    private int[] type;
 
     void Start()
     {

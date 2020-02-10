@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         pause = false;
+        Time.timeScale = 1;
     }
 
     public static void Pause(bool boolean)

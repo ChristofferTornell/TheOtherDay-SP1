@@ -8,6 +8,7 @@ using FMODUnity;
 public class Interactable : MonoBehaviour
 {
     public bool mouseInteraction = false;
+    public bool OneTime = false;
     [Space]
     [SerializeField] private float sceneChangeDelay = 1f;
     public CharacterData characterdata = null;
@@ -19,6 +20,7 @@ public class Interactable : MonoBehaviour
         if (!mouseInteraction)
         {
             OnInteract.Invoke();
+            if (OneTime) { DestroyThis(); }
         }
         else { Debug.Log(gameObject.name + "can only be interacted with using the mouse"); }
     }
@@ -34,7 +36,13 @@ public class Interactable : MonoBehaviour
         {
             Debug.Log("Interacting with " + gameObject.name + " using mouse");
             OnInteract.Invoke();
+            if (OneTime) { DestroyThis(); }
         }
+    }
+
+    private void DestroyThis()
+    {
+        Destroy(gameObject);
     }
 
     private IEnumerator ChangeScene(string sceneName)

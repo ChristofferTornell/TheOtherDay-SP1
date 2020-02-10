@@ -10,13 +10,15 @@ public class CameraFollowPlayer : MonoBehaviour
     [Tooltip("A GameObject with Transform that will block the camera from going further left")] public Transform leftBoundary;
     [Tooltip("A GameObject with Transform that will block the camera from going further right")] public Transform rightBoundary;
 
-    [Tooltip("The time it takes for the camera to catch up to the player")] public float smoothTime = 0.1f;
+    [Tooltip("The time it takes for the camera to catch up to the player in seconds")] public float smoothTime = 0.1f;
     private float smoothVelocity = 0;
 
     private float camWidth, camHeight, sceneMinX, sceneMaxX;
 
     void Start()
     {
+        player = FindObjectOfType<PlayerMovement>().transform;
+
         // Place the camera on the player
         if (player)
         {

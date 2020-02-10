@@ -32,7 +32,7 @@ public class ItemMenu : MonoBehaviour
         }
     }
 
-    void UseItem(int type)
+    public void UseItem(int type)
     {
         if(type == 1)
         {
@@ -41,7 +41,7 @@ public class ItemMenu : MonoBehaviour
         }
         else if(type == 2)
         {
-
+            Debug.Log("You opened a backpack in a packpack");
         }
     }
 }

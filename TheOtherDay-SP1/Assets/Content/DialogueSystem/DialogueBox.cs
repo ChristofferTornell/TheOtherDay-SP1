@@ -39,7 +39,10 @@ public class DialogueBox : MonoBehaviour
         for (int i = 0; i < inputMessage.Length; i++)
         {
             textObject.text = inputMessage.Substring(0, i+1);
-            //FMODUnity.RuntimeManager.PlayOneShot(typingSound); IMPLEMENT AUDIO
+            if (i % 4 == 0)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(typingSound);
+            }
             yield return new WaitForSeconds(delay);
         }
 

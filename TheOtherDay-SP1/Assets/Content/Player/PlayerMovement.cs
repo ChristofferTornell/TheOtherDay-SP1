@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     // https://www.youtube.com/watch?v=S9h_iu4Zx5I&feature=youtu.be Use additive scene loading
 
+    public static bool playerMovementLocked = false;
+
     [Tooltip("The string name of the axis at Edit -> Project Settings -> Input")]
     [SerializeField] private string horizontalAxis = "Horizontal";
 
@@ -14,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Movement speed of the player (recommended value around 450)")]
     [SerializeField] private float movementSpeed = 450;
     [SerializeField] private float sprintingSpeed = 500;
+
     private Rigidbody2D rb = null;
 
     private float originalMovementSpeed;
@@ -55,7 +58,21 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!GameController.pause) { PlayerInput(); }
-        else { rb.velocity = Vector2.zero; }
+        if (!GameController.pause)
+        {
+            if (!playerMovementLocked)
+            {
+                PlayerInput();
+            }
+            else
+            {
+                rb.velocity = Vector2.zero;
+            }
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
+
     }
 }

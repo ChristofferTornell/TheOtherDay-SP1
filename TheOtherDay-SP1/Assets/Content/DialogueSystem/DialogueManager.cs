@@ -20,11 +20,13 @@ public class DialogueManager : MonoBehaviour
         currentDialogue = initialDialogue;
         dialogueBoxUI.gameObject.SetActive(true);
         dialogueBoxUI.InitializeDialogueUI();
+        PlayerMovement.playerMovementLocked = true;
     }
 
     public void ExitDialogue()
     {
         dialogueBoxUI.gameObject.SetActive(false);
+        PlayerMovement.playerMovementLocked = false;
     }
 
 }

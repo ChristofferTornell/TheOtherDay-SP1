@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ItemMenu : MonoBehaviour
 {
+    public Inventory bp;
     public Button btn;
     public GameObject rest;
     public GameObject menu;
@@ -15,15 +16,32 @@ public class ItemMenu : MonoBehaviour
     {
         GameObject parent = transform.parent.parent.gameObject;
         type = parent.GetComponent<Inventory>().type;
-        btn.onClick.AddListener(click);
+        btn.onClick.AddListener(Click);
     }
 
-    void click()
+    void Click()
     {
-        if(type[ID] != 0)
+        if(type[ID] != 0 && type[ID] != 1)
         {
             menu.SetActive(true);
             rest.SetActive(true);
+        }
+        else if(type[ID] == 1)
+        {
+            UseItem(1);
+        }
+    }
+
+    void UseItem(int type)
+    {
+        if(type == 1)
+        {
+            bp.INV_RemoveItem(ID);
+            Debug.Log("You drank water, hungover level decreased");
+        }
+        else if(type == 2)
+        {
+
         }
     }
 }

@@ -45,6 +45,11 @@ public class Inventory : MonoBehaviour
         image[slot].sprite = items[0].sprite;
     }
 
+    public void INV_UseItem(int type)
+    {
+
+    }
+
     private void SetItems()
     {
         for (int i = 0; i < image.Length; i++)

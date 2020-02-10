@@ -8,7 +8,10 @@ public class DialogueBox : MonoBehaviour
 {
     [HideInInspector]   public Dialogue currentDialogue = null;
     public TextMeshProUGUI textObject = null;
-    public TextMeshProUGUI speakerNameObject = null;
+    public TextMeshProUGUI leftNameTextObject = null;
+    public TextMeshProUGUI rightNameTextObject = null;
+    public GameObject leftNamePlate;
+    public GameObject rightNamePlate;
     public Button nextButtonObject = null;
     public GameObject choiceButtonLayout = null;
 
@@ -85,7 +88,8 @@ public class DialogueBox : MonoBehaviour
 
         if (rileySpeaking)
         {
-
+            leftNamePlate.SetActive(true);
+            rightNamePlate.SetActive(false);
             rileyEmotion = currentDialogue.speakerEmotion;
             npcEmotion = currentDialogue.listenerEmotion;
             rileyProfile.myCharacter = currentDialogue.speaker;
@@ -97,10 +101,14 @@ public class DialogueBox : MonoBehaviour
             rileyProfile.FadeInColor();
 
             NPCprofile.FadeOutColor();
+            leftNameTextObject.text = currentDialogue.speaker.name;
+            leftNameTextObject.color = currentDialogue.speaker.color;
 
         }
         else
         {
+            leftNamePlate.SetActive(false);
+            rightNamePlate.SetActive(true);
             rileyEmotion = currentDialogue.listenerEmotion;
             npcEmotion = currentDialogue.speakerEmotion;
             NPCprofile.myCharacter = currentDialogue.speaker;
@@ -111,6 +119,8 @@ public class DialogueBox : MonoBehaviour
             rileyProfile.FadeOutColor();
 
             NPCprofile.FadeInColor();
+            rightNameTextObject.text = currentDialogue.speaker.name;
+            rightNameTextObject.color = currentDialogue.speaker.color;
 
         }
 
@@ -118,8 +128,7 @@ public class DialogueBox : MonoBehaviour
         NPCprofile.profileImage.sprite = NPCprofile.SpriteFromMood(npcEmotion);
 
 
-        speakerNameObject.text = currentDialogue.speaker.name;
-        speakerNameObject.color = currentDialogue.speaker.color;
+
         textObject.font = currentDialogue.speaker.font;
         textObject.color = currentDialogue.speaker.color;
         

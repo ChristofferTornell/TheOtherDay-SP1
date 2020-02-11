@@ -20,6 +20,7 @@ MonoBehaviour:
   message: Do you want to go to the mall with me?
   typeDelay: 0.01
   nextDialogue: {fileID: 0}
+  TimeLimitSeconds: 10
   choiceButtons:
   - buttonText: Let's go right now!
     nextDialogue: {fileID: 11400000, guid: 034cd72e446c00845adc81a3a6dcd219, type: 2}

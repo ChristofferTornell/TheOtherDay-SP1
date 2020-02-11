@@ -867,6 +867,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3267592579915930903, guid: 458cbf6921e8e1e42a05168bb05c5c94,
         type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3267592579915930903, guid: 458cbf6921e8e1e42a05168bb05c5c94,
+        type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2011971527}
@@ -890,6 +895,43 @@ PrefabInstance:
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 11400000, guid: 2133bcfdffa71464bb3d1e16d4d7beb1,
+        type: 2}
+    - target: {fileID: -3267592579915930903, guid: 458cbf6921e8e1e42a05168bb05c5c94,
+        type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3267592579915930903, guid: 458cbf6921e8e1e42a05168bb05c5c94,
+        type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3267592579915930903, guid: 458cbf6921e8e1e42a05168bb05c5c94,
+        type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2011971527}
+    - target: {fileID: -3267592579915930903, guid: 458cbf6921e8e1e42a05168bb05c5c94,
+        type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: -3267592579915930903, guid: 458cbf6921e8e1e42a05168bb05c5c94,
+        type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Dialogue, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -3267592579915930903, guid: 458cbf6921e8e1e42a05168bb05c5c94,
+        type: 3}
+      propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 2133bcfdffa71464bb3d1e16d4d7beb1,
+        type: 2}
+    - target: {fileID: -3267592579915930903, guid: 458cbf6921e8e1e42a05168bb05c5c94,
+        type: 3}
+      propertyPath: characterdata
+      value: 
+      objectReference: {fileID: 11400000, guid: 01c44b970609f204c80fc359a7fe9730,
         type: 2}
     - target: {fileID: 4629731411073843521, guid: 458cbf6921e8e1e42a05168bb05c5c94,
         type: 3}

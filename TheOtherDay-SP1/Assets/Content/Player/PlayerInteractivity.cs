@@ -35,7 +35,7 @@ public class PlayerInteractivity : MonoBehaviour
         // Interact with the Object using the useButton
         if (interactableObject && Input.GetButtonDown(interactionButton))
         {
-            Debug.Log("Doing something with " + interactableObject.name);
+            //Debug.Log("Doing something with " + interactableObject.name);
 
             if (interactableObject.Door)
             {

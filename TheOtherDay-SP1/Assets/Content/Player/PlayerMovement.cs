@@ -40,14 +40,25 @@ public class PlayerMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         if (horizontalAxis.Length == 0) { Debug.LogError("The horizontalAxis string is empty"); }
-
-        SceneManager.sceneUnloaded += OnSceneLoaded;
     }
-    void OnSceneLoaded(Scene scene)
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Vector2 newPosition = SavedPositions.GetPosition(GameController.currentScene);
+
         if (newPosition != Vector2.zero)
         {
+            Debug.Log("New Position: " + newPosition);
             transform.position = newPosition;
         }
     }

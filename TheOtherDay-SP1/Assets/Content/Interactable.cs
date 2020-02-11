@@ -14,7 +14,7 @@ public class Interactable : MonoBehaviour
     [SerializeField] private float sceneChangeDelay = 1f;
     public CharacterData characterdata = null;
     [Header("Events")]
-    [SerializeField] private UnityEvent onInteract;
+    [SerializeField] private UnityEvent onInteract; // Byter man namn på denna kommer alla existerande interactables att förlora sina events
 
     public void Interact()
     {

@@ -7,7 +7,7 @@ using FMODUnity;
 
 public class Interactable : MonoBehaviour
 {
-    public bool Door = false;
+    public bool savePlayerPosition = false;
     public bool mouseInteraction = false;
     public bool OneTime = false;
     [Space]

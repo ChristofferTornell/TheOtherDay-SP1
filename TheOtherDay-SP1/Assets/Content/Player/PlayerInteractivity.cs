@@ -11,7 +11,7 @@ public class PlayerInteractivity : MonoBehaviour
 
     private void Start()
     {
-        if (interactionButton.Length == 0) { Debug.LogError("The useButton string is empty"); }
+        if (interactionButton.Length == 0) { Debug.LogError("PlayerInteractivity - The interactionButton string is empty"); }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,7 +37,7 @@ public class PlayerInteractivity : MonoBehaviour
         {
             //Debug.Log("Doing something with " + interactableObject.name);
 
-            if (interactableObject.Door)
+            if (interactableObject.savePlayerPosition)
             {
                 SavedPositions.NewPosition(GameController.currentScene, new Vector2(interactableObject.transform.position.x, gameObject.transform.position.y));
             }

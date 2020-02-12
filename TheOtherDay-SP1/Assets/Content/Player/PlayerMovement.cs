@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public string playableScene = null;
     private static PlayerMovement playerInstance;
     public static bool playerMovementLocked = false;
 
@@ -54,12 +55,15 @@ public class PlayerMovement : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Vector2 newPosition = SavedPositions.GetPosition(GameController.currentScene);
-
-        if (newPosition != Vector2.zero)
+        if (scene.name == playableScene)
         {
-            Debug.Log("New Position: " + newPosition);
-            transform.position = newPosition;
+            Vector2 newPosition = SavedPositions.GetPosition(GameController.currentScene);
+
+            if (newPosition != Vector2.zero)
+            {
+                Debug.Log("New Position: " + newPosition);
+                transform.position = newPosition;
+            }
         }
     }
 

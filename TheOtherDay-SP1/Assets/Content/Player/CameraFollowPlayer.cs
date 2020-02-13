@@ -10,10 +10,17 @@ public class CameraFollowPlayer : MonoBehaviour
     [Tooltip("A GameObject with Transform that will block the camera from going further left")] public Transform leftBoundary;
     [Tooltip("A GameObject with Transform that will block the camera from going further right")] public Transform rightBoundary;
 
-    [Tooltip("The time it takes for the camera to catch up to the player in seconds")] public float smoothTime = 0.1f;
+    [Tooltip("The time it takes for the camera to catch up to the player in seconds")] public float smoothTime = 0.3f;
     private float smoothVelocity = 0;
 
     private float camWidth, camHeight, sceneMinX, sceneMaxX;
+    private float originalSmoothTime;
+
+    private void Awake()
+    {
+        originalSmoothTime = smoothTime;
+        smoothTime = 0f;
+    }
 
     void Start()
     {
@@ -28,7 +35,15 @@ public class CameraFollowPlayer : MonoBehaviour
 
             sceneMinX = leftBoundary.position.x + (camWidth / 2);
             sceneMaxX = rightBoundary.position.x - (camWidth / 2);
+            StartCoroutine(RestoreSmoothTime(0.3f));         
         }
+    }
+
+    private IEnumerator RestoreSmoothTime(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        smoothTime = originalSmoothTime;
+        yield return null;
     }
 
     // Update is called once per frame

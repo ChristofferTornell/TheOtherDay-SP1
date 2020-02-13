@@ -6,11 +6,18 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public static bool pause = false;
-    public static Scene currentScene;
+    public static string currentScene;
+
+    public Transform startingPosition = null;
+
+    private void Awake()
+    {
+        currentScene = gameObject.scene.name;
+        Debug.Log("----- Current scene: " + currentScene + " -----");
+    }
 
     private void Start()
     {
-        currentScene = gameObject.scene;
         pause = false;
         Time.timeScale = 1;
     }
@@ -20,4 +27,11 @@ public class GameController : MonoBehaviour
         if (boolean) { pause = true; }
         else { pause = false; }
     }
+
+    public Vector2 GetStartingPosition()
+    {
+        Vector2 newVector2 = new Vector2(startingPosition.position.x, startingPosition.position.y);
+        return newVector2;
+    }
+
 }

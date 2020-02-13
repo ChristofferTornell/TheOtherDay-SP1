@@ -7,14 +7,14 @@ using FMODUnity;
 
 public class Interactable : MonoBehaviour
 {
-    public bool Door = false;
+    public bool savePlayerPosition = false;
     public bool mouseInteraction = false;
     public bool OneTime = false;
     [Space]
     [SerializeField] private float sceneChangeDelay = 1f;
     public CharacterData characterdata = null;
     [Header("Events")]
-    [SerializeField] private UnityEvent onInteract;
+    [SerializeField] private UnityEvent onInteract; // Byter man namn på denna kommer alla existerande interactables att förlora sina events
 
     public void Interact()
     {

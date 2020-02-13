@@ -22,6 +22,11 @@ public class DigitalClockScript : MonoBehaviour
     private void Start()
     {
         if (timeFactor <= 0) { timeFactor = 1; }
+
+        seconds = digitalClockObject.seconds;
+        minutes = digitalClockObject.minutes;
+        hours = digitalClockObject.hours;
+
         displayColor.a = displayColorAlpha;
         hoursDisplay.color = displayColor;
         minutesDisplay.color = displayColor;
@@ -57,6 +62,13 @@ public class DigitalClockScript : MonoBehaviour
         {
             hours = 0;
         }
+    }
+
+    public void ChangeTime(float seconds, float minutes, float hours)
+    {
+        this.seconds += seconds;
+        this.minutes += minutes;
+        this.hours += hours;
     }
 
     private void LateUpdate()

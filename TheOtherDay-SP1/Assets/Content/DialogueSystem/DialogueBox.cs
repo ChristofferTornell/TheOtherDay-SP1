@@ -21,17 +21,67 @@ public class DialogueBox : MonoBehaviour
 
     public GameObject choiceButton;
     private bool choiceButtonsExist = false;
+    private bool choiceTimerInitiated = false;
+    private float choiceTimerCounter = 0;
+    public TextMeshProUGUI choiceTimerTextObject = null;
+
+    private float typeSoundCounter;
+    public float typeSoundDelay = 0.1f;
+    private bool typeSoundReady;
 
     public void InitializeDialogueUI()
     {
         currentDialogue = DialogueManager.instance.currentDialogue;
+        ResetChoiceTimer();
         UpdateDialogueUI();
     }
 
     public void TakeNewDialogue()
     {
+        ResetChoiceTimer();
         ResetDialogueUI();
         UpdateDialogueUI();
+    }
+
+    private void ResetChoiceTimer()
+    {
+        choiceTimerCounter = currentDialogue.TimeLimitSeconds;
+        choiceTimerInitiated = false;
+        choiceTimerTextObject.gameObject.SetActive(false);
+    }
+    private void Update()
+    {
+        if (!typeSoundReady)
+        {
+            typeSoundCounter += Time.deltaTime;
+            if (typeSoundDelay < typeSoundCounter)
+            {
+                typeSoundReady = true;
+                typeSoundCounter = 0;
+            }
+        }
+       
+
+        if (currentDialogue.TimeLimitSeconds > 0 && choiceTimerInitiated == false)
+        {
+            choiceTimerTextObject.gameObject.SetActive(true);
+            choiceTimerInitiated = true;
+            choiceTimerCounter = currentDialogue.TimeLimitSeconds;
+
+        }
+        if (choiceTimerInitiated)
+        {
+            if(choiceTimerCounter <= 0f)
+            {
+                Debug.Log("You ran out of time!");
+                ResetChoiceTimer();
+
+            }
+
+            choiceTimerCounter -= Time.deltaTime;
+            choiceTimerCounter = Mathf.Clamp(choiceTimerCounter, 0f, Mathf.Infinity);
+            choiceTimerTextObject.text = string.Format("{0:00.00}", choiceTimerCounter);
+        }
     }
 
     IEnumerator AutotypeText(string inputMessage, float delay, string typingSound)
@@ -39,10 +89,13 @@ public class DialogueBox : MonoBehaviour
         for (int i = 0; i < inputMessage.Length; i++)
         {
             textObject.text = inputMessage.Substring(0, i+1);
-            if (i % 4 == 0)
+
+            if (typeSoundReady)
             {
                 FMODUnity.RuntimeManager.PlayOneShot(typingSound);
+                typeSoundReady = false;
             }
+            
             yield return new WaitForSeconds(delay);
         }
 

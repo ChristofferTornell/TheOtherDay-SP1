@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public string playableScene = null;
     private static PlayerMovement playerInstance;
     public static bool playerMovementLocked = false;
 
@@ -40,15 +41,29 @@ public class PlayerMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         if (horizontalAxis.Length == 0) { Debug.LogError("The horizontalAxis string is empty"); }
-
-        SceneManager.sceneUnloaded += OnSceneLoaded;
     }
-    void OnSceneLoaded(Scene scene)
+
+    private void OnEnable()
     {
-        Vector2 newPosition = SavedPositions.GetPosition(GameController.currentScene);
-        if (newPosition != Vector2.zero)
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == playableScene)
         {
-            transform.position = newPosition;
+            Vector2 newPosition = SavedPositions.GetPosition(GameController.currentScene);
+
+            if (newPosition != Vector2.zero)
+            {
+                Debug.Log("New Position: " + newPosition);
+                transform.position = newPosition;
+            }
         }
     }
 

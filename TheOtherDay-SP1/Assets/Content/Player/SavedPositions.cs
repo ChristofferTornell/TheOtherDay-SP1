@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Position
 {
-    public Scene scene;
+    public string sceneName;
     public Vector2 position;
 }
 
@@ -13,36 +13,44 @@ public class SavedPositions
 {
     private static List<Position> savedPositions = new List<Position>();
 
-    public static void NewPosition(Scene scene, Vector2 position)
+    // Called before changing scene
+    public static void NewPosition(string sceneName, Vector2 position)
     {
         // If creating new position in a scene that is already in the list, overwrite the postion in it
         for (int i = 0; i < savedPositions.Count; i++)
         {
-            if (savedPositions[i].scene == scene)
+            if (savedPositions[i].sceneName == sceneName)
             {
                 savedPositions[i].position = position;
-                Debug.Log("SavedPositions - Overwriting position in " + scene.name + " with " + position);
+                Debug.Log("SavedPositions - Overwriting position in " + sceneName + " with " + position);
                 return;
             }
         }
 
-        Debug.Log("SavedPosition - Creating new position in " + scene);
+        // Else, create a new Position and add it to the list
+        Debug.Log("SavedPositions - Creating new position in " + sceneName);
         Position newPosition = new Position();
-        newPosition.scene = scene;
+        newPosition.sceneName = sceneName;
         newPosition.position = position;
         savedPositions.Add(newPosition);
     }
 
-    public static Vector2 GetPosition(Scene scene)
-    {
+    // Called after changing scene
+    public static Vector2 GetPosition(string sceneName)
+    {     
+        // Search for a Position with sceneName and return it
         for (int i = 0; i < savedPositions.Count; i++)
         {
-            if (savedPositions[i].scene == scene)
+            if (savedPositions[i].sceneName == sceneName)
             {
+                Debug.Log("SavedPositions - Getting position: " + savedPositions[i].position + " from " + sceneName);
                 return savedPositions[i].position;
             }
         }
-        Debug.LogError("SavedPositions - Could not find saved position in " + scene);
-        return Vector2.zero;
+
+        // Else return startingPosition
+        GameController gameController = GameObject.FindObjectOfType<GameController>();
+        Debug.LogError("SavedPositions - Could not find saved position in " + sceneName + ", getting startingPosition: " + gameController.GetStartingPosition());
+        return gameController.GetStartingPosition();
     }
 }

@@ -13,6 +13,9 @@ public class Interactable : MonoBehaviour
     [Space]
     [SerializeField] private float sceneChangeDelay = 1f;
     public CharacterData characterdata = null;
+    [Header("Audio")]
+    [FMODUnity.EventRef] public string changeSceneSoundEvent;
+
     [Header("Events")]
     [SerializeField] private UnityEvent onInteract; // Byter man namn på denna kommer alla existerande interactables att förlora sina events
 
@@ -50,6 +53,7 @@ public class Interactable : MonoBehaviour
     {
         // Scene change effect(s) can be put here
         // --------------------------------------
+        //FMODUnity.RuntimeManager.PlayOneShot(changeSceneSoundEvent); SOUND IMPLEMENTATION
 
         yield return new WaitForSeconds(sceneChangeDelay);
 

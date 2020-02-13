@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        // footStepInstance = FMODUnity.RuntimeManager.CreateInstance(footStepEvent); IMPLEMENT SOUND
+
         originalMovementSpeed = movementSpeed;
 
         rb = GetComponent<Rigidbody2D>();
@@ -98,6 +100,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    [FMODUnity.EventRef] public string footStepEvent;
+    //FMOD.Studio.EventInstance footStepInstance; IMPLEMENT SOUND
+
     void FixedUpdate()
     {
         if (!GameController.pause)
@@ -105,16 +110,18 @@ public class PlayerMovement : MonoBehaviour
             if (!playerMovementLocked)
             {
                 PlayerInput();
+               // footStepInstance.start();
             }
             else
             {
                 rb.velocity = Vector2.zero;
+                // footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); IMPLEMENT SOUND
             }
         }
         else
         {
             rb.velocity = Vector2.zero;
+            // footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); IMPLEMENT SOUND
         }
-
     }
 }

@@ -40,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
 
         originalMovementSpeed = movementSpeed;
 
+        footStepInstance = FMODUnity.RuntimeManager.CreateInstance(footStepEvent);
+
         rb = GetComponent<Rigidbody2D>();
         if (horizontalAxis.Length == 0) { Debug.LogError("The horizontalAxis string is empty"); }
 

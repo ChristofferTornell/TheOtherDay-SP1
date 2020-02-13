@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public SceneData sceneData;
+    FMOD.Studio.EventInstance locationMusicInstance;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        string sceneMusicEvent = sceneData.sceneMusic;
+        locationMusicInstance = FMODUnity.RuntimeManager.CreateInstance(sceneMusicEvent);
+        locationMusicInstance.start();
+    }
+    private void OnDestroy()
+    {
+        locationMusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

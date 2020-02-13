@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!114 &-8521797717641580566
+=======
+--- !u!114 &-5041053989249429120
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14,13 +18,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/FmodBanks/Master.strings.bank
   SubDir: 
+<<<<<<< HEAD
   lastModified: 637169494720954916
+=======
+  lastModified: 637169511585707380
+>>>>>>> master
   LoadResult: 0
   FileSizes:
   - Name: 
     Value: 916
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-7449907823867953029
+=======
+--- !u!114 &-3979101947158204821
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30,6 +42,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Sounds/Hotel Room/Static TV
   m_EditorClassIdentifier: 
   Path: event:/Sounds/Hotel Room/Static TV
@@ -44,6 +57,49 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 3394
 --- !u!114 &-1630132345997147959
+=======
+  m_Name: event:/Sounds/Riley/Dialouge
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/Riley/Dialouge
+  guid: 24cabd6849297c44a5ae83f242fc82b2
+  Banks:
+  - {fileID: -5041053989249429120}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 92
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 1899477073840622795}
+  - {fileID: -5041053989249429120}
+  EditorEvents:
+  - {fileID: 1304581385023240380}
+  - {fileID: -3979101947158204821}
+  - {fileID: 8087700655288530899}
+  - {fileID: 5227648931732368937}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -5041053989249429120}
+  StringsBanks:
+  - {fileID: 1899477073840622795}
+  stringsBankWriteTime: 637169511585666700
+  cacheVersion: 3
+--- !u!114 &1304581385023240380
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,6 +109,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Sounds/Riley/Footsteps
   m_EditorClassIdentifier: 
   Path: event:/Sounds/Riley/Footsteps
@@ -67,6 +124,22 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 1020
 --- !u!114 &-1247190985485487412
+=======
+  m_Name: event:/Sounds/Hotel Room/Static TV
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/Hotel Room/Static TV
+  guid: 155ef6da5cac3445bef3690f4b471f1b
+  Banks:
+  - {fileID: -5041053989249429120}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3394
+--- !u!114 &1899477073840622795
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76,14 +149,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
+  Path: Assets/Audio/FmodBanks/Master.strings.bank
   SubDir: 
+<<<<<<< HEAD
   lastModified: 637169494610867254
+=======
+  lastModified: 637169511585666700
+>>>>>>> master
   LoadResult: 0
-  FileSizes: []
+  FileSizes:
+  - Name: 
+    Value: 916
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +192,9 @@ MonoBehaviour:
   stringsBankWriteTime: 637169494720954916
   cacheVersion: 3
 --- !u!114 &1627168851883203514
+=======
+--- !u!114 &5227648931732368937
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,20 +204,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Riley/Dialouge
+  m_Name: event:/Sounds/Riley/Footsteps
   m_EditorClassIdentifier: 
-  Path: event:/Sounds/Riley/Dialouge
-  guid: 24cabd6849297c44a5ae83f242fc82b2
+  Path: event:/Sounds/Riley/Footsteps
+  guid: 5822a4432c3ea64d97e43661aa89fc75
   Banks:
+<<<<<<< HEAD
   - {fileID: -1247190985485487412}
+=======
+  - {fileID: -5041053989249429120}
+>>>>>>> master
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
   Length: 92
 --- !u!114 &3775125561291968193
+=======
+  Length: 1020
+--- !u!114 &8087700655288530899
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,7 +241,11 @@ MonoBehaviour:
   Path: event:/Sounds/Hotel Room/Ceiling Fan
   guid: 3ccdb4bf263f2e4a81c8a4d7baa3cca4
   Banks:
+<<<<<<< HEAD
   - {fileID: -1247190985485487412}
+=======
+  - {fileID: -5041053989249429120}
+>>>>>>> master
   IsStream: 1
   Is3D: 1
   IsOneShot: 1

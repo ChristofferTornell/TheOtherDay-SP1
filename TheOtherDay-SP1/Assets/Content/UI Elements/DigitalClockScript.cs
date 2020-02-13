@@ -64,11 +64,9 @@ public class DigitalClockScript : MonoBehaviour
         }
     }
 
-    public void ChangeTime(float seconds, float minutes, float hours)
+    public void ChangeTime(float minutes)
     {
-        this.seconds += seconds;
         this.minutes += minutes;
-        this.hours += hours;
     }
 
     private void LateUpdate()

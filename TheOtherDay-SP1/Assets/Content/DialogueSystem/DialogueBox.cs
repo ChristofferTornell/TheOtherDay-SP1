@@ -22,8 +22,12 @@ public class DialogueBox : MonoBehaviour
     public GameObject choiceButton;
     private bool choiceButtonsExist = false;
     private bool choiceTimerInitiated = false;
-    private float choiceTimerCounter;
+    private float choiceTimerCounter = 0;
     public TextMeshProUGUI choiceTimerTextObject = null;
+
+    private float typeSoundCounter;
+    public float typeSoundDelay = 0.1f;
+    private bool typeSoundReady;
 
     public void InitializeDialogueUI()
     {
@@ -47,6 +51,17 @@ public class DialogueBox : MonoBehaviour
     }
     private void Update()
     {
+        if (!typeSoundReady)
+        {
+            typeSoundCounter += Time.deltaTime;
+            if (typeSoundDelay < typeSoundCounter)
+            {
+                typeSoundReady = true;
+                typeSoundCounter = 0;
+            }
+        }
+       
+
         if (currentDialogue.TimeLimitSeconds > 0 && choiceTimerInitiated == false)
         {
             choiceTimerTextObject.gameObject.SetActive(true);
@@ -74,10 +89,13 @@ public class DialogueBox : MonoBehaviour
         for (int i = 0; i < inputMessage.Length; i++)
         {
             textObject.text = inputMessage.Substring(0, i+1);
-            if (i % 4 == 0)
+
+            if (typeSoundReady)
             {
                 FMODUnity.RuntimeManager.PlayOneShot(typingSound);
+                typeSoundReady = false;
             }
+            
             yield return new WaitForSeconds(delay);
         }
 

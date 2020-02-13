@@ -1,71 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8728693015737482473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Riley/Footsteps
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Riley/Footsteps
-  guid: 5822a4432c3ea64d97e43661aa89fc75
-  Banks:
-<<<<<<< HEAD
-  - {fileID: -2328445732812143900}
-=======
-  - {fileID: -7992271948177615612}
->>>>>>> master
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1020
---- !u!114 &-7992271948177615612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637169494610867254
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-7370386314095534507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637169494610867254
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
-<<<<<<< HEAD
-=======
---- !u!114 &-7274161643789859295
+--- !u!114 &-5041053989249429120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,81 +18,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
->>>>>>> master
---- !u!114 &-3238954937091351164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.strings.bank
-  SubDir: 
-  lastModified: 637170233449543919
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 916
-  Exists: 1
---- !u!114 &-2328445732812143900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637170233449543919
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: -3238954937091351164}
-<<<<<<< HEAD
-  - {fileID: -2328445732812143900}
-=======
-  - {fileID: -7992271948177615612}
->>>>>>> master
-  EditorEvents:
-  - {fileID: 5094998713441822273}
-  - {fileID: 806804584645973734}
-  - {fileID: 1773965870899914633}
-  - {fileID: -8728693015737482473}
-  EditorParameters: []
-  MasterBanks:
-<<<<<<< HEAD
-  - {fileID: -2328445732812143900}
-=======
-  - {fileID: -7992271948177615612}
->>>>>>> master
-  StringsBanks:
-  - {fileID: -3238954937091351164}
-  stringsBankWriteTime: 637170233449543919
-  cacheVersion: 3
---- !u!114 &806804584645973734
+--- !u!114 &-3979101947158204821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,11 +33,7 @@ MonoBehaviour:
   Path: event:/Sounds/Riley/Dialouge
   guid: 24cabd6849297c44a5ae83f242fc82b2
   Banks:
-<<<<<<< HEAD
-  - {fileID: -2328445732812143900}
-=======
-  - {fileID: -7992271948177615612}
->>>>>>> master
+  - {fileID: -5041053989249429120}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -184,7 +41,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 92
---- !u!114 &1773965870899914633
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,25 +50,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Hotel Room/Ceiling Fan
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  Path: event:/Sounds/Hotel Room/Ceiling Fan
-  guid: 3ccdb4bf263f2e4a81c8a4d7baa3cca4
-  Banks:
-<<<<<<< HEAD
-  - {fileID: -2328445732812143900}
-=======
-  - {fileID: -7992271948177615612}
->>>>>>> master
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 11271
---- !u!114 &5094998713441822273
+  EditorBanks:
+  - {fileID: 1899477073840622795}
+  - {fileID: -5041053989249429120}
+  EditorEvents:
+  - {fileID: 1304581385023240380}
+  - {fileID: -3979101947158204821}
+  - {fileID: 8087700655288530899}
+  - {fileID: 5227648931732368937}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -5041053989249429120}
+  StringsBanks:
+  - {fileID: 1899477073840622795}
+  stringsBankWriteTime: 637169511585666700
+  cacheVersion: 3
+--- !u!114 &1304581385023240380
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,11 +83,7 @@ MonoBehaviour:
   Path: event:/Sounds/Hotel Room/Static TV
   guid: 155ef6da5cac3445bef3690f4b471f1b
   Banks:
-<<<<<<< HEAD
-  - {fileID: -2328445732812143900}
-=======
-  - {fileID: -7992271948177615612}
->>>>>>> master
+  - {fileID: -5041053989249429120}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -238,3 +91,69 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3394
+--- !u!114 &1899477073840622795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FmodBanks/Master.strings.bank
+  SubDir: 
+  lastModified: 637169511585666700
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 916
+  Exists: 1
+--- !u!114 &5227648931732368937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/Riley/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/Riley/Footsteps
+  guid: 5822a4432c3ea64d97e43661aa89fc75
+  Banks:
+  - {fileID: -5041053989249429120}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1020
+--- !u!114 &8087700655288530899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/Hotel Room/Ceiling Fan
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/Hotel Room/Ceiling Fan
+  guid: 3ccdb4bf263f2e4a81c8a4d7baa3cca4
+  Banks:
+  - {fileID: -5041053989249429120}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11271

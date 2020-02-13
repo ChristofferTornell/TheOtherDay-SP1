@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     public static bool pause = false;
     public static string currentScene;
 
-    public Transform startingPosition = null;
+    [SerializeField] private Transform startingPosition = null;
 
     private void Awake()
     {

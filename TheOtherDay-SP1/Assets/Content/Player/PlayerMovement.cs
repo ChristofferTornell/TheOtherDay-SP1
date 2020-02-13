@@ -36,7 +36,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        // footStepInstance = FMODUnity.RuntimeManager.CreateInstance(footStepEvent); IMPLEMENT SOUND
+
         originalMovementSpeed = movementSpeed;
+
+        footStepInstance = FMODUnity.RuntimeManager.CreateInstance(footStepEvent);
 
         rb = GetComponent<Rigidbody2D>();
         if (horizontalAxis.Length == 0) { Debug.LogError("The horizontalAxis string is empty"); }
@@ -74,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
     void PlayerInput()
     {
         rb.velocity = Vector2.zero;
+        
 
         // Sprinting
         if (Input.GetKey(KeyCode.LeftShift))
@@ -96,7 +101,31 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.left * movementSpeed * Time.deltaTime;
         }
+        if (rb.velocity == Vector2.zero)
+        {
+            if (footStepInstanceActive)
+            {
+                footStepInstanceActive = false;
+                Debug.Log("disable footstep sound");
+
+                footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            }
+        }
+        else
+        {
+            if (!footStepInstanceActive)
+            {
+                Debug.Log("active footstep sound");
+                footStepInstanceActive = true;
+                footStepInstance.start();
+
+            }
+        }
     }
+
+    [FMODUnity.EventRef] public string footStepEvent;
+    FMOD.Studio.EventInstance footStepInstance;
+    private bool footStepInstanceActive;
 
     void FixedUpdate()
     {
@@ -109,12 +138,25 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 rb.velocity = Vector2.zero;
+                if (footStepInstanceActive)
+                {
+                    footStepInstanceActive = false;
+                    Debug.Log("disable footstep sound");
+
+                    footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                }
             }
         }
         else
         {
             rb.velocity = Vector2.zero;
-        }
+            if (footStepInstanceActive)
+            {
+                footStepInstanceActive = false;
+                Debug.Log("disable footstep sound");
 
+                footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            }
+        }
     }
 }

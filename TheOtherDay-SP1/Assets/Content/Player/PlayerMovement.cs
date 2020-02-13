@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public string playableScene = null;
     private static PlayerMovement playerInstance;
     public static bool playerMovementLocked = false;
 
@@ -24,15 +23,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
-        if (playerInstance == null)
-        {
-            DontDestroyOnLoad(this);
-            playerInstance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        //if (playerInstance == null)
+        //{
+        //    DontDestroyOnLoad(this);
+        //    playerInstance = this;
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 
     void Start()
@@ -41,6 +40,14 @@ public class PlayerMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         if (horizontalAxis.Length == 0) { Debug.LogError("The horizontalAxis string is empty"); }
+
+        Vector2 newPosition = SavedPositions.GetPosition(GameController.currentScene);
+
+        if (newPosition != Vector2.zero)
+        {
+            Debug.Log("New Position: " + newPosition);
+            transform.position = newPosition;
+        }
     }
 
     private void OnEnable()
@@ -55,16 +62,13 @@ public class PlayerMovement : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == playableScene)
-        {
-            Vector2 newPosition = SavedPositions.GetPosition(GameController.currentScene);
+        //Vector2 newPosition = SavedPositions.GetPosition(GameController.currentScene);
 
-            if (newPosition != Vector2.zero)
-            {
-                Debug.Log("New Position: " + newPosition);
-                transform.position = newPosition;
-            }
-        }
+        //if (newPosition != Vector2.zero)
+        //{
+        //    Debug.Log("New Position: " + newPosition);
+        //    transform.position = newPosition;
+        //}
     }
 
     void PlayerInput()

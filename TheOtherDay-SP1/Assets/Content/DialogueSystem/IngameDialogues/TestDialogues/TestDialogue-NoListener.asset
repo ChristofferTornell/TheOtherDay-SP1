@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: TestDialogue-Erin03-reply1
+  m_Name: TestDialogue-NoListener
   m_EditorClassIdentifier: 
-  speaker: {fileID: 11400000, guid: 01c44b970609f204c80fc359a7fe9730, type: 2}
-  speakerEmotion: 1
+  speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  speakerEmotion: 0
   messageVocalizationSound: 
-  listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  listener: {fileID: 0}
   listenerEmotion: 0
-  message: Yippie, I know just what I want to buy!
+  message: this is a test dialogue
   typeDelay: 0.01
-  nextDialogue: {fileID: 11400000, guid: 2ef370d42a23f48469a539ae8296b4e6, type: 2}
+  nextDialogue: {fileID: 0}
   TimeLimitSeconds: 0
   choiceButtons: []

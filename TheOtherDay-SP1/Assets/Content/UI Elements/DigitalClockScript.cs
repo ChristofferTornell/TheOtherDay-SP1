@@ -35,12 +35,56 @@ public class DigitalClockScript : MonoBehaviour
         hoursDisplay.color = displayColor;
         minutesDisplay.color = displayColor;
 
+        if (hours > 9)
+        {
+            hoursDisplay.text = hours + ":";
+        }
+        else { hoursDisplay.text = "0" + hours + ":"; }
+
+        if (minutes > 9)
+        {
+            minutesDisplay.text = minutes.ToString();
+        }
+        else { minutesDisplay.text = "0" + minutes.ToString(); }
+
         SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
     private void Update()
     {
         //if (!GameController.pause) { seconds += Time.deltaTime * timeFactor; }
+
+        //if (hours > 9)
+        //{
+        //    hoursDisplay.text = hours + ":";
+        //}
+        //else { hoursDisplay.text = "0" + hours + ":"; }
+
+        //if (minutes > 9)
+        //{
+        //    minutesDisplay.text = minutes.ToString();
+        //}
+        //else { minutesDisplay.text = "0" + minutes.ToString(); }
+
+        //if (seconds >= 60)
+        //{
+        //    minutes ++;
+        //    seconds = 0;
+        //}
+        //if (minutes >= 60)
+        //{
+        //    hours++;
+        //    minutes = 0;
+        //}
+        //if (hours >= 24)
+        //{
+        //    hours = 0;
+        //}
+    }
+
+    void UpdateTime()
+    {
+        minutes += timeChangeAmount;
 
         if (hours > 9)
         {
@@ -56,7 +100,7 @@ public class DigitalClockScript : MonoBehaviour
 
         if (seconds >= 60)
         {
-            minutes ++;
+            minutes++;
             seconds = 0;
         }
         if (minutes >= 60)
@@ -68,12 +112,15 @@ public class DigitalClockScript : MonoBehaviour
         {
             hours = 0;
         }
+
+        digitalClockObject.seconds = seconds;
+        digitalClockObject.minutes = minutes;
+        digitalClockObject.hours = hours;
     }
 
     void OnSceneUnloaded(Scene scene)
     {
-        minutes += timeChangeAmount;
-        digitalClockObject.minutes = minutes;
+        UpdateTime();
     }
 
     public void ChangeTime(float minutes)
@@ -83,12 +130,5 @@ public class DigitalClockScript : MonoBehaviour
             timeChangeAmount = minutes;
             changingTime = true;
         }
-    }
-
-    private void LateUpdate()
-    {
-        digitalClockObject.seconds = seconds;
-        digitalClockObject.minutes = minutes;
-        digitalClockObject.hours = hours;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class DigitalClockScript : MonoBehaviour
@@ -19,6 +20,9 @@ public class DigitalClockScript : MonoBehaviour
     public Color displayColor;
     public int displayColorAlpha = 255;
 
+    private bool changingTime = false;
+    private float timeChangeAmount = 0;
+
     private void Start()
     {
         if (timeFactor <= 0) { timeFactor = 1; }
@@ -30,10 +34,14 @@ public class DigitalClockScript : MonoBehaviour
         displayColor.a = displayColorAlpha;
         hoursDisplay.color = displayColor;
         minutesDisplay.color = displayColor;
+
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
     private void Update()
     {
+        //if (!GameController.pause) { seconds += Time.deltaTime * timeFactor; }
+
         if (hours > 9)
         {
             hoursDisplay.text = hours + ":";
@@ -45,8 +53,6 @@ public class DigitalClockScript : MonoBehaviour
             minutesDisplay.text = minutes.ToString();
         }
         else { minutesDisplay.text = "0" + minutes.ToString(); }
-
-        if (!GameController.pause) { seconds += Time.deltaTime * timeFactor; }
 
         if (seconds >= 60)
         {
@@ -64,9 +70,19 @@ public class DigitalClockScript : MonoBehaviour
         }
     }
 
+    void OnSceneUnloaded(Scene scene)
+    {
+        minutes += timeChangeAmount;
+        digitalClockObject.minutes = minutes;
+    }
+
     public void ChangeTime(float minutes)
     {
-        this.minutes += minutes;
+        if (!changingTime)
+        {
+            timeChangeAmount = minutes;
+            changingTime = true;
+        }
     }
 
     private void LateUpdate()

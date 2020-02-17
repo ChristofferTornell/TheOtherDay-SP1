@@ -71,7 +71,7 @@ public class Phone : MonoBehaviour
     private void Update()
     {
         PressingTime += Time.deltaTime;
-        if(PressingTime > PressingDelta)
+        if(PressingTime > PressingDelta && Pulling == false)
         {
             if (Input.GetKeyDown(KeyCode.P))
             {

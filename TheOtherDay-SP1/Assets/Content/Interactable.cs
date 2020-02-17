@@ -21,7 +21,6 @@ public class Interactable : MonoBehaviour
 
     public void Interact()
     {
-        //FMODUnity.RuntimeManager.PlayOneShot(interactSoundEvent); SOUND IMPLEMENTATION
 
         if (!mouseInteraction)
         {
@@ -72,10 +71,12 @@ public class Interactable : MonoBehaviour
     }
 
     // Needs testing
-    public void IE_PlayAudio(AudioClip audioClip)
+    public void IE_PlayAudio()
     {
         // Play interaction audio here <---
         Debug.Log("Interactable - Playing audio: " + " ->Audio source here<-");
+        //FMODUnity.RuntimeManager.PlayOneShot(interactSoundEvent); SOUND IMPLEMENTATION
+
     }
 
     private void IE_PlayScreenEffect()

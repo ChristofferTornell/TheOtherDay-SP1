@@ -15,7 +15,11 @@ MonoBehaviour:
   Path: event:/Sounds/Hotel Room/HotelTVStatic
   guid: 155ef6da5cac3445bef3690f4b471f1b
   Banks:
+<<<<<<< HEAD
   - {fileID: 5985661402496592361}
+=======
+  - {fileID: -96580293020344654}
+>>>>>>> develop
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -38,7 +42,11 @@ MonoBehaviour:
   Path: event:/Sounds/Hotel Room/HotelMusic
   guid: a6bbbf3512249041bf74fcfcb73b1dc2
   Banks:
+<<<<<<< HEAD
   - {fileID: 5985661402496592361}
+=======
+  - {fileID: -96580293020344654}
+>>>>>>> develop
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -78,11 +86,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/FmodBanks/Master.strings.bank
   SubDir: 
+<<<<<<< HEAD
   lastModified: 637172073911151450
+=======
+  lastModified: 637172098504784299
+>>>>>>> develop
   LoadResult: 0
   FileSizes:
   - Name: 
     Value: 1004
+  Exists: 1
+--- !u!114 &-96580293020344654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FmodBanks/Master.bank
+  SubDir: 
+  lastModified: 637172098363423612
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -98,7 +128,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -3883048215405011750}
+<<<<<<< HEAD
   - {fileID: 5985661402496592361}
+=======
+  - {fileID: -96580293020344654}
+>>>>>>> develop
   EditorEvents:
   - {fileID: -6090259774136847775}
   - {fileID: 7333004936196384800}
@@ -108,10 +142,17 @@ MonoBehaviour:
   - {fileID: -6080519681727694011}
   EditorParameters: []
   MasterBanks:
+<<<<<<< HEAD
   - {fileID: 5985661402496592361}
   StringsBanks:
   - {fileID: -3883048215405011750}
   stringsBankWriteTime: 637172073911151450
+=======
+  - {fileID: -96580293020344654}
+  StringsBanks:
+  - {fileID: -3883048215405011750}
+  stringsBankWriteTime: 637172098504784299
+>>>>>>> develop
   cacheVersion: 3
 --- !u!114 &256733083890564298
 MonoBehaviour:
@@ -146,7 +187,11 @@ MonoBehaviour:
   Path: event:/Sounds/Street/StreetMusic
   guid: 619acf8845c3a74b992c79cb01c5fd6e
   Banks:
+<<<<<<< HEAD
   - {fileID: 5985661402496592361}
+=======
+  - {fileID: -96580293020344654}
+>>>>>>> develop
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -169,7 +214,11 @@ MonoBehaviour:
   Path: event:/Sounds/Riley/Footsteps
   guid: 5822a4432c3ea64d97e43661aa89fc75
   Banks:
+<<<<<<< HEAD
   - {fileID: 5985661402496592361}
+=======
+  - {fileID: -96580293020344654}
+>>>>>>> develop
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -192,7 +241,11 @@ MonoBehaviour:
   Path: event:/Sounds/Hotel Room/HotelCeilingFan
   guid: 3ccdb4bf263f2e4a81c8a4d7baa3cca4
   Banks:
+<<<<<<< HEAD
   - {fileID: 5985661402496592361}
+=======
+  - {fileID: -96580293020344654}
+>>>>>>> develop
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -233,7 +286,11 @@ MonoBehaviour:
   Path: event:/Sounds/Riley/Dialouge
   guid: 24cabd6849297c44a5ae83f242fc82b2
   Banks:
+<<<<<<< HEAD
   - {fileID: 5985661402496592361}
+=======
+  - {fileID: -96580293020344654}
+>>>>>>> develop
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

@@ -14,13 +14,15 @@ public class Interactable : MonoBehaviour
     [SerializeField] private float sceneChangeDelay = 1f;
     public CharacterData characterdata = null;
     [Header("Audio")]
-    [FMODUnity.EventRef] public string changeSceneSoundEvent;
+    [FMODUnity.EventRef] public string interactSoundEvent;
 
     [Header("Events")]
     [SerializeField] private UnityEvent onInteract; // Byter man namn på denna kommer alla existerande interactables att förlora sina events
 
     public void Interact()
     {
+        //FMODUnity.RuntimeManager.PlayOneShot(interactSoundEvent); SOUND IMPLEMENTATION
+
         if (!mouseInteraction)
         {
             onInteract.Invoke();
@@ -53,7 +55,6 @@ public class Interactable : MonoBehaviour
     {
         // Scene change effect(s) can be put here
         // --------------------------------------
-        //FMODUnity.RuntimeManager.PlayOneShot(changeSceneSoundEvent); SOUND IMPLEMENTATION
 
         yield return new WaitForSeconds(sceneChangeDelay);
 

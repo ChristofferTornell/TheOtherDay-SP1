@@ -32,6 +32,10 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (mouseInteraction)
+        {
+            // Change Cursor
+        }
         // Play highlight effects on the object
     }
 

@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
         //SetItems();
     }
 
-    public ItemMenu[] itemMenuList;
+    public ItemSlot[] itemMenuList;
     /*
     public bool CheckForItem(Items questItem)
     {

@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemMenu : MonoBehaviour
+public class ItemSlot : MonoBehaviour
 {
-    public Inventory bp;
     public Button btn;
-    public GameObject rest;
+    public GameObject hideMenuButton;
     public GameObject menu;
-    public int ID;
 
     public Items myItem = null;
     [HideInInspector]public bool isOccupied = false;
+    public ItemIcon myItemIcon = null;
 
     /*
     void Start()

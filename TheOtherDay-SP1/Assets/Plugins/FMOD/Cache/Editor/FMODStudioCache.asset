@@ -1,10 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD
---- !u!114 &-8537298500151964859
-=======
---- !u!114 &-7037121101841379076
->>>>>>> develop
+--- !u!114 &-8579425626000337334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13,7 +9,168 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/Hotel Room/HotelMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/Hotel Room/HotelMusic
+  guid: a6bbbf3512249041bf74fcfcb73b1dc2
+  Banks:
+  - {fileID: -5411576583769881876}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 192000
+--- !u!114 &-6541214638410065333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/Hotel Room/HotelTVStatic
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/Hotel Room/HotelTVStatic
+  guid: 155ef6da5cac3445bef3690f4b471f1b
+  Banks:
+  - {fileID: -5411576583769881876}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3394
+--- !u!114 &-5411576583769881876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FmodBanks/Master.bank
+  SubDir: 
+  lastModified: 637172098363423612
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-4281650949924102249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/Street/StreetMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/Street/StreetMusic
+  guid: 619acf8845c3a74b992c79cb01c5fd6e
+  Banks:
+  - {fileID: -5411576583769881876}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 91636
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 6948672409464760892}
+  - {fileID: -5411576583769881876}
+  EditorEvents:
+  - {fileID: -6541214638410065333}
+  - {fileID: 8231135649535159435}
+  - {fileID: 6379144734082938031}
+  - {fileID: 5473401912522936329}
+  - {fileID: -4281650949924102249}
+  - {fileID: -8579425626000337334}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -5411576583769881876}
+  StringsBanks:
+  - {fileID: 6948672409464760892}
+  stringsBankWriteTime: 637172098504784299
+  cacheVersion: 3
+--- !u!114 &5473401912522936329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/Riley/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/Riley/Footsteps
+  guid: 5822a4432c3ea64d97e43661aa89fc75
+  Banks:
+  - {fileID: -5411576583769881876}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1020
+--- !u!114 &6379144734082938031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/Hotel Room/HotelCeilingFan
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/Hotel Room/HotelCeilingFan
+  guid: 3ccdb4bf263f2e4a81c8a4d7baa3cca4
+  Banks:
+  - {fileID: -5411576583769881876}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11271
+--- !u!114 &6948672409464760892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
@@ -25,24 +182,7 @@ MonoBehaviour:
   - Name: 
     Value: 1004
   Exists: 1
---- !u!114 &-5541006443049535908
-=======
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Street/StreetMusic
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Street/StreetMusic
-  guid: 619acf8845c3a74b992c79cb01c5fd6e
-  Banks:
-  - {fileID: 4153611789122699077}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 91636
---- !u!114 &-4695100425624393611
->>>>>>> develop
+--- !u!114 &8231135649535159435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,246 +191,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-<<<<<<< HEAD
-  m_Name: event:/Sounds/Riley/Footsteps
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Riley/Footsteps
-  guid: 5822a4432c3ea64d97e43661aa89fc75
-  Banks:
-  - {fileID: -4400515391871605439}
-  IsStream: 0
-=======
-  m_Name: event:/Sounds/Hotel Room/HotelCeilingFan
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Hotel Room/HotelCeilingFan
-  guid: 3ccdb4bf263f2e4a81c8a4d7baa3cca4
-  Banks:
-  - {fileID: 4153611789122699077}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 11271
---- !u!114 &-892809674889290217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Hotel Room/HotelMusic
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Hotel Room/HotelMusic
-  guid: a6bbbf3512249041bf74fcfcb73b1dc2
-  Banks:
-  - {fileID: 4153611789122699077}
-  IsStream: 1
->>>>>>> develop
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-<<<<<<< HEAD
-  Length: 1020
---- !u!114 &-4400515391871605439
-=======
-  Length: 192000
---- !u!114 &-763632452709938972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Riley/Footsteps
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Riley/Footsteps
-  guid: 5822a4432c3ea64d97e43661aa89fc75
-  Banks:
-  - {fileID: 4153611789122699077}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1020
---- !u!114 &-509006397523868151
->>>>>>> develop
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-<<<<<<< HEAD
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637172098363423612
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-740571564271038806
-=======
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Hotel Room/HotelTVStatic
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Hotel Room/HotelTVStatic
-  guid: 155ef6da5cac3445bef3690f4b471f1b
-  Banks:
-  - {fileID: 4153611789122699077}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3394
---- !u!114 &11400000
->>>>>>> develop
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-<<<<<<< HEAD
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Hotel Room/HotelMusic
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Hotel Room/HotelMusic
-  guid: a6bbbf3512249041bf74fcfcb73b1dc2
-  Banks:
-  - {fileID: -4400515391871605439}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 192000
---- !u!114 &-79198493377793399
-=======
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 5305298904051625220}
-  - {fileID: 4153611789122699077}
-  EditorEvents:
-  - {fileID: -509006397523868151}
-  - {fileID: 8878144318346027324}
-  - {fileID: -4695100425624393611}
-  - {fileID: -763632452709938972}
-  - {fileID: -7037121101841379076}
-  - {fileID: -892809674889290217}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 4153611789122699077}
-  StringsBanks:
-  - {fileID: 5305298904051625220}
-  stringsBankWriteTime: 637172072252780817
-  cacheVersion: 3
---- !u!114 &4153611789122699077
->>>>>>> develop
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-<<<<<<< HEAD
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Hotel Room/HotelCeilingFan
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Hotel Room/HotelCeilingFan
-  guid: 3ccdb4bf263f2e4a81c8a4d7baa3cca4
-  Banks:
-  - {fileID: -4400515391871605439}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 11271
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: -8537298500151964859}
-  - {fileID: -4400515391871605439}
-  EditorEvents:
-  - {fileID: 6803100775981396455}
-  - {fileID: 1063597479190758487}
-  - {fileID: -79198493377793399}
-  - {fileID: -5541006443049535908}
-  - {fileID: 5394654967579634984}
-  - {fileID: -740571564271038806}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -4400515391871605439}
-  StringsBanks:
-  - {fileID: -8537298500151964859}
-  stringsBankWriteTime: 637172098504784299
-  cacheVersion: 3
---- !u!114 &1063597479190758487
-=======
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637175458361305302
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &5305298904051625220
->>>>>>> develop
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Sounds/Riley/Dialouge
   m_EditorClassIdentifier: 
   Path: event:/Sounds/Riley/Dialouge
   guid: 24cabd6849297c44a5ae83f242fc82b2
   Banks:
-  - {fileID: -4400515391871605439}
+  - {fileID: -5411576583769881876}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -298,77 +205,3 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 92
---- !u!114 &5394654967579634984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Street/StreetMusic
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Street/StreetMusic
-  guid: 619acf8845c3a74b992c79cb01c5fd6e
-  Banks:
-  - {fileID: -4400515391871605439}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 91636
---- !u!114 &6803100775981396455
-=======
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.strings.bank
-  SubDir: 
-  lastModified: 637172072252780817
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 1004
-  Exists: 1
---- !u!114 &8878144318346027324
->>>>>>> develop
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-<<<<<<< HEAD
-  m_Name: event:/Sounds/Hotel Room/HotelTVStatic
-=======
-  m_Name: event:/Sounds/Riley/Dialouge
->>>>>>> develop
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Hotel Room/HotelTVStatic
-  guid: 155ef6da5cac3445bef3690f4b471f1b
-  Banks:
-<<<<<<< HEAD
-  - {fileID: -4400515391871605439}
-=======
-  - {fileID: 4153611789122699077}
->>>>>>> develop
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-<<<<<<< HEAD
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3394
-=======
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 92
->>>>>>> develop

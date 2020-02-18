@@ -10,10 +10,17 @@ public class ItemMenu : MonoBehaviour
     public GameObject rest;
     public GameObject menu;
     public int ID;
-    private int[] type;
 
+    public Items myItem = null;
+    [HideInInspector]public bool isOccupied = false;
+
+    /*
     void Start()
     {
+        if(myItem == null)
+        {
+            isOccupied = false;
+        }
         GameObject parent = transform.parent.parent.gameObject;
         type = parent.GetComponent<Inventory>().type;
         btn.onClick.AddListener(Click);
@@ -43,5 +50,5 @@ public class ItemMenu : MonoBehaviour
         {
             Debug.Log("You opened a backpack in a packpack");
         }
-    }
+    }*/
 }

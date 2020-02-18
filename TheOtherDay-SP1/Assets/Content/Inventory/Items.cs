@@ -6,7 +6,7 @@ using UnityEngine;
 public class Items : ScriptableObject
 {
     public Sprite sprite;
-    public new string name;
+    public string myName;
     [TextArea(3, 7)]
     public string description;
 }

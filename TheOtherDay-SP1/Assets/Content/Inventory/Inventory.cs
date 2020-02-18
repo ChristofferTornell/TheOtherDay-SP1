@@ -6,43 +6,58 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public Items[] items;
-    public Image[] image;
-    public GameObject[] itemSlots;
+    public Image[] images;
     [Range(0, 2)]
-    public int[] type;
+    public Items[] itemsInInventory;
 
     private void Start()
     {
-        SetItems();
+        //SetItems();
     }
+
+    public ItemMenu[] itemMenuList;
+    /*
+    public bool CheckForItem(Items questItem)
+    {
+        for (int i = 0; i < itemMenuList.Length; i++)
+        {
+            if (itemMenuList[i] == questItem)
+            {
+                return
+            }
+        }
+        //
+        foreach (Items item in items)
+        {
+            if(item == questItem)
+            {
+                return true;
+            }
+        }
+        return false;
+        
+    }*/
+
 
     public void INV_AddItem(Items item)
     {
-        for(int i = 0; i < itemSlots.Length; i++)
+        for(int i = 0; i < itemMenuList.Length; i++)
         {
-            if(type[i] == 0)
+            if(itemMenuList[i].isOccupied == false)
             {
-                Debug.Log("Adding item " + item.name);
-                image[i].sprite = item.sprite;
-                switch (item.name)
-                {
-                    case "Water Bottle":
-                        type[i] = 1;
-                    break;
-
-                    case "Backpack":
-                        type[i] = 2;
-                    break;
-                }
+                Debug.Log("Adding item " + item.myName);
+                itemMenuList[i].isOccupied = true;
+                itemMenuList[i].myItem = item;
+                images[i].sprite = item.sprite;
                 return;
             }
         }
     }
-
+    /*
     public void INV_RemoveItem(int slot)
     {
         type[slot] = 0;
-        image[slot].sprite = items[0].sprite;
+        images[slot].sprite = items[0].sprite;
     }
 
     public void INV_UseItem(int type)
@@ -52,9 +67,10 @@ public class Inventory : MonoBehaviour
 
     private void SetItems()
     {
-        for (int i = 0; i < image.Length; i++)
+        for (int i = 0; i < images.Length; i++)
         {
-            image[i].sprite = items[type[i]].sprite;
+            images[i].sprite = items[type[i]].sprite;
         }
     }
+    */
 }

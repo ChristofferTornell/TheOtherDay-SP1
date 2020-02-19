@@ -456,6 +456,7 @@ MonoBehaviour:
   savePlayerPosition: 0
   mouseInteraction: 1
   OneTime: 0
+  hoverCursor: 5
   sceneChangeDelay: 1
   characterdata: {fileID: 0}
   interactSoundEvent: 
@@ -1482,6 +1483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene Essentials
       objectReference: {fileID: 0}
+    - target: {fileID: 853701106, guid: 6feaf60f489aa7444a205dbb2b5fbeb6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1243228700668701290, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1537,8 +1542,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 853701106, guid: 6feaf60f489aa7444a205dbb2b5fbeb6, type: 3}
-      propertyPath: m_LocalPosition.z
+    - target: {fileID: 1844750349108326845, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: cursorOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1844750349108326845, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: cursorOffset.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1874563062861499967, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
@@ -2011,6 +2022,7 @@ MonoBehaviour:
   savePlayerPosition: 0
   mouseInteraction: 1
   OneTime: 1
+  hoverCursor: 5
   sceneChangeDelay: 1
   characterdata: {fileID: 0}
   interactSoundEvent: 

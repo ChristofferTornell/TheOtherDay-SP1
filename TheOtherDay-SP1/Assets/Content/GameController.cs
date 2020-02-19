@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public enum CursorSprite { SmallPointer, BigPointer, SmallGlass, BigGlass, SmallHand, BigHand }
@@ -9,15 +10,17 @@ public class GameController : MonoBehaviour
 {
     public static bool pause = false;
     public static string currentScene;
-    public static CursorSprite cursorSprite = CursorSprite.BigPointer;
+    public CursorSprite defaultCursor = CursorSprite.BigPointer;
+    public Vector2 cursorOffset = Vector2.zero;
 
-    [Header("Cursor Sprites")]
+    [Header("Cursor Textures")]
     public Texture2D smallPointer = null;
     public Texture2D bigPointer = null;
     public Texture2D smallGlass = null;
     public Texture2D bigGlass = null;
     public Texture2D smallHand = null;
     public Texture2D bigHand = null;
+    [Space]
 
     [SerializeField] private Transform startingPosition = null;
 
@@ -31,42 +34,42 @@ public class GameController : MonoBehaviour
     {
         pause = false;
         Time.timeScale = 1;
-        ChangeCursor(CursorSprite.BigHand);
+        ChangeCursor(defaultCursor);
     }
 
-    public void ChangeCursor(CursorSprite newCursor)
+    public void ChangeCursor(CursorSprite cursor)
     {
-        cursorSprite = newCursor;
-    }
-
-    private void UpdateCursor()
-    {
-        switch (cursorSprite)
+        switch (cursor)
         {
             case CursorSprite.SmallPointer:
-                Cursor.SetCursor(smallPointer, Vector2.zero, CursorMode.Auto);
+                Cursor.SetCursor(smallPointer, cursorOffset, CursorMode.Auto);
                 return;
 
             case CursorSprite.BigPointer:
-                Cursor.SetCursor(bigPointer, Vector2.zero, CursorMode.Auto);
+                Cursor.SetCursor(bigPointer, cursorOffset, CursorMode.Auto);
                 return;
 
             case CursorSprite.SmallGlass:
-                Cursor.SetCursor(smallGlass, Vector2.zero, CursorMode.Auto);
+                Cursor.SetCursor(smallGlass, cursorOffset, CursorMode.Auto);
                 return;
 
             case CursorSprite.BigGlass:
-                Cursor.SetCursor(bigGlass, Vector2.zero, CursorMode.Auto);
+                Cursor.SetCursor(bigGlass, cursorOffset, CursorMode.Auto);
                 return;
 
             case CursorSprite.SmallHand:
-                Cursor.SetCursor(smallHand, Vector2.zero, CursorMode.Auto);
+                Cursor.SetCursor(smallHand, new Vector2(8, 10f), CursorMode.Auto);
                 return;
 
             case CursorSprite.BigHand:
-                Cursor.SetCursor(bigHand, Vector2.zero, CursorMode.Auto);
+                Cursor.SetCursor(bigHand, new Vector2(8, 10f), CursorMode.Auto);
                 return;
         }
+    }
+
+    public void ResetCursor()
+    {
+        ChangeCursor(defaultCursor);
     }
 
     public static void Pause(bool boolean)
@@ -79,10 +82,5 @@ public class GameController : MonoBehaviour
     {
         Vector2 newVector2 = new Vector2(startingPosition.position.x, startingPosition.position.y);
         return newVector2;
-    }
-
-    private void Update()
-    {
-        UpdateCursor();
     }
 }

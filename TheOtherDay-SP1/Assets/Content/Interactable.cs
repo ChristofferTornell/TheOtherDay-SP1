@@ -10,6 +10,7 @@ public class Interactable : MonoBehaviour
     public bool savePlayerPosition = false;
     public bool mouseInteraction = false;
     public bool OneTime = false;
+    public CursorSprite hoverCursor = CursorSprite.BigHand;
     [Space]
     [SerializeField] private float sceneChangeDelay = 1f;
     public CharacterData characterdata = null;
@@ -18,6 +19,12 @@ public class Interactable : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private UnityEvent onInteract; // Byter man namn på denna kommer alla existerande interactables att förlora sina events
+    private GameController gameController;
+
+    private void Start()
+    {
+        gameController = FindObjectOfType<GameController>();
+    }
 
     public void Interact()
     {
@@ -34,9 +41,17 @@ public class Interactable : MonoBehaviour
     {
         if (mouseInteraction)
         {
-            // Change Cursor
+            gameController.ChangeCursor(hoverCursor);
         }
         // Play highlight effects on the object
+    }
+
+    private void OnMouseExit()
+    {
+        if (mouseInteraction)
+        {
+            gameController.ResetCursor();
+        }
     }
 
     private void OnMouseDown()

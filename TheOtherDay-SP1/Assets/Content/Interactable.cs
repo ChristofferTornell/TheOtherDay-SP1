@@ -39,7 +39,7 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (mouseInteraction)
+        if (mouseInteraction && !DialogueManager.dialogueActive)
         {
             gameController.ChangeCursor(hoverCursor);
         }
@@ -56,7 +56,7 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (mouseInteraction)
+        if (mouseInteraction && !DialogueManager.dialogueActive)
         {
             Debug.Log("Interacting with " + gameObject.name + " using mouse");
             onInteract.Invoke();

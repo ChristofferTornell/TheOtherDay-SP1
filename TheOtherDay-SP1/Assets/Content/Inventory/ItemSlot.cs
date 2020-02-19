@@ -2,52 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ItemSlot : MonoBehaviour
 {
     public Button btn;
-    public GameObject hideMenuButton;
-    public GameObject menu;
+    //public GameObject hideMenuButton;
+    //public GameObject menu;
+    public Inventory inventory;
 
     public Items myItem = null;
-    [HideInInspector]public bool isOccupied = false;
     public ItemIcon myItemIcon = null;
 
-    /*
+    
     void Start()
     {
-        if(myItem == null)
-        {
-            isOccupied = false;
-        }
-        GameObject parent = transform.parent.parent.gameObject;
-        type = parent.GetComponent<Inventory>().type;
         btn.onClick.AddListener(Click);
     }
 
     void Click()
     {
-        if(type[ID] != 0 && type[ID] != 1)
+        //menu.SetActive(true);
+        //hideMenuButton.SetActive(true);
+        Debug.Log("You clicked me");
+    }
+
+    public void UseItem(Items item)
+    {
+        if(item.useable)
         {
-            menu.SetActive(true);
-            rest.SetActive(true);
+            item.OnUse();
         }
-        else if(type[ID] == 1)
+        else
         {
-            UseItem(1);
+            Debug.Log("You can not use this item");
         }
     }
 
-    public void UseItem(int type)
+    public void ExamineItem(Items item)
     {
-        if(type == 1)
-        {
-            bp.INV_RemoveItem(ID);
-            Debug.Log("You drank water, hungover level decreased");
-        }
-        else if(type == 2)
-        {
-            Debug.Log("You opened a backpack in a packpack");
-        }
-    }*/
+        inventory.descriptionBoxNameTextObj.text = item.myName;
+        inventory.descriptionBoxDescriptionTextObj.text = item.description;
+        inventory.descriptionBoxImageObj.sprite = item.sprite;
+
+        inventory.descriptionBoxObj.SetActive(true);
+    }
+
+    public void ExitExamineMenu()
+    {
+        inventory.descriptionBoxObj.SetActive(false);
+    }
 }

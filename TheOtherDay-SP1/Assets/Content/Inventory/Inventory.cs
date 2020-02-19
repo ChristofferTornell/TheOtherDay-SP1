@@ -2,75 +2,88 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Inventory : MonoBehaviour
 {
-    public Items[] items;
-    public Image[] images;
-    [Range(0, 2)]
-    public Items[] itemsInInventory;
+    public GameObject itemBar;
+    public GameObject itemSlotObj;
+    public int itemSlotAmount;
+    public InventoryManager inventoryManager;
+
+    public GameObject descriptionBoxObj;
+    public TextMeshProUGUI descriptionBoxDescriptionTextObj;
+    public TextMeshProUGUI descriptionBoxNameTextObj;
+    public Image descriptionBoxImageObj;
+
+    public Button backpackButton;
+
+
+
+    [HideInInspector] public static Inventory instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        instance = this;
+    }
 
     private void Start()
     {
-        //SetItems();
+        backpackButton = GetComponent<BackpackButton>().button;
+        inventoryManager.itemSlots = new ItemSlot[itemSlotAmount];
+
+        for (int i = 0; i < itemSlotAmount; i++)
+        {
+            GameObject iSlotObj = Instantiate(itemSlotObj);
+            iSlotObj.transform.SetParent(itemBar.transform);
+            ItemSlot iSlot = iSlotObj.GetComponent<ItemSlot>();
+            inventoryManager.itemSlots[i] = iSlot;
+            iSlot.inventory = this;
+            iSlot.btn = backpackButton;
+        }
     }
-
-    public ItemSlot[] itemMenuList;
-    /*
-    public bool CheckForItem(Items questItem)
-    {
-        for (int i = 0; i < itemMenuList.Length; i++)
-        {
-            if (itemMenuList[i] == questItem)
-            {
-                return
-            }
-        }
-        //
-        foreach (Items item in items)
-        {
-            if(item == questItem)
-            {
-                return true;
-            }
-        }
-        return false;
-        
-    }*/
-
 
     public void INV_AddItem(Items item)
     {
-        for(int i = 0; i < itemMenuList.Length; i++)
+        foreach (ItemSlot iSlot in inventoryManager.itemSlots)
         {
-            if(itemMenuList[i].isOccupied == false)
+            if (iSlot.myItem == null)
             {
                 Debug.Log("Adding item " + item.myName);
-                itemMenuList[i].isOccupied = true;
-                itemMenuList[i].myItem = item;
-                images[i].sprite = item.sprite;
+                iSlot.myItem = item;
+                iSlot.myItemIcon.UpdateSprite(item.sprite);
+                iSlot.myItem.myItemSlot = iSlot;
                 return;
             }
         }
     }
-    /*
-    public void INV_RemoveItem(int slot)
-    {
-        type[slot] = 0;
-        images[slot].sprite = items[0].sprite;
-    }
 
-    public void INV_UseItem(int type)
-    {
 
-    }
-
-    private void SetItems()
+    public bool INV_FindItem(Items item)
     {
-        for (int i = 0; i < images.Length; i++)
+        foreach (ItemSlot iSlot in inventoryManager.itemSlots)
         {
-            images[i].sprite = items[type[i]].sprite;
+            if (iSlot.myItem == item)
+            {
+                Debug.Log("Found item " + item.myName);
+                return true;
+            }
         }
+        return false;
     }
-    */
+
+    public Sprite nullSprite;
+
+    public void INV_ClearItemSlot(ItemSlot _itemSlot)
+    {
+        Debug.Log("Adding item " + _itemSlot);
+
+        _itemSlot.myItem = null;
+        _itemSlot.myItemIcon.UpdateSprite(nullSprite);
+    }
+
 }

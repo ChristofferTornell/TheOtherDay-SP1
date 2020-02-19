@@ -13,8 +13,6 @@ public class Inventory : MonoBehaviour
 
     public GameObject descriptionBoxObj;
     public TextMeshProUGUI descriptionBoxDescriptionTextObj;
-    public TextMeshProUGUI descriptionBoxNameTextObj;
-    public Image descriptionBoxImageObj;
 
     public Button backpackButton;
 
@@ -33,7 +31,6 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        backpackButton = GetComponent<BackpackButton>().button;
         inventoryManager.itemSlots = new ItemSlot[itemSlotAmount];
 
         for (int i = 0; i < itemSlotAmount; i++)
@@ -43,7 +40,6 @@ public class Inventory : MonoBehaviour
             ItemSlot iSlot = iSlotObj.GetComponent<ItemSlot>();
             inventoryManager.itemSlots[i] = iSlot;
             iSlot.inventory = this;
-            iSlot.btn = backpackButton;
         }
     }
 

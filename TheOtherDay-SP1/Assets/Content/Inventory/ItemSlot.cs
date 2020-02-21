@@ -33,7 +33,14 @@ public class ItemSlot : MonoBehaviour
             Debug.Log("I dont have an item :(");
             return;
         }
-        menu.SetActive(true);
+        if (menu.activeSelf)
+        {
+            menu.SetActive(false);
+        }
+        else
+        {
+            menu.SetActive(true);
+        }
         //hideMenuButton.SetActive(true);
         Debug.Log("You clicked me");
     }
@@ -48,6 +55,7 @@ public class ItemSlot : MonoBehaviour
         {
             Debug.Log("You can not use this item: " + myItem);
         }
+        menu.SetActive(false);
     }
 
     public void ExamineItem()
@@ -55,6 +63,7 @@ public class ItemSlot : MonoBehaviour
 
         StartCoroutine(AutotypeText(myItem.description, typeDelay));
         inventory.descriptionBoxObj.SetActive(true);
+        menu.SetActive(false);
     }
 
     public void ExitExamineMenu()

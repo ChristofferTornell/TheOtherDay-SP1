@@ -9,6 +9,15 @@ public class PlayerMovement : MonoBehaviour
     private static PlayerMovement playerInstance;
     public static bool playerMovementLocked = false;
 
+    [Header("Animation")]
+    public Animator animator = null;
+    public AnimationClip IdleLeft;
+    public AnimationClip IdleRight;
+    public AnimationClip WalkLeft;
+    public AnimationClip WalkRight;
+    private Vector2 lookDirection;
+
+    [Space]
     [Tooltip("The string name of the axis at Edit -> Project Settings -> Input")]
     [SerializeField] private string horizontalAxis = "Horizontal";
 
@@ -93,14 +102,19 @@ public class PlayerMovement : MonoBehaviour
         // Right
         if (Input.GetAxisRaw(horizontalAxis) > 0)
         {
+            lookDirection = Vector2.right;
             rb.velocity = Vector2.right * movementSpeed * Time.deltaTime;
+            animator.Play(WalkRight.name);
         }
 
         // Left
         if (Input.GetAxisRaw(horizontalAxis) < 0)
         {
+            lookDirection = Vector2.left;
             rb.velocity = Vector2.left * movementSpeed * Time.deltaTime;
+            animator.Play(WalkLeft.name);
         }
+
         if (rb.velocity == Vector2.zero)
         {
             if (footStepInstanceActive)
@@ -126,6 +140,19 @@ public class PlayerMovement : MonoBehaviour
     [FMODUnity.EventRef] public string footStepEvent;
     FMOD.Studio.EventInstance footStepInstance;
     private bool footStepInstanceActive;
+
+    private void Update()
+    {
+        if (lookDirection == Vector2.left && Input.GetAxisRaw(horizontalAxis) == 0)
+        {
+            animator.Play(IdleLeft.name);
+        }
+
+        if (lookDirection == Vector2.right && Input.GetAxisRaw(horizontalAxis) == 0)
+        {
+            animator.Play(IdleRight.name);
+        }
+    }
 
     void FixedUpdate()
     {

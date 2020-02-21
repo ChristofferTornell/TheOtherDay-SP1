@@ -1,12 +1,78 @@
 fileFormatVersion: 2
 guid: cf42e9fc62deded46aae28e46a4a7d1a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3332999139314093449
+    second: Riley_spriteSheet_01_0
+  - first:
+      213: 8504783248653659603
+    second: Riley_spriteSheet_01_1
+  - first:
+      213: -8718641700313481493
+    second: Riley_spriteSheet_01_2
+  - first:
+      213: -4309582874290988294
+    second: Riley_spriteSheet_01_3
+  - first:
+      213: 9049416597142624605
+    second: Riley_spriteSheet_01_4
+  - first:
+      213: -5801188351033498211
+    second: Riley_spriteSheet_01_5
+  - first:
+      213: 6689125850567259064
+    second: Riley_spriteSheet_01_6
+  - first:
+      213: -8070884592784636589
+    second: Riley_spriteSheet_01_7
+  - first:
+      213: -8354310332295045824
+    second: Riley_spriteSheet_01_8
+  - first:
+      213: 2583388401315494801
+    second: Riley_spriteSheet_01_9
+  - first:
+      213: -2084716353196682459
+    second: Riley_spriteSheet_01_10
+  - first:
+      213: -5548701959107330087
+    second: Riley_spriteSheet_01_11
+  - first:
+      213: -2069784317017092833
+    second: Riley_spriteSheet_01_12
+  - first:
+      213: -3099561974886321465
+    second: Riley_spriteSheet_01_13
+  - first:
+      213: -8973806992874520732
+    second: Riley_spriteSheet_01_14
+  - first:
+      213: -617409930457752561
+    second: Riley_spriteSheet_01_15
+  - first:
+      213: 189958708800559031
+    second: Riley_spriteSheet_01_16
+  - first:
+      213: -7393786853393437542
+    second: Riley_spriteSheet_01_17
+  - first:
+      213: -6572558699897976892
+    second: Riley_spriteSheet_01_18
+  - first:
+      213: 1781568964789368971
+    second: Riley_spriteSheet_01_19
+  - first:
+      213: 6769449026585050434
+    second: Riley_spriteSheet_01_20
+  - first:
+      213: 5953948397369125125
+    second: Riley_spriteSheet_01_21
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -31,16 +97,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +115,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -63,7 +129,43 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -72,11 +174,473 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 87
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0291c959c257d2843a7e63abff620677
+      internalID: -3332999139314093449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 87
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f02ff24f0596e84f84a1a2fb62e3b57
+      internalID: 8504783248653659603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 87
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fe4ee91c2236a459a214e110ab6fd9
+      internalID: -8718641700313481493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_3
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 87
+        width: 18
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2f2b36abe12ba42b1a6ba04c31b66c
+      internalID: -4309582874290988294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_4
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 87
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3212bdd063e614490aae4adcb5cf8c
+      internalID: 9049416597142624605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_5
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 87
+        width: 17
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc282e2004611c4a8c2a9fe6d694977
+      internalID: -5801188351033498211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_6
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 48
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdf38bd0b7679f44ae530fbf98abdba
+      internalID: 6689125850567259064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_7
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 48
+        width: 29
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ce0bec8235710408d4dbc8f8ec1473
+      internalID: -8070884592784636589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_8
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 48
+        width: 24
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75cd9555289fee8469b4f19525903f65
+      internalID: -8354310332295045824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_9
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 48
+        width: 22
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21010605fd97c7445a9bde4f3b2f954f
+      internalID: 2583388401315494801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_10
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 48
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e304c70f2460ce48b91ae6605715025
+      internalID: -2084716353196682459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_11
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 48
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197d8d68b0f3cbe4b970f2d8e5b8850e
+      internalID: -5548701959107330087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_12
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 48
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8132ae8dbe3ca7a4499045707dcef47e
+      internalID: -2069784317017092833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_13
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 48
+        width: 23
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f1e1960b1355a49b67e9260aff2281
+      internalID: -3099561974886321465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_14
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 8
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8645732f4e74d3341b7850d0fe1a7122
+      internalID: -8973806992874520732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_15
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 8
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8642d411b8796bc4abc5574174c4a815
+      internalID: -617409930457752561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_16
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 8
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ea58d7aafc0fc47890a2730e5748ba
+      internalID: 189958708800559031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 8
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75f26fd7dea77e4ebebe4ac3dfd3574
+      internalID: -7393786853393437542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_18
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 8
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c90b52ab47404c458bc73b7421673ec
+      internalID: -6572558699897976892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_19
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 8
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80bccee3e152de4f8d4e4b147a4e34f
+      internalID: 1781568964789368971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_20
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 8
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c23b608c143fdd4ba0cc6d8e95438ce
+      internalID: 6769449026585050434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_01_21
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 8
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dba7109e8193f347acf17cfe1954962
+      internalID: 5953948397369125125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1ea600b52ac40ce428a6cdf658b22672
     internalID: 0
     vertices: []
     indices: 

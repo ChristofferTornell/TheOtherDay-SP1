@@ -12,7 +12,7 @@ public class Phone : MonoBehaviour
     private float PressingDelta = 0.6f;
     private float PressingTime = 0;
 
-    public Button CallButton;
+   // public Button CallButton;
     public GameObject CallPage;
 
     public Button MessageButton;
@@ -24,15 +24,17 @@ public class Phone : MonoBehaviour
     public Button AlbumButton;
     public GameObject AlbumPage;
 
-    public Button PhoneButton;
-
+    public Button PullUpButton;
+    public Button PullDownButton;
+    
     private void Start()
     {
-        CallButton.onClick.AddListener(EnableCall);
+        //CallButton.onClick.AddListener(EnableCall);
         MessageButton.onClick.AddListener(EnableMessage);
         LogButton.onClick.AddListener(EnableLog);
         AlbumButton.onClick.AddListener(EnableAlbum);
-        PhoneButton.onClick.AddListener(PullUp);
+        PullUpButton.onClick.AddListener(PullUp);
+        PullDownButton.onClick.AddListener(PullDown);
     }
 
     void EnableCall()
@@ -59,13 +61,18 @@ public class Phone : MonoBehaviour
     {
         PullUpTime = 0;
         Pulling = true;
-        PhoneButton.gameObject.SetActive(false);
+        PullUpButton.gameObject.SetActive(false);
+        PullDownButton.gameObject.SetActive(true);
+        Debug.Log("Pulled up");
     }
+
     void PullDown()
     {
         PullUpTime = 0;
         Pulling = true;
-        PhoneButton.gameObject.SetActive(true);
+        PullUpButton.gameObject.SetActive(true);
+        PullDownButton.gameObject.SetActive(false);
+        Debug.Log("Pulled down");
     }
 
     private void Update()

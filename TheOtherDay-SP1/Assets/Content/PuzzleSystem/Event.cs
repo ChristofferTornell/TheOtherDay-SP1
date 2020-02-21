@@ -26,7 +26,6 @@ public class Event : ScriptableObject
 
         }
 
-
         return true;
         // Go thruogh all conditions, if all are satisfied: EventComplete = true 
     }

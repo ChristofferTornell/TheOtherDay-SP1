@@ -918,6 +918,7 @@ MonoBehaviour:
   savePlayerPosition: 0
   mouseInteraction: 1
   OneTime: 0
+  hoverCursor: 5
   sceneChangeDelay: 1
   characterdata: {fileID: 0}
   interactSoundEvent: 
@@ -3490,6 +3491,12 @@ PrefabInstance:
       propertyPath: hours
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: sceneData
+      value: 
+      objectReference: {fileID: 11400000, guid: db7ce4cf5d6b78644b768c39a2af37b8,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6feaf60f489aa7444a205dbb2b5fbeb6, type: 3}
 --- !u!114 &1243228701576139505 stripped

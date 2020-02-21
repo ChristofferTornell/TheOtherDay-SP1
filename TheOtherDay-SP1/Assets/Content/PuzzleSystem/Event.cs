@@ -10,6 +10,11 @@ public class Event : ScriptableObject
     [SerializeField] private List<Event> eventConditions = new List<Event>();
     [SerializeField] private List<Items> itemConditions = new List<Items>();
 
+    public void CompleteEvent()
+    {
+        eventComplete = true;
+    }
+
     public bool CheckIfDone()
     {
         for (int i = 0; i < eventConditions.Count; i++)
@@ -26,8 +31,8 @@ public class Event : ScriptableObject
 
         }
 
-
-        return true;
+        eventComplete = true;
+        return eventComplete;
         // Go thruogh all conditions, if all are satisfied: EventComplete = true 
     }
 }

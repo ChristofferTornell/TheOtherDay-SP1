@@ -32,15 +32,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
-        //if (playerInstance == null)
-        //{
-        //    DontDestroyOnLoad(this);
-        //    playerInstance = this;
-        //}
-        //else
-        //{
-        //    Destroy(gameObject);
-        //}
+        if (playerInstance == null)
+        {
+            DontDestroyOnLoad(this);
+            playerInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()
@@ -75,13 +75,13 @@ public class PlayerMovement : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //Vector2 newPosition = SavedPositions.GetPosition(GameController.currentScene);
+        Vector2 newPosition = SavedPositions.GetPosition(GameController.currentScene);
 
-        //if (newPosition != Vector2.zero)
-        //{
-        //    Debug.Log("New Position: " + newPosition);
-        //    transform.position = newPosition;
-        //}
+        if (newPosition != Vector2.zero)
+        {
+            Debug.Log("New Position: " + newPosition);
+            transform.position = newPosition;
+        }
     }
 
     void PlayerInput()

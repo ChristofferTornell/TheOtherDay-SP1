@@ -10,11 +10,13 @@ public class Interactable : MonoBehaviour
     public bool savePlayerPosition = false;
     public bool mouseInteraction = false;
     public bool examineOnClick = false;
+    public bool pickupItem = false;
     public bool OneTime = false;
     public CursorSprite hoverCursor = CursorSprite.BigHand;
     [Space]
     [SerializeField] private float sceneChangeDelay = 1f;
     public CharacterData characterdata = null;
+    public Items itemData = null;
     [Header("Audio")]
     [FMODUnity.EventRef] public string interactSoundEvent;
 
@@ -62,13 +64,17 @@ public class Interactable : MonoBehaviour
         {
             Debug.Log("Interacting with " + gameObject.name + " using mouse");
             onInteract.Invoke();
+            if (pickupItem)
+            {
+                Inventory.instance.INV_AddItem(itemData);
+            }
             if (OneTime) { DestroyThis(); }
         }
         if (examineOnClick)
         {
             if (characterdata != null)
             {
-
+                DescriptionUI.instance.ExamineNPC(characterdata);
                 //description.text = characterData.description;
             }
         }

@@ -120,8 +120,6 @@ public class PlayerMovement : MonoBehaviour
             if (footStepInstanceActive)
             {
                 footStepInstanceActive = false;
-                Debug.Log("disable footstep sound");
-
                 footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
@@ -129,7 +127,6 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!footStepInstanceActive)
             {
-                Debug.Log("active footstep sound");
                 footStepInstanceActive = true;
                 footStepInstance.start();
 

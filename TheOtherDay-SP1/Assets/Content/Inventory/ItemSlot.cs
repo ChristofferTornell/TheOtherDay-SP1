@@ -15,16 +15,12 @@ public class ItemSlot : MonoBehaviour
     public ItemIcon myItemIcon = null;
     public int slotIndex;
 
-    public float typeDelay = 1f;
-    private float timerCounter = 0f;
-    public float boxExitDelay = 1f;
-    private bool timerTrigger = false;
-
     
     void Start()
     {
         btn.onClick.AddListener(Click);
         inventory = Inventory.instance;
+        Debug.Log("Inventory instance: " + inventory.GetHashCode().ToString());
         foreach (ItemSlot _iSlot in inventory.inventoryManager.itemSlots)
         {
             if (_iSlot.myItem != null)
@@ -50,7 +46,6 @@ public class ItemSlot : MonoBehaviour
             menu.SetActive(true);
         }
         //hideMenuButton.SetActive(true);
-        Debug.Log("You clicked me");
     }
 
     public void UseItem()
@@ -69,43 +64,8 @@ public class ItemSlot : MonoBehaviour
     public void ExamineItem()
     {
 
-        StartCoroutine(AutotypeText(myItem.description, typeDelay));
-        inventory.descriptionBoxObj.SetActive(true);
+        DescriptionUI.instance.ExamineItem(myItem);
         menu.SetActive(false);
-    }
-
-    public void ExitExamineMenu()
-    {
-        inventory.descriptionBoxObj.SetActive(false);
-    }
-
-    IEnumerator AutotypeText(string inputMessage, float delay)
-    {
-
-        for (int i = 0; i < inputMessage.Length; i++)
-        {
-            inventory.descriptionBoxDescriptionTextObj.text = inputMessage.Substring(0, i + 1);
-            yield return new WaitForSeconds(delay);
-        }
-        timerCounter = 0f;
-        timerTrigger = true;
-
-    }
-
-    private void Update()
-    {
-        if (!timerTrigger)
-        {
-            return;
-        }
-
-        timerCounter += Time.deltaTime;
-        if (timerCounter >= boxExitDelay)
-        {
-            timerTrigger = false;
-            timerCounter = 0f;
-            ExitExamineMenu();
-        }
     }
 
 }

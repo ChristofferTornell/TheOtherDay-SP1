@@ -455,10 +455,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
   mouseInteraction: 1
+  examineOnClick: 0
+  pickupItem: 0
   OneTime: 0
   hoverCursor: 5
   sceneChangeDelay: 1
   characterdata: {fileID: 0}
+  itemData: {fileID: 0}
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -485,6 +488,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onMouseInteract:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &380389401
@@ -818,18 +826,6 @@ MonoBehaviour:
   - {x: 3.9407806, y: -3.4216905, z: 0}
   - {x: 3.7915354, y: 2.5611842, z: 0}
   - {x: -3.2704368, y: 2.5008712, z: 0}
---- !u!114 &521835482 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4579092622392651757, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1409712999}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b7b25beb7ee7524b9e3edeb5555ed9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &578837131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1023,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &930656232
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6020426335575503426, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: m_Name
+      value: SceneEssentialsDontDestroy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020426335575503424, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020426335575503424, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020426335575503424, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020426335575503424, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020426335575503424, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020426335575503424, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020426335575503424, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020426335575503424, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020426335575503424, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020426335575503424, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020426335575503424, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
 --- !u!1 &966828326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,6 +1671,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 3732617407535675623, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415259249700216488, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.28
+      objectReference: {fileID: 0}
     - target: {fileID: 1844750349108326845, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: cursorOffset.x
@@ -1650,16 +1725,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732617407535675623, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4415259249700216488, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.28
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4579092622392651758, guid: 6feaf60f489aa7444a205dbb2b5fbeb6, type: 3}
@@ -2122,26 +2187,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
   mouseInteraction: 1
+  examineOnClick: 0
+  pickupItem: 1
   OneTime: 1
   hoverCursor: 5
   sceneChangeDelay: 1
   characterdata: {fileID: 0}
+  itemData: {fileID: 11400000, guid: 23c96a41a0e3a9e43ab19bcd40d410be, type: 2}
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 521835482}
-        m_MethodName: INV_AddItem
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 23c96a41a0e3a9e43ab19bcd40d410be,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: Items, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1874357370}
         m_MethodName: IE_PlayAudio
         m_Mode: 1
@@ -2153,6 +2209,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onMouseInteract:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &1874357371

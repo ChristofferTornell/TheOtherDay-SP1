@@ -11,13 +11,6 @@ public class Inventory : MonoBehaviour
     public int itemSlotAmount;
     public InventoryManager inventoryManager;
 
-    public GameObject descriptionBoxObj;
-    public TextMeshProUGUI descriptionBoxDescriptionTextObj;
-
-    public Button backpackButton;
-
-
-
     [HideInInspector] public static Inventory instance;
 
     private void Awake()
@@ -26,7 +19,12 @@ public class Inventory : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        instance = this;
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
     }
 
     private void Start()
@@ -47,8 +45,10 @@ public class Inventory : MonoBehaviour
 
     public void INV_AddItem(Items item)
     {
+        Debug.Log("trying to add item");
         foreach (ItemSlot iSlot in inventoryManager.itemSlots)
         {
+            Debug.Log("checking each slot");
             if (iSlot.myItem == null)
             {
                 Debug.Log("Adding item " + item.myName);
@@ -59,7 +59,6 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
 
     public bool INV_FindItem(Items item)
     {

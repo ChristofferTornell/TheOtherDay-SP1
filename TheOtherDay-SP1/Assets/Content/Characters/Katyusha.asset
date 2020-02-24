@@ -13,14 +13,23 @@ MonoBehaviour:
   m_Name: Katyusha
   m_EditorClassIdentifier: 
   name: Katyusha
+  description: This is Katyusha.
   contactImage: {fileID: 21300000, guid: 34745eb2056682443b10c84a79c8a6a6, type: 3}
-  dialogueImageNormal: {fileID: 21300000, guid: 34745eb2056682443b10c84a79c8a6a6,
+  dialogueImageFlashbackNormal: {fileID: 21300000, guid: 34745eb2056682443b10c84a79c8a6a6,
     type: 3}
-  dialogueImageHappy: {fileID: 21300000, guid: 6ff12a432139f9149953bc4723e43aa4, type: 3}
-  dialogueImageSad: {fileID: 21300000, guid: 2a33b5146bc14464bb6f4a29f29126b3, type: 3}
-  font: {fileID: 11400000, guid: 9a6e7fbdb43d4f145b169bbc9b0328bb, type: 2}
+  dialogueImageFlashbackHappy: {fileID: 21300000, guid: 34745eb2056682443b10c84a79c8a6a6,
+    type: 3}
+  dialogueImageFlashbackSad: {fileID: 21300000, guid: 34745eb2056682443b10c84a79c8a6a6,
+    type: 3}
+  dialogueImagePresentNormal: {fileID: 21300000, guid: 34745eb2056682443b10c84a79c8a6a6,
+    type: 3}
+  dialogueImagePresentHappy: {fileID: 21300000, guid: 34745eb2056682443b10c84a79c8a6a6,
+    type: 3}
+  dialogueImagePresentSad: {fileID: 21300000, guid: 34745eb2056682443b10c84a79c8a6a6,
+    type: 3}
+  font: {fileID: 11400000, guid: 06188d2604db92e4786bc502162be7d4, type: 2}
   color: {r: 0.66967785, g: 0.7900989, b: 0.9528302, a: 1}
-  typingSound: 
+  typingSound: event:/Sounds/Riley/SoundsRileyDialogue
   sms:
   - hej
   - 

@@ -9,7 +9,7 @@ public class Interactable : MonoBehaviour
 {
     public bool savePlayerPosition = false;
     public bool mouseInteraction = false;
-    public bool ifExamineOnClick = false;
+    public bool examineOnClick = false;
     public bool OneTime = false;
     public CursorSprite hoverCursor = CursorSprite.BigHand;
     [Space]
@@ -64,7 +64,7 @@ public class Interactable : MonoBehaviour
             onInteract.Invoke();
             if (OneTime) { DestroyThis(); }
         }
-        if (ifExamineOnClick)
+        if (examineOnClick)
         {
             if (characterdata != null)
             {

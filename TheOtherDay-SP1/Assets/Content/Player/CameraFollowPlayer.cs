@@ -24,7 +24,10 @@ public class CameraFollowPlayer : MonoBehaviour
 
     void Start()
     {
-        player = FindObjectOfType<PlayerMovement>().transform;
+        if (FindObjectOfType<PlayerMovement>())
+        {
+            player = FindObjectOfType<PlayerMovement>().transform;
+        }
 
         // Place the camera on the player
         if (player)

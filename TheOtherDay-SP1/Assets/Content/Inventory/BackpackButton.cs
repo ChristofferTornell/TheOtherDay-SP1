@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class BackpackButton : MonoBehaviour
 {
     public Button button;
-    private bool inventory = false;
+    private bool inventoryOpen = false;
+    public InventoryManager inventoryManager;
     public GameObject hotbar;
 
     private void Start()
@@ -16,15 +17,20 @@ public class BackpackButton : MonoBehaviour
 
     void OnOff()
     {
-        if(inventory == false)
+        foreach (ItemSlot iSlot in inventoryManager.itemSlots)
+        {
+            iSlot.menu.SetActive(false);
+        }
+
+        if (inventoryOpen == false)
         {
             hotbar.SetActive(true);
-            inventory = true;
+            inventoryOpen = true;
         }
         else
         {
             hotbar.SetActive(false);
-            inventory = false;
+            inventoryOpen = false;
         }
     }
 }

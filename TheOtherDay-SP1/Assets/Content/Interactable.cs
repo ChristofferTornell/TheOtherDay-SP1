@@ -10,17 +10,25 @@ public class Interactable : MonoBehaviour
     public bool savePlayerPosition = false;
     public bool mouseInteraction = false;
     public bool OneTime = false;
+    public CursorSprite hoverCursor = CursorSprite.BigHand;
     [Space]
     [SerializeField] private float sceneChangeDelay = 1f;
     public CharacterData characterdata = null;
     [Header("Audio")]
-    [FMODUnity.EventRef] public string changeSceneSoundEvent;
+    [FMODUnity.EventRef] public string interactSoundEvent;
 
     [Header("Events")]
     [SerializeField] private UnityEvent onInteract; // Byter man namn på denna kommer alla existerande interactables att förlora sina events
+    private GameController gameController;
+
+    private void Start()
+    {
+        gameController = FindObjectOfType<GameController>();
+    }
 
     public void Interact()
     {
+
         if (!mouseInteraction)
         {
             onInteract.Invoke();
@@ -31,12 +39,24 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (mouseInteraction && !DialogueManager.dialogueActive)
+        {
+            gameController.ChangeCursor(hoverCursor);
+        }
         // Play highlight effects on the object
+    }
+
+    private void OnMouseExit()
+    {
+        if (mouseInteraction)
+        {
+            gameController.ResetCursor();
+        }
     }
 
     private void OnMouseDown()
     {
-        if (mouseInteraction)
+        if (mouseInteraction && !DialogueManager.dialogueActive)
         {
             Debug.Log("Interacting with " + gameObject.name + " using mouse");
             onInteract.Invoke();
@@ -53,7 +73,6 @@ public class Interactable : MonoBehaviour
     {
         // Scene change effect(s) can be put here
         // --------------------------------------
-        //FMODUnity.RuntimeManager.PlayOneShot(changeSceneSoundEvent); SOUND IMPLEMENTATION
 
         yield return new WaitForSeconds(sceneChangeDelay);
 
@@ -71,10 +90,12 @@ public class Interactable : MonoBehaviour
     }
 
     // Needs testing
-    public void IE_PlayAudio(AudioClip audioClip)
+    public void IE_PlayAudio()
     {
         // Play interaction audio here <---
         Debug.Log("Interactable - Playing audio: " + " ->Audio source here<-");
+        //FMODUnity.RuntimeManager.PlayOneShot(interactSoundEvent); SOUND IMPLEMENTATION
+
     }
 
     private void IE_PlayScreenEffect()

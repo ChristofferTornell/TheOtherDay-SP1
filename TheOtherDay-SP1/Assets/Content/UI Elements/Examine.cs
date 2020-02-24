@@ -15,6 +15,6 @@ public class Examine : MonoBehaviour
     {
         sprite.sprite = item.sprite;
         description.text = item.description;
-        name.text = item.name;
+        name.text = item.myName;
     }
 }

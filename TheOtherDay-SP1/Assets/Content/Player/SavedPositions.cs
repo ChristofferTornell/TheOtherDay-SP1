@@ -50,7 +50,7 @@ public class SavedPositions
 
         // Else return startingPosition
         GameController gameController = GameObject.FindObjectOfType<GameController>();
-        Debug.LogError("SavedPositions - Could not find saved position in " + sceneName + ", getting startingPosition: " + gameController.GetStartingPosition());
+        Debug.Log("SavedPositions - Could not find saved position in " + sceneName + ", getting startingPosition: " + gameController.GetStartingPosition());
         return gameController.GetStartingPosition();
     }
 }

@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class Phone : MonoBehaviour
 {
-    private bool PullUp = false;
+    private bool Pulled = false;
+    private bool Pulling = false;
     private float PullUpTime = 0;
-    private float PullUpLimit = 0.2f;
-    private Vector3 initPos;
+    private float PullUpLimit = 0.17f;
+    private float PressingDelta = 0.6f;
+    private float PressingTime = 0;
 
-    public Button CallButton;
+   // public Button CallButton;
     public GameObject CallPage;
 
     public Button MessageButton;
@@ -22,12 +24,17 @@ public class Phone : MonoBehaviour
     public Button AlbumButton;
     public GameObject AlbumPage;
 
+    public Button PullUpButton;
+    public Button PullDownButton;
+    
     private void Start()
     {
-        CallButton.onClick.AddListener(EnableCall);
+        //CallButton.onClick.AddListener(EnableCall);
         MessageButton.onClick.AddListener(EnableMessage);
         LogButton.onClick.AddListener(EnableLog);
         AlbumButton.onClick.AddListener(EnableAlbum);
+        PullUpButton.onClick.AddListener(PullUp);
+        PullDownButton.onClick.AddListener(PullDown);
     }
 
     void EnableCall()
@@ -50,31 +57,72 @@ public class Phone : MonoBehaviour
         AlbumPage.SetActive(true);
     }
 
-    private void OnEnable()
+    private void PullUp()
     {
-        PullUp = true;
         PullUpTime = 0;
+        Pulling = true;
+        PullUpButton.gameObject.SetActive(false);
+        PullDownButton.gameObject.SetActive(true);
+        Debug.Log("Pulled up");
     }
 
-    private void FixedUpdate()
+    void PullDown()
     {
-        if(PullUp == true)
+        PullUpTime = 0;
+        Pulling = true;
+        PullUpButton.gameObject.SetActive(true);
+        PullDownButton.gameObject.SetActive(false);
+        Debug.Log("Pulled down");
+    }
+
+    private void Update()
+    {
+        PressingTime += Time.deltaTime;
+        if(PressingTime > PressingDelta && Pulling == false)
         {
-            PullUpTime += Time.deltaTime;
-            if(PullUpTime < PullUpLimit)
+            if (Input.GetKeyDown(KeyCode.P))
             {
-                transform.position += new Vector3(0, 45, 0);
+                if(Pulled == false)
+                {
+                    PullUp();
+                }
+                else
+                {
+                    PullDown();
+                }
             }
         }
     }
 
-    private void Awake()
+    private void FixedUpdate()
     {
-        initPos = transform.position;
-    }
-
-    private void OnDisable()
-    {
-        transform.position = initPos;
+        if (Pulling == true && Pulled == false)
+        {
+            PullUpTime += Time.fixedDeltaTime;
+            if (PullUpTime < PullUpLimit)
+            {
+                transform.position += new Vector3(0, 35, 0);
+            }
+            else
+            {
+                Pulling = false;
+                Pulled = true;
+                PressingTime = 0;
+            }
+        }
+        if (Pulling == true && Pulled == true)
+        {
+            PullUpTime += Time.fixedDeltaTime;
+            if (PullUpTime < PullUpLimit)
+            {
+                transform.position += new Vector3(0, -35, 0);
+            }
+            else
+            {
+                Pulling = false;
+                Pulled = false;
+                PressingTime = 0;
+            }
+        }
     }
 }

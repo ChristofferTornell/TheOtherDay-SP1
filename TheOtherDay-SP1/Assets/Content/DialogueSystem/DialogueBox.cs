@@ -132,6 +132,17 @@ public class DialogueBox : MonoBehaviour
         Dialogue.CharacterEmotion rileyEmotion;
         Dialogue.CharacterEmotion npcEmotion;
 
+        if (currentDialogue.listener == null)
+        {
+            NPCprofile.profileImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            NPCprofile.profileImage.gameObject.SetActive(true);
+
+        }
+
+
 
         if (currentDialogue.speaker.name == "Riley")
         {
@@ -147,22 +158,29 @@ public class DialogueBox : MonoBehaviour
             leftNamePlate.SetActive(true);
             rightNamePlate.SetActive(false);
             rileyEmotion = currentDialogue.speakerEmotion;
+            if(currentDialogue.listener != null)
+            {
+                rileyProfile.myCharacter = currentDialogue.speaker;
+                NPCprofile.myCharacter = currentDialogue.listener;
+                NPCprofile.FadeOutColor();
+
+            }
             npcEmotion = currentDialogue.listenerEmotion;
-            rileyProfile.myCharacter = currentDialogue.speaker;
-            NPCprofile.myCharacter = currentDialogue.listener;
+
+
 
 
             textObject.alignment = TextAlignmentOptions.TopLeft;
 
             rileyProfile.FadeInColor();
 
-            NPCprofile.FadeOutColor();
             leftNameTextObject.text = currentDialogue.speaker.name;
             leftNameTextObject.color = currentDialogue.speaker.color;
 
         }
         else
         {
+
             leftNamePlate.SetActive(false);
             rightNamePlate.SetActive(true);
             rileyEmotion = currentDialogue.listenerEmotion;
@@ -181,8 +199,8 @@ public class DialogueBox : MonoBehaviour
         }
 
         rileyProfile.profileImage.sprite = rileyProfile.SpriteFromMood(rileyEmotion);
-        NPCprofile.profileImage.sprite = NPCprofile.SpriteFromMood(npcEmotion);
 
+        NPCprofile.profileImage.sprite = NPCprofile.SpriteFromMood(npcEmotion);
 
 
         textObject.font = currentDialogue.speaker.font;

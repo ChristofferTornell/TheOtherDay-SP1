@@ -120,12 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &9804771 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7533981237017971072, guid: 599f8094af025e74ebb11687569938ff,
-    type: 3}
-  m_PrefabInstance: {fileID: 1404012750}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &112591317
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,11 +4350,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.602
       objectReference: {fileID: 0}
+    - target: {fileID: 1874563062861499967, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.23
+      objectReference: {fileID: 0}
     - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 9804771}
+      objectReference: {fileID: 0}
     - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: leftBoundary
@@ -4390,6 +4389,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874563062861499966, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_Depth
+      value: -7.79
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6feaf60f489aa7444a205dbb2b5fbeb6, type: 3}
@@ -4483,6 +4487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
   mouseInteraction: 0
+  ifExamineOnClick: 0
   OneTime: 0
   hoverCursor: 5
   sceneChangeDelay: 1
@@ -4513,6 +4518,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onMouseInteract:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1969691472
@@ -4747,6 +4757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
   mouseInteraction: 0
+  ifExamineOnClick: 0
   OneTime: 0
   hoverCursor: 5
   sceneChangeDelay: 1
@@ -4766,6 +4777,11 @@ MonoBehaviour:
           m_StringArgument: JensTest
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onMouseInteract:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &2100784184
@@ -4976,6 +4992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
   mouseInteraction: 0
+  ifExamineOnClick: 0
   OneTime: 0
   hoverCursor: 5
   sceneChangeDelay: 1
@@ -4995,6 +5012,11 @@ MonoBehaviour:
           m_StringArgument: "Caf\xE9Present"
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onMouseInteract:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &2114476106

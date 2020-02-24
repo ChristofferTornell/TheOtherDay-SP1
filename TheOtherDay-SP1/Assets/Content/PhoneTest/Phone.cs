@@ -8,9 +8,10 @@ public class Phone : MonoBehaviour
     private bool Pulled = false;
     private bool Pulling = false;
     private float PullUpTime = 0;
-    private float PullUpLimit = 0.17f;
+    private float PullUpLimit = 0.169f;
     private float PressingDelta = 0.6f;
     private float PressingTime = 0;
+    public KeyCode PullUpKey = KeyCode.P;
 
    // public Button CallButton;
     public GameObject CallPage;
@@ -26,35 +27,36 @@ public class Phone : MonoBehaviour
 
     public Button PullUpButton;
     public Button PullDownButton;
+
     
     private void Start()
     {
         //CallButton.onClick.AddListener(EnableCall);
-        MessageButton.onClick.AddListener(EnableMessage);
-        LogButton.onClick.AddListener(EnableLog);
-        AlbumButton.onClick.AddListener(EnableAlbum);
+        MessageButton.onClick.AddListener(delegate { EnableMessage(true); });
+        LogButton.onClick.AddListener(delegate { EnableLog(true); });
+        AlbumButton.onClick.AddListener(delegate { EnableAlbum(true); });
         PullUpButton.onClick.AddListener(PullUp);
         PullDownButton.onClick.AddListener(PullDown);
     }
 
-    void EnableCall()
+    void EnableCall(bool state)
     {
-        CallPage.SetActive(true);
+        CallPage.SetActive(state);
     }
 
-    void EnableMessage()
+    void EnableMessage(bool state)
     {
-        MessagePage.SetActive(true);
+        MessagePage.SetActive(state);
     }
 
-    void EnableLog()
+    void EnableLog(bool state)
     {
-        LogPage.SetActive(true);
+        LogPage.SetActive(state);
     }
 
-    void EnableAlbum()
+    void EnableAlbum(bool state)
     {
-        AlbumPage.SetActive(true);
+        AlbumPage.SetActive(state);
     }
 
     private void PullUp()
@@ -68,6 +70,9 @@ public class Phone : MonoBehaviour
 
     void PullDown()
     {
+        EnableAlbum(false);
+        EnableLog(false);
+        EnableMessage(false);
         PullUpTime = 0;
         Pulling = true;
         PullUpButton.gameObject.SetActive(true);
@@ -80,7 +85,7 @@ public class Phone : MonoBehaviour
         PressingTime += Time.deltaTime;
         if(PressingTime > PressingDelta && Pulling == false)
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKeyDown(PullUpKey))
             {
                 if(Pulled == false)
                 {

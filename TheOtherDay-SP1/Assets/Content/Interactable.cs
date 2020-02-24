@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
 {
     public bool savePlayerPosition = false;
     public bool mouseInteraction = false;
+    public bool ifExamineOnClick = false;
     public bool OneTime = false;
     public CursorSprite hoverCursor = CursorSprite.BigHand;
     [Space]
@@ -19,6 +20,7 @@ public class Interactable : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private UnityEvent onInteract; // Byter man namn på denna kommer alla existerande interactables att förlora sina events
+    [SerializeField] private UnityEvent onMouseInteract;
     private GameController gameController;
 
     private void Start()
@@ -61,6 +63,14 @@ public class Interactable : MonoBehaviour
             Debug.Log("Interacting with " + gameObject.name + " using mouse");
             onInteract.Invoke();
             if (OneTime) { DestroyThis(); }
+        }
+        if (ifExamineOnClick)
+        {
+            if (characterdata != null)
+            {
+
+                //description.text = characterData.description;
+            }
         }
     }
 

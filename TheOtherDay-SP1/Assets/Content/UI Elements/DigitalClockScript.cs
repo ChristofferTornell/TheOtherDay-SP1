@@ -131,4 +131,9 @@ public class DigitalClockScript : MonoBehaviour
             changingTime = true;
         }
     }
+
+    public void SetTime(float hours, float minutes)
+    {
+
+    }
 }

@@ -9,11 +9,11 @@ public class ItemSlot : MonoBehaviour
     public Button btn;
     //public GameObject hideMenuButton;
     public GameObject menu;
-    public Inventory inventory;
+    [HideInInspector] public Inventory inventory;
 
     public Items myItem = null;
     public ItemIcon myItemIcon = null;
-
+    public int slotIndex;
 
     public float typeDelay = 1f;
     private float timerCounter = 0f;
@@ -24,6 +24,14 @@ public class ItemSlot : MonoBehaviour
     void Start()
     {
         btn.onClick.AddListener(Click);
+        inventory = Inventory.instance;
+        foreach (ItemSlot _iSlot in inventory.inventoryManager.itemSlots)
+        {
+            if (_iSlot.myItem != null)
+            {
+                inventory.INV_AddItem(_iSlot.myItem);
+            }
+        }
     }
 
     void Click()

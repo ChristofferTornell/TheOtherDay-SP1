@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BackpackButton : MonoBehaviour
 {
+    /*
     public Button button;
     private bool inventoryOpen = false;
     public InventoryManager inventoryManager;
@@ -33,4 +34,5 @@ public class BackpackButton : MonoBehaviour
             inventoryOpen = false;
         }
     }
+    */
 }

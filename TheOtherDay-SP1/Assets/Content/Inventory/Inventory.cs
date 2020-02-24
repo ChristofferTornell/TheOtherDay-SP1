@@ -31,6 +31,7 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
+        //inventoryManager = InventoryData.instance.manager;
         inventoryManager.itemSlots = new ItemSlot[itemSlotAmount];
 
         for (int i = 0; i < itemSlotAmount; i++)
@@ -38,6 +39,7 @@ public class Inventory : MonoBehaviour
             GameObject iSlotObj = Instantiate(itemSlotObj);
             iSlotObj.transform.SetParent(itemBar.transform);
             ItemSlot iSlot = iSlotObj.GetComponent<ItemSlot>();
+            iSlot.slotIndex = i;
             inventoryManager.itemSlots[i] = iSlot;
             iSlot.inventory = this;
         }

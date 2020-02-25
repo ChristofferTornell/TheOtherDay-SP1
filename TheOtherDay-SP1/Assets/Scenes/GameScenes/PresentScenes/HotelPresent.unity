@@ -453,8 +453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c833995a30f0534e869b9c70f364dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  savePlayerPosition: 0
-  mouseInteraction: 1
+  savePlayerPosition: 1
+  mouseInteraction: 0
   examineOnClick: 0
   pickupItem: 0
   OneTime: 0
@@ -1655,12 +1655,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
-      propertyPath: sceneData
+      propertyPath: leftBoundary
       value: 
-      objectReference: {fileID: 11400000, guid: b29a67a2f3c5ab84b905cc269cd2d159,
-        type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: rightBoundary
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1874563062861499967, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1696,6 +1700,12 @@ PrefabInstance:
       propertyPath: startingPosition
       value: 
       objectReference: {fileID: 1961290283}
+    - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: sceneData
+      value: 
+      objectReference: {fileID: 11400000, guid: b29a67a2f3c5ab84b905cc269cd2d159,
+        type: 2}
     - target: {fileID: 8822042503807116703, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_IsActive

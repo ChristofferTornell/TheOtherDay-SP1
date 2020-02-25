@@ -17,7 +17,7 @@ public class Blink : MonoBehaviour
         text = GetText();
         if(text != null)
         {
-            text.text = GetString(Notifications);
+            SetText();
         }
     }
 
@@ -37,6 +37,7 @@ public class Blink : MonoBehaviour
         }
     }
 
+
     private TextMeshProUGUI GetText()
     {
         TextMeshProUGUI text;
@@ -49,6 +50,10 @@ public class Blink : MonoBehaviour
             }
         }
         return null;
+    }
+    public void SetText()
+    {
+        text.text = GetString(Notifications);
     }
 
     private string GetString(int x)

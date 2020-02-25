@@ -54,6 +54,7 @@ MonoBehaviour:
   Target:
   - {fileID: 1461919644}
   - {fileID: 203513669416283597}
+  Notifications: 1
 --- !u!1 &472646064
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +380,7 @@ GameObject:
   - component: {fileID: 1606469035}
   - component: {fileID: 1606469037}
   - component: {fileID: 1606469036}
+  - component: {fileID: 4152550091422127037}
   m_Layer: 5
   m_Name: In Message
   m_TagString: Untagged
@@ -444,6 +446,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4152550091422127037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606469034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62f78fa773b857429f5e1b6d98ee2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sms:
+  - {fileID: 472646066}
 --- !u!1 &159296059475425537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,11 +2808,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9001126138279523004}
     m_Modifications:
-    - target: {fileID: 6652103048668445156, guid: b1076a8e8d85adf4d8eab297e297484e,
-        type: 3}
-      propertyPath: m_Name
-      value: Call Square
-      objectReference: {fileID: 0}
     - target: {fileID: 6652103048668445159, guid: b1076a8e8d85adf4d8eab297e297484e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2901,6 +2912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652103048668445156, guid: b1076a8e8d85adf4d8eab297e297484e,
+        type: 3}
+      propertyPath: m_Name
+      value: Call Square
       objectReference: {fileID: 0}
     - target: {fileID: 6652103048668445160, guid: b1076a8e8d85adf4d8eab297e297484e,
         type: 3}
@@ -2928,11 +2944,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9001126137696709467}
     m_Modifications:
-    - target: {fileID: 2384331326851925880, guid: 6384d825db18cb3458e59d49ed063793,
-        type: 3}
-      propertyPath: m_Name
-      value: Message square
-      objectReference: {fileID: 0}
     - target: {fileID: 2384331326851925881, guid: 6384d825db18cb3458e59d49ed063793,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3037,6 +3048,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384331326851925880, guid: 6384d825db18cb3458e59d49ed063793,
+        type: 3}
+      propertyPath: m_Name
+      value: Message square
       objectReference: {fileID: 0}
     - target: {fileID: 6784319635490383606, guid: 6384d825db18cb3458e59d49ed063793,
         type: 3}
@@ -3069,11 +3085,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1606469035}
     m_Modifications:
-    - target: {fileID: 735560003784700991, guid: 9c289e4da28b3b14e998a4e20f950a96,
-        type: 3}
-      propertyPath: m_Name
-      value: Bubble White
-      objectReference: {fileID: 0}
     - target: {fileID: 735560003784700990, guid: 9c289e4da28b3b14e998a4e20f950a96,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3193,6 +3204,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.09902498
+      objectReference: {fileID: 0}
+    - target: {fileID: 735560003784700991, guid: 9c289e4da28b3b14e998a4e20f950a96,
+        type: 3}
+      propertyPath: m_Name
+      value: Bubble White
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c289e4da28b3b14e998a4e20f950a96, type: 3}

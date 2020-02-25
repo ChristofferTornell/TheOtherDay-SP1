@@ -9,7 +9,6 @@ public class Interactable : MonoBehaviour
 {
     public bool savePlayerPosition = false;
     public bool mouseInteraction = false;
-    public bool examineOnClick = false;
     public bool pickupItem = false;
     public bool OneTime = false;
     public CursorSprite hoverCursor = CursorSprite.BigHand;
@@ -64,19 +63,11 @@ public class Interactable : MonoBehaviour
         {
             Debug.Log("Interacting with " + gameObject.name + " using mouse");
             onInteract.Invoke();
-            if (pickupItem)
+            if (GlobalData.instance.flashBack && pickupItem)
             {
                 Inventory.instance.INV_AddItem(itemData);
             }
             if (OneTime) { DestroyThis(); }
-        }
-        if (examineOnClick)
-        {
-            if (characterdata != null)
-            {
-                DescriptionUI.instance.ExamineNPC(characterdata);
-                //description.text = characterData.description;
-            }
         }
     }
 
@@ -105,6 +96,22 @@ public class Interactable : MonoBehaviour
         GameController.Pause(true);
     }
 
+    public void IE_EnterFlashback(string sceneName)
+    {
+        Debug.Log("Interactable - Entering flashback: " + sceneName);
+        StartCoroutine(ChangeScene(sceneName));
+        GameController.Pause(true);
+        GlobalData.instance.flashBack = true;
+    }
+
+    public void IE_ExitFlashback(string sceneName)
+    {
+        Debug.Log("Interactable - Returning to present: " + sceneName);
+        StartCoroutine(ChangeScene(sceneName));
+        GameController.Pause(true);
+        GlobalData.instance.flashBack = false;
+    }
+
     // Needs testing
     public void IE_PlayAudio()
     {
@@ -123,5 +130,4 @@ public class Interactable : MonoBehaviour
     {
         // Play the dialogue here
     }
-
 }

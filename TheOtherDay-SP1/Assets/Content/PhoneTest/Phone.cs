@@ -12,6 +12,7 @@ public class Phone : MonoBehaviour
     private float PressingDelta = 0.6f;
     private float PressingTime = 0;
     public KeyCode PullUpKey = KeyCode.P;
+    public float PullSpeed = 40;
 
    // public Button CallButton;
     public GameObject CallPage;
@@ -106,7 +107,7 @@ public class Phone : MonoBehaviour
             PullUpTime += Time.fixedDeltaTime;
             if (PullUpTime < PullUpLimit)
             {
-                transform.position += new Vector3(0, 35, 0);
+                transform.position += new Vector3(0, PullSpeed, 0);
             }
             else
             {
@@ -120,7 +121,7 @@ public class Phone : MonoBehaviour
             PullUpTime += Time.fixedDeltaTime;
             if (PullUpTime < PullUpLimit)
             {
-                transform.position += new Vector3(0, -35, 0);
+                transform.position += new Vector3(0, -1 * PullSpeed, 0);
             }
             else
             {

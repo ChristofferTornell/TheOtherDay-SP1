@@ -22,7 +22,6 @@ public class Inventory : MonoBehaviour
         else
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
 
     }
@@ -45,7 +44,11 @@ public class Inventory : MonoBehaviour
 
     public void INV_AddItem(Items item)
     {
-        Debug.Log("trying to add item");
+        if (GlobalData.instance.flashBack)
+        {
+            Debug.Log("cant add item outside of flashback");
+            return;
+        }
         foreach (ItemSlot iSlot in inventoryManager.itemSlots)
         {
             Debug.Log("checking each slot");
@@ -83,4 +86,15 @@ public class Inventory : MonoBehaviour
         _itemSlot.myItemIcon.UpdateSprite(nullSprite);
     }
 
+    public void UpdateState()
+    {
+        if (GlobalData.instance.flashBack)
+        {
+            itemBar.gameObject.SetActive(true);
+        }
+        else
+        {
+            itemBar.gameObject.SetActive(false);
+        }
+    }
 }

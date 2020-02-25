@@ -15,12 +15,18 @@ MonoBehaviour:
   name: Riley
   description: This is me.
   contactImage: {fileID: 21300000, guid: c764a79c2d36cdb4b9172ee62aaa5e81, type: 3}
-  dialogueImageFlashbackNormal: {fileID: 0}
-  dialogueImageFlashbackHappy: {fileID: 0}
-  dialogueImageFlashbackSad: {fileID: 0}
-  dialogueImagePresentNormal: {fileID: 0}
-  dialogueImagePresentHappy: {fileID: 0}
-  dialogueImagePresentSad: {fileID: 0}
+  dialogueImageFlashbackNormal: {fileID: 21300000, guid: 514ea1cd15289b142954536236a24d4f,
+    type: 3}
+  dialogueImageFlashbackHappy: {fileID: 21300000, guid: 514ea1cd15289b142954536236a24d4f,
+    type: 3}
+  dialogueImageFlashbackSad: {fileID: 21300000, guid: 514ea1cd15289b142954536236a24d4f,
+    type: 3}
+  dialogueImagePresentNormal: {fileID: 21300000, guid: c764a79c2d36cdb4b9172ee62aaa5e81,
+    type: 3}
+  dialogueImagePresentHappy: {fileID: 21300000, guid: c764a79c2d36cdb4b9172ee62aaa5e81,
+    type: 3}
+  dialogueImagePresentSad: {fileID: 21300000, guid: c764a79c2d36cdb4b9172ee62aaa5e81,
+    type: 3}
   font: {fileID: 11400000, guid: 06188d2604db92e4786bc502162be7d4, type: 2}
   color: {r: 0.5875232, g: 0.8980392, b: 0.5372549, a: 1}
   typingSound: event:/Sounds/Riley/SoundsRileyDialogue

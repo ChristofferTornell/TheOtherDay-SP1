@@ -29,6 +29,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb = null;
 
     private float originalMovementSpeed;
+    [Space]
+    [FMODUnity.EventRef] public string footStepEvent;
+    FMOD.Studio.EventInstance footStepInstance;
+    private bool footStepInstanceActive;
+    [FMODUnity.ParamRef] public string footStepParameter;
 
     void Awake()
     {
@@ -82,6 +87,11 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("New Position: " + newPosition);
             transform.position = newPosition;
         }
+        footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        MusicPlayer musicPlayer = FindObjectOfType<MusicPlayer>();
+        float _sceneIndex = musicPlayer.sceneData.footstepIndex;
+        //footStepInstance.setParameterByName(footStepParameter, _sceneIndex); //SOUND IMPLEMENTATION
+
     }
 
     void PlayerInput()
@@ -133,10 +143,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
-    [FMODUnity.EventRef] public string footStepEvent;
-    FMOD.Studio.EventInstance footStepInstance;
-    private bool footStepInstanceActive;
 
     private void Update()
     {

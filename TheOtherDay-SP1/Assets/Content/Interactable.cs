@@ -96,6 +96,22 @@ public class Interactable : MonoBehaviour
         GameController.Pause(true);
     }
 
+    public void IE_EnterFlashback(string sceneName)
+    {
+        Debug.Log("Interactable - Entering flashback: " + sceneName);
+        StartCoroutine(ChangeScene(sceneName));
+        GameController.Pause(true);
+        GlobalData.instance.flashBack = true;
+    }
+
+    public void IE_ExitFlashback(string sceneName)
+    {
+        Debug.Log("Interactable - Returning to present: " + sceneName);
+        StartCoroutine(ChangeScene(sceneName));
+        GameController.Pause(true);
+        GlobalData.instance.flashBack = false;
+    }
+
     // Needs testing
     public void IE_PlayAudio()
     {

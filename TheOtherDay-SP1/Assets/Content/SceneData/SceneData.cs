@@ -7,4 +7,5 @@ using UnityEngine;
 public class SceneData : ScriptableObject
 {
     [FMODUnity.EventRef] public string sceneMusic;
+    public int footstepIndex;
 }

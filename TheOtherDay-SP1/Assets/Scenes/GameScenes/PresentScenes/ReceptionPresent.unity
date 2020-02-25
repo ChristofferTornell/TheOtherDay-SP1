@@ -936,7 +936,7 @@ GameObject:
   - component: {fileID: 1318303050}
   - component: {fileID: 1318303049}
   m_Layer: 0
-  m_Name: Reception_armchair (1)
+  m_Name: Reception_armchair right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -979,7 +979,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 126223357
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f088bf63e44c3594099b578963bbf1f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -999,7 +999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318303048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.934303, y: -10.638821, z: 231.04688}
+  m_LocalPosition: {x: 26.45, y: -9.94, z: 231.04688}
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 523491451}
@@ -1063,7 +1063,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
   mouseInteraction: 0
-  examineOnClick: 0
   pickupItem: 0
   OneTime: 0
   hoverCursor: 1
@@ -1171,7 +1170,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 126223357
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 1244f49b36af27a428879bd52471fd08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1651,7 +1650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874313423}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.95, y: -3.49, z: -207.04297}
+  m_LocalPosition: {x: -1.95, y: -4, z: -207.04297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1815,7 +1814,7 @@ PrefabInstance:
     - target: {fileID: 4415259249700216488, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.4
+      value: 9.91
       objectReference: {fileID: 0}
     - target: {fileID: 1844750349108326845, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}

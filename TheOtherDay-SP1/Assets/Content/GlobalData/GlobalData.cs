@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryData : MonoBehaviour
+public class GlobalData : MonoBehaviour
 {
-    public static InventoryData instance;
-    public InventoryManager manager;
+    public static GlobalData instance;
+    public int stage = 0;
+    public bool flashBack;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class InventoryData : MonoBehaviour
         else
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 }

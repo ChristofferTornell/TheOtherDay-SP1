@@ -8,14 +8,10 @@ using FMODUnity;
 public class Interactable : MonoBehaviour
 {
     public bool savePlayerPosition = false;
-    public bool mouseInteraction = false;
-    public bool pickupItem = false;
     public bool OneTime = false;
     public CursorSprite hoverCursor = CursorSprite.BigHand;
     [Space]
     [SerializeField] private float sceneChangeDelay = 1f;
-    public CharacterData characterdata = null;
-    public Items itemData = null;
     [Header("Audio")]
     [FMODUnity.EventRef] public string interactSoundEvent;
 
@@ -31,18 +27,15 @@ public class Interactable : MonoBehaviour
 
     public void Interact()
     {
+        onInteract.Invoke();
+        if (OneTime) { DestroyThis(); }
 
-        if (!mouseInteraction)
-        {
-            onInteract.Invoke();
-            if (OneTime) { DestroyThis(); }
-        }
         else { Debug.Log(gameObject.name + "can only be interacted with using the mouse"); }
     }
 
     private void OnMouseEnter()
     {
-        if (mouseInteraction && !DialogueManager.dialogueActive)
+        if (!DialogueManager.dialogueActive)
         {
             gameController.ChangeCursor(hoverCursor);
         }
@@ -51,23 +44,17 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseExit()
     {
-        if (mouseInteraction)
-        {
-            gameController.ResetCursor();
-        }
+
+        gameController.ResetCursor();
+
     }
 
     private void OnMouseDown()
     {
-        if (mouseInteraction && !DialogueManager.dialogueActive)
+        Debug.Log("Pressed on interactable");
+        if (!DialogueManager.dialogueActive)
         {
-            Debug.Log("Interacting with " + gameObject.name + " using mouse");
-            onInteract.Invoke();
-            if (GlobalData.instance.flashBack && pickupItem)
-            {
-                Inventory.instance.INV_AddItem(itemData);
-            }
-            if (OneTime) { DestroyThis(); }
+            onMouseInteract.Invoke();
         }
     }
 

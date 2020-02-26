@@ -33,9 +33,9 @@ public class PlayerInteractivity : MonoBehaviour
     void Update()
     {
         // Interact with the Object using the useButton
-        if (interactableObject && Input.GetButtonDown(interactionButton))
+        if (interactableObject && Input.GetButtonDown(interactionButton) && !DialogueManager.dialogueActive)
         {
-            //Debug.Log("Doing something with " + interactableObject.name);
+            Debug.Log("Doing something with " + interactableObject.name);
 
             if (interactableObject.savePlayerPosition)
             {

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -571,13 +571,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
   mouseInteraction: 1
-  examineOnClick: 0
-  pickupItem: 0
   OneTime: 0
   hoverCursor: 1
   sceneChangeDelay: 1
-  characterdata: {fileID: 0}
-  itemData: {fileID: 0}
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -1749,13 +1745,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
   mouseInteraction: 0
-  examineOnClick: 0
-  pickupItem: 0
   OneTime: 0
   hoverCursor: 1
   sceneChangeDelay: 1
-  characterdata: {fileID: 0}
-  itemData: {fileID: 0}
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -2085,13 +2077,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
   mouseInteraction: 0
-  examineOnClick: 0
-  pickupItem: 0
   OneTime: 0
   hoverCursor: 5
   sceneChangeDelay: 1
-  characterdata: {fileID: 11400000, guid: 01c44b970609f204c80fc359a7fe9730, type: 2}
-  itemData: {fileID: 0}
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -2112,7 +2100,19 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   onMouseInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1985527688}
+        m_MethodName: ExamineNPC
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 01c44b970609f204c80fc359a7fe9730,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: CharacterData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!4 &1600159381
@@ -2185,6 +2185,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1985527688 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2356892426582510869, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1275436628}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2daea64fe261c40b86650f7ba76ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2063020588
 GameObject:
   m_ObjectHideFlags: 0

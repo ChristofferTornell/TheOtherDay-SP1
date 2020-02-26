@@ -11,7 +11,6 @@ public class Interactable : MonoBehaviour
     public bool OneTime = false;
     public CursorSprite hoverCursor = CursorSprite.BigHand;
     [Space]
-    [SerializeField] private float sceneChangeDelay = 1f;
     [Header("Audio")]
     [FMODUnity.EventRef] public string interactSoundEvent;
 
@@ -63,41 +62,12 @@ public class Interactable : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private IEnumerator ChangeScene(string sceneName)
-    {
-        // Scene change effect(s) can be put here
-        // --------------------------------------
-
-        yield return new WaitForSeconds(sceneChangeDelay);
-
-        SceneManager.LoadScene(sceneName);
-
-        yield return null;
-    }
-
     // IE_ = Interactivity Event
     public void IE_ChangeScene(string sceneName)
     {
-        Debug.Log("Interactable - Changing Scene to: " + sceneName);
-        StartCoroutine(ChangeScene(sceneName));
-        GameController.Pause(true);
+        SceneChanger.instance.ChangeScene(sceneName);
     }
 
-    public void IE_EnterFlashback(string sceneName)
-    {
-        Debug.Log("Interactable - Entering flashback: " + sceneName);
-        StartCoroutine(ChangeScene(sceneName));
-        GameController.Pause(true);
-        GlobalData.instance.flashBack = true;
-    }
-
-    public void IE_ExitFlashback(string sceneName)
-    {
-        Debug.Log("Interactable - Returning to present: " + sceneName);
-        StartCoroutine(ChangeScene(sceneName));
-        GameController.Pause(true);
-        GlobalData.instance.flashBack = false;
-    }
 
     // Needs testing
     public void IE_PlayAudio()

@@ -117,6 +117,10 @@ public class DialogueBox : MonoBehaviour
             {
                 DialogueManager.instance.ExitDialogue();
                 ResetDialogueUI();
+                if(currentDialogue.triggerFlashback != null)
+                {
+                    SceneChanger.instance.EnterFlashback(currentDialogue.triggerFlashback);
+                }
                 return;
             }
             

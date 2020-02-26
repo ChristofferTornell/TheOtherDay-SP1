@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class Dialogue : ScriptableObject
 {
-
     public enum CharacterEmotion
     {
         normal,
@@ -27,6 +26,7 @@ public class Dialogue : ScriptableObject
     [TextArea(15, 20)]
     public string message = "";
     public float typeDelay = 0.01f;
+    public string triggerFlashback;
 
     [Header ("Insertables")]
     public Dialogue nextDialogue = null;

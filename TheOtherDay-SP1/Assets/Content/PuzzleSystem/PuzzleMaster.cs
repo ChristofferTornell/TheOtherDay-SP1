@@ -20,7 +20,7 @@ public class PuzzleMaster : MonoBehaviour
                 if (PuzzleClear())
                 {
                     Debug.Log("Exit flashback");
-                    GetComponent<Interactable>().IE_ExitFlashback(goToSceneOnClear);
+                    SceneChanger.instance.ExitFlashback(goToSceneOnClear);
                 }
                 return;
             }

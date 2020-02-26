@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class Blink : MonoBehaviour
 {
@@ -9,17 +8,7 @@ public class Blink : MonoBehaviour
     private float BlinkTime = 0;
     public GameObject[] Target;
     private bool NewNotification = true;
-    private TextMeshProUGUI text;
     public int Notifications = 1;
-
-    private void Start()
-    {
-        text = GetText();
-        if(text != null)
-        {
-            SetText();
-        }
-    }
 
     private void Update()
     {
@@ -35,55 +24,17 @@ public class Blink : MonoBehaviour
                 BlinkTime = 0;
             }
         }
-    }
-
-
-    private TextMeshProUGUI GetText()
-    {
-        TextMeshProUGUI text;
-        for (int i = 0; i < Target.Length; i++)
+        else
         {
-            text = Target[i].GetComponent<TextMeshProUGUI>();
-            if(text != null)
+            for (int i = 0; i < Target.Length; i++)
             {
-                return text;
+                Target[i].SetActive(false);
             }
         }
-        return null;
-    }
-    public void SetText()
-    {
-        text.text = GetString(Notifications);
     }
 
-    private string GetString(int x)
+    public void ChangeNotificationState(bool state)
     {
-        switch (x)
-        {
-            case 1:
-                return "1";
-            break;
-
-            case 2:
-                return "2";
-            break;
-
-            case 3:
-                return "3";
-            break;
-
-            case 4:
-                return "4";
-            break;
-
-            case 5:
-                return "5";
-            break;
-
-            case 6:
-                return "6";
-            break;
-        }
-        return "1";
+        NewNotification = state;
     }
 }

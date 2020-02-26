@@ -7,18 +7,20 @@ public class PuzzleMaster : MonoBehaviour
     public RequiredItem[] requiredItems;
     public string goToSceneOnClear;
     
-    public void RecieveItem(Items _item)
+    public void RecieveItem()
     {
+        //DeselectItem
         for (int i = 0; i < requiredItems.Length; i++)
         {
-            if (_item == requiredItems[i].item && !requiredItems[i].isGiven)
+            if (PuzzleMouse.itemOnMouse == requiredItems[i].item && !requiredItems[i].isGiven)
             {
                 Debug.Log("Correct item for puzzle");
                 requiredItems[i].isGiven = true;
+                PuzzleMouse.RemoveItem();
                 if (PuzzleClear())
                 {
                     Debug.Log("Exit flashback");
-                    //Exit flashback
+                    GetComponent<Interactable>().IE_ExitFlashback(goToSceneOnClear);
                 }
                 return;
             }

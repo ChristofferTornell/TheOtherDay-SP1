@@ -117,4 +117,12 @@ public class Interactable : MonoBehaviour
     {
         // Play the dialogue here
     }
+
+    public void IE_GiveItem()
+    {
+        if (PuzzleMouse.itemOnMouse != null)
+        {
+            GetComponent<PuzzleMaster>().RecieveItem();
+        }
+    }
 }

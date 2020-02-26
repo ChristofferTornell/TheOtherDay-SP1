@@ -52,6 +52,7 @@ public class ItemSlot : MonoBehaviour
     {
         if(myItem.useable)
         {
+            PuzzleMouse.SetItemOnMouse(myItem);
             myItem.OnUse();
         }
         else

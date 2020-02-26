@@ -32,6 +32,7 @@ public class ItemSlot : MonoBehaviour
 
     void Click()
     {
+        Debug.Log("clicked on itemslot");
         if (myItem == null)
         {
             Debug.Log("I dont have an item :(");
@@ -52,6 +53,7 @@ public class ItemSlot : MonoBehaviour
     {
         if(myItem.useable)
         {
+            PuzzleMouse.SetItemOnMouse(myItem);
             myItem.OnUse();
         }
         else

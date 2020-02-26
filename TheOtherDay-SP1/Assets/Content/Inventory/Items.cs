@@ -16,6 +16,6 @@ public class Items : ScriptableObject
 
     public virtual void OnUse()
     {
-
+       
     }
 }

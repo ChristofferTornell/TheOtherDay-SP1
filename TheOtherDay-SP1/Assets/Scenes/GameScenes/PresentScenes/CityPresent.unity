@@ -2110,13 +2110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
-  mouseInteraction: 0
-  pickupItem: 0
   OneTime: 0
   hoverCursor: 5
   sceneChangeDelay: 1
-  characterdata: {fileID: 0}
-  itemData: {fileID: 0}
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -4234,13 +4230,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
-  mouseInteraction: 0
-  pickupItem: 0
   OneTime: 0
   hoverCursor: 5
   sceneChangeDelay: 1
-  characterdata: {fileID: 0}
-  itemData: {fileID: 0}
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -4430,13 +4422,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
-  mouseInteraction: 0
-  pickupItem: 0
   OneTime: 0
   hoverCursor: 5
   sceneChangeDelay: 1
-  characterdata: {fileID: 0}
-  itemData: {fileID: 0}
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -4742,6 +4730,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -5.9
       objectReference: {fileID: 0}
+    - target: {fileID: 4757630665772093109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6feaf60f489aa7444a205dbb2b5fbeb6, type: 3}
 --- !u!114 &1928440426 stripped
@@ -4833,13 +4826,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
-  mouseInteraction: 0
-  pickupItem: 0
   OneTime: 0
   hoverCursor: 5
   sceneChangeDelay: 1
-  characterdata: {fileID: 0}
-  itemData: {fileID: 0}
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -5010,13 +4999,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
-  mouseInteraction: 0
-  pickupItem: 0
   OneTime: 0
   hoverCursor: 5
   sceneChangeDelay: 1
-  characterdata: {fileID: 0}
-  itemData: {fileID: 0}
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -5351,13 +5336,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
-  mouseInteraction: 0
-  pickupItem: 0
   OneTime: 0
   hoverCursor: 5
   sceneChangeDelay: 1
-  characterdata: {fileID: 0}
-  itemData: {fileID: 0}
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:

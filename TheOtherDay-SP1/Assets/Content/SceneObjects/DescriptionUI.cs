@@ -37,8 +37,11 @@ public class DescriptionUI : MonoBehaviour
 
     public void ExamineNPC(CharacterData _char)
     {
-        StartCoroutine(AutotypeText(_char.description, typeDelay));
-        descriptionBoxObj.SetActive(true);
+        if (PuzzleMouse.itemOnMouse == null)
+        {
+            StartCoroutine(AutotypeText(_char.description, typeDelay));
+            descriptionBoxObj.SetActive(true);
+        }
     }
     IEnumerator AutotypeText(string inputMessage, float delay)
     {

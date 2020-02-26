@@ -44,7 +44,7 @@ public class Inventory : MonoBehaviour
 
     public void INV_AddItem(Items item)
     {
-        if (GlobalData.instance.flashBack)
+        if (!GlobalData.instance.flashBack)
         {
             Debug.Log("cant add item outside of flashback");
             return;

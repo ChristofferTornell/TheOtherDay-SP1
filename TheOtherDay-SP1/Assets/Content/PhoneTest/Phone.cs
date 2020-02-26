@@ -66,7 +66,6 @@ public class Phone : MonoBehaviour
         Pulling = true;
         PullUpButton.gameObject.SetActive(false);
         PullDownButton.gameObject.SetActive(true);
-        Debug.Log("Pulled up");
     }
 
     void PullDown()
@@ -78,7 +77,6 @@ public class Phone : MonoBehaviour
         Pulling = true;
         PullUpButton.gameObject.SetActive(true);
         PullDownButton.gameObject.SetActive(false);
-        Debug.Log("Pulled down");
     }
 
     private void Update()

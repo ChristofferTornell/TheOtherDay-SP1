@@ -6,35 +6,42 @@ public class Blink : MonoBehaviour
 {
     public float BlinkInterval = 1;
     private float BlinkTime = 0;
-    public GameObject[] Target;
-    private bool NewNotification = true;
-    public int Notifications = 1;
+    public GameObject MessageDot;
+    public GameObject NoteDot;
+    private bool NewMessage = true;
+    private bool NewNote = true;
 
     private void Update()
     {
-        if (NewNotification == true)
+        if (NewMessage || NewNote)
         {
             BlinkTime += Time.deltaTime;
             if(BlinkTime > BlinkInterval)
             {
-                for (int i = 0; i < Target.Length; i++)
+                if (NewMessage)
                 {
-                    Target[i].SetActive(!Target[i].activeSelf);
+                    MessageDot.SetActive(!MessageDot.activeSelf);
+                }
+                if (NewNote)
+                {
+                    NoteDot.SetActive(!NoteDot.activeSelf);
                 }
                 BlinkTime = 0;
             }
         }
         else
         {
-            for (int i = 0; i < Target.Length; i++)
-            {
-                Target[i].SetActive(false);
-            }
+            MessageDot.SetActive(false);
+            NoteDot.SetActive(false);
         }
     }
 
-    public void ChangeNotificationState(bool state)
+    public void ChangeNewMessageState(bool state)
     {
-        NewNotification = state;
+        NewMessage = state;
+    }
+    public void ChangeNewNoteState(bool state)
+    {
+        NewNote = state;
     }
 }

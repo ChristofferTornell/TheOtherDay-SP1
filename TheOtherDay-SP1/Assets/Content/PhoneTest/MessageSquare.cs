@@ -9,14 +9,10 @@ public class MessageSquare : MonoBehaviour
     public CharacterData character;
     public Image image;
     public TextMeshProUGUI text;
-    public TextMeshProUGUI sms;
-    public int which;
-
 
     void Start()
     {
         image.sprite = character.contactImage;
         text.text = character.name;
-        sms.text = character.sms[which];
     }
 }

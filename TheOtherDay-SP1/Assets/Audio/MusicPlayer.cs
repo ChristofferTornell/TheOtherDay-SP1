@@ -15,7 +15,7 @@ public class MusicPlayer : MonoBehaviour
         locationMusicInstance = FMODUnity.RuntimeManager.CreateInstance(sceneMusicEvent);
         locationMusicInstance.start();
 
-        string sceneAmbienceEvent = sceneData.sceneMusic;
+        string sceneAmbienceEvent = sceneData.sceneAmbience;
         locationAmbienceInstance = FMODUnity.RuntimeManager.CreateInstance(sceneAmbienceEvent);
         locationAmbienceInstance.start();
     }

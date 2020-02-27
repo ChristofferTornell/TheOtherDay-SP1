@@ -6,7 +6,7 @@ public class Event : ScriptableObject
 {
     public bool eventComplete = false;
 
-    [Header("Conditions")]S
+    [Header("Conditions")]
     [SerializeField] private List<Event> eventConditions = new List<Event>();
     [SerializeField] private List<Items> itemConditions = new List<Items>();
 

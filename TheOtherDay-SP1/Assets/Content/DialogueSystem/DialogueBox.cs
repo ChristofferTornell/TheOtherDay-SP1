@@ -31,6 +31,7 @@ public class DialogueBox : MonoBehaviour
 
     public void InitializeDialogueUI()
     {
+        Debug.Log(DialogueManager.instance);
         currentDialogue = DialogueManager.instance.currentDialogue;
         ResetChoiceTimer();
         UpdateDialogueUI();

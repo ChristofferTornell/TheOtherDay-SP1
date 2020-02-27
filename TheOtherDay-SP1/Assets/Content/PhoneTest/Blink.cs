@@ -8,8 +8,8 @@ public class Blink : MonoBehaviour
     private float BlinkTime = 0;
     public GameObject MessageDot;
     public GameObject NoteDot;
-    private bool NewMessage = true;
-    private bool NewNote = true;
+    private bool NewMessage = false;
+    private bool NewNote = false;
 
     private void Update()
     {

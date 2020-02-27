@@ -1,878 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9080500222359683475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUIExitLogbook
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUIExitLogbook
-  guid: aec4ee10fa2ed947945bb27338b067fc
-  Banks:
-  - {fileID: -4201022303476270333}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 421
---- !u!114 &-8902649860674398065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUIClickLogbook
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUIClickLogbook
-  guid: 65f538f33f9cc740814b18bf06fa5f78
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 780
---- !u!114 &-8773400462129288348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Riley/SoundsRileyDialogue
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Riley/SoundsRileyDialogue
-  guid: 24cabd6849297c44a5ae83f242fc82b2
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 92
---- !u!114 &-8663871371260848454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Riley/SoundsRileyFootsteps
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Riley/SoundsRileyFootsteps
-  guid: 5822a4432c3ea64d97e43661aa89fc75
-  Banks:
-  - {fileID: -4201022303476270333}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 580
---- !u!114 &-8619920571040472696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUINotification
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUINotification
-  guid: 63edd6d2c614f44c900c80376861ba98
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 325
---- !u!114 &-8541579286532901698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUIInventoryPickUp
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUIInventoryPickUp
-  guid: 49c53f1ce2dd8d4f80dd3f6e2fbb95ea
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2719
---- !u!114 &-8161720910331261547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.strings.bank
-  SubDir: 
-  lastModified: 637184150414614459
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 1894
-  Exists: 1
---- !u!114 &-8041417024817850927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Hotel Room/MusicHotelRoomPresent
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Hotel Room/MusicHotelRoomPresent
-  guid: 57cbfc8c48d8284f89488ff6eabdd967
-  Banks:
-  - {fileID: -4201022303476270333}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 288000
---- !u!114 &-7479280826515871554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUINotification
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUINotification
-  guid: 63edd6d2c614f44c900c80376861ba98
-  Banks:
-  - {fileID: -4201022303476270333}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 325
---- !u!114 &-7269585190507619207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Hotel Room/AmbienceHotelRoomFan
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Hotel Room/AmbienceHotelRoomFan
-  guid: 1e4468203efb064f8807e9fa66551837
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-=======
-  - {fileID: 4574134107881403940}
->>>>>>> develop
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 11271
---- !u!114 &-7123903456661736576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Hotel Room/AmbienceHotelRoomTV
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Hotel Room/AmbienceHotelRoomTV
-  guid: 819bf3a13d38484283adac3b68ed745e
-  Banks:
-  - {fileID: 4574134107881403940}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3394
---- !u!114 &-6952648424481851922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Cafe/AmbienceCafeChatter
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Cafe/AmbienceCafeChatter
-  guid: fa84ee8cbc3f9c459f5376ead4fa449e
-  Banks:
-  - {fileID: -4201022303476270333}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 118624
---- !u!114 &-6698833347655112336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637184146482574720
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-6169920056076274947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Bar/MusicBarPresent
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Bar/MusicBarPresent
-  guid: 759ad72fad31ab458b0708b1991192e5
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 85360
---- !u!114 &-6112384695654557124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.strings.bank
-  SubDir: 
-  lastModified: 637178517445912260
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 1694
-  Exists: 1
---- !u!114 &-5546025673586065296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Cafe/MusicCafePresent
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Cafe/MusicCafePresent
-  guid: 6cc8b4443d47024f95dc037e0bc6011f
-  Banks:
-  - {fileID: -4201022303476270333}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 170322
---- !u!114 &-4985086953927864248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Pizzeria/MusicPizzeriaPresent
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Pizzeria/MusicPizzeriaPresent
-  guid: fedc92acd0ad8b42bdf124b3839d39a5
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 78600
---- !u!114 &-4851234000017962257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Street/AmbienceStreetTrafic
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Street/AmbienceStreetTrafic
-  guid: 2ece97597071884b8319593ad3bbd857
-  Banks:
-  - {fileID: -4201022303476270333}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 39221
---- !u!114 &-4829466751600648995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Street/AmbienceStreetRain
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Street/AmbienceStreetRain
-  guid: d27e4eea181b2e4ca16367dc84fbaae1
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 41000
---- !u!114 &-4781378581389920475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUIClickLogbook
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUIClickLogbook
-  guid: 65f538f33f9cc740814b18bf06fa5f78
-  Banks:
-  - {fileID: -4201022303476270333}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 780
---- !u!114 &-4208229066948184312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsSceneTransition
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsSceneTransition
-  guid: 77d866bfd114d247983ec2089e17ef85
-  Banks:
-  - {fileID: 4574134107881403940}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1449
---- !u!114 &-4201022303476270333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637184163315406834
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-4092650851983492640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Street/MusicStreetPresent
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Street/MusicStreetPresent
-  guid: fd1a4f1b59e4304e80e461f3396e3c56
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 91636
---- !u!114 &-3189012506220662781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Riley/SoundsRileyDialogue
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Riley/SoundsRileyDialogue
-  guid: 24cabd6849297c44a5ae83f242fc82b2
-  Banks:
-  - {fileID: 4574134107881403940}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 92
---- !u!114 &-3039480940686247951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.strings.bank
-  SubDir: 
-  lastModified: 637184146482744776
-  LoadResult: 0
-  FileSizes:
-  - Name: 
-    Value: 1894
-  Exists: 1
---- !u!114 &-2662045890827123211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637184150421037283
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-2466215489005421752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Cafe/MusicCafePresent
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Cafe/MusicCafePresent
-  guid: 6cc8b4443d47024f95dc037e0bc6011f
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 170322
---- !u!114 &-2311114228823633726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Riley/SoundsRileyDialogue
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Riley/SoundsRileyDialogue
-  guid: 24cabd6849297c44a5ae83f242fc82b2
-  Banks:
-  - {fileID: -4201022303476270333}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 92
---- !u!114 &-2261396930284864897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUIExitLogbook
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUIExitLogbook
-  guid: aec4ee10fa2ed947945bb27338b067fc
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 421
---- !u!114 &-2112838191790281756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Hotel Room/MusicHotelRoomPresent
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Hotel Room/MusicHotelRoomPresent
-  guid: 57cbfc8c48d8284f89488ff6eabdd967
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 288000
---- !u!114 &-2105119965648082940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Riley/SoundsRileyFootsteps
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Riley/SoundsRileyFootsteps
-  guid: 5822a4432c3ea64d97e43661aa89fc75
-  Banks:
-  - {fileID: 4574134107881403940}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1020
---- !u!114 &-2070626715408853140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUIExitLogbook
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUIExitLogbook
-  guid: aec4ee10fa2ed947945bb27338b067fc
-  Banks:
-  - {fileID: 4574134107881403940}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 421
---- !u!114 &-1719439156868751190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/Riley/SoundsRileyFootsteps
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/Riley/SoundsRileyFootsteps
-  guid: 5822a4432c3ea64d97e43661aa89fc75
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 580
---- !u!114 &-1668578742176020887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Hotel Room/AmbienceHotelRoomTV
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Hotel Room/AmbienceHotelRoomTV
-  guid: 819bf3a13d38484283adac3b68ed745e
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3394
---- !u!114 &-1649168515102549105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUIInventoryPickUp
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUIInventoryPickUp
-  guid: 49c53f1ce2dd8d4f80dd3f6e2fbb95ea
-  Banks:
-  - {fileID: -4201022303476270333}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2719
---- !u!114 &-1507414811048976498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637184146482574720
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-1442259826474508195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Street/AmbienceStreetRain
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Street/AmbienceStreetRain
-  guid: d27e4eea181b2e4ca16367dc84fbaae1
-  Banks:
-  - {fileID: 4574134107881403940}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 41000
---- !u!114 &-964583809492794033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Street/MusicStreetPresent
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Street/MusicStreetPresent
-  guid: fd1a4f1b59e4304e80e461f3396e3c56
-  Banks:
-  - {fileID: -4201022303476270333}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 91636
---- !u!114 &-611146451787315154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Hotel Room/AmbienceHotelRoomFan
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Hotel Room/AmbienceHotelRoomFan
-  guid: 1e4468203efb064f8807e9fa66551837
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 11271
---- !u!114 &-497829526561211959
+--- !u!114 &-8166742688303644570
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -887,7 +15,7 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsUIOpenLogbook
   guid: 60ec7c426b919b48addcf1467193e99b
   Banks:
-  - {fileID: -6698833347655112336}
+  - {fileID: -522916283729158056}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -895,7 +23,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 661
---- !u!114 &-369900402584636446
+--- !u!114 &-6254241129378542706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -905,20 +33,288 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Pizzeria/MusicPizzeriaPresent
+  m_Name: event:/Sounds/UI/SoundsUIClickLogbook
   m_EditorClassIdentifier: 
-  Path: event:/Music/Pizzeria/MusicPizzeriaPresent
-  guid: fedc92acd0ad8b42bdf124b3839d39a5
+  Path: event:/Sounds/UI/SoundsUIClickLogbook
+  guid: 65f538f33f9cc740814b18bf06fa5f78
   Banks:
-  - {fileID: -4201022303476270333}
+  - {fileID: -522916283729158056}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 780
+--- !u!114 &-5176680743809868212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Cafe/MusicCafePresent
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Cafe/MusicCafePresent
+  guid: 6cc8b4443d47024f95dc037e0bc6011f
+  Banks:
+  - {fileID: -522916283729158056}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 78600
---- !u!114 &-61296016417501712
+  Length: 170322
+--- !u!114 &-4457079488193762621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/UI/SoundsUIInventoryPickUp
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/UI/SoundsUIInventoryPickUp
+  guid: 49c53f1ce2dd8d4f80dd3f6e2fbb95ea
+  Banks:
+  - {fileID: -522916283729158056}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2719
+--- !u!114 &-4096987542711861677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Street/AmbienceStreetTrafic
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Street/AmbienceStreetTrafic
+  guid: 2ece97597071884b8319593ad3bbd857
+  Banks:
+  - {fileID: -522916283729158056}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 39221
+--- !u!114 &-3376952924883343637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Cafe/AmbienceCafeChatter
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Cafe/AmbienceCafeChatter
+  guid: fa84ee8cbc3f9c459f5376ead4fa449e
+  Banks:
+  - {fileID: -522916283729158056}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 118624
+--- !u!114 &-3097908428049005629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FmodBanks/Master.strings.bank
+  SubDir: 
+  lastModified: 637184176269874830
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1894
+  Exists: 1
+--- !u!114 &-3038415514962753748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Hotel Room/MusicHotelRoomPresent
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Hotel Room/MusicHotelRoomPresent
+  guid: 57cbfc8c48d8284f89488ff6eabdd967
+  Banks:
+  - {fileID: -522916283729158056}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 288000
+--- !u!114 &-2860630504603618426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Street/MusicStreetPresent
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Street/MusicStreetPresent
+  guid: fd1a4f1b59e4304e80e461f3396e3c56
+  Banks:
+  - {fileID: -522916283729158056}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 91636
+--- !u!114 &-1953100156135789914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Hotel Room/AmbienceHotelRoomTV
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Hotel Room/AmbienceHotelRoomTV
+  guid: 819bf3a13d38484283adac3b68ed745e
+  Banks:
+  - {fileID: -522916283729158056}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3394
+--- !u!114 &-1627920673260257393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Street/AmbienceStreetRain
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Street/AmbienceStreetRain
+  guid: d27e4eea181b2e4ca16367dc84fbaae1
+  Banks:
+  - {fileID: -522916283729158056}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 41000
+--- !u!114 &-1307901032048180650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Bar/MusicBarPresent
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Bar/MusicBarPresent
+  guid: 759ad72fad31ab458b0708b1991192e5
+  Banks:
+  - {fileID: -522916283729158056}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 85360
+--- !u!114 &-1019748900448761146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/Riley/SoundsRileyFootsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/Riley/SoundsRileyFootsteps
+  guid: 5822a4432c3ea64d97e43661aa89fc75
+  Banks:
+  - {fileID: -522916283729158056}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 580
+--- !u!114 &-522916283729158056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FmodBanks/Master.bank
+  SubDir: 
+  lastModified: 637184176278273510
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-470901870060884196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -933,7 +329,7 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsSceneTransition
   guid: 77d866bfd114d247983ec2089e17ef85
   Banks:
-  - {fileID: -4201022303476270333}
+  - {fileID: -522916283729158056}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -954,450 +350,36 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -8161720910331261547}
-  - {fileID: -4201022303476270333}
+  - {fileID: -3097908428049005629}
+  - {fileID: -522916283729158056}
   EditorEvents:
-  - {fileID: 7071082440382092503}
-  - {fileID: -2311114228823633726}
-  - {fileID: -4851234000017962257}
-  - {fileID: -1649168515102549105}
-  - {fileID: 3472952866286291159}
-  - {fileID: -8041417024817850927}
-  - {fileID: -8663871371260848454}
-  - {fileID: 4814093318956104156}
-  - {fileID: -7479280826515871554}
-  - {fileID: -4781378581389920475}
-  - {fileID: -5546025673586065296}
-  - {fileID: 3166807311524153545}
-  - {fileID: -61296016417501712}
-  - {fileID: 5379670394293568884}
-  - {fileID: -9080500222359683475}
-  - {fileID: 9030729407989690646}
-  - {fileID: -6952648424481851922}
-  - {fileID: -964583809492794033}
-  - {fileID: -369900402584636446}
+  - {fileID: 395472443493689247}
+  - {fileID: 4549695156852737786}
+  - {fileID: -4096987542711861677}
+  - {fileID: -4457079488193762621}
+  - {fileID: 2104002244092125813}
+  - {fileID: -3038415514962753748}
+  - {fileID: -1019748900448761146}
+  - {fileID: -8166742688303644570}
+  - {fileID: 6490255874554624997}
+  - {fileID: -6254241129378542706}
+  - {fileID: -5176680743809868212}
+  - {fileID: -1307901032048180650}
+  - {fileID: -470901870060884196}
+  - {fileID: -1953100156135789914}
+  - {fileID: 4814268044942910560}
+  - {fileID: -1627920673260257393}
+  - {fileID: -3376952924883343637}
+  - {fileID: -2860630504603618426}
+  - {fileID: 5184266984536052399}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4201022303476270333}
+  - {fileID: -522916283729158056}
   StringsBanks:
-  - {fileID: -8161720910331261547}
-  stringsBankWriteTime: 637184150414614459
+  - {fileID: -3097908428049005629}
+  stringsBankWriteTime: 637184176269874830
   cacheVersion: 3
---- !u!114 &182469033916709939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Street/MusicStreetPresent
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Street/MusicStreetPresent
-  guid: fd1a4f1b59e4304e80e461f3396e3c56
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-  IsStream: 0
-  Is3D: 1
-=======
-  - {fileID: 4574134107881403940}
-  IsStream: 1
-  Is3D: 0
->>>>>>> develop
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 91636
---- !u!114 &722630792655649256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-<<<<<<< HEAD
-  lastModified: 637181464527201190
-=======
-  lastModified: 637181464529945090
->>>>>>> develop
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &3138885345537284956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUINotification
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUINotification
-  guid: 63edd6d2c614f44c900c80376861ba98
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-=======
-  - {fileID: 4574134107881403940}
->>>>>>> develop
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 325
---- !u!114 &3166807311524153545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Bar/MusicBarPresent
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Bar/MusicBarPresent
-  guid: 759ad72fad31ab458b0708b1991192e5
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-  IsStream: 0
-=======
-  - {fileID: -4201022303476270333}
-  IsStream: 1
->>>>>>> develop
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 85360
---- !u!114 &3324135024979140869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Hotel Room/MusicHotelRoomPresent
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Hotel Room/MusicHotelRoomPresent
-  guid: 57cbfc8c48d8284f89488ff6eabdd967
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-  IsStream: 0
-=======
-  - {fileID: 4574134107881403940}
-  IsStream: 1
->>>>>>> develop
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 192000
---- !u!114 &3395928819389096485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Street/AmbienceStreetTrafic
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Street/AmbienceStreetTrafic
-  guid: 2ece97597071884b8319593ad3bbd857
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-=======
-  - {fileID: -6698833347655112336}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
->>>>>>> develop
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 39221
---- !u!114 &3452025832294609748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Cafe/MusicCafePresent
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Cafe/MusicCafePresent
-  guid: 6cc8b4443d47024f95dc037e0bc6011f
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-=======
-  - {fileID: 4574134107881403940}
->>>>>>> develop
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-<<<<<<< HEAD
-  Length: 41000
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: -6112384695654557124}
-  - {fileID: 8083968012269478651}
-  EditorEvents:
-  - {fileID: -7269585190507619207}
-  - {fileID: -3189012506220662781}
-  - {fileID: 6162890076354395456}
-  - {fileID: 3324135024979140869}
-  - {fileID: -2105119965648082940}
-  - {fileID: 7324376106230936601}
-  - {fileID: 3138885345537284956}
-  - {fileID: 7797305247335367328}
-  - {fileID: 3452025832294609748}
-  - {fileID: -4208229066948184312}
-  - {fileID: -7123903456661736576}
-  - {fileID: -2070626715408853140}
-  - {fileID: -1442259826474508195}
-  - {fileID: 182469033916709939}
-  - {fileID: 8401702437371167644}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 8083968012269478651}
-  StringsBanks:
-  - {fileID: -6112384695654557124}
-  stringsBankWriteTime: 637181464527201190
-  cacheVersion: 3
---- !u!114 &182469033916709939
-=======
-  Length: 77419
---- !u!114 &3472952866286291159
->>>>>>> develop
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Club/MusicClubFlashback
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Club/MusicClubFlashback
-  guid: 56cbdf02a302bf4ca8ddaee045317e0c
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-=======
-  - {fileID: -4201022303476270333}
->>>>>>> develop
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 265846
---- !u!114 &4574134107881403940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637178517445692246
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &4626937081086909679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Club/MusicClubFlashback
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Club/MusicClubFlashback
-  guid: 56cbdf02a302bf4ca8ddaee045317e0c
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-  IsStream: 0
-=======
-  - {fileID: -6698833347655112336}
-  IsStream: 1
->>>>>>> develop
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 265846
---- !u!114 &4814093318956104156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUIOpenLogbook
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUIOpenLogbook
-  guid: 60ec7c426b919b48addcf1467193e99b
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-  IsStream: 1
-=======
-  - {fileID: -4201022303476270333}
-  IsStream: 0
->>>>>>> develop
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 661
---- !u!114 &5379670394293568884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Hotel Room/AmbienceHotelRoomTV
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Hotel Room/AmbienceHotelRoomTV
-  guid: 819bf3a13d38484283adac3b68ed745e
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-  IsStream: 1
-  Is3D: 0
-=======
-  - {fileID: -4201022303476270333}
-  IsStream: 0
-  Is3D: 1
->>>>>>> develop
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 3394
---- !u!114 &6162890076354395456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Club/MusicClubFlashback
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Club/MusicClubFlashback
-  guid: 56cbdf02a302bf4ca8ddaee045317e0c
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-=======
-  - {fileID: 4574134107881403940}
->>>>>>> develop
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 140307
---- !u!114 &7055866844161837707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsSceneTransition
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsSceneTransition
-  guid: 77d866bfd114d247983ec2089e17ef85
-  Banks:
-  - {fileID: -6698833347655112336}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1449
---- !u!114 &7071082440382092503
+--- !u!114 &395472443493689247
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1412,7 +394,7 @@ MonoBehaviour:
   Path: event:/Ambience/Hotel Room/AmbienceHotelRoomFan
   guid: 1e4468203efb064f8807e9fa66551837
   Banks:
-  - {fileID: -4201022303476270333}
+  - {fileID: -522916283729158056}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1420,7 +402,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 11271
---- !u!114 &7324376106230936601
+--- !u!114 &2104002244092125813
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1430,108 +412,66 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUIOpenLogbook
+  m_Name: event:/Music/Club/MusicClubFlashback
   m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUIOpenLogbook
-  guid: 60ec7c426b919b48addcf1467193e99b
+  Path: event:/Music/Club/MusicClubFlashback
+  guid: 56cbdf02a302bf4ca8ddaee045317e0c
   Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-=======
-  - {fileID: 4574134107881403940}
->>>>>>> develop
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 661
---- !u!114 &7418394595655002321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637184158893255545
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &7797305247335367328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sounds/UI/SoundsUIClickLogbook
-  m_EditorClassIdentifier: 
-  Path: event:/Sounds/UI/SoundsUIClickLogbook
-  guid: 65f538f33f9cc740814b18bf06fa5f78
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-=======
-  - {fileID: 4574134107881403940}
->>>>>>> develop
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 780
-<<<<<<< HEAD
---- !u!114 &8083968012269478651
-=======
---- !u!114 &7822369871142858925
->>>>>>> develop
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-<<<<<<< HEAD
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637181464529945090
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
-=======
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Cafe/AmbienceCafeChatter
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Cafe/AmbienceCafeChatter
-  guid: fa84ee8cbc3f9c459f5376ead4fa449e
-  Banks:
-  - {fileID: -6698833347655112336}
+  - {fileID: -522916283729158056}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 118624
->>>>>>> develop
---- !u!114 &8401702437371167644
+  Length: 265846
+--- !u!114 &4549695156852737786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/Riley/SoundsRileyDialogue
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/Riley/SoundsRileyDialogue
+  guid: 24cabd6849297c44a5ae83f242fc82b2
+  Banks:
+  - {fileID: -522916283729158056}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 92
+--- !u!114 &4814268044942910560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sounds/UI/SoundsUIExitLogbook
+  m_EditorClassIdentifier: 
+  Path: event:/Sounds/UI/SoundsUIExitLogbook
+  guid: aec4ee10fa2ed947945bb27338b067fc
+  Banks:
+  - {fileID: -522916283729158056}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 421
+--- !u!114 &5184266984536052399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1546,11 +486,7 @@ MonoBehaviour:
   Path: event:/Music/Pizzeria/MusicPizzeriaPresent
   guid: fedc92acd0ad8b42bdf124b3839d39a5
   Banks:
-<<<<<<< HEAD
-  - {fileID: 8083968012269478651}
-=======
-  - {fileID: 4574134107881403940}
->>>>>>> develop
+  - {fileID: -522916283729158056}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1558,25 +494,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 78600
---- !u!114 &8795488310265017057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637181488669955223
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &9030729407989690646
+--- !u!114 &6490255874554624997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1586,34 +504,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Street/AmbienceStreetRain
+  m_Name: event:/Sounds/UI/SoundsUINotification
   m_EditorClassIdentifier: 
-  Path: event:/Ambience/Street/AmbienceStreetRain
-  guid: d27e4eea181b2e4ca16367dc84fbaae1
+  Path: event:/Sounds/UI/SoundsUINotification
+  guid: 63edd6d2c614f44c900c80376861ba98
   Banks:
-  - {fileID: -4201022303476270333}
-  IsStream: 1
+  - {fileID: -522916283729158056}
+  IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 41000
---- !u!114 &9055692843748644703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/FmodBanks/Master.bank
-  SubDir: 
-  lastModified: 637181488669955223
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
+  Length: 325

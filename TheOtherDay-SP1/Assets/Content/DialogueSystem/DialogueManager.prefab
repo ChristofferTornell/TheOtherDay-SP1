@@ -192,8 +192,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -238,7 +238,7 @@ MonoBehaviour:
     spaceCount: 32
     wordCount: 32
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1473,6 +1473,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightProfile
       objectReference: {fileID: 0}
+    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: listenerFadeColor.r
+      value: 0.2735849
+      objectReference: {fileID: 0}
+    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: listenerFadeColor.g
+      value: 0.2735849
+      objectReference: {fileID: 0}
+    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: listenerFadeColor.b
+      value: 0.2735849
+      objectReference: {fileID: 0}
     - target: {fileID: 2146713060814842012, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1562,21 +1577,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: listenerFadeColor.r
-      value: 0.2735849
-      objectReference: {fileID: 0}
-    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: listenerFadeColor.g
-      value: 0.2735849
-      objectReference: {fileID: 0}
-    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: listenerFadeColor.b
-      value: 0.2735849
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6561d94be3f8ce249bdeba75c6e92cf9, type: 3}

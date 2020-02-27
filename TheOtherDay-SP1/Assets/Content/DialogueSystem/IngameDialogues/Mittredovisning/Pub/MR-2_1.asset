@@ -21,6 +21,12 @@ MonoBehaviour:
   typeDelay: 0.01
   triggerFlashback: 
   nextDialogue: {fileID: 0}
-  TimeLimitSeconds: 0
-  noChoiceDialogue: {fileID: 0}
-  choiceButtons: []
+  TimeLimitSeconds: 10
+  noChoiceDialogue: {fileID: 11400000, guid: 1b9b022386b6a0e49abbe0d37d58f86c, type: 2}
+  choiceButtons:
+  - buttonText: I sure was!
+    nextDialogue: {fileID: 11400000, guid: e31c89b5e0d0a1e4195424009ae1e137, type: 2}
+  - buttonText: I don't remember that...
+    nextDialogue: {fileID: 0}
+  - buttonText: What the heck are you talking about?
+    nextDialogue: {fileID: 11400000, guid: e31c89b5e0d0a1e4195424009ae1e137, type: 2}

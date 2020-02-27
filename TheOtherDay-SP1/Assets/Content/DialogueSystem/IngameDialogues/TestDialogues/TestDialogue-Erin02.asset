@@ -19,8 +19,10 @@ MonoBehaviour:
   listenerEmotion: 0
   message: Do you want to go to the mall with me?
   typeDelay: 0.01
+  triggerFlashback: 
   nextDialogue: {fileID: 0}
   TimeLimitSeconds: 10
+  noChoiceDialogue: {fileID: 11400000, guid: d8e896314559e024b9d3cf0216f67b20, type: 2}
   choiceButtons:
   - buttonText: Let's go right now!
     nextDialogue: {fileID: 11400000, guid: 034cd72e446c00845adc81a3a6dcd219, type: 2}

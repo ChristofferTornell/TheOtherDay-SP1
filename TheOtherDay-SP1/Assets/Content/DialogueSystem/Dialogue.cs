@@ -31,6 +31,7 @@ public class Dialogue : ScriptableObject
     [Header ("Insertables")]
     public Dialogue nextDialogue = null;
     public float TimeLimitSeconds = 0;
+    public Dialogue noChoiceDialogue = null;
     public ChoiceButtonBlueprint[] choiceButtons = null;
 }
 

@@ -75,7 +75,9 @@ public class DialogueBox : MonoBehaviour
             {
                 Debug.Log("You ran out of time!");
                 ResetChoiceTimer();
-
+                DialogueManager.instance.currentDialogue = currentDialogue.noChoiceDialogue;
+                DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
+                return;
             }
 
             choiceTimerCounter -= Time.deltaTime;
@@ -117,7 +119,7 @@ public class DialogueBox : MonoBehaviour
             {
                 DialogueManager.instance.ExitDialogue();
                 ResetDialogueUI();
-                if(currentDialogue.triggerFlashback != null)
+                if(currentDialogue.triggerFlashback != "")
                 {
                     SceneChanger.instance.EnterFlashback(currentDialogue.triggerFlashback);
                 }

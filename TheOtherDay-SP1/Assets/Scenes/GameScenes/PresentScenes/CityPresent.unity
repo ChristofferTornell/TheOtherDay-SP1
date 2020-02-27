@@ -2112,7 +2112,6 @@ MonoBehaviour:
   savePlayerPosition: 1
   OneTime: 0
   hoverCursor: 5
-  sceneChangeDelay: 1
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -4232,7 +4231,6 @@ MonoBehaviour:
   savePlayerPosition: 1
   OneTime: 0
   hoverCursor: 5
-  sceneChangeDelay: 1
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -4424,7 +4422,6 @@ MonoBehaviour:
   savePlayerPosition: 1
   OneTime: 0
   hoverCursor: 5
-  sceneChangeDelay: 1
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -4735,6 +4732,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: sceneData
+      value: 
+      objectReference: {fileID: 11400000, guid: 47da64e698d98d447b722c3d1401e604,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6feaf60f489aa7444a205dbb2b5fbeb6, type: 3}
 --- !u!114 &1928440426 stripped
@@ -4828,7 +4831,6 @@ MonoBehaviour:
   savePlayerPosition: 1
   OneTime: 0
   hoverCursor: 5
-  sceneChangeDelay: 1
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -5001,7 +5003,6 @@ MonoBehaviour:
   savePlayerPosition: 1
   OneTime: 0
   hoverCursor: 5
-  sceneChangeDelay: 1
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -5338,7 +5339,6 @@ MonoBehaviour:
   savePlayerPosition: 1
   OneTime: 0
   hoverCursor: 5
-  sceneChangeDelay: 1
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:

@@ -2112,7 +2112,7 @@ MonoBehaviour:
   savePlayerPosition: 1
   OneTime: 0
   hoverCursor: 5
-  interactSoundEvent: 
+  interactSoundEvent: event:/Sounds/UI/SoundsSceneTransition
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -2125,6 +2125,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: PizzeriaPresent
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1942514444}
+        m_MethodName: IE_PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1928440426}
@@ -4231,7 +4242,7 @@ MonoBehaviour:
   savePlayerPosition: 1
   OneTime: 0
   hoverCursor: 5
-  interactSoundEvent: 
+  interactSoundEvent: event:/Sounds/UI/SoundsSceneTransition
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -4244,6 +4255,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: PubPresent
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1942514444}
+        m_MethodName: IE_PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1928440426}
@@ -4422,7 +4444,7 @@ MonoBehaviour:
   savePlayerPosition: 1
   OneTime: 0
   hoverCursor: 5
-  interactSoundEvent: 
+  interactSoundEvent: event:/Sounds/UI/SoundsSceneTransition
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -4435,6 +4457,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: ClubFoyerPresent
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1942514444}
+        m_MethodName: IE_PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1928440426}
@@ -4836,7 +4869,7 @@ MonoBehaviour:
   savePlayerPosition: 1
   OneTime: 0
   hoverCursor: 5
-  interactSoundEvent: 
+  interactSoundEvent: event:/Sounds/UI/SoundsSceneTransition
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -4849,6 +4882,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: HotelPresent
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1942514444}
+        m_MethodName: IE_PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1928440426}
@@ -5088,7 +5132,7 @@ MonoBehaviour:
   savePlayerPosition: 1
   OneTime: 0
   hoverCursor: 5
-  interactSoundEvent: 
+  interactSoundEvent: event:/Sounds/UI/SoundsSceneTransition
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -5101,6 +5145,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: ReceptionPresent
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1942514444}
+        m_MethodName: IE_PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1928440426}
@@ -5424,13 +5479,24 @@ MonoBehaviour:
   savePlayerPosition: 1
   OneTime: 0
   hoverCursor: 5
-  interactSoundEvent: 
+  interactSoundEvent: event:/Sounds/UI/SoundsSceneTransition
   onInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2114476105}
         m_MethodName: IE_ChangeScene
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "Caf\xE9Present"
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1942514444}
+        m_MethodName: IE_PlayAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

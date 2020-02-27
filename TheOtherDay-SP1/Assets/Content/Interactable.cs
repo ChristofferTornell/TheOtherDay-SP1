@@ -74,7 +74,7 @@ public class Interactable : MonoBehaviour
     {
         // Play interaction audio here <---
         Debug.Log("Interactable - Playing audio: " + " ->Audio source here<-");
-        //FMODUnity.RuntimeManager.PlayOneShot(interactSoundEvent); SOUND IMPLEMENTATION
+        FMODUnity.RuntimeManager.PlayOneShot(interactSoundEvent);
 
     }
 

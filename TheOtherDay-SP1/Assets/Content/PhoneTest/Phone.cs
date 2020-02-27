@@ -29,6 +29,28 @@ public class Phone : MonoBehaviour
     public Button PullUpButton;
     public Button PullDownButton;
 
+    private bool Zoomed = false;
+    private bool Zooming = false;
+    private float ZoomSpeed = 1.045f;
+    private float MoveSpeed = -35;
+    private float ZoomTime = 0;
+    private float ZoomLimit = 0.2f;
+    private float ZoomTimeDelta = 0;
+    private float i = 0;
+    private Vector3 ZoomedScale = new Vector3(2.995397f, 6.015067f, 0);
+    private Vector3 NonZoomedScale = new Vector3(1.92882f, 3.87327f, 0);
+    private float speed = 0.1f;
+
+    private void Lerp(Vector3 a, Vector3 b, float time)
+    {
+        float i = 0;
+        float rate = (1 / time) * speed;
+        while (i < 1.0f)
+        {
+            i += Time.deltaTime * rate;
+            transform.localScale = Vector3.Lerp(a, b, i);
+        }
+    }
     
     private void Start()
     {
@@ -48,16 +70,17 @@ public class Phone : MonoBehaviour
     void EnableMessage(bool state)
     {
         MessagePage.SetActive(state);
+        Lerp(NonZoomedScale, ZoomedScale, 2);
     }
 
     void EnableLog(bool state)
     {
-        LogPage.SetActive(state);
+       LogPage.SetActive(state);
     }
 
     void EnableAlbum(bool state)
     {
-        AlbumPage.SetActive(state);
+       AlbumPage.SetActive(state);
     }
 
     private void PullUp()
@@ -79,9 +102,15 @@ public class Phone : MonoBehaviour
         PullDownButton.gameObject.SetActive(false);
     }
 
+    public void Zoom()
+    {
+        Zooming = true;
+    }
+
     private void Update()
     {
         PressingTime += Time.deltaTime;
+        ZoomTimeDelta += Time.deltaTime;
         if(PressingTime > PressingDelta && Pulling == false)
         {
             if (Input.GetKeyDown(PullUpKey))
@@ -98,34 +127,48 @@ public class Phone : MonoBehaviour
         }
     }
 
+    public void Testlerp()
+    {
+        transform.localScale = Vector3.Lerp(ZoomedScale, NonZoomedScale, 2000f);
+    }
+
     private void FixedUpdate()
     {
-        if (Pulling == true && Pulled == false)
-        {
-            PullUpTime += Time.fixedDeltaTime;
-            if (PullUpTime < PullUpLimit)
+        /*PullUp*/{
+            if (Pulling == true && Pulled == false)
             {
-                transform.position += new Vector3(0, PullSpeed, 0);
+                PullUpTime += Time.fixedDeltaTime;
+                if (PullUpTime < PullUpLimit)
+                {
+                    transform.position += new Vector3(0, PullSpeed, 0);
+                }
+                else
+                {
+                    Pulling = false;
+                    Pulled = true;
+                    PressingTime = 0;
+                }
             }
-            else
+            if (Pulling == true && Pulled == true)
             {
-                Pulling = false;
-                Pulled = true;
-                PressingTime = 0;
+                PullUpTime += Time.fixedDeltaTime;
+                if (PullUpTime < PullUpLimit)
+                {
+                    transform.position += new Vector3(0, -1 * PullSpeed, 0);
+                }
+                else
+                {
+                    Pulling = false;
+                    Pulled = false;
+                    PressingTime = 0;
+                }
             }
         }
-        if (Pulling == true && Pulled == true)
-        {
-            PullUpTime += Time.fixedDeltaTime;
-            if (PullUpTime < PullUpLimit)
+
+        /*ZoomIn*/{
+            if(Zooming && !Zoomed)
             {
-                transform.position += new Vector3(0, -1 * PullSpeed, 0);
-            }
-            else
-            {
-                Pulling = false;
-                Pulled = false;
-                PressingTime = 0;
+                
             }
         }
     }

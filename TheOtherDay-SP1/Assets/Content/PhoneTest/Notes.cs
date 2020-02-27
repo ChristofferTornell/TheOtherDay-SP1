@@ -10,7 +10,7 @@ public class Notes : MonoBehaviour
 
     public void EnableNextNote()
     {
-        if(stage < Note.Length)
+        if(stage < Note.Length - 1)
         {
             stage++;
             Note[stage].gameObject.SetActive(true);

@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 681, y: 494}
-  m_MaxSize: {x: 14004, y: 14044}
+  m_MinSize: {x: 679, y: 472}
+  m_MaxSize: {x: 14000, y: 14022}
   vertical: 0
-  controlID: 5690
+  controlID: 4434
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -127,10 +127,10 @@ MonoBehaviour:
     y: 0
     width: 1225
     height: 731
-  m_MinSize: {x: 404, y: 494}
-  m_MaxSize: {x: 10002, y: 14044}
+  m_MinSize: {x: 404, y: 472}
+  m_MaxSize: {x: 10000, y: 14022}
   vertical: 1
-  controlID: 5691
+  controlID: 4435
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 222}
   m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 5692
+  controlID: 4436
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -213,7 +213,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 68d7feff40dafeff2cddfeff04e0feff0ce6feffb6f9feff72fdfeffe0fdfeff5cfefeffbefefeffdcfefeff0cfffeff24fffeff2cfffeffcc01fffffc01ffff1602ffff1802ffff0c05ffffb014ffff2c15ffff8c15ffffa215ffffaa15ffffda15fffff615fffffe15ffffee25ffff7e28fffffa28ffff5c29ffff7a29ffffaa29ffffc429ffffc629ffff7633fffff233ffff5434ffff7234ffffa234ffffbc34ffffc834ffff4a4dffffc64dffff284effff484effff764effff904effffa84effffcc58ffffcc5bffff16deffff02e1ffff36e4ffff6ce7ffff8ceaffff8aedffff6ef0ffff64f3ffff64f6ffff58f9ffff18faffff
+      m_ExpandedIDs: 42c1feff1c5e0000385e00004e5e0000525e0000565e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -294,16 +294,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 8d2c69bc7156d4148948e8265d788878
   m_Gizmos: 1
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 556.43524, y: -84.78295, z: -289.77686}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 556.43524, y: -84.78295, z: -289.77686}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -336,9 +336,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10
+    m_Target: 744.1506
     speed: 2
-    m_Value: 10
+    m_Value: 744.1506
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -456,20 +456,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/GameScenes/PresentScenes
+    - Assets/Content/Characters
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/GameScenes/PresentScenes
+  - Assets/Content/Characters
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Christoffer\Desktop\SpelProjekt 1\TheOtherDay-SP1\TheOtherDay-SP1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 710}
-    m_SelectedIDs: a2410000
-    m_LastClickedID: 16802
-    m_ExpandedIDs: 000000009236000096360000fe3600000e3800006a380000ae390000e8390000fe390000083a0000d43a0000dc3b0000de3b0000a83d00005c410000864100002443000000ca9a3b
+    scrollPos: {x: 0, y: 82.99667}
+    m_SelectedIDs: c03b0000
+    m_LastClickedID: 15296
+    m_ExpandedIDs: 00000000c43500003636000046370000a2370000ea380000243900003a39000044390000123a0000383b00003a3b000060400000f04000001a410000b842000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -497,7 +497,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009236000096360000fe3600000e3800006a380000ae390000e8390000fe390000083a0000d43a0000dc3b0000de3b0000a83d00005c410000864100002443000000ca9a3b
+    m_ExpandedIDs: 00000000c43500003636000046370000a2370000ea380000243900003a39000044390000123a0000383b00003a3b000060400000f04000001a410000b842000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -522,8 +522,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 84370000
-    m_LastClickedInstanceID: 14212
+    m_SelectedInstanceIDs: d2350000
+    m_LastClickedInstanceID: 13778
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -541,7 +541,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0

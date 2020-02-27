@@ -10,23 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: MR-2_1
+  m_Name: MR-2_1-0
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: 697c03abe2da6a34e9cc67fe00994873, type: 2}
-  speakerEmotion: 0
+  speakerEmotion: 2
   messageVocalizationSound: 
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
-  listenerEmotion: 0
-  message: Oh yeah, you were a really drunk one!
+  listenerEmotion: 1
+  message: Haha, you too shy to say anything?
   typeDelay: 0.01
   triggerFlashback: 
   nextDialogue: {fileID: 0}
-  TimeLimitSeconds: 10
-  noChoiceDialogue: {fileID: 11400000, guid: 1b9b022386b6a0e49abbe0d37d58f86c, type: 2}
-  choiceButtons:
-  - buttonText: I sure was!
-    nextDialogue: {fileID: 11400000, guid: e31c89b5e0d0a1e4195424009ae1e137, type: 2}
-  - buttonText: I don't remember that...
-    nextDialogue: {fileID: 0}
-  - buttonText: What the heck are you talking about?
-    nextDialogue: {fileID: 11400000, guid: e31c89b5e0d0a1e4195424009ae1e137, type: 2}
+  TimeLimitSeconds: 0
+  noChoiceDialogue: {fileID: 0}
+  choiceButtons: []

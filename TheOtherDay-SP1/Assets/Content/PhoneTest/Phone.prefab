@@ -933,10 +933,10 @@ RectTransform:
   m_GameObject: {fileID: 404168760836543089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.07537726, y: 0.037921906, z: 0.037920553}
+  m_LocalScale: {x: 0.07537727, y: 0.037921906, z: 0}
   m_Children: []
-  m_Father: {fileID: 9001126137696709467}
-  m_RootOrder: 3
+  m_Father: {fileID: 9001126136877757140}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1036,7 +1036,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 9001126136877757145}
-        m_MethodName: ZoomOut
+        m_MethodName: Zoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1593,12 +1593,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3490845222999925033}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.07537595, y: 0.037923098, z: 0.037923098}
+  m_LocalScale: {x: 0.07537596, y: 0.037923098, z: 0}
   m_Children: []
-  m_Father: {fileID: 9001126137696709467}
-  m_RootOrder: 2
+  m_Father: {fileID: 9001126136877757140}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1698,7 +1698,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 9001126136877757145}
-        m_MethodName: ZoomOut
+        m_MethodName: Zoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2281,7 +2281,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9001126136877757144}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.9288199, y: 3.8732698, z: 0}
   m_Children:
@@ -2290,6 +2290,8 @@ RectTransform:
   - {fileID: 9001126138377271812}
   - {fileID: 9001126138213167938}
   - {fileID: 9001126136664251584}
+  - {fileID: 3938023205559198308}
+  - {fileID: 7198570584496317123}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2970,6 +2972,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9001126136877757145}
+        m_MethodName: Zoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &9001126137621801447
@@ -3076,8 +3089,6 @@ RectTransform:
   m_Children:
   - {fileID: 9001126137023728478}
   - {fileID: 6772486116973350309}
-  - {fileID: 3938023205559198308}
-  - {fileID: 7198570584496317123}
   m_Father: {fileID: 9001126136877757140}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

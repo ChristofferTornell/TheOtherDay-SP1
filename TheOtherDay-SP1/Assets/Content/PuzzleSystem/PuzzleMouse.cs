@@ -19,7 +19,7 @@ public class PuzzleMouse : MonoBehaviour
     {
         itemOnMouse = item;
         itemSprite.enabled = true;
-        itemSprite.sprite = item.sprite;
+        itemSprite.sprite = item.icon;
         Debug.Log("Placing " + item.name + " on mouse with " + itemSprite.name + " sprite");
     }
 

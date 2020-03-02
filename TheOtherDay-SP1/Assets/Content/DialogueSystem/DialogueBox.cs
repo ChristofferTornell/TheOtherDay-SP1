@@ -103,6 +103,20 @@ public class DialogueBox : MonoBehaviour
 
     }
 
+    public void CheckSceneTrigger()
+    {
+        if (currentDialogue.triggerScene != "")
+        {
+            if (currentDialogue.enterFlashback)
+            {
+                SceneChanger.instance.EnterFlashback(currentDialogue.triggerScene);
+            }
+            if (currentDialogue.exitFlashback)
+            {
+                SceneChanger.instance.ExitFlashback(currentDialogue.triggerScene);
+            }
+        }
+    }
     public void UpdateDialogueUI()
     {
         StopAllCoroutines();
@@ -117,20 +131,17 @@ public class DialogueBox : MonoBehaviour
         {
             if (currentDialogue.choiceButtons.Length == 0)
             {
-                DialogueManager.instance.ExitDialogue();
-                ResetDialogueUI();
-                if(currentDialogue.triggerScene != "")
+
+                if (!currentDialogue.initialDialogue)
                 {
-                    if (currentDialogue.enterFlashback)
-                    {
-                        SceneChanger.instance.EnterFlashback(currentDialogue.triggerScene);
-                    }
-                    if (currentDialogue.exitFlashback)
-                    {
-                        SceneChanger.instance.ExitFlashback(currentDialogue.triggerScene);
-                    }
+                    DialogueManager.instance.ExitDialogue();
+                    ResetDialogueUI();
+                    return;
                 }
-                return;
+                else
+                {
+                    CheckSceneTrigger();
+                }
             }
             
         }
@@ -139,6 +150,10 @@ public class DialogueBox : MonoBehaviour
         nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
         PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().UpdateDialogue();
         //FMODUnity.RuntimeManager.PlayOneShot(currentDialogue.messageVocalizationSound); IMPLEMENT AUDIO
+        if (currentDialogue.item != null)
+        {
+            Inventory.instance.INV_AddItem(currentDialogue.item);
+        }
 
         StartCoroutine(AutotypeText(currentDialogue.message, currentDialogue.typeDelay, currentDialogue.speaker.typingSound));
 
@@ -155,8 +170,6 @@ public class DialogueBox : MonoBehaviour
             NPCprofile.profileImage.gameObject.SetActive(true);
 
         }
-
-
 
         if (currentDialogue.speaker.name == "Riley")
         {

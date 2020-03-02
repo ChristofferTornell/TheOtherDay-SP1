@@ -17,10 +17,14 @@ MonoBehaviour:
   messageVocalizationSound: 
   listener: {fileID: 11400000, guid: ecd1378815b872248a4c06eb0a786cd8, type: 2}
   listenerEmotion: 0
-  message: Hello, teleport me to present time.
+  message: Hello, give me the ring please.
   typeDelay: 0.01
-  triggerFlashback: 
-  nextDialogue: {fileID: 11400000, guid: 5618d9680ca4c534e958c20345cf8f31, type: 2}
+  triggerScene: 
+  enterFlashback: 0
+  exitFlashback: 0
+  initialDialogue: 0
+  item: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 112fe5d477936064ca039e34a2b85e4e, type: 2}
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

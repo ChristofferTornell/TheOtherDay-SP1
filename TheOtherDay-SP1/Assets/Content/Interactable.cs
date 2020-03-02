@@ -9,7 +9,8 @@ public class Interactable : MonoBehaviour
 {
     public bool savePlayerPosition = false;
     public bool OneTime = false;
-    public int unlockedOnStage = 1;
+    public int unlockedOnStage = 0;
+    public Items requiredItem;
     public Items lockedData;
     public CursorSprite hoverCursor = CursorSprite.BigHand;
     [Space]
@@ -32,6 +33,14 @@ public class Interactable : MonoBehaviour
         {
             DescriptionUI.instance.ExamineItem(lockedData);
             return;
+        }
+        if (requiredItem != null)
+        {
+            if (!Inventory.instance.INV_FindItem(requiredItem))
+            {
+                DescriptionUI.instance.ExamineItem(lockedData);
+                return;
+            }
         }
         onInteract.Invoke();
         if (OneTime) { DestroyThis(); }
@@ -85,6 +94,11 @@ public class Interactable : MonoBehaviour
         SceneChanger.instance.ExitFlashback(sceneName);
     }
 
+    public void IE_DestroySelf()
+    {
+        Destroy(gameObject);
+    }
+
 
     // Needs testing
     public void IE_PlayAudio()
@@ -100,16 +114,30 @@ public class Interactable : MonoBehaviour
         // PH, make public when done
     }
 
-    public void IE_PlayDialogue(Dialogue dialogue)
-    {
-        // Play the dialogue here
-    }
-
     public void IE_GiveItem()
     {
         if (PuzzleMouse.itemOnMouse != null)
         {
             GetComponent<PuzzleMaster>().RecieveItem();
+        }
+    }
+
+    public void IE_PlayDialogue()
+    {
+        Dialogue _initDialogue = null;
+        DialogueContainer container = GetComponent<DialogueContainer>();
+        if (!container.hasSpoken)
+        {
+            _initDialogue = container.dialogue;
+        }
+        else
+        {
+            _initDialogue = container.dialogueSpoken;
+        }
+        if (_initDialogue != null)
+        {
+            container.hasSpoken = true;
+            DialogueManager.instance.EnterDialogue(_initDialogue);
         }
     }
 }

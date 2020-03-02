@@ -13,7 +13,7 @@ public class Examine : MonoBehaviour
 
     private void OnEnable()
     {
-        sprite.sprite = item.sprite;
+        sprite.sprite = item.icon;
         description.text = item.description;
         name.text = item.myName;
     }

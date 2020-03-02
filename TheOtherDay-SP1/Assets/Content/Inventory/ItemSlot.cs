@@ -29,7 +29,7 @@ public class ItemSlot : MonoBehaviour
     public void UpdateSlot(Items _item)
     {
         myItem = _item;
-        myItemIcon.UpdateSprite(_item.sprite);
+        myItemIcon.UpdateSprite(_item.icon);
         myItem.myItemSlot = this;
     }
 

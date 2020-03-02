@@ -54,6 +54,7 @@ public class Inventory : MonoBehaviour
             {
                 Debug.Log("Adding item " + item.myName);
                 iSlot.UpdateSlot(item);
+                
                 return;
             }
         }

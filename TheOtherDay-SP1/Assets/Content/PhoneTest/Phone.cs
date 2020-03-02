@@ -31,26 +31,10 @@ public class Phone : MonoBehaviour
 
     private bool Zoomed = false;
     private bool Zooming = false;
-    private float ZoomSpeed = 1.045f;
-    private float MoveSpeed = -35;
-    private float ZoomTime = 0;
-    private float ZoomLimit = 0.2f;
     private float ZoomTimeDelta = 0;
-    private float i = 0;
     private Vector3 ZoomedScale = new Vector3(2.995397f, 6.015067f, 0);
     private Vector3 NonZoomedScale = new Vector3(1.92882f, 3.87327f, 0);
     private float speed = 0.1f;
-
-    private void Lerp(Vector3 a, Vector3 b, float time)
-    {
-        float i = 0;
-        float rate = (1 / time) * speed;
-        while (i < 1.0f)
-        {
-            i += Time.deltaTime * rate;
-            transform.localScale = Vector3.Lerp(a, b, i);
-        }
-    }
     
     private void Start()
     {
@@ -59,7 +43,7 @@ public class Phone : MonoBehaviour
         LogButton.onClick.AddListener(delegate { EnableLog(true); });
         AlbumButton.onClick.AddListener(delegate { EnableAlbum(true); });
         PullUpButton.onClick.AddListener(PullUp);
-        PullDownButton.onClick.AddListener(PullDown);
+        PullDownButton.onClick.AddListener(delegate { PullDown(); PullDownButtonFunc(); });
     }
 
     void EnableCall(bool state)
@@ -70,7 +54,6 @@ public class Phone : MonoBehaviour
     void EnableMessage(bool state)
     {
         MessagePage.SetActive(state);
-        Lerp(NonZoomedScale, ZoomedScale, 2);
     }
 
     void EnableLog(bool state)
@@ -107,6 +90,14 @@ public class Phone : MonoBehaviour
         Zooming = true;
     }
 
+    public void PullDownButtonFunc()
+    {
+        if (Zoomed)
+        {
+            Zoom();
+        }
+    }
+
     private void Update()
     {
         PressingTime += Time.deltaTime;
@@ -125,11 +116,6 @@ public class Phone : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void Testlerp()
-    {
-        transform.localScale = Vector3.Lerp(ZoomedScale, NonZoomedScale, 2000f);
     }
 
     private void FixedUpdate()
@@ -168,8 +154,30 @@ public class Phone : MonoBehaviour
         /*ZoomIn*/{
             if(Zooming && !Zoomed)
             {
-                
+                PullDownButton.gameObject.SetActive(false);
+                Vector3 desiredScale = ZoomedScale;
+                Vector3 smoothedScale = Vector3.Lerp(transform.localScale, desiredScale, 0.25f);
+                transform.localScale = smoothedScale;
+                if(transform.localScale == desiredScale)
+                {
+                    Zooming = false;
+                    Zoomed = !Zoomed;
+                    PullDownButton.gameObject.SetActive(true);
+                }
             }
-        }
+            if (Zooming && Zoomed)
+            {
+                PullDownButton.gameObject.SetActive(false);
+                Vector3 desiredScale = NonZoomedScale;
+                Vector3 smoothedScale = Vector3.Lerp(transform.localScale, desiredScale, 0.25f);
+                transform.localScale = smoothedScale;
+                if (transform.localScale == desiredScale)
+                {
+                    Zooming = false;
+                    Zoomed = !Zoomed;
+                    PullDownButton.gameObject.SetActive(true);
+                }
+            }
+            }
     }
 }

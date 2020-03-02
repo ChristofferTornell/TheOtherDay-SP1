@@ -8,6 +8,7 @@ public class PlayerInteractivity : MonoBehaviour
     [SerializeField] private string interactionButton;
 
     private Interactable interactableObject = null;
+    public GameObject interactUI;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class PlayerInteractivity : MonoBehaviour
         if (collision.GetComponent<Interactable>())
         {
             interactableObject = collision.GetComponent<Interactable>();
+            interactUI.SetActive(true);
         }
     }
 
@@ -27,23 +29,41 @@ public class PlayerInteractivity : MonoBehaviour
         if (collision.GetComponent<Interactable>())
         {
             interactableObject = null;
+            interactUI.SetActive(false);
         }
+    }
+
+    [HideInInspector] public Dialogue currentDialogue;
+    public void UpdateDialogue()
+    {
+        currentDialogue = DialogueManager.instance.currentDialogue;
     }
 
     void Update()
     {
         // Interact with the Object using the useButton
-        if (interactableObject && Input.GetButtonDown(interactionButton) && !DialogueManager.dialogueActive)
+        if (interactableObject && Input.GetButtonDown(interactionButton))
         {
-            Debug.Log("Doing something with " + interactableObject.name);
+            Debug.Log("Dialogue active: " + DialogueManager.dialogueActive);
 
-            if (interactableObject.savePlayerPosition)
+            if (DialogueManager.dialogueActive && currentDialogue.noChoiceDialogue == null)
             {
-                SavedPositions.NewPosition(GameController.currentScene, new Vector2(interactableObject.transform.position.x, gameObject.transform.position.y));
+                Debug.Log("Go to next dialogue via space");
+                DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;
+                DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
             }
+            else if (!DialogueManager.dialogueActive)
+            {
+                Debug.Log("Doing something with " + interactableObject.name);
 
-            interactableObject.Interact();
-            // Do something with the object
+                if (interactableObject.savePlayerPosition)
+                {
+                    SavedPositions.NewPosition(GameController.currentScene, new Vector2(interactableObject.transform.position.x, gameObject.transform.position.y));
+                }
+
+                interactableObject.Interact();
+                // Do something with the object
+            }
         }
     }
 }

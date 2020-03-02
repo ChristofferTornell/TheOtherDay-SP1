@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private static PlayerMovement playerInstance;
+    public static PlayerMovement playerInstance;
     public static bool playerMovementLocked = false;
 
     [Header("Animation")]

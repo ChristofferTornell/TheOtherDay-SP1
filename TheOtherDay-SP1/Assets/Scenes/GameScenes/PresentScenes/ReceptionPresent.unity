@@ -644,7 +644,19 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   onMouseInteract:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1949716773}
+        m_MethodName: ExamineNPC
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: f194cfe8527bcc946bfb2c8ae1bb4bea,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: CharacterData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!61 &125069760
@@ -2155,6 +2167,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65fd18d0f7d10c341ab685ff58a8c697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1949716773 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2356892426582510869, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1949716770}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2daea64fe261c40b86650f7ba76ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2062099358

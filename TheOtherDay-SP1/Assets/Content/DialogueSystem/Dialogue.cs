@@ -25,7 +25,9 @@ public class Dialogue : ScriptableObject
 
     [TextArea] public string message = "";
     public float typeDelay = 0.01f;
-    public string triggerFlashback;
+    public string triggerScene;
+    public bool enterFlashback = false;
+    public bool exitFlashback = false;
 
     [Header ("Insertables")]
     public Dialogue nextDialogue = null;

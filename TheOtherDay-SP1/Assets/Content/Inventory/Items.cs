@@ -7,6 +7,7 @@ using UnityEngine;
 public class Items : ScriptableObject
 {
     public Sprite sprite;
+    public Sprite icon;
     public string myName;
     public bool useable = false;
     public ItemSlot myItemSlot;

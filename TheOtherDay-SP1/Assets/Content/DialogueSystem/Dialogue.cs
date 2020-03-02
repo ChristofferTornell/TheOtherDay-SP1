@@ -23,8 +23,7 @@ public class Dialogue : ScriptableObject
     public CharacterData listener;
     public CharacterEmotion listenerEmotion = CharacterEmotion.normal;
 
-    [TextArea(15, 20)]
-    public string message = "";
+    [TextArea] public string message = "";
     public float typeDelay = 0.01f;
     public string triggerFlashback;
 

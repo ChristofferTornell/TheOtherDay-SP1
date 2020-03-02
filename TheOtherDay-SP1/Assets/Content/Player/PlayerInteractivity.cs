@@ -44,11 +44,8 @@ public class PlayerInteractivity : MonoBehaviour
         // Interact with the Object using the useButton
         if (interactableObject && Input.GetButtonDown(interactionButton))
         {
-            Debug.Log("Dialogue active: " + DialogueManager.dialogueActive);
-
             if (DialogueManager.dialogueActive && currentDialogue.noChoiceDialogue == null)
             {
-                Debug.Log("Go to next dialogue via space");
                 DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;
                 DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
             }

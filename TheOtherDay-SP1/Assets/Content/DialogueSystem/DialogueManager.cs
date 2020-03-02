@@ -12,7 +12,6 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("creating dialoguemanager");
         if (instance != null)
         {
             Destroy(gameObject);

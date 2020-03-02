@@ -31,7 +31,6 @@ public class DialogueBox : MonoBehaviour
 
     public void InitializeDialogueUI()
     {
-        Debug.Log(DialogueManager.instance);
         currentDialogue = DialogueManager.instance.currentDialogue;
         ResetChoiceTimer();
         UpdateDialogueUI();
@@ -128,7 +127,7 @@ public class DialogueBox : MonoBehaviour
             }
             
         }
-        nextButtonObject.gameObject.SetActive(true);
+        //nextButtonObject.gameObject.SetActive(true);
         currentDialogue = DialogueManager.instance.currentDialogue;
         nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
         PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().UpdateDialogue();

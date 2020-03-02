@@ -26,10 +26,6 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        foreach (ItemSlot iSlot in itemSlots)
-        {
-            Debug.Log("my item: " + iSlot.myItem.myName);
-        }
         //inventoryManager = InventoryData.instance.manager;
         //inventoryManager.itemSlots = new ItemSlot[itemSlotAmount];
         /*

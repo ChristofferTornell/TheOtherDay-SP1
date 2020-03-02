@@ -20,16 +20,10 @@ public class ItemSlot : MonoBehaviour
     {
         btn.onClick.AddListener(Click);
         inventory = Inventory.instance;
-        UpdateSlot(myItem);
-        /*
-        foreach (ItemSlot _iSlot in inventory.itemSlots)
+        if (myItem != null)
         {
-            if (_iSlot.myItem != null)
-            {
-                inventory.INV_AddItem(_iSlot.myItem);
-            }
+            UpdateSlot(myItem);
         }
-        */
     }
 
     public void UpdateSlot(Items _item)
@@ -41,10 +35,8 @@ public class ItemSlot : MonoBehaviour
 
     void Click()
     {
-        Debug.Log("clicked on itemslot");
         if (myItem == null)
         {
-            Debug.Log("I dont have an item :(");
             return;
         }
         if (menu.activeSelf)
@@ -55,7 +47,6 @@ public class ItemSlot : MonoBehaviour
         {
             menu.SetActive(true);
         }
-        //hideMenuButton.SetActive(true);
     }
 
     public void UseItem()

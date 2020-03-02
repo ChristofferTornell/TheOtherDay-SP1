@@ -19,7 +19,9 @@ MonoBehaviour:
   listenerEmotion: 0
   message: Okay boss.
   typeDelay: 0.01
-  triggerFlashback: HotelPresent
+  triggerScene: HotelPresent
+  enterFlashback: 0
+  exitFlashback: 1
   nextDialogue: {fileID: 0}
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}

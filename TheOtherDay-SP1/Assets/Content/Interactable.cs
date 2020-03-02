@@ -9,6 +9,8 @@ public class Interactable : MonoBehaviour
 {
     public bool savePlayerPosition = false;
     public bool OneTime = false;
+    public int unlockedOnStage = 1;
+    public Items lockedData;
     public CursorSprite hoverCursor = CursorSprite.BigHand;
     [Space]
     [Header("Audio")]
@@ -26,6 +28,11 @@ public class Interactable : MonoBehaviour
 
     public void Interact()
     {
+        if (lockedData != null && unlockedOnStage > GlobalData.instance.stage)
+        {
+            DescriptionUI.instance.ExamineItem(lockedData);
+            return;
+        }
         onInteract.Invoke();
         if (OneTime) { DestroyThis(); }
 

@@ -68,6 +68,16 @@ public class Interactable : MonoBehaviour
         SceneChanger.instance.ChangeScene(sceneName);
     }
 
+    public void IE_EnterFlashback(string sceneName)
+    {
+        SceneChanger.instance.EnterFlashback(sceneName);
+    }
+
+    public void IE_ExitFlashback(string sceneName)
+    {
+        SceneChanger.instance.ExitFlashback(sceneName);
+    }
+
 
     // Needs testing
     public void IE_PlayAudio()

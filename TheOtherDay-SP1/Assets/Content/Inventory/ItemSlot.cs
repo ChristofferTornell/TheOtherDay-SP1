@@ -20,14 +20,23 @@ public class ItemSlot : MonoBehaviour
     {
         btn.onClick.AddListener(Click);
         inventory = Inventory.instance;
-        Debug.Log("Inventory instance: " + inventory.GetHashCode().ToString());
-        foreach (ItemSlot _iSlot in inventory.inventoryManager.itemSlots)
+        UpdateSlot(myItem);
+        /*
+        foreach (ItemSlot _iSlot in inventory.itemSlots)
         {
             if (_iSlot.myItem != null)
             {
                 inventory.INV_AddItem(_iSlot.myItem);
             }
         }
+        */
+    }
+
+    public void UpdateSlot(Items _item)
+    {
+        myItem = _item;
+        myItemIcon.UpdateSprite(_item.sprite);
+        myItem.myItemSlot = this;
     }
 
     void Click()

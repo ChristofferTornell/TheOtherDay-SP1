@@ -7,9 +7,7 @@ using TMPro;
 public class Inventory : MonoBehaviour
 {
     public GameObject itemBar;
-    public GameObject itemSlotObj;
-    public int itemSlotAmount;
-    public InventoryManager inventoryManager;
+    public ItemSlot[] itemSlots;
 
     [HideInInspector] public static Inventory instance;
 
@@ -28,9 +26,13 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
+        foreach (ItemSlot iSlot in itemSlots)
+        {
+            Debug.Log("my item: " + iSlot.myItem.myName);
+        }
         //inventoryManager = InventoryData.instance.manager;
-        inventoryManager.itemSlots = new ItemSlot[itemSlotAmount];
-
+        //inventoryManager.itemSlots = new ItemSlot[itemSlotAmount];
+        /*
         for (int i = 0; i < itemSlotAmount; i++)
         {
             GameObject iSlotObj = Instantiate(itemSlotObj);
@@ -40,6 +42,7 @@ public class Inventory : MonoBehaviour
             inventoryManager.itemSlots[i] = iSlot;
             iSlot.inventory = this;
         }
+        */
     }
 
     public void INV_AddItem(Items item)
@@ -49,15 +52,12 @@ public class Inventory : MonoBehaviour
             Debug.Log("cant add item outside of flashback");
             return;
         }
-        foreach (ItemSlot iSlot in inventoryManager.itemSlots)
+        foreach (ItemSlot iSlot in itemSlots)
         {
-            Debug.Log("checking each slot");
             if (iSlot.myItem == null)
             {
                 Debug.Log("Adding item " + item.myName);
-                iSlot.myItem = item;
-                iSlot.myItemIcon.UpdateSprite(item.sprite);
-                iSlot.myItem.myItemSlot = iSlot;
+                iSlot.UpdateSlot(item);
                 return;
             }
         }
@@ -65,7 +65,7 @@ public class Inventory : MonoBehaviour
 
     public bool INV_FindItem(Items item)
     {
-        foreach (ItemSlot iSlot in inventoryManager.itemSlots)
+        foreach (ItemSlot iSlot in itemSlots)
         {
             if (iSlot.myItem == item)
             {
@@ -80,21 +80,9 @@ public class Inventory : MonoBehaviour
 
     public void INV_ClearItemSlot(ItemSlot _itemSlot)
     {
-        Debug.Log("Adding item " + _itemSlot);
+        Debug.Log("Clearing slot" + _itemSlot);
 
         _itemSlot.myItem = null;
         _itemSlot.myItemIcon.UpdateSprite(nullSprite);
-    }
-
-    public void UpdateState()
-    {
-        if (GlobalData.instance.flashBack)
-        {
-            itemBar.gameObject.SetActive(true);
-        }
-        else
-        {
-            itemBar.gameObject.SetActive(false);
-        }
     }
 }

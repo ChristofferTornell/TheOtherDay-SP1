@@ -15,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
     public AnimationClip IdleRight;
     public AnimationClip WalkLeft;
     public AnimationClip WalkRight;
+    [Space]
+    public AnimationClip IdleLeftFresh;
+    public AnimationClip IdleRightFresh;
+    public AnimationClip WalkLeftFresh;
+    public AnimationClip WalkRightFresh;
     private Vector2 lookDirection;
 
     [Space]
@@ -114,7 +119,15 @@ public class PlayerMovement : MonoBehaviour
         {
             lookDirection = Vector2.right;
             rb.velocity = Vector2.right * movementSpeed * Time.deltaTime;
-            animator.Play(WalkRight.name);
+
+            if (GlobalData.instance.flashBack)
+            {
+                animator.Play(WalkRightFresh.name);
+            }
+            else
+            {
+                animator.Play(WalkRight.name);
+            }               
         }
 
         // Left
@@ -122,7 +135,16 @@ public class PlayerMovement : MonoBehaviour
         {
             lookDirection = Vector2.left;
             rb.velocity = Vector2.left * movementSpeed * Time.deltaTime;
-            animator.Play(WalkLeft.name);
+
+            if (GlobalData.instance.flashBack)
+            {
+                animator.Play(WalkLeftFresh.name);
+            }   
+
+            else
+            {
+                animator.Play(WalkLeft.name);
+            }
         }
 
         if (rb.velocity == Vector2.zero)
@@ -148,12 +170,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (lookDirection == Vector2.left && Input.GetAxisRaw(horizontalAxis) == 0)
         {
-            animator.Play(IdleLeft.name);
+            if (GlobalData.instance.flashBack) { animator.Play(IdleLeftFresh.name); }
+            else { animator.Play(IdleLeft.name); }
         }
 
         if (lookDirection == Vector2.right && Input.GetAxisRaw(horizontalAxis) == 0)
         {
-            animator.Play(IdleRight.name);
+            if (GlobalData.instance.flashBack) { animator.Play(IdleRightFresh.name); }
+            else { animator.Play(IdleRight.name); }
         }
     }
 

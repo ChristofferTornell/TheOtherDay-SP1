@@ -8,7 +8,8 @@ public class BackButton : MonoBehaviour
     public Phone phone;
     public Button _HomeButton;
     public Button _BackButton;
-    public GameObject[] Menus;
+    public GameObject[] MessageMenus;
+    public GameObject LogMenu;
 
     private void Start()
     {
@@ -18,27 +19,51 @@ public class BackButton : MonoBehaviour
 
     private void HomeButton()
     {
-        for (int i = Menus.Length; i > 0; i--)
+        if (phone.Page == 0)
         {
-            Menus[i - 1].SetActive(false);
+            int count = 0;
+            for (int i = 0; i < MessageMenus.Length; i++)
+            {
+                if (!MessageMenus[i].activeSelf)
+                {
+                    count++;
+                }
+            }
+            if(count != MessageMenus.Length)
+            {
+                for (int i = MessageMenus.Length; i > 0; i--)
+                {
+                    MessageMenus[i - 1].SetActive(false);
+                }
+                phone.Zoom();
+            }
         }
-        phone.Zoom();
+        else if(phone.Page == 1)
+        {
+            LogMenu.SetActive(false);
+        }
     }
 
     private void BackbuttonFunc()
     {
-        for (int i = Menus.Length - 1; i >= 0; i--)
+        if(phone.Page == 0)
         {
-            if (Menus[i].activeSelf)
+            for (int i = MessageMenus.Length - 1; i >= 0; i--)
             {
-                Debug.Log(i);
-                Menus[i].SetActive(false);
-                if(i == 0)
+                if (MessageMenus[i].activeSelf)
                 {
-                    phone.Zoom();
+                    MessageMenus[i].SetActive(false);
+                    if(i == 0)
+                    {
+                        phone.Zoom();
+                    }
+                    return;
                 }
             }
-            return;
+        }
+        else if(phone.Page == 1)
+        {
+            LogMenu.SetActive(false);
         }
     }
 }

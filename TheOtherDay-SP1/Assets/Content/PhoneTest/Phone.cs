@@ -29,6 +29,8 @@ public class Phone : MonoBehaviour
     public Button PullUpButton;
     public Button PullDownButton;
 
+    [HideInInspector]public int Page;
+
     private bool Zoomed = false;
     private bool Zooming = false;
     private float ZoomTimeDelta = 0;
@@ -53,11 +55,13 @@ public class Phone : MonoBehaviour
 
     void EnableMessage(bool state)
     {
+        Page = 0;
         MessagePage.SetActive(state);
     }
 
     void EnableLog(bool state)
     {
+       Page = 1;
        LogPage.SetActive(state);
     }
 
@@ -87,6 +91,7 @@ public class Phone : MonoBehaviour
 
     public void Zoom()
     {
+        Debug.Log("Zoom");
         Zooming = true;
     }
 

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
+  m_Name: 0annaliese_first_6a_0
+  m_EditorClassIdentifier: 
+  speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  speakerEmotion: 2
+  messageVocalizationSound: 
+  listener: {fileID: 11400000, guid: f194cfe8527bcc946bfb2c8ae1bb4bea, type: 2}
+  listenerEmotion: 2
+  message: "Oh, okay. I guess that\u2019ll have to do. Damn..."
+  typeDelay: 0.01
+  triggerScene: 
+  enterFlashback: 0
+  exitFlashback: 0
+  item: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 9696c269c2a2418419ea4d1bf0f75157, type: 2}
+  TimeLimitSeconds: 0
+  noChoiceDialogue: {fileID: 0}
+  choiceButtons: []

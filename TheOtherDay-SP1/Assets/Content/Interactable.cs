@@ -12,6 +12,7 @@ public class Interactable : MonoBehaviour
     public int unlockedOnStage = 0;
     public Items requiredItem;
     public Items lockedData;
+    public int charIndex = 0;
     public CursorSprite hoverCursor = CursorSprite.BigHand;
     [Space]
     [Header("Audio")]
@@ -124,19 +125,36 @@ public class Interactable : MonoBehaviour
 
     public void IE_PlayDialogue()
     {
+        CharacterData charData = GlobalData.instance.charaters[charIndex];
+        
         Dialogue _initDialogue = null;
-        DialogueContainer container = GetComponent<DialogueContainer>();
-        if (!container.hasSpoken)
+        int _stage = GlobalData.instance.stage;
+
+        if (!charData.dialogues[_stage].hasSpoken)
         {
-            _initDialogue = container.dialogue;
+            if (!GlobalData.instance.flashBack)
+            {
+                _initDialogue = charData.dialogues[_stage].dialogue;
+            }
+            else
+            {
+                _initDialogue = charData.dialogues[_stage].dialogueFlashback;
+            }
         }
         else
         {
-            _initDialogue = container.dialogueSpoken;
+            if (!GlobalData.instance.flashBack)
+            {
+                _initDialogue = charData.dialogues[_stage].dialogueSpoken;
+            }
+            else
+            {
+                _initDialogue = charData.dialogues[_stage].dialogueFlashbackSpoken;
+            }
         }
         if (_initDialogue != null)
         {
-            container.hasSpoken = true;
+            charData.dialogues[_stage].hasSpoken = true;
             DialogueManager.instance.EnterDialogue(_initDialogue);
         }
     }

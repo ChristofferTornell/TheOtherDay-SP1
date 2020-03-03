@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1599,6 +1599,7 @@ MonoBehaviour:
   unlockedOnStage: 0
   requiredItem: {fileID: 11400000, guid: c549d5f4404db504c85ad57c5f7f0444, type: 2}
   lockedData: {fileID: 11400000, guid: 5e43578f0da946940868f47962d5ff51, type: 2}
+  charIndex: 0
   hoverCursor: 5
   interactSoundEvent: event:/Sounds/UI/SoundsSceneTransition
   onInteract:
@@ -2645,6 +2646,7 @@ MonoBehaviour:
   unlockedOnStage: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
+  charIndex: 0
   hoverCursor: 5
   interactSoundEvent: 
   onInteract:
@@ -3924,7 +3926,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1200901811}
   - component: {fileID: 1200901813}
-  - component: {fileID: 1200901814}
   - component: {fileID: 1200901810}
   - component: {fileID: 1200901812}
   - component: {fileID: 1200901815}
@@ -4042,6 +4043,7 @@ MonoBehaviour:
   unlockedOnStage: 1
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
+  charIndex: 1
   hoverCursor: 5
   interactSoundEvent: 
   onInteract:
@@ -4077,22 +4079,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1200901814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1200901809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d57846393746a34a8fdfe966704ebe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 0
-  dialogue: {fileID: 11400000, guid: f7f6aa99468cf9946b4be690cf041662, type: 2}
-  dialogueSpoken: {fileID: 11400000, guid: 112fe5d477936064ca039e34a2b85e4e, type: 2}
-  hasSpoken: 0
 --- !u!95 &1200901815
 Animator:
   serializedVersion: 3

@@ -623,18 +623,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
   OneTime: 0
+  unlockedOnStage: 0
+  requiredItem: {fileID: 0}
+  lockedData: {fileID: 0}
+  charIndex: 2
   hoverCursor: 5
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1949716772}
-        m_MethodName: EnterDialogue
-        m_Mode: 2
+      - m_Target: {fileID: 125069759}
+        m_MethodName: IE_PlayDialogue
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: ae4e67169db50064d8bd687870837101,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: Dialogue, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1207,6 +1210,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
   OneTime: 0
+  unlockedOnStage: 0
+  requiredItem: {fileID: 0}
+  lockedData: {fileID: 0}
+  charIndex: 0
   hoverCursor: 1
   interactSoundEvent: event:/Sounds/UI/SoundsSceneTransition
   onInteract:
@@ -2155,18 +2162,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d6da8328e15cb548949297f2a357be5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1949716772 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2321846843708220559, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1949716770}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65fd18d0f7d10c341ab685ff58a8c697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1949716773 stripped

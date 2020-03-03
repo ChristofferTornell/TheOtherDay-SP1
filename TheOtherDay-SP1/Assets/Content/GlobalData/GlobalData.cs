@@ -7,6 +7,7 @@ public class GlobalData : MonoBehaviour
     public static GlobalData instance;
     public int stage = 0;
     public bool flashBack;
+    public CharacterData[] charaters;
 
     private void Awake()
     {

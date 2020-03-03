@@ -24,6 +24,12 @@ MonoBehaviour:
   exitFlashback: 0
   item: {fileID: 0}
   nextDialogue: {fileID: 0}
-  TimeLimitSeconds: 0
-  noChoiceDialogue: {fileID: 0}
-  choiceButtons: []
+  TimeLimitSeconds: 10
+  noChoiceDialogue: {fileID: 11400000, guid: 5618d9680ca4c534e958c20345cf8f31, type: 2}
+  choiceButtons:
+  - buttonText: yes
+    nextDialogue: {fileID: 11400000, guid: 5618d9680ca4c534e958c20345cf8f31, type: 2}
+  - buttonText: no
+    nextDialogue: {fileID: 11400000, guid: 5618d9680ca4c534e958c20345cf8f31, type: 2}
+  - buttonText: fine
+    nextDialogue: {fileID: 11400000, guid: 5618d9680ca4c534e958c20345cf8f31, type: 2}

@@ -24,6 +24,7 @@ public class DialogueBox : MonoBehaviour
     private bool choiceTimerInitiated = false;
     private float choiceTimerCounter = 0;
     public TextMeshProUGUI choiceTimerTextObject = null;
+    private List<GameObject> choiceButtons = new List<GameObject>();
 
     private float typeSoundCounter;
     public float typeSoundDelay = 0.1f;
@@ -81,10 +82,12 @@ public class DialogueBox : MonoBehaviour
                 DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
                 return;
             }
-
+            
             choiceTimerCounter -= Time.deltaTime;
             choiceTimerCounter = Mathf.Clamp(choiceTimerCounter, 0f, Mathf.Infinity);
             choiceTimerTextObject.text = string.Format("{0:00.00}", choiceTimerCounter);
+           
+            
         }
     }
 
@@ -127,6 +130,7 @@ public class DialogueBox : MonoBehaviour
         {
             foreach (Transform child in choiceButtonLayout.transform)
             {
+                choiceButtons.Remove(child.gameObject);
                 Destroy(child.gameObject);
             }
         }
@@ -260,6 +264,7 @@ public class DialogueBox : MonoBehaviour
                     _choiceButton.transform.SetParent(choiceButtonLayout.transform);
                     _choiceButton.GetComponent<ChoiceButton>().textObject.text = currentDialogue.choiceButtons[i].buttonText;
                     _choiceButton.GetComponent<ChoiceButton>().myId = i;
+                    choiceButtons.Add(_choiceButton);
                 }
                 choiceButtonsExist = true;
                 return;

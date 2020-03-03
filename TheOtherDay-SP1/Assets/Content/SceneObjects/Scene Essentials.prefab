@@ -333,7 +333,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.8, y: -0.9}
-  m_SizeDelta: {x: 100, y: 16.88}
+  m_SizeDelta: {x: 120, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7504291171199215487
 CanvasRenderer:
@@ -512,8 +512,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descriptionBoxObj: {fileID: 2737734496920964152}
   descriptionBoxDescriptionTextObj: {fileID: 6899582714451652494}
-  typeDelay: 0.01
-  boxExitDelay: 1
+  typeDelay: 0.0075
+  boxExitDelay: 3
 --- !u!1001 &1217652723
 PrefabInstance:
   m_ObjectHideFlags: 0

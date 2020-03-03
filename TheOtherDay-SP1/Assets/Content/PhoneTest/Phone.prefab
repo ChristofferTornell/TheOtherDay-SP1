@@ -1895,7 +1895,7 @@ RectTransform:
   m_GameObject: {fileID: 9001126136877757144}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9288199, y: 3.8732698, z: 0}
+  m_LocalScale: {x: 1.576948, y: 3.166675, z: 0}
   m_Children:
   - {fileID: 9001126138072577976}
   - {fileID: 9001126137696709467}
@@ -1963,7 +1963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PullUpKey: 112
-  PullSpeed: 27
+  PullSpeed: 28
   CallPage: {fileID: 9001126138213167936}
   MessageButton: {fileID: 9001126137612808568}
   MessagePage: {fileID: 9001126137696709466}
@@ -3581,6 +3581,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9001126138279523004}
     m_Modifications:
+    - target: {fileID: 6652103048668445156, guid: b1076a8e8d85adf4d8eab297e297484e,
+        type: 3}
+      propertyPath: m_Name
+      value: Call Square
+      objectReference: {fileID: 0}
     - target: {fileID: 6652103048668445159, guid: b1076a8e8d85adf4d8eab297e297484e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3686,11 +3691,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6652103048668445156, guid: b1076a8e8d85adf4d8eab297e297484e,
-        type: 3}
-      propertyPath: m_Name
-      value: Call Square
-      objectReference: {fileID: 0}
     - target: {fileID: 6652103048668445160, guid: b1076a8e8d85adf4d8eab297e297484e,
         type: 3}
       propertyPath: time
@@ -3717,6 +3717,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1606469035}
     m_Modifications:
+    - target: {fileID: 735560003784700991, guid: 9c289e4da28b3b14e998a4e20f950a96,
+        type: 3}
+      propertyPath: m_Name
+      value: Bubble White (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 735560003784700991, guid: 9c289e4da28b3b14e998a4e20f950a96,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 735560003784700990, guid: 9c289e4da28b3b14e998a4e20f950a96,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3837,16 +3847,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.09902309
       objectReference: {fileID: 0}
-    - target: {fileID: 735560003784700991, guid: 9c289e4da28b3b14e998a4e20f950a96,
-        type: 3}
-      propertyPath: m_Name
-      value: Bubble White (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 735560003784700991, guid: 9c289e4da28b3b14e998a4e20f950a96,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c289e4da28b3b14e998a4e20f950a96, type: 3}
 --- !u!224 &8565661107731851243 stripped
@@ -3862,6 +3862,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9001126137696709467}
     m_Modifications:
+    - target: {fileID: 2384331326851925880, guid: 6384d825db18cb3458e59d49ed063793,
+        type: 3}
+      propertyPath: m_Name
+      value: Message square
+      objectReference: {fileID: 0}
     - target: {fileID: 2384331326851925881, guid: 6384d825db18cb3458e59d49ed063793,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3967,11 +3972,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2384331326851925880, guid: 6384d825db18cb3458e59d49ed063793,
-        type: 3}
-      propertyPath: m_Name
-      value: Message square
-      objectReference: {fileID: 0}
     - target: {fileID: 6784319635490383606, guid: 6384d825db18cb3458e59d49ed063793,
         type: 3}
       propertyPath: character
@@ -4013,6 +4013,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1606469035}
     m_Modifications:
+    - target: {fileID: 735560003784700991, guid: 9c289e4da28b3b14e998a4e20f950a96,
+        type: 3}
+      propertyPath: m_Name
+      value: Bubble White 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 735560003784700991, guid: 9c289e4da28b3b14e998a4e20f950a96,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 735560003784700990, guid: 9c289e4da28b3b14e998a4e20f950a96,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4132,16 +4142,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.09902498
-      objectReference: {fileID: 0}
-    - target: {fileID: 735560003784700991, guid: 9c289e4da28b3b14e998a4e20f950a96,
-        type: 3}
-      propertyPath: m_Name
-      value: Bubble White 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 735560003784700991, guid: 9c289e4da28b3b14e998a4e20f950a96,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c289e4da28b3b14e998a4e20f950a96, type: 3}

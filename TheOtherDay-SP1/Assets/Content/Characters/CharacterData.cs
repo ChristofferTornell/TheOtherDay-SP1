@@ -22,6 +22,8 @@ public class CharacterData : ScriptableObject
     public Color color;
     [FMODUnity.EventRef] public string typingSound;
 
+    public DialogueContainer[] dialogues;
+
     [TextArea(15,20)]
     public string[] sms;
 

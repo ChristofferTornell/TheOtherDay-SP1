@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueContainer : MonoBehaviour
+[System.Serializable]
+public class DialogueContainer
 {
-    public int id = 0;
     public Dialogue dialogue = null;
     public Dialogue dialogueSpoken = null;
-
+    public Dialogue dialogueFlashback = null;
+    public Dialogue dialogueFlashbackSpoken = null;
     public bool hasSpoken = false;
-    
 }

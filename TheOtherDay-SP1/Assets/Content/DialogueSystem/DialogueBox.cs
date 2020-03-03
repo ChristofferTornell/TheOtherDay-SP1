@@ -91,21 +91,46 @@ public class DialogueBox : MonoBehaviour
         }
     }
 
-    IEnumerator AutotypeText(string inputMessage, float delay, string typingSound)
+    IEnumerator AutotypeText()
     {
-        for (int i = 0; i < inputMessage.Length; i++)
+        textObject.font = currentDialogue.speaker.font;
+        textObject.color = currentDialogue.speaker.color;
+        textObject.fontStyle = FontStyles.Normal;
+        if (currentDialogue.italic)
         {
-            textObject.text = inputMessage.Substring(0, i + 1);
-
-            if (typeSoundReady)
-            {
-                FMODUnity.RuntimeManager.PlayOneShot(typingSound);
-                typeSoundReady = false;
-            }
-
-            yield return new WaitForSeconds(delay);
+            textObject.fontStyle = FontStyles.Italic;
         }
+        foreach (Message _message in currentDialogue.messages)
+        {
+            //FMODUnity.RuntimeManager.PlayOneShot(_message.messageSound); //SOUND IMPLEMENTATION
+            /*
+            if (_message.bold)
+            {
+                textObject.fontStyle = FontStyles.Bold;
+            }
+            if (_message.italic)
+            {
+                textObject.fontStyle = FontStyles.Italic;
+            }
+            if (_message.useAlternateColor)
+            {
+                textObject.color = _message.alternateColor;
+            }
+            */
+            for (int i = 0; i < _message.text.Length; i++)
+            {
+                textObject.text += _message.text[i];
+                //textObject.text = _message.text.Substring(0, i + 1);
 
+                if (typeSoundReady)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot(currentDialogue.speaker.typingSound);
+                    typeSoundReady = false;
+                }
+
+                yield return new WaitForSeconds(_message.typeDelay);
+            }
+        }
     }
 
     public void CheckSceneTrigger()
@@ -141,9 +166,9 @@ public class DialogueBox : MonoBehaviour
             {
                 CheckSceneTrigger();
                 Debug.Log("exit dialogue: " + currentDialogue);
-                DialogueManager.instance.ExitDialogue();
                 ResetDialogueUI();
                 dialogueEnded = true;
+                DialogueManager.instance.ExitDialogue();
                 return;
             }
 
@@ -164,12 +189,6 @@ public class DialogueBox : MonoBehaviour
         PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().UpdateDialogue();
         //FMODUnity.RuntimeManager.PlayOneShot(currentDialogue.messageVocalizationSound); IMPLEMENT AUDIO
 
-        if (isActiveAndEnabled)
-        {
-            StartCoroutine(AutotypeText(currentDialogue.message, currentDialogue.typeDelay, currentDialogue.speaker.typingSound));
-        }
-
-        Debug.Log(currentDialogue);
         if (currentDialogue.item != null)
         {
             Inventory.instance.INV_AddItem(currentDialogue.item);
@@ -246,11 +265,10 @@ public class DialogueBox : MonoBehaviour
 
         NPCprofile.profileImage.sprite = NPCprofile.SpriteFromMood(npcEmotion);
 
-
-        textObject.font = currentDialogue.speaker.font;
-        textObject.color = currentDialogue.speaker.color;
-
-
+        if (isActiveAndEnabled)
+        {
+            StartCoroutine(AutotypeText());
+        }
 
         if (currentDialogue.nextDialogue == null)
         {
@@ -275,6 +293,7 @@ public class DialogueBox : MonoBehaviour
 
     public void ResetDialogueUI()
     {
+        textObject.text = "";
         //currentDialogue = null;
         //textObject.text = "";
         //nextButtonObject = null;

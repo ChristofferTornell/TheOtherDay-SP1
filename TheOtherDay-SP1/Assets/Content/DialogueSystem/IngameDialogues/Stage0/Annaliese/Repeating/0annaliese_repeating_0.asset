@@ -10,22 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 0annaliese_first_0
+  m_Name: 0annaliese_repeating_0
   m_EditorClassIdentifier: 
-  speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
-  speakerEmotion: 0
-  listener: {fileID: 11400000, guid: f194cfe8527bcc946bfb2c8ae1bb4bea, type: 2}
+  speaker: {fileID: 11400000, guid: f194cfe8527bcc946bfb2c8ae1bb4bea, type: 2}
+  speakerEmotion: 1
+  messageVocalizationSound: 
+  listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   listenerEmotion: 0
-  italic: 0
-  messages:
-  - text: Uh, hey...
-    typeDelay: 0.01
-    messageSound: 
+  message: Greetings! How can I assist you? Oh, it is you. How goes the hunt?
+  typeDelay: 0.01
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: d5bb7ab06d0821942aba86325eebf120, type: 2}
+  nextDialogue: {fileID: 0}
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

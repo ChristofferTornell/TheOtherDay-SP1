@@ -14,11 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: f194cfe8527bcc946bfb2c8ae1bb4bea, type: 2}
   speakerEmotion: 0
-  messageVocalizationSound: 
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   listenerEmotion: 0
-  message: Hum... not here... Wah! Oh, that was just a toy. No, not there either....
-  typeDelay: 0.01
+  italic: 0
+  messages:
+  - text: 'Hum... not here... '
+    typeDelay: 0.1
+    messageSound: 
+  - text: 'Wah! '
+    typeDelay: 0.001
+    messageSound: 
+  - text: 'Oh, that was just a toy. '
+    typeDelay: 0.01
+    messageSound: 
+  - text: 'No, not there either.... '
+    typeDelay: 0.1
+    messageSound: 
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

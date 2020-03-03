@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   speakerEmotion: 2
-  messageVocalizationSound: 
   listener: {fileID: 11400000, guid: f194cfe8527bcc946bfb2c8ae1bb4bea, type: 2}
   listenerEmotion: 0
-  message: Yeah, well, you never know. You are a receptionist, not a CEO.
-  typeDelay: 0.01
+  italic: 0
+  messages:
+  - text: Yeah, well, you never know. You are a receptionist, not a CEO.
+    typeDelay: 0.01
+    messageSound: 
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

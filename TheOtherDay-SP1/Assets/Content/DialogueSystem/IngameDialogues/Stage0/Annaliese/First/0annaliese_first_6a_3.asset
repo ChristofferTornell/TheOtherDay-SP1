@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: f194cfe8527bcc946bfb2c8ae1bb4bea, type: 2}
   speakerEmotion: 0
-  messageVocalizationSound: 
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   listenerEmotion: 0
-  message: "\xA4...=...#... Okay, got it! I will be sure to contact you the moment
-    we find anything."
-  typeDelay: 0.01
+  italic: 0
+  messages:
+  - text: "\xA4...=...#... "
+    typeDelay: 0.1
+    messageSound: 
+  - text: Okay, got it! I will be sure to contact you the moment we find anything.
+    typeDelay: 0.01
+    messageSound: 
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

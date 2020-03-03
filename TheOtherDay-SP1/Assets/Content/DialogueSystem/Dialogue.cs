@@ -18,18 +18,17 @@ public class Dialogue : ScriptableObject
     [Header ("Customization")]
     public CharacterData speaker;
     public CharacterEmotion speakerEmotion = CharacterEmotion.normal;
-    [FMODUnity.EventRef] public string messageVocalizationSound;
 
     public CharacterData listener;
     public CharacterEmotion listenerEmotion = CharacterEmotion.normal;
 
-    [TextArea] public string message = "";
-    public float typeDelay = 0.01f;
+    public bool italic;
+    public Message[] messages;
+    [Header("Insertables")]
     public string triggerScene;
     public bool enterFlashback = false;
     public bool exitFlashback = false;
-
-    [Header("Insertables")]
+    [Space]
     public Items item;
     public Dialogue nextDialogue = null;
     public float TimeLimitSeconds = 0;

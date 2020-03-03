@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class DialogueBox : MonoBehaviour
 {
-    [HideInInspector]   public Dialogue currentDialogue = null;
+    [HideInInspector] public Dialogue currentDialogue = null;
     public TextMeshProUGUI textObject = null;
     public TextMeshProUGUI leftNameTextObject = null;
     public TextMeshProUGUI rightNameTextObject = null;
@@ -31,6 +31,7 @@ public class DialogueBox : MonoBehaviour
 
     public void InitializeDialogueUI()
     {
+        dialogueEnded = false;
         currentDialogue = DialogueManager.instance.currentDialogue;
         ResetChoiceTimer();
         UpdateDialogueUI();
@@ -40,6 +41,7 @@ public class DialogueBox : MonoBehaviour
     {
         ResetChoiceTimer();
         ResetDialogueUI();
+        CheckExistingDialogue();
         UpdateDialogueUI();
     }
 
@@ -60,7 +62,7 @@ public class DialogueBox : MonoBehaviour
                 typeSoundCounter = 0;
             }
         }
-       
+
 
         if (currentDialogue.TimeLimitSeconds > 0 && choiceTimerInitiated == false)
         {
@@ -71,7 +73,7 @@ public class DialogueBox : MonoBehaviour
         }
         if (choiceTimerInitiated)
         {
-            if(choiceTimerCounter <= 0f)
+            if (choiceTimerCounter <= 0f)
             {
                 Debug.Log("You ran out of time!");
                 ResetChoiceTimer();
@@ -90,14 +92,14 @@ public class DialogueBox : MonoBehaviour
     {
         for (int i = 0; i < inputMessage.Length; i++)
         {
-            textObject.text = inputMessage.Substring(0, i+1);
+            textObject.text = inputMessage.Substring(0, i + 1);
 
             if (typeSoundReady)
             {
                 FMODUnity.RuntimeManager.PlayOneShot(typingSound);
                 typeSoundReady = false;
             }
-            
+
             yield return new WaitForSeconds(delay);
         }
 
@@ -117,7 +119,8 @@ public class DialogueBox : MonoBehaviour
             }
         }
     }
-    public void UpdateDialogueUI()
+    private bool dialogueEnded;
+    void CheckExistingDialogue()
     {
         StopAllCoroutines();
         if (choiceButtonsExist)
@@ -127,36 +130,46 @@ public class DialogueBox : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
+        Debug.Log(currentDialogue + " next dialogue: " + currentDialogue.nextDialogue);
         if (currentDialogue.nextDialogue == null)
         {
             if (currentDialogue.choiceButtons.Length == 0)
             {
-
-                if (!currentDialogue.initialDialogue)
-                {
-                    DialogueManager.instance.ExitDialogue();
-                    ResetDialogueUI();
-                    return;
-                }
-                else
-                {
-                    CheckSceneTrigger();
-                }
+                CheckSceneTrigger();
+                Debug.Log("exit dialogue: " + currentDialogue);
+                DialogueManager.instance.ExitDialogue();
+                ResetDialogueUI();
+                dialogueEnded = true;
+                return;
             }
-            
+
+        }
+    }
+    public void UpdateDialogueUI()
+    {
+        if (dialogueEnded)
+        {
+            return;
         }
         //nextButtonObject.gameObject.SetActive(true);
-        currentDialogue = DialogueManager.instance.currentDialogue;
+        if (DialogueManager.instance.currentDialogue != null)
+        {
+            currentDialogue = DialogueManager.instance.currentDialogue;
+        }
         nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
         PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().UpdateDialogue();
         //FMODUnity.RuntimeManager.PlayOneShot(currentDialogue.messageVocalizationSound); IMPLEMENT AUDIO
+
+        if (isActiveAndEnabled)
+        {
+            StartCoroutine(AutotypeText(currentDialogue.message, currentDialogue.typeDelay, currentDialogue.speaker.typingSound));
+        }
+
+        Debug.Log(currentDialogue);
         if (currentDialogue.item != null)
         {
             Inventory.instance.INV_AddItem(currentDialogue.item);
         }
-
-        StartCoroutine(AutotypeText(currentDialogue.message, currentDialogue.typeDelay, currentDialogue.speaker.typingSound));
-
 
         Dialogue.CharacterEmotion rileyEmotion;
         Dialogue.CharacterEmotion npcEmotion;
@@ -185,7 +198,7 @@ public class DialogueBox : MonoBehaviour
             leftNamePlate.SetActive(true);
             rightNamePlate.SetActive(false);
             rileyEmotion = currentDialogue.speakerEmotion;
-            if(currentDialogue.listener != null)
+            if (currentDialogue.listener != null)
             {
                 rileyProfile.myCharacter = currentDialogue.speaker;
                 NPCprofile.myCharacter = currentDialogue.listener;
@@ -232,7 +245,7 @@ public class DialogueBox : MonoBehaviour
 
         textObject.font = currentDialogue.speaker.font;
         textObject.color = currentDialogue.speaker.color;
-        
+
 
 
         if (currentDialogue.nextDialogue == null)
@@ -261,7 +274,7 @@ public class DialogueBox : MonoBehaviour
         //textObject.text = "";
         //nextButtonObject = null;
         //leftProfile = null;
-       // rightProfile = null;
+        // rightProfile = null;
     }
 
 }

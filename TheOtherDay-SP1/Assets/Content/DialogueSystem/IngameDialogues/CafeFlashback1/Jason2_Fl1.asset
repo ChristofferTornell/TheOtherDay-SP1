@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: Jason1_Fl2
+  m_Name: Jason2_Fl1
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: ecd1378815b872248a4c06eb0a786cd8, type: 2}
-  speakerEmotion: 1
+  speakerEmotion: 0
   messageVocalizationSound: 
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   listenerEmotion: 0
-  message: Okay boss.
+  message: I've already given you the ring.
   typeDelay: 0.01
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
-  item: {fileID: 11400000, guid: e861a804f1901804cbf0dfd9d9227e92, type: 2}
+  item: {fileID: 0}
   nextDialogue: {fileID: 0}
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}

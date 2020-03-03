@@ -30,7 +30,6 @@ public class Dialogue : ScriptableObject
     public bool exitFlashback = false;
 
     [Header("Insertables")]
-    public bool initialDialogue;
     public Items item;
     public Dialogue nextDialogue = null;
     public float TimeLimitSeconds = 0;

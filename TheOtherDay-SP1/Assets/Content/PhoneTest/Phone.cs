@@ -34,8 +34,8 @@ public class Phone : MonoBehaviour
     private bool Zoomed = false;
     private bool Zooming = false;
     private float ZoomTimeDelta = 0;
-    private Vector3 ZoomedScale = new Vector3(2.995397f, 6.015067f, 0);
-    private Vector3 NonZoomedScale = new Vector3(1.92882f, 3.87327f, 0);
+    private Vector3 ZoomedScale = new Vector3(2.275618f, 4.569676f, 0);
+    private Vector3 NonZoomedScale = new Vector3(1.576948f, 3.166675f, 0);
     private float speed = 0.1f;
     
     private void Start()
@@ -117,6 +117,7 @@ public class Phone : MonoBehaviour
                 else
                 {
                     PullDown();
+                    PullDownButtonFunc();
                 }
             }
         }

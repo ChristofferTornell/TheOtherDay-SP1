@@ -187,6 +187,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3480607174871130095, guid: 599f8094af025e74ebb11687569938ff,
+        type: 3}
+      propertyPath: IdleLeftFresh
+      value: 
+      objectReference: {fileID: 7400000, guid: f1ff7fd26b04c014a8230d502d1fc0f3, type: 2}
+    - target: {fileID: 3480607174871130095, guid: 599f8094af025e74ebb11687569938ff,
+        type: 3}
+      propertyPath: IdleRightFresh
+      value: 
+      objectReference: {fileID: 7400000, guid: 32352fc5fa77513468c178d7eeb8869e, type: 2}
+    - target: {fileID: 3480607174871130095, guid: 599f8094af025e74ebb11687569938ff,
+        type: 3}
+      propertyPath: WalkLeftFresh
+      value: 
+      objectReference: {fileID: 7400000, guid: 805314028a3416643a1a5c849570161a, type: 2}
+    - target: {fileID: 3480607174871130095, guid: 599f8094af025e74ebb11687569938ff,
+        type: 3}
+      propertyPath: WalkRightFresh
+      value: 
+      objectReference: {fileID: 7400000, guid: ba0984f6a783ff640935561d5b8ad639, type: 2}
+    - target: {fileID: 3480607174871130095, guid: 599f8094af025e74ebb11687569938ff,
+        type: 3}
+      propertyPath: movementSpeed
+      value: 450
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599f8094af025e74ebb11687569938ff, type: 3}
 --- !u!1001 &572917715
@@ -669,14 +694,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
-  mouseInteraction: 0
-  examineOnClick: 0
-  pickupItem: 0
   OneTime: 0
+  unlockedOnStage: 0
+  requiredItem: {fileID: 0}
+  lockedData: {fileID: 0}
+  charIndex: 0
   hoverCursor: 5
-  sceneChangeDelay: 1
-  characterdata: {fileID: 0}
-  itemData: {fileID: 0}
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -930,6 +953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 294146206648491336, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: flashBack
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}

@@ -131,8 +131,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100.19635, y: -16.567566}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: -92, y: -29}
+  m_SizeDelta: {x: 520, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2406047993954277388
 CanvasRenderer:
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -51.882984, y: 0, z: -59.026367, w: -18.421387}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2406047993954277389}
     characterCount: 168
@@ -1086,11 +1086,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4670344911138750771}
     m_Modifications:
-    - target: {fileID: 8040725963986640674, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: m_Name
-      value: LeftProfile
-      objectReference: {fileID: 0}
     - target: {fileID: 2146713060814842012, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1195,6 +1190,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040725963986640674, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: m_Name
+      value: LeftProfile
       objectReference: {fileID: 0}
     - target: {fileID: 6181025935409634981, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
         type: 3}
@@ -1544,11 +1544,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4670344911138750771}
     m_Modifications:
-    - target: {fileID: 8040725963986640674, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: m_Name
-      value: RightProfile
-      objectReference: {fileID: 0}
     - target: {fileID: 2146713060814842012, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1638,6 +1633,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8040725963986640674, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: m_Name
+      value: RightProfile
       objectReference: {fileID: 0}
     - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
         type: 3}

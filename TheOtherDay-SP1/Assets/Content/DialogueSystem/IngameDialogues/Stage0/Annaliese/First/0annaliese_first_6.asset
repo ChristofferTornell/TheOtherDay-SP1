@@ -17,7 +17,8 @@ MonoBehaviour:
   messageVocalizationSound: 
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   listenerEmotion: 0
-  message: 'No, sorry, I cannot seem to find anything matching your description here. '
+  message: No, sorry, I cannot seem to find anything matching your description in
+    here. I can ask my colleagues to keep an eye out for it, if you wish?
   typeDelay: 0.01
   triggerScene: 
   enterFlashback: 0
@@ -25,7 +26,7 @@ MonoBehaviour:
   item: {fileID: 0}
   nextDialogue: {fileID: 0}
   TimeLimitSeconds: 10
-  noChoiceDialogue: {fileID: 0}
+  noChoiceDialogue: {fileID: 11400000, guid: 99a0f9e7b9077894394f7fae370d8d94, type: 2}
   choiceButtons:
   - buttonText: Oh okay.
     nextDialogue: {fileID: 11400000, guid: 99a0f9e7b9077894394f7fae370d8d94, type: 2}

@@ -91,7 +91,6 @@ public class Phone : MonoBehaviour
 
     public void Zoom()
     {
-        Debug.Log("Zoom");
         Zooming = true;
     }
 

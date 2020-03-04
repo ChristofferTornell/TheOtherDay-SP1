@@ -188,7 +188,10 @@ public class DialogueBox : MonoBehaviour
         nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
         PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().UpdateDialogue();
         //FMODUnity.RuntimeManager.PlayOneShot(currentDialogue.messageVocalizationSound); IMPLEMENT AUDIO
-
+        if (currentDialogue.changeReputation != 0)
+        {
+            GlobalData.instance.reputation += currentDialogue.changeReputation;
+        }
         if (currentDialogue.item != null)
         {
             Inventory.instance.INV_AddItem(currentDialogue.item);

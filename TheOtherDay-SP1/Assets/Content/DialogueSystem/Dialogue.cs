@@ -23,6 +23,7 @@ public class Dialogue : ScriptableObject
     public CharacterData listener;
     public CharacterEmotion listenerEmotion = CharacterEmotion.normal;
 
+    public int changeReputation;
     public bool italic;
     public Message[] messages;
     [Header("Insertables")]

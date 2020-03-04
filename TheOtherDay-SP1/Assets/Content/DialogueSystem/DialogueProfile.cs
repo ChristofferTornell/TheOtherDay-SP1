@@ -38,6 +38,11 @@ public class DialogueProfile : MonoBehaviour
             return myCharacter.dialogueImageFlashbackSad;
 
         }
+        if (mood == Dialogue.CharacterEmotion.angry)
+        {
+            return myCharacter.dialogueImageFlashbackSad;
+
+        }
         Debug.Log("Error, mood doesnt have sprite");
         return myCharacter.dialogueImageFlashbackNormal;
 

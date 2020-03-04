@@ -13,10 +13,13 @@ public class CharacterData : ScriptableObject
     public Sprite dialogueImageFlashbackNormal;
     public Sprite dialogueImageFlashbackHappy;
     public Sprite dialogueImageFlashbackSad;
+    public Sprite dialogueImageFlashbackAngry;
 
     public Sprite dialogueImagePresentNormal;
     public Sprite dialogueImagePresentHappy;
     public Sprite dialogueImagePresentSad;
+    public Sprite dialogueImagePresentAngry;
+
 
     public TMPro.TMP_FontAsset font;
     public Color color;

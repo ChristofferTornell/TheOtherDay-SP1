@@ -12,7 +12,8 @@ public class Dialogue : ScriptableObject
     {
         normal,
         happy,
-        sad
+        sad,
+        angry
     };
 
     [Header ("Customization")]

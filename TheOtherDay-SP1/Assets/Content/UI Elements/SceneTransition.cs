@@ -7,19 +7,22 @@ using UnityEngine.UI;
 public class SceneTransition : MonoBehaviour
 {
     public Image panelImage;
-    public RectTransform imagePosition = null;
     [Header("Transition Stuf")]
     public Animator animator = null;
     public AnimationClip fadeInAnimation = null;
     public Color fadeInColor;
     public AnimationClip fadeOutAnimation = null;
     public Color fadeOutColor;
-    public Color transitionColor;
 
     private void Start()
     {
         SceneManager.sceneUnloaded += OnSceneUnloaded; 
         SceneManager.sceneLoaded += OnSceneLoaded; 
+
+    }
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void TRAN_FadeIn()

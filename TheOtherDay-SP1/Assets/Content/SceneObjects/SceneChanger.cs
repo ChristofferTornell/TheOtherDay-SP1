@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    public Animator animator = null;
     [SerializeField] private float sceneChangeDelay = 1f;
     public static SceneChanger instance;
     void Awake()
@@ -22,9 +23,11 @@ public class SceneChanger : MonoBehaviour
     {
         // Scene change effect(s) can be put here
         // --------------------------------------
+        if (animator) animator.SetTrigger("Fade In");
 
         yield return new WaitForSeconds(sceneChangeDelay);
 
+        if (animator) animator.ResetTrigger("Fade In");
         SceneManager.LoadScene(sceneName);
 
         yield return null;

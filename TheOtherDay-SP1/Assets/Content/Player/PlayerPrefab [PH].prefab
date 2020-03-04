@@ -190,8 +190,12 @@ MonoBehaviour:
   IdleRight: {fileID: 7400000, guid: 17ca286e71665ea4d9de8701dbb6fca5, type: 2}
   WalkLeft: {fileID: 7400000, guid: b550f3185be32b44c870b1951632594c, type: 2}
   WalkRight: {fileID: 7400000, guid: b4d27ad9f53bd5741abe067a16d8fdfb, type: 2}
+  IdleLeftFresh: {fileID: 7400000, guid: f1ff7fd26b04c014a8230d502d1fc0f3, type: 2}
+  IdleRightFresh: {fileID: 7400000, guid: 32352fc5fa77513468c178d7eeb8869e, type: 2}
+  WalkLeftFresh: {fileID: 7400000, guid: 805314028a3416643a1a5c849570161a, type: 2}
+  WalkRightFresh: {fileID: 7400000, guid: ba0984f6a783ff640935561d5b8ad639, type: 2}
   horizontalAxis: Horizontal
-  movementSpeed: 275
+  movementSpeed: 450
   sprintingSpeed: 1000
   footStepEvent: event:/Sounds/Riley/SoundsRileyFootsteps
   footStepParameter: 

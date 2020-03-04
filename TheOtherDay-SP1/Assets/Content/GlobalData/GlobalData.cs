@@ -8,6 +8,7 @@ public class GlobalData : MonoBehaviour
     public int stage = 0;
     public bool flashBack;
     public CharacterData[] charaters;
+    public int reputation = 0;
 
     private void Awake()
     {

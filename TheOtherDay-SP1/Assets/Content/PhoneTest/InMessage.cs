@@ -27,11 +27,7 @@ public class InMessage : MonoBehaviour
         }
         for (int i = 0; i <= stage; i++) //om man ska börja med att ha sms så ska man ha i <= stage
         {
-            if(i <= stage)
-            {
-                sms[i].transform.parent.gameObject.SetActive(true);
-                sms[i].transform.parent.position = new Vector3(sms[i].transform.parent.position.x, sms[i].transform.parent.position.y + (50 * (stage - i)), 0);
-            }
+            
         }
     }
 }

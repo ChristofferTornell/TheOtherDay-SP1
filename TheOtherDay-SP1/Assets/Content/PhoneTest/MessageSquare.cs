@@ -13,6 +13,13 @@ public class MessageSquare : MonoBehaviour
     void Start()
     {
         image.sprite = character.contactImage;
-        text.text = character.name;
+        if(character.name == "Erin")
+        {
+            text.text = character.name + " <3";
+        }
+        else
+        {
+            text.text = character.name;
+        }
     }
 }

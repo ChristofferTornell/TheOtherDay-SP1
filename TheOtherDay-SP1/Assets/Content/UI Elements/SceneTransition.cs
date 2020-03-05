@@ -6,45 +6,39 @@ using UnityEngine.UI;
 
 public class SceneTransition : MonoBehaviour
 {
+    // Player exits scene, play fade in animation
+    // Player enter a new scene, play fade out animation.
+    // ability to change the color of the fading and duration?
+
     public Image panelImage;
     [Header("Transition Stuf")]
     public Animator animator = null;
     public AnimationClip fadeInAnimation = null;
-    public Color fadeInColor;
     public AnimationClip fadeOutAnimation = null;
-    public Color fadeOutColor;
 
-    private void Start()
+    public static SceneTransition instance;
+
+    void Awake()
     {
-        SceneManager.sceneUnloaded += OnSceneUnloaded; 
-        SceneManager.sceneLoaded += OnSceneLoaded; 
-
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
 
-    public void TRAN_FadeIn()
+    public void TRAN_FadeIn(Color color)
     {
-        panelImage.color = fadeInColor;
+        panelImage.color = color;
         animator.Play(fadeInAnimation.name);
     }
 
-    public void TRAN_FadeOut()
+    public void TRAN_FadeOut(Color color)
     {
-        panelImage.color = fadeOutColor;
+        panelImage.color = color;
         animator.Play(fadeOutAnimation.name);
-    }
-
-    public void OnSceneUnloaded(Scene scene)
-    {
-        Debug.Log(gameObject.scene.name + " unloaded");
-    }
-
-    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        animator.Play(fadeOutAnimation.name);
-        Debug.Log(scene.name + " loaded");
     }
 }

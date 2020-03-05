@@ -8,6 +8,10 @@ public class SceneChanger : MonoBehaviour
     public Animator animator = null;
     [SerializeField] private float sceneChangeDelay = 1f;
     public static SceneChanger instance;
+
+    private Color fadeInColor;
+    private Color fadeOutColor;
+
     void Awake()
     {
         if (instance == null)
@@ -19,19 +23,35 @@ public class SceneChanger : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private IEnumerator CoChangeScene(string sceneName)
     {
         // Scene change effect(s) can be put here
         // --------------------------------------
-        if (animator) animator.SetTrigger("Fade In");
+
+        if (sceneName == "CityPresent")
+        {
+            fadeInColor = Color.gray;    
+            fadeOutColor = Color.gray;    
+        }
+
+        else
+        {
+            fadeInColor = Color.black;
+            fadeOutColor = Color.black;
+        }
+
+        SceneTransition.instance.TRAN_FadeIn(fadeInColor);
 
         yield return new WaitForSeconds(sceneChangeDelay);
 
-        if (animator) animator.ResetTrigger("Fade In");
+        SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
+
         SceneManager.LoadScene(sceneName);
 
         yield return null;
     }
+
     public void ChangeScene(string sceneName)
     {
         Debug.Log("Interactable - Changing Scene to: " + sceneName);

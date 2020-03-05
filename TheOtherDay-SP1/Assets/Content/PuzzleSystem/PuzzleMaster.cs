@@ -20,8 +20,8 @@ public class PuzzleMaster : MonoBehaviour
                 {
                     DialogueManager.instance.EnterDialogue(requiredItems[i].recievedDialogue);
                 }
-                Debug.Log("Correct item for puzzle");
                 requiredItems[i].isGiven = true;
+                Inventory.instance.INV_ClearItemSlot(PuzzleMouse.itemOnMouse.myItemSlot);
                 PuzzleMouse.RemoveItem();
                 if (PuzzleClear() && exitFlashbackOnClear)
                 {
@@ -38,7 +38,6 @@ public class PuzzleMaster : MonoBehaviour
         {
             if (!_requiredItem.isGiven)
             {
-                Debug.Log("You still have item(s) to give to this PuzzleMaster");
                 return false;
             }
         }

@@ -291,6 +291,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 271888123}
+        m_MethodName: RecieveItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!61 &271888122
@@ -1606,3 +1617,72 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b39de3ce01998064db33ff6b4ba73ca7, type: 3}
+--- !u!1001 &3325014104858438630
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6570465230407401613, guid: b77334dbb982c114aa9c8fa21c9374cf,
+        type: 3}
+      propertyPath: m_Name
+      value: FlashbackHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828095277833978816, guid: b77334dbb982c114aa9c8fa21c9374cf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.03308606
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828095277833978816, guid: b77334dbb982c114aa9c8fa21c9374cf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.4771235
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828095277833978816, guid: b77334dbb982c114aa9c8fa21c9374cf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -131.43906
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828095277833978816, guid: b77334dbb982c114aa9c8fa21c9374cf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828095277833978816, guid: b77334dbb982c114aa9c8fa21c9374cf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828095277833978816, guid: b77334dbb982c114aa9c8fa21c9374cf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828095277833978816, guid: b77334dbb982c114aa9c8fa21c9374cf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828095277833978816, guid: b77334dbb982c114aa9c8fa21c9374cf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828095277833978816, guid: b77334dbb982c114aa9c8fa21c9374cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828095277833978816, guid: b77334dbb982c114aa9c8fa21c9374cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828095277833978816, guid: b77334dbb982c114aa9c8fa21c9374cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b77334dbb982c114aa9c8fa21c9374cf, type: 3}

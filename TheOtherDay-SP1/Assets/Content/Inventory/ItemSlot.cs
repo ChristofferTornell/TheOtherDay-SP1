@@ -51,7 +51,7 @@ public class ItemSlot : MonoBehaviour
 
     public void UseItem()
     {
-        if(myItem.useable)
+        if (myItem.useable)
         {
             PuzzleMouse.SetItemOnMouse(myItem);
             myItem.OnUse();
@@ -65,7 +65,6 @@ public class ItemSlot : MonoBehaviour
 
     public void ExamineItem()
     {
-
         DescriptionUI.instance.ExamineItem(myItem);
         menu.SetActive(false);
     }

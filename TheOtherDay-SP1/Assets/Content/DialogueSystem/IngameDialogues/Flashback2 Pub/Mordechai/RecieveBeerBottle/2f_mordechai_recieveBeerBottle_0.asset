@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: 2f_mordechai_recieveBeerBottle_0
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: 697c03abe2da6a34e9cc67fe00994873, type: 2}
-  speakerEmotion: 1
+  speakerEmotion: 0
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
   messages:
-  - text: Thanks for the beer bro, let's get you back to present time.
+  - text: You're not gonna spend the entire evening here are you?
     typeDelay: 0.01
     messageSound: 
-  triggerScene: PubPresent
+  triggerScene: 
   enterFlashback: 0
-  exitFlashback: 1
+  exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: ed12ae266094f5b42b56819c617a88bc, type: 2}
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

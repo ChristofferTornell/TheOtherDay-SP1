@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Music/Pizzeria/MusicPizzeriaPresent
   guid: fedc92acd0ad8b42bdf124b3839d39a5
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsUIOpenLogbook
   guid: 60ec7c426b919b48addcf1467193e99b
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -79,7 +79,7 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsSceneTransition
   guid: 77d866bfd114d247983ec2089e17ef85
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -87,6 +87,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1449
+--- !u!114 &-6078295514912764708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FmodBanks/Master.bank
+  SubDir: 
+  lastModified: 637188371277245460
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-6054141794863550536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,7 +120,7 @@ MonoBehaviour:
   Path: event:/Music/Hotel Room/MusicHotelRoomPresent
   guid: 57cbfc8c48d8284f89488ff6eabdd967
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -125,7 +143,7 @@ MonoBehaviour:
   Path: event:/Sounds/Riley/SoundsRileyFootsteps
   guid: 5822a4432c3ea64d97e43661aa89fc75
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -147,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/FmodBanks/Master.strings.bank
   SubDir: 
-  lastModified: 637184150414614459
+  lastModified: 637184176269874830
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -168,7 +186,7 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsUIClickLogbook
   guid: 65f538f33f9cc740814b18bf06fa5f78
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -191,7 +209,7 @@ MonoBehaviour:
   Path: event:/Sounds/Riley/SoundsRileyDialogue
   guid: 24cabd6849297c44a5ae83f242fc82b2
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -214,7 +232,7 @@ MonoBehaviour:
   Path: event:/Ambience/Cafe/AmbienceCafeChatter
   guid: fa84ee8cbc3f9c459f5376ead4fa449e
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -273,7 +291,7 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsUIExitLogbook
   guid: aec4ee10fa2ed947945bb27338b067fc
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -296,7 +314,7 @@ MonoBehaviour:
   Path: event:/Ambience/Street/AmbienceStreetTrafic
   guid: 2ece97597071884b8319593ad3bbd857
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -319,7 +337,7 @@ MonoBehaviour:
   Path: event:/Ambience/Hotel Room/AmbienceHotelRoomTV
   guid: 819bf3a13d38484283adac3b68ed745e
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -341,7 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -4835280965422989162}
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   EditorEvents:
   - {fileID: 5069860781419326429}
   - {fileID: -3515908552669265301}
@@ -364,10 +382,10 @@ MonoBehaviour:
   - {fileID: -8228435284589083303}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   StringsBanks:
   - {fileID: -4835280965422989162}
-  stringsBankWriteTime: 637184150414614459
+  stringsBankWriteTime: 637184176269874830
   cacheVersion: 3
 --- !u!114 &682997274351084843
 MonoBehaviour:
@@ -384,7 +402,7 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsUINotification
   guid: 63edd6d2c614f44c900c80376861ba98
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -407,7 +425,7 @@ MonoBehaviour:
   Path: event:/Music/Club/MusicClubFlashback
   guid: 56cbdf02a302bf4ca8ddaee045317e0c
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -430,7 +448,7 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsUIInventoryPickUp
   guid: 49c53f1ce2dd8d4f80dd3f6e2fbb95ea
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -453,7 +471,7 @@ MonoBehaviour:
   Path: event:/Music/Bar/MusicBarPresent
   guid: 759ad72fad31ab458b0708b1991192e5
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -476,7 +494,7 @@ MonoBehaviour:
   Path: event:/Ambience/Street/AmbienceStreetRain
   guid: d27e4eea181b2e4ca16367dc84fbaae1
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -499,7 +517,7 @@ MonoBehaviour:
   Path: event:/Music/Street/MusicStreetPresent
   guid: fd1a4f1b59e4304e80e461f3396e3c56
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -522,7 +540,7 @@ MonoBehaviour:
   Path: event:/Ambience/Hotel Room/AmbienceHotelRoomFan
   guid: 1e4468203efb064f8807e9fa66551837
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -545,7 +563,7 @@ MonoBehaviour:
   Path: event:/Music/Cafe/MusicCafePresent
   guid: 6cc8b4443d47024f95dc037e0bc6011f
   Banks:
-  - {fileID: -1312128429719591879}
+  - {fileID: -6078295514912764708}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0

@@ -250,6 +250,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2e209c002f374304a945f083f4e9d4e4, type: 2}
   - {fileID: 11400000, guid: 931d8ee79da164545a8170c8f69c77c4, type: 2}
   - {fileID: 11400000, guid: d33bd45ba7ad34940acad0b9a00a5a21, type: 2}
+  reputation: 0
 --- !u!114 &1074403432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,14 +258,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6020426335575503426}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94a7111c7f8f3e64f8fe450f61339eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   panelImage: {fileID: 139706204}
   animator: {fileID: 139706206}
-  fadeInAnimation: {fileID: 7400000, guid: ad7155aac657fbc41812eef01b4598fe, type: 2}
-  fadeInColor: {r: 0, g: 0, b: 0, a: 0}
+  fadeInAnimation: {fileID: 7400000, guid: 2ba788ed985affe4e85e9cab8c25f5e4, type: 2}
   fadeOutAnimation: {fileID: 7400000, guid: 60138e8a89fb1f544af4b81d61843ae2, type: 2}
-  fadeOutColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 0}

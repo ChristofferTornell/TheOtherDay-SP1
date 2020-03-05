@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1409,34 +1409,6 @@ PrefabInstance:
     - target: {fileID: 6020426335575503424, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1074403432, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1370426356}
-    - target: {fileID: 1074403432, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
-      propertyPath: fadeInAnimation
-      value: 
-      objectReference: {fileID: 7400000, guid: 2ba788ed985affe4e85e9cab8c25f5e4, type: 2}
-    - target: {fileID: 1074403432, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
-      propertyPath: fadeOutAnimation
-      value: 
-      objectReference: {fileID: 7400000, guid: 60138e8a89fb1f544af4b81d61843ae2, type: 2}
-    - target: {fileID: 1074403432, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1074403432, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
-      propertyPath: fadeOutColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1074403432, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
-      propertyPath: fadeOutColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1074403432, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
-      propertyPath: fadeOutColor.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

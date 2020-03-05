@@ -44,9 +44,11 @@ public class Interactable : MonoBehaviour
             }
         }
         onInteract.Invoke();
+        /*
         if (OneTime) { DestroyThis(); }
 
         else { Debug.Log(gameObject.name + "can only be interacted with using the mouse"); }
+        */
     }
 
     private void OnMouseEnter()

@@ -31,8 +31,8 @@ public class SceneChanger : MonoBehaviour
 
         if (sceneName == "CityPresent")
         {
-            fadeInColor = Color.gray;    
-            fadeOutColor = Color.gray;    
+            fadeInColor = Color.gray;
+            fadeOutColor = Color.gray;
         }
 
         else

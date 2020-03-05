@@ -1,12 +1,72 @@
 fileFormatVersion: 2
 guid: e38ec9ba818f3b042bf545ded23d0ded
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2625578987999330818
+    second: Riley_spriteSheet_phone_0
+  - first:
+      213: 8490800324092554051
+    second: Riley_spriteSheet_phone_1
+  - first:
+      213: -8135065501046849805
+    second: Riley_spriteSheet_phone_2
+  - first:
+      213: 8953047171467070275
+    second: Riley_spriteSheet_phone_3
+  - first:
+      213: 5527996171057404522
+    second: Riley_spriteSheet_phone_4
+  - first:
+      213: 4052813851106926986
+    second: Riley_spriteSheet_phone_5
+  - first:
+      213: -9041564355736227552
+    second: Riley_spriteSheet_phone_6
+  - first:
+      213: -5316651039772092802
+    second: Riley_spriteSheet_phone_7
+  - first:
+      213: 6827671203414964405
+    second: Riley_spriteSheet_phone_8
+  - first:
+      213: -1856638652511533817
+    second: Riley_spriteSheet_phone_9
+  - first:
+      213: -1662954949115575429
+    second: Riley_spriteSheet_phone_10
+  - first:
+      213: 6276081458033238574
+    second: Riley_spriteSheet_phone_11
+  - first:
+      213: -7786318243239600775
+    second: Riley_spriteSheet_phone_12
+  - first:
+      213: 4877338267257608580
+    second: Riley_spriteSheet_phone_13
+  - first:
+      213: -7047267477720935134
+    second: Riley_spriteSheet_phone_14
+  - first:
+      213: 4398097103903621659
+    second: Riley_spriteSheet_phone_15
+  - first:
+      213: 8206922341391407812
+    second: Riley_spriteSheet_phone_16
+  - first:
+      213: -7592671825916651899
+    second: Riley_spriteSheet_phone_17
+  - first:
+      213: 2094305505894776482
+    second: Riley_spriteSheet_phone_18
+  - first:
+      213: 4387528304476574864
+    second: Riley_spriteSheet_phone_19
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -31,16 +91,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +109,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -63,7 +123,43 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -72,11 +168,431 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 139
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f112e4372c5a1f547bb494749c6db9be
+      internalID: -2625578987999330818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 139
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499274765bb3c01468410005411eef23
+      internalID: 8490800324092554051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_2
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 139
+        width: 20
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac257a0f1cc149745bd460a2a801ff8a
+      internalID: -8135065501046849805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_3
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 139
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e7bf683d19d4145aa065b5fb979acf
+      internalID: 8953047171467070275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_4
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 139
+        width: 20
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4771ad61743334a8ba53f491a81961
+      internalID: 5527996171057404522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 98
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329764177e26a1f4a991d9c06ae1bf55
+      internalID: 4052813851106926986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 98
+        width: 18
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3c5ea053ab94644b5dd7e25a3a0186
+      internalID: -9041564355736227552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_7
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 98
+        width: 19
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b171c57c6f12734987743586be35046
+      internalID: -5316651039772092802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_8
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 98
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2892ebefff72be64daf72b1d122157d0
+      internalID: 6827671203414964405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_9
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 98
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caad6ab9057228647aa71639daceb0e9
+      internalID: -1856638652511533817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 51
+        width: 13
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634216a60a9374a4793d1b9a06e2bce8
+      internalID: -1662954949115575429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_11
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 51
+        width: 12
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d316a76f38c9640b2694c6b93ed203
+      internalID: 6276081458033238574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_12
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 51
+        width: 13
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5caf446633163ff46b245bd64eda6137
+      internalID: -7786318243239600775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_13
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 51
+        width: 14
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f34e6d65e9433418f03b70f9eaaa24
+      internalID: 4877338267257608580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_14
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 51
+        width: 14
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a241468c0ac22a4b8936f3c3446ed52
+      internalID: -7047267477720935134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_15
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4
+        width: 15
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d58dddcc84c5f4ea199676f2684841
+      internalID: 4398097103903621659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_16
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 4
+        width: 13
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2d4ef16e14127438c1d6af827a1ea9
+      internalID: 8206922341391407812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_17
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 4
+        width: 15
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fce83a219bc14d49a110e8b1f1d96fe
+      internalID: -7592671825916651899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_18
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 4
+        width: 14
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0be824de687e044e963443a36943770
+      internalID: 2094305505894776482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riley_spriteSheet_phone_19
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 4
+        width: 14
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9869b0c9ee55e8409184cc76617dc21
+      internalID: 4387528304476574864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

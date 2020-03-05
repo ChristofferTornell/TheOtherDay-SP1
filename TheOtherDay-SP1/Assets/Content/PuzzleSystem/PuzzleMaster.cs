@@ -6,6 +6,8 @@ public class PuzzleMaster : MonoBehaviour
 {
     public RequiredItem[] requiredItems;
     public string goToSceneOnClear;
+    public bool exitFlashbackOnClear = false;
+    public Dialogue clearDialogue;
     
     public void RecieveItem()
     {
@@ -14,10 +16,14 @@ public class PuzzleMaster : MonoBehaviour
         {
             if (PuzzleMouse.itemOnMouse == requiredItems[i].item && !requiredItems[i].isGiven)
             {
+                if (requiredItems[i].recievedDialogue != null)
+                {
+                    DialogueManager.instance.EnterDialogue(requiredItems[i].recievedDialogue);
+                }
                 Debug.Log("Correct item for puzzle");
                 requiredItems[i].isGiven = true;
                 PuzzleMouse.RemoveItem();
-                if (PuzzleClear())
+                if (PuzzleClear() && exitFlashbackOnClear)
                 {
                     Debug.Log("Exit flashback");
                     SceneChanger.instance.ExitFlashback(goToSceneOnClear);

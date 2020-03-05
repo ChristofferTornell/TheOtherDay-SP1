@@ -131,41 +131,51 @@ public class Interactable : MonoBehaviour
         
         Dialogue _initDialogue = null;
         int _stage = GlobalData.instance.stage;
-
-        if (!GlobalData.instance.flashBack)
+        if (GetComponent<PuzzleMaster>() == null)
         {
-            if (!charData.dialogues[_stage].hasSpoken)
+            if (!GlobalData.instance.flashBack)
             {
-                _initDialogue = charData.dialogues[_stage].dialogue;
+                if (!charData.dialogues[_stage].hasSpoken)
+                {
+                    _initDialogue = charData.dialogues[_stage].dialogue;
+                }
+                else
+                {
+                    _initDialogue = charData.dialogues[_stage].dialogueSpoken;
+                }
             }
             else
             {
-                _initDialogue = charData.dialogues[_stage].dialogueSpoken;
+                if (!charData.dialogues[_stage].hasSpokenFlashback)
+                {
+                    _initDialogue = charData.dialogues[_stage].dialogueFlashback;
+                }
+                else
+                {
+                    _initDialogue = charData.dialogues[_stage].dialogueFlashbackSpoken;
+                }
+            }
+
+            if (_initDialogue != null)
+            {
+                if (GlobalData.instance.flashBack)
+                {
+                    charData.dialogues[_stage].hasSpokenFlashback = true;
+                }
+                else
+                {
+                    charData.dialogues[_stage].hasSpoken = true;
+                }
+                DialogueManager.instance.EnterDialogue(_initDialogue);
             }
         }
         else
         {
-            if (!charData.dialogues[_stage].hasSpokenFlashback)
+            PuzzleMaster pMaster = GetComponent<PuzzleMaster>();
+            if (pMaster.PuzzleClear())
             {
-                _initDialogue = charData.dialogues[_stage].dialogueFlashback;
+                _initDialogue = pMaster.clearDialogue;
             }
-            else
-            {
-                _initDialogue = charData.dialogues[_stage].dialogueFlashbackSpoken;
-            }
-        }
-
-        if (_initDialogue != null)
-        {
-            if (GlobalData.instance.flashBack)
-            {
-                charData.dialogues[_stage].hasSpokenFlashback = true;
-            }
-            else
-            {
-                charData.dialogues[_stage].hasSpoken = true;
-            }
-            DialogueManager.instance.EnterDialogue(_initDialogue);
         }
     }
 }

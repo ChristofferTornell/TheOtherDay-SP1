@@ -44,12 +44,7 @@ public class PlayerInteractivity : MonoBehaviour
         // Interact with the Object using the useButton
         if (interactableObject && Input.GetButtonDown(interactionButton))
         {
-            if (DialogueManager.dialogueActive && currentDialogue.noChoiceDialogue == null)
-            {
-                DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;
-                DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
-            }
-            else if (!DialogueManager.dialogueActive)
+            if (!DialogueManager.dialogueActive)
             {
                 Debug.Log("Doing something with " + interactableObject.name);
 
@@ -61,6 +56,11 @@ public class PlayerInteractivity : MonoBehaviour
                 interactableObject.Interact();
                 // Do something with the object
             }
+        }
+        if (DialogueManager.dialogueActive && currentDialogue.noChoiceDialogue == null && Input.GetButtonDown(interactionButton))
+        {
+            DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;
+            DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
         }
     }
 }

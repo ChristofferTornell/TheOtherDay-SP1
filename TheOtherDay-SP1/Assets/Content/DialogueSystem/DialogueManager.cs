@@ -23,6 +23,10 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogue(Dialogue initialDialogue)
     {
+        if (GlobalData.instance.flashBack)
+        {
+            Inventory.instance.INV_Hide();
+        }
         currentDialogue = initialDialogue;
         dialogueBoxUI.gameObject.SetActive(true);
         dialogueBoxUI.InitializeDialogueUI();
@@ -32,6 +36,10 @@ public class DialogueManager : MonoBehaviour
 
     public void ExitDialogue()
     {
+        if (GlobalData.instance.flashBack)
+        {
+            Inventory.instance.INV_Appear();
+        }
         dialogueBoxUI.gameObject.SetActive(false);
         PlayerMovement.playerMovementLocked = false;
         dialogueActive = false;

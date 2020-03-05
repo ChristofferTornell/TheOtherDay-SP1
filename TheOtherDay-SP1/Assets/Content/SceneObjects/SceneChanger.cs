@@ -42,7 +42,6 @@ public class SceneChanger : MonoBehaviour
     public void EnterFlashback(string sceneName)
     {
         Debug.Log("Interactable - Entering flashback: " + sceneName);
-        GlobalData.instance.flashBack = true;
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }
@@ -51,7 +50,6 @@ public class SceneChanger : MonoBehaviour
     {
         Debug.Log("Interactable - Returning to present: " + sceneName);
         GlobalData.instance.stage++;
-        GlobalData.instance.flashBack = false;
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }

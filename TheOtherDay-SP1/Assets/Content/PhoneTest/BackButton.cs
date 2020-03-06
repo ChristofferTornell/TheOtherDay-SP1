@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class BackButton : MonoBehaviour
 {
@@ -13,10 +14,22 @@ public class BackButton : MonoBehaviour
     private GameObject[] MessageBubbles;
     public GameObject SettingsMenu;
 
+    public VideoPlayer vp;
+    private GameObject parent;
+
     private void Start()
     {
+        parent = GameObject.Find("Video player paretn");
         _HomeButton.onClick.AddListener(HomeButton);
         _BackButton.onClick.AddListener(BackbuttonFunc);
+        vp.loopPointReached += EndReached;
+    }
+
+    void EndReached(UnityEngine.Video.VideoPlayer vp)
+    {
+        vp.playbackSpeed = 0;
+        Debug.Log("end");
+        parent.SetActive(false);
     }
 
     private void HomeButton()

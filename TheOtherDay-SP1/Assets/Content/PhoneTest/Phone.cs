@@ -29,9 +29,9 @@ public class Phone : MonoBehaviour
     public Button PullUpButton;
     public Button PullDownButton;
 
-    [HideInInspector]public int Page;
+    [HideInInspector]public int Page = -1;
 
-    private bool Zoomed = false;
+    [HideInInspector]public bool Zoomed = false;
     private bool Zooming = false;
     private float ZoomTimeDelta = 0;
     private Vector3 ZoomedScale = new Vector3(2.275618f, 4.569676f, 0);

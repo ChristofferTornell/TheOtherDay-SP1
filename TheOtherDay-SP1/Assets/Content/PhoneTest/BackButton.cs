@@ -8,8 +8,9 @@ public class BackButton : MonoBehaviour
     public Phone phone;
     public Button _HomeButton;
     public Button _BackButton;
-    public GameObject[] MessageMenus;
+    public List<GameObject> MessageMenus;
     public GameObject LogMenu;
+    private GameObject[] MessagePages;
 
     private void Start()
     {
@@ -21,34 +22,66 @@ public class BackButton : MonoBehaviour
     {
         if (phone.Page == 0)
         {
-            int count = 0;
-            for (int i = 0; i < MessageMenus.Length; i++)
+            ResetMessages();
+            for (int i = MessageMenus.Count - 1; i >= 0; i--)
             {
-                if (!MessageMenus[i].activeSelf)
-                {
-                    count++;
-                }
+                MessageMenus[i].SetActive(false);
             }
-            if(count != MessageMenus.Length)
+            MessageMenus.RemoveRange(1, MessageMenus.Count - 1);
+            if (phone.Zoomed)
             {
-                for (int i = MessageMenus.Length; i > 0; i--)
-                {
-                    MessageMenus[i - 1].SetActive(false);
-                }
                 phone.Zoom();
             }
+            phone.Page = -1;
         }
         else if(phone.Page == 1)
         {
             LogMenu.SetActive(false);
+            phone.Page = -1;
         }
     }
 
+    public void AddToList(GameObject obj)
+    {
+        MessageMenus.Add(obj);
+        if(obj.name == "In Message")
+        {
+            MessagePages = obj.GetComponent<InMessage>().TextBubbles;
+            int stage = obj.GetComponent<InMessage>().stage;
+            if(stage == 0)
+            {
+                Button[] f = obj.GetComponent<InMessage>().ForwardArrow;
+                Button[] b = obj.GetComponent<InMessage>().BackArrow;
+                for (int i = 0; i < f.Length; i++)
+                {
+                    f[i].gameObject.SetActive(false);
+                    b[i].gameObject.SetActive(false);
+                }
+            }
+        }
+    }
+
+    public void ResetMessages()
+    {
+        for (int i = 0; i < MessagePages.Length; i++)
+        {
+            if(i == 0)
+            {
+                MessagePages[i].SetActive(true);
+            }
+            else
+            {
+                MessagePages[i].SetActive(false);
+            }
+        }
+    }
+    
     private void BackbuttonFunc()
     {
         if(phone.Page == 0)
         {
-            for (int i = MessageMenus.Length - 1; i >= 0; i--)
+            ResetMessages();
+            for (int i = MessageMenus.Count - 1; i >= 0; i--)
             {
                 if (MessageMenus[i].activeSelf)
                 {
@@ -56,6 +89,10 @@ public class BackButton : MonoBehaviour
                     if(i == 0)
                     {
                         phone.Zoom();
+                    }
+                    else
+                    {
+                        MessageMenus.Remove(MessageMenus[i]);
                     }
                     return;
                 }

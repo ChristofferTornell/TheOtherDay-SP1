@@ -10,23 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 2f_mordechai_recieveBeerBottle_2
+  m_Name: 0riley_thoughts_0
   m_EditorClassIdentifier: 
-  speaker: {fileID: 11400000, guid: 697c03abe2da6a34e9cc67fe00994873, type: 2}
+  speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   speakerEmotion: 0
-  listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  listener: {fileID: 0}
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
   messages:
-  - text: Berugen? Yeah that's a good place for that. Although...
+  - text: (It's almost time for that stupid ponyride. Hopefully the coffee will be
+      done soon so we can get this thing over with. I should press space to see what
+      Erin wants.)
     typeDelay: 0.01
     messageSound: 
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: a5f4c83b8c57cf54bbce9fe50bf59822, type: 2}
+  nextDialogue: {fileID: 0}
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

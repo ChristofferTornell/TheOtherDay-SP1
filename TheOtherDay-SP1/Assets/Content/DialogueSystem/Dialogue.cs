@@ -27,12 +27,15 @@ public class Dialogue : ScriptableObject
     public bool italic;
     public Message[] messages;
     [Header("Insertables")]
+    public Dialogue nextDialogue = null;
+    [Space]
     public string triggerScene;
     public bool enterFlashback = false;
     public bool exitFlashback = false;
     [Space]
     public Items item;
-    public Dialogue nextDialogue = null;
+    public bool showItem;
+    [Space]
     public float TimeLimitSeconds = 0;
     public Dialogue noChoiceDialogue = null;
     public ChoiceButtonBlueprint[] choiceButtons = null;

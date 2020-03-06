@@ -10,22 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 0jason_first_0
+  m_Name: 0jason_first_5
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   speakerEmotion: 0
-  listener: {fileID: 11400000, guid: ecd1378815b872248a4c06eb0a786cd8, type: 2}
+  listener: {fileID: 0}
   listenerEmotion: 0
+  changeReputation: 0
   italic: 0
   messages:
-  - text: Hello.
+  - text: (I should probably grab my coffe by clicking on it with the left mouse button
+      and get out of here as soon as possible by exiting out the front door.)
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 0}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: 5618d9680ca4c534e958c20345cf8f31, type: 2}
+  showItem: 1
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

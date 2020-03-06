@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
   m_Name: 0f_erin_first_1
   m_EditorClassIdentifier: 
-  speaker: {fileID: 11400000, guid: d33bd45ba7ad34940acad0b9a00a5a21, type: 2}
+  speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   speakerEmotion: 0
-  listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  listener: {fileID: 11400000, guid: d33bd45ba7ad34940acad0b9a00a5a21, type: 2}
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
@@ -22,11 +22,12 @@ MonoBehaviour:
   - text: As if I'd ever do that to you. I know you just think they're glorified cows.
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 11400000, guid: adefaf50e1b696b4ebcd550148f4b69c, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: adefaf50e1b696b4ebcd550148f4b69c, type: 2}
+  showItem: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

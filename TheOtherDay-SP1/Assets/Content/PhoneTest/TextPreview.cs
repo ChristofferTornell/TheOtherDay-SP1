@@ -13,7 +13,7 @@ public class TextPreview : MonoBehaviour
     void Start()
     {
         character = GetComponentInParent<MessageSquare>().character;
-        message = character.sms[0];
+        message = character.sms[character.sms.Length - 1];
         if(message.Length >= 25)
         {
             string preview = message.Remove(previewLenght, message.Length - previewLenght);

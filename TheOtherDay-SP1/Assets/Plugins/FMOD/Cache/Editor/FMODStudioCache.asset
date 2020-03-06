@@ -15,8 +15,13 @@ MonoBehaviour:
   Path: event:/Music/Club/MusicClubFlashback
   guid: 56cbdf02a302bf4ca8ddaee045317e0c
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
   IsStream: 1
+=======
+  - {fileID: 1460054376847485896}
+  IsStream: 0
+>>>>>>> Stashed changes
   Is3D: 0
   IsOneShot: 0
   Parameters: []
@@ -38,7 +43,11 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsSceneTransition
   guid: 77d866bfd114d247983ec2089e17ef85
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
+=======
+  - {fileID: 1460054376847485896}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -61,7 +70,11 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsUIOpenLogbook
   guid: 60ec7c426b919b48addcf1467193e99b
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
+=======
+  - {fileID: 1460054376847485896}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -84,7 +97,11 @@ MonoBehaviour:
   Path: event:/Music/Cafe/MusicCafePresent
   guid: 6cc8b4443d47024f95dc037e0bc6011f
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
+=======
+  - {fileID: 1460054376847485896}
+>>>>>>> Stashed changes
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -107,15 +124,44 @@ MonoBehaviour:
   Path: event:/Sounds/Riley/SoundsRileyFootsteps
   guid: 5822a4432c3ea64d97e43661aa89fc75
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
+=======
+  - {fileID: 1460054376847485896}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< Updated upstream
   Length: 580
 --- !u!114 &-3879312290126463410
+=======
+  Length: 92
+--- !u!114 &-5793503330315946264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FmodBanks/Master.strings.bank
+  SubDir: 
+  lastModified: 637185101297232299
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1894
+  Exists: 1
+--- !u!114 &-5674502466579104721
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +176,11 @@ MonoBehaviour:
   Path: event:/Music/Street/MusicStreetPresent
   guid: fd1a4f1b59e4304e80e461f3396e3c56
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
+=======
+  - {fileID: 1460054376847485896}
+>>>>>>> Stashed changes
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -153,7 +203,11 @@ MonoBehaviour:
   Path: event:/Ambience/Street/AmbienceStreetTrafic
   guid: 2ece97597071884b8319593ad3bbd857
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
+=======
+  - {fileID: 1460054376847485896}
+>>>>>>> Stashed changes
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -176,7 +230,11 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsUINotification
   guid: 63edd6d2c614f44c900c80376861ba98
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
+=======
+  - {fileID: 1460054376847485896}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -199,7 +257,11 @@ MonoBehaviour:
   Path: event:/Music/Bar/MusicBarPresent
   guid: 759ad72fad31ab458b0708b1991192e5
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
+=======
+  - {fileID: 1460054376847485896}
+>>>>>>> Stashed changes
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -219,6 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Sounds/UI/SoundsUIClickLogbook
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Path: event:/Sounds/UI/SoundsUIClickLogbook
   guid: 65f538f33f9cc740814b18bf06fa5f78
   Banks:
@@ -231,6 +294,39 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 780
 --- !u!114 &11400000
+=======
+  EditorBanks:
+  - {fileID: -5793503330315946264}
+  - {fileID: 1460054376847485896}
+  EditorEvents:
+  - {fileID: 1010172288679118627}
+  - {fileID: -6445711959753620880}
+  - {fileID: -241042193273406471}
+  - {fileID: -3293683828038078831}
+  - {fileID: -6785809833082096447}
+  - {fileID: -4545218623381922068}
+  - {fileID: -7793350274946634870}
+  - {fileID: -8894233020525538012}
+  - {fileID: -8898659639227281872}
+  - {fileID: 2816863868777077302}
+  - {fileID: 5369884400800331544}
+  - {fileID: 3809775298041955695}
+  - {fileID: 6531270377124352302}
+  - {fileID: 952334640625112356}
+  - {fileID: 7607200793199134909}
+  - {fileID: 1769315297938518417}
+  - {fileID: 4898800207614022469}
+  - {fileID: -5674502466579104721}
+  - {fileID: 8581973606164886803}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 1460054376847485896}
+  StringsBanks:
+  - {fileID: -5793503330315946264}
+  stringsBankWriteTime: 637185101297232299
+  cacheVersion: 3
+--- !u!114 &81873016475686541
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -242,6 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   EditorBanks:
   - {fileID: 3262728354043825991}
   - {fileID: 6156164892584910279}
@@ -273,6 +370,15 @@ MonoBehaviour:
   stringsBankWriteTime: 637184150414614459
   cacheVersion: 3
 --- !u!114 &270515290099125311
+=======
+  Path: Assets/Audio/FmodBanks/Master.bank
+  SubDir: 
+  lastModified: 637187529248375469
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &952334640625112356
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,9 +393,15 @@ MonoBehaviour:
   Path: event:/Music/Hotel Room/MusicHotelRoomPresent
   guid: 57cbfc8c48d8284f89488ff6eabdd967
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
   IsStream: 1
   Is3D: 0
+=======
+  - {fileID: 1460054376847485896}
+  IsStream: 0
+  Is3D: 1
+>>>>>>> Stashed changes
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
@@ -310,15 +422,44 @@ MonoBehaviour:
   Path: event:/Ambience/Cafe/AmbienceCafeChatter
   guid: fa84ee8cbc3f9c459f5376ead4fa449e
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
+=======
+  - {fileID: 1460054376847485896}
+>>>>>>> Stashed changes
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters: []
+<<<<<<< Updated upstream
   MinDistance: 0
   MaxDistance: 0
   Length: 118624
 --- !u!114 &1429757306428224663
+=======
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11271
+--- !u!114 &1460054376847485896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/FmodBanks/Master.bank
+  SubDir: 
+  lastModified: 637185101299652245
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1769315297938518417
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -333,8 +474,13 @@ MonoBehaviour:
   Path: event:/Sounds/Riley/SoundsRileyDialogue
   guid: 24cabd6849297c44a5ae83f242fc82b2
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
   IsStream: 0
+=======
+  - {fileID: 1460054376847485896}
+  IsStream: 1
+>>>>>>> Stashed changes
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -356,10 +502,17 @@ MonoBehaviour:
   Path: event:/Ambience/Hotel Room/AmbienceHotelRoomFan
   guid: 1e4468203efb064f8807e9fa66551837
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
+=======
+  - {fileID: 1460054376847485896}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+>>>>>>> Stashed changes
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -379,7 +532,11 @@ MonoBehaviour:
   Path: event:/Music/Pizzeria/MusicPizzeriaPresent
   guid: fedc92acd0ad8b42bdf124b3839d39a5
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
+=======
+  - {fileID: 1460054376847485896}
+>>>>>>> Stashed changes
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -425,10 +582,17 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsUIInventoryPickUp
   guid: 49c53f1ce2dd8d4f80dd3f6e2fbb95ea
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
+=======
+  - {fileID: 1460054376847485896}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+>>>>>>> Stashed changes
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
@@ -468,7 +632,11 @@ MonoBehaviour:
   Path: event:/Ambience/Street/AmbienceStreetRain
   guid: d27e4eea181b2e4ca16367dc84fbaae1
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
+=======
+  - {fileID: 1460054376847485896}
+>>>>>>> Stashed changes
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -488,6 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Path: Assets/Audio/FmodBanks/Master.bank
   SubDir: 
   lastModified: 637184881561584868
@@ -495,6 +664,20 @@ MonoBehaviour:
   FileSizes: []
   Exists: 1
 --- !u!114 &7496905955855843258
+=======
+  Path: event:/Sounds/UI/SoundsSceneTransition
+  guid: 77d866bfd114d247983ec2089e17ef85
+  Banks:
+  - {fileID: 1460054376847485896}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1449
+--- !u!114 &7607200793199134909
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -509,7 +692,11 @@ MonoBehaviour:
   Path: event:/Sounds/UI/SoundsUIExitLogbook
   guid: aec4ee10fa2ed947945bb27338b067fc
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 6156164892584910279}
+=======
+  - {fileID: 1460054376847485896}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -517,3 +704,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 421
+<<<<<<< Updated upstream
+=======
+--- !u!114 &8581973606164886803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Pizzeria/MusicPizzeriaPresent
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Pizzeria/MusicPizzeriaPresent
+  guid: fedc92acd0ad8b42bdf124b3839d39a5
+  Banks:
+  - {fileID: 1460054376847485896}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 78600
+>>>>>>> Stashed changes

@@ -197,8 +197,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 4
-  m_fontSizeBase: 4
+  m_fontSize: 6
+  m_fontSizeBase: 6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 3
@@ -333,7 +333,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.8, y: -0.9}
-  m_SizeDelta: {x: 120, y: 32}
+  m_SizeDelta: {x: 90, y: 26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7504291171199215487
 CanvasRenderer:
@@ -363,7 +363,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4ea8fe4db71742044bf50b32bcd706a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -451,9 +451,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d61f35a264f943349a415fc559bcd16a, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -487,7 +487,7 @@ RectTransform:
   m_GameObject: {fileID: 7579520425904420696}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.7419999, y: 3.7419999, z: 3.7419999}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 1772429650007700355}
   m_Father: {fileID: 853701106}
@@ -1085,7 +1085,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bigPointer
       value: 
-      objectReference: {fileID: 2800000, guid: 1baabfd6adcda2f48b0dcf977a31a757, type: 3}
+      objectReference: {fileID: 2800000, guid: 9b7a82b768dad1a4589904942af4447b, type: 3}
     - target: {fileID: 637553198409434520, guid: 245ced831aab25b48a7175440957cee1,
         type: 3}
       propertyPath: smallGlass
@@ -1105,7 +1105,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bigHand
       value: 
-      objectReference: {fileID: 2800000, guid: ce74d9caa52343249825cde7808d9f0b, type: 3}
+      objectReference: {fileID: 2800000, guid: d5ce83e9737aead44b87c1744c804fd2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 245ced831aab25b48a7175440957cee1, type: 3}
 --- !u!4 &7742616349829940400 stripped

@@ -41,6 +41,19 @@ public class Inventory : MonoBehaviour
         */
     }
 
+    public void INV_Hide()
+    {
+        itemBar.SetActive(false);
+        foreach(ItemSlot iSlot in itemSlots)
+        {
+            iSlot.menu.SetActive(false);
+        }
+    }
+
+    public void INV_Appear()
+    {
+        itemBar.SetActive(true);
+    }
     public void INV_AddItem(Items item)
     {
         if (!GlobalData.instance.flashBack)
@@ -77,8 +90,6 @@ public class Inventory : MonoBehaviour
 
     public void INV_ClearItemSlot(ItemSlot _itemSlot)
     {
-        Debug.Log("Clearing slot" + _itemSlot);
-
         _itemSlot.myItem = null;
         _itemSlot.myItemIcon.UpdateSprite(nullSprite);
     }

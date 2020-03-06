@@ -12,7 +12,8 @@ public class Dialogue : ScriptableObject
     {
         normal,
         happy,
-        sad
+        sad,
+        angry
     };
 
     [Header ("Customization")]
@@ -22,6 +23,7 @@ public class Dialogue : ScriptableObject
     public CharacterData listener;
     public CharacterEmotion listenerEmotion = CharacterEmotion.normal;
 
+    public int changeReputation;
     public bool italic;
     public Message[] messages;
     [Header("Insertables")]

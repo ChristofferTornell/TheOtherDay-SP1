@@ -7,4 +7,5 @@ public class RequiredItem
 {
     public bool isGiven;
     public Items item;
+    public Dialogue recievedDialogue;
 }

@@ -15,7 +15,9 @@ public class Phone : MonoBehaviour
     public float PullSpeed = 40;
 
    // public Button CallButton;
-    public GameObject CallPage;
+    public GameObject SettingsPage;
+    public Button SettingsButton;
+    public GameObject ExitBox;
 
     public Button MessageButton;
     public GameObject MessagePage;
@@ -41,6 +43,7 @@ public class Phone : MonoBehaviour
     private void Start()
     {
         //CallButton.onClick.AddListener(EnableCall);
+        SettingsButton.onClick.AddListener(delegate { EnableSettings(true); });
         MessageButton.onClick.AddListener(delegate { EnableMessage(true); });
         LogButton.onClick.AddListener(delegate { EnableLog(true); });
         AlbumButton.onClick.AddListener(delegate { EnableAlbum(true); });
@@ -48,27 +51,22 @@ public class Phone : MonoBehaviour
         PullDownButton.onClick.AddListener(delegate { PullDown(); PullDownButtonFunc(); });
     }
 
-    void EnableCall(bool state)
+    void EnableSettings(bool state)
     {
-        CallPage.SetActive(state);
+        Page = 2;
+        SettingsPage.SetActive(state);
     }
 
     void EnableMessage(bool state)
     {
-        if (Zooming)
-        {
-            Page = 0;
-            MessagePage.SetActive(state);
-        }
+        Page = 0;
+        MessagePage.SetActive(state);
     }
 
     void EnableLog(bool state)
     {
-        if (Zooming)
-        {
-           Page = 1;
-           LogPage.SetActive(state);
-        }
+        Page = 1;
+        LogPage.SetActive(state);
     }
 
     void EnableAlbum(bool state)
@@ -98,6 +96,11 @@ public class Phone : MonoBehaviour
     public void Zoom()
     {
         Zooming = true;
+    }
+
+    public void ExitGame()
+    {
+        Instantiate(ExitBox, new Vector3(455, 200, 0), Quaternion.identity).transform.parent = gameObject.transform;
     }
 
     public void PullDownButtonFunc()

@@ -11,6 +11,7 @@ public class BackButton : MonoBehaviour
     public List<GameObject> MessageMenus;
     public GameObject LogMenu;
     private GameObject[] MessageBubbles;
+    public GameObject SettingsMenu;
 
     private void Start()
     {
@@ -35,13 +36,16 @@ public class BackButton : MonoBehaviour
             {
                 phone.Zoom();
             }
-            phone.Page = -1;
         }
         else if(phone.Page == 1)
         {
             LogMenu.SetActive(false);
-            phone.Page = -1;
         }
+        else if(phone.Page == 2)
+        {
+            SettingsMenu.SetActive(false);
+        }
+        phone.Page = -1;
     }
 
     public void AddToList(GameObject obj)
@@ -95,6 +99,7 @@ public class BackButton : MonoBehaviour
                     if(i == 0)
                     {
                         phone.Zoom();
+                        phone.Page = -1;
                     }
                     else
                     {
@@ -107,6 +112,12 @@ public class BackButton : MonoBehaviour
         else if(phone.Page == 1)
         {
             LogMenu.SetActive(false);
+            phone.Page = -1;
+        }
+        else if(phone.Page == 2)
+        {
+            SettingsMenu.SetActive(false);
+            phone.Page = -1;
         }
     }
 }

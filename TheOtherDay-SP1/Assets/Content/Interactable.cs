@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
 {
     public bool savePlayerPosition = false;
     public bool OneTime = false;
+    public bool hideOnStart = false;
     public int unlockedOnStage = 0;
     public Items requiredItem;
     public Items lockedData;
@@ -26,6 +27,10 @@ public class Interactable : MonoBehaviour
     private void Start()
     {
         gameController = FindObjectOfType<GameController>();
+        if (hideOnStart)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void Interact()
@@ -125,6 +130,10 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    public void IE_PlayDialogueSpecific(Dialogue dialogue)
+    {
+        DialogueManager.instance.EnterDialogue(dialogue);
+    }
     public void IE_PlayDialogue()
     {
         CharacterData charData = GlobalData.instance.charaters[charIndex];

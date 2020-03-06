@@ -32,6 +32,7 @@ public class DialogueBox : MonoBehaviour
 
     public void InitializeDialogueUI()
     {
+        Debug.Log("initialize dialogue");
         dialogueEnded = false;
         currentDialogue = DialogueManager.instance.currentDialogue;
         ResetChoiceTimer();
@@ -176,6 +177,7 @@ public class DialogueBox : MonoBehaviour
     }
     public void UpdateDialogueUI()
     {
+        Debug.Log("updating dialogue UI .." + currentDialogue);
         if (dialogueEnded)
         {
             return;
@@ -186,7 +188,10 @@ public class DialogueBox : MonoBehaviour
             currentDialogue = DialogueManager.instance.currentDialogue;
         }
         nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
-        PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().UpdateDialogue();
+        if (PlayerMovement.playerInstance != null)
+        {
+            PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().UpdateDialogue();
+        }
         //FMODUnity.RuntimeManager.PlayOneShot(currentDialogue.messageVocalizationSound); IMPLEMENT AUDIO
         if (currentDialogue.changeReputation != 0)
         {
@@ -195,6 +200,10 @@ public class DialogueBox : MonoBehaviour
         if (currentDialogue.item != null)
         {
             Inventory.instance.INV_AddItem(currentDialogue.item);
+        }
+        if (currentDialogue.showItem && FlashbackEvents.instance != null && FlashbackEvents.instance.objectAppear != null)
+        {
+            FlashbackEvents.instance.ShowObject();
         }
 
         Dialogue.CharacterEmotion rileyEmotion;
@@ -223,10 +232,12 @@ public class DialogueBox : MonoBehaviour
         {
             leftNamePlate.SetActive(true);
             rightNamePlate.SetActive(false);
+
             rileyEmotion = currentDialogue.speakerEmotion;
+            rileyProfile.myCharacter = currentDialogue.speaker;
+
             if (currentDialogue.listener != null)
             {
-                rileyProfile.myCharacter = currentDialogue.speaker;
                 NPCprofile.myCharacter = currentDialogue.listener;
                 NPCprofile.FadeOutColor();
 
@@ -266,7 +277,10 @@ public class DialogueBox : MonoBehaviour
 
         rileyProfile.profileImage.sprite = rileyProfile.SpriteFromMood(rileyEmotion);
 
-        NPCprofile.profileImage.sprite = NPCprofile.SpriteFromMood(npcEmotion);
+        if (currentDialogue.listener != null)
+        {
+            NPCprofile.profileImage.sprite = NPCprofile.SpriteFromMood(npcEmotion);
+        }
 
         if (isActiveAndEnabled)
         {

@@ -20,15 +20,16 @@ MonoBehaviour:
   italic: 0
   messages:
   - text: (It's almost time for that stupid ponyride. Hopefully the coffee will be
-      done soon so we can get this thing over with. I should press space to see what
-      Erin wants.)
+      done soon so we can get this thing over with. I should talk to Erin to see what
+      she wants.)
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 0}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 0}
+  showItem: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

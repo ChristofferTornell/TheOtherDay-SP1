@@ -10,22 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 0jason_repeating
+  m_Name: 0jason_first_4
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: ecd1378815b872248a4c06eb0a786cd8, type: 2}
   speakerEmotion: 0
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   listenerEmotion: 0
+  changeReputation: 0
   italic: 0
   messages:
-  - text: I already gave you the ring.
+  - text: Roger that. Sorry. You two just have good chemistry is all.
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 11400000, guid: bc5f5e0c7e3a3dd45a43e45d5952d069, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 0}
+  showItem: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

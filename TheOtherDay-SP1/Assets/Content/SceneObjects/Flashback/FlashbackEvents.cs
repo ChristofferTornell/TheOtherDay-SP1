@@ -21,13 +21,16 @@ public class FlashbackEvents : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        objectAppear.SetActive(false);
         Invoke("InitDialogue", dialogueDelay);
     }
 
     // Update is called once per frame
     public void ShowObject()
     {
+        Debug.Log("showing object");
         objectAppear.SetActive(true);
+        Debug.Log(objectAppear.activeSelf);
     }
     void InitDialogue()
     {

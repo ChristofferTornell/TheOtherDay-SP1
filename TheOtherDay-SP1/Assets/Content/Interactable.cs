@@ -29,7 +29,7 @@ public class Interactable : MonoBehaviour
         gameController = FindObjectOfType<GameController>();
         if (hideOnStart)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 

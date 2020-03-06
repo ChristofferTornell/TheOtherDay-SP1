@@ -10,7 +10,7 @@ public class BackButton : MonoBehaviour
     public Button _BackButton;
     public List<GameObject> MessageMenus;
     public GameObject LogMenu;
-    private GameObject[] MessagePages;
+    private GameObject[] MessageBubbles;
 
     private void Start()
     {
@@ -22,7 +22,10 @@ public class BackButton : MonoBehaviour
     {
         if (phone.Page == 0)
         {
-            ResetMessages();
+            if(MessageBubbles != null)
+            {
+                ResetMessages();
+            }
             for (int i = MessageMenus.Count - 1; i >= 0; i--)
             {
                 MessageMenus[i].SetActive(false);
@@ -46,7 +49,7 @@ public class BackButton : MonoBehaviour
         MessageMenus.Add(obj);
         if(obj.name == "In Message")
         {
-            MessagePages = obj.GetComponent<InMessage>().TextBubbles;
+            MessageBubbles = obj.GetComponent<InMessage>().TextBubbles;
             int stage = obj.GetComponent<InMessage>().stage;
             if(stage == 0)
             {
@@ -63,15 +66,15 @@ public class BackButton : MonoBehaviour
 
     public void ResetMessages()
     {
-        for (int i = 0; i < MessagePages.Length; i++)
+        for (int i = 0; i < MessageBubbles.Length; i++)
         {
             if(i == 0)
             {
-                MessagePages[i].SetActive(true);
+                MessageBubbles[i].SetActive(true);
             }
             else
             {
-                MessagePages[i].SetActive(false);
+                MessageBubbles[i].SetActive(false);
             }
         }
     }
@@ -80,7 +83,10 @@ public class BackButton : MonoBehaviour
     {
         if(phone.Page == 0)
         {
-            ResetMessages();
+            if(MessageBubbles != null)
+            {
+                ResetMessages();
+            }
             for (int i = MessageMenus.Count - 1; i >= 0; i--)
             {
                 if (MessageMenus[i].activeSelf)

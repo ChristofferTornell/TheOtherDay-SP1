@@ -55,14 +55,20 @@ public class Phone : MonoBehaviour
 
     void EnableMessage(bool state)
     {
-        Page = 0;
-        MessagePage.SetActive(state);
+        if (Zooming)
+        {
+            Page = 0;
+            MessagePage.SetActive(state);
+        }
     }
 
     void EnableLog(bool state)
     {
-       Page = 1;
-       LogPage.SetActive(state);
+        if (Zooming)
+        {
+           Page = 1;
+           LogPage.SetActive(state);
+        }
     }
 
     void EnableAlbum(bool state)

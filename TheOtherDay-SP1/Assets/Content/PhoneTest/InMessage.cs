@@ -70,16 +70,4 @@ public class InMessage : MonoBehaviour
             }   
         }
     }
-
-    private void OnValidate()
-    {
-        if(stage >= character.sms.Length)
-        {
-            stage = character.sms.Length - 1;
-        }
-        else if(stage < 0)
-        {
-            stage = 0;
-        }
-    }
 }

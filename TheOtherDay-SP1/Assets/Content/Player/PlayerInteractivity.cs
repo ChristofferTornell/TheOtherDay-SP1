@@ -7,7 +7,7 @@ public class PlayerInteractivity : MonoBehaviour
 {
     [SerializeField] private string interactionButton;
 
-    private Interactable interactableObject = null;
+    private List<Interactable> interactables = new List<Interactable>();
     public GameObject interactUI;
 
     private void Start()
@@ -19,7 +19,7 @@ public class PlayerInteractivity : MonoBehaviour
     {
         if (collision.GetComponent<Interactable>())
         {
-            interactableObject = collision.GetComponent<Interactable>();
+            interactables.Add(collision.GetComponent<Interactable>());
             interactUI.SetActive(true);
         }
     }
@@ -28,7 +28,7 @@ public class PlayerInteractivity : MonoBehaviour
     {
         if (collision.GetComponent<Interactable>())
         {
-            interactableObject = null;
+            interactables.Remove(collision.GetComponent<Interactable>());
             interactUI.SetActive(false);
         }
     }
@@ -42,21 +42,22 @@ public class PlayerInteractivity : MonoBehaviour
     void Update()
     {
         // Interact with the Object using the useButton
-        if (interactableObject && Input.GetButtonDown(interactionButton))
+        if (interactables[0] && Input.GetButtonDown(interactionButton))
         {
             if (!DialogueManager.dialogueActive)
             {
-                Debug.Log("Doing something with " + interactableObject.name);
+                Debug.Log("Doing something with " + interactables[0].name);
 
-                if (interactableObject.savePlayerPosition)
+                if (interactables[0].savePlayerPosition)
                 {
-                    SavedPositions.NewPosition(GameController.currentScene, new Vector2(interactableObject.transform.position.x, gameObject.transform.position.y));
+                    SavedPositions.NewPosition(GameController.currentScene, new Vector2(interactables[0].transform.position.x, gameObject.transform.position.y));
                 }
 
-                interactableObject.Interact();
+                interactables[0].Interact();
                 // Do something with the object
             }
         }
+
         if (DialogueManager.dialogueActive && currentDialogue.noChoiceDialogue == null && Input.GetButtonDown(interactionButton))
         {
             DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;

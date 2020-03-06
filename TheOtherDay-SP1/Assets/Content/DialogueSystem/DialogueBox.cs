@@ -25,6 +25,8 @@ public class DialogueBox : MonoBehaviour
     private float choiceTimerCounter = 0;
     public TextMeshProUGUI choiceTimerTextObject = null;
     private List<GameObject> choiceButtons = new List<GameObject>();
+    [SerializeField] private string interactionButton = "Interact Button";
+
 
     private float typeSoundCounter;
     public float typeSoundDelay = 0.1f;
@@ -55,6 +57,13 @@ public class DialogueBox : MonoBehaviour
     }
     private void Update()
     {
+        if (DialogueManager.dialogueActive && currentDialogue.noChoiceDialogue == null && Input.GetButtonDown(interactionButton))
+        {
+            Debug.Log("bum");
+            DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;
+            DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
+        }
+
         if (!typeSoundReady)
         {
             typeSoundCounter += Time.deltaTime;

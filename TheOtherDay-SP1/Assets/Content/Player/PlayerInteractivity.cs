@@ -57,11 +57,11 @@ public class PlayerInteractivity : MonoBehaviour
                 // Do something with the object
             }
         }
-
-        if (DialogueManager.dialogueActive && currentDialogue.noChoiceDialogue == null && Input.GetButtonDown(interactionButton))
+        if (DialogueManager.dialogueActive)
         {
-            DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;
-            DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
+            Debug.Log("currentDialogue: " + currentDialogue);
         }
+
+
     }
 }

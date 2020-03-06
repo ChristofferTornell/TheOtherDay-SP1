@@ -27,6 +27,7 @@ public class Dialogue : ScriptableObject
     public bool italic;
     public Message[] messages;
     [Header("Insertables")]
+    public bool initial;
     public Dialogue nextDialogue = null;
     [Space]
     public string triggerScene;

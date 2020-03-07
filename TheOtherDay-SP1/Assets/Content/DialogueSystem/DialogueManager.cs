@@ -43,10 +43,18 @@ public class DialogueManager : MonoBehaviour
         }
         dialogueBoxUI.gameObject.SetActive(false);
         PlayerMovement.playerMovementLocked = false;
+        
         if(PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().interactables.Count > 0)
         {
             DescriptionUI.instance.gameObject.SetActive(true);
         }
+        
+        /*
+        if (PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().interactableObject != null)
+        {
+            DescriptionUI.instance.gameObject.SetActive(true);
+        }
+        */
         dialogueActive = false;
     }
 

@@ -181,7 +181,6 @@ public class DialogueBox : MonoBehaviour
             if (currentDialogue.choiceButtons.Length == 0)
             {
                 CheckSceneTrigger();
-                Debug.Log("exit dialogue: " + currentDialogue);
                 ResetDialogueUI();
                 dialogueEnded = true;
                 DialogueManager.instance.ExitDialogue();

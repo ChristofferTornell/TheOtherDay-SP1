@@ -32,10 +32,10 @@ public class PlayerInteractivity : MonoBehaviour
             UpdateInteractUI();
         }
     }
-    
+
     private void UpdateInteractUI()
     {
-        if(interactables.Count > 0)
+        if (interactables.Count > 0)
         {
             interactUI.SetActive(true);
 

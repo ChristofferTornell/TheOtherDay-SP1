@@ -821,6 +821,7 @@ MonoBehaviour:
   unlockedOnStage: 1
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
+  lockedDialogue: {fileID: 0}
   charIndex: 7
   hoverCursor: 5
   interactSoundEvent: 
@@ -865,7 +866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460207180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.79, y: -3.71, z: 0.4}
+  m_LocalPosition: {x: -8.79, y: -3.71, z: 0.4}
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1003,6 +1004,7 @@ MonoBehaviour:
   unlockedOnStage: 0
   requiredItem: {fileID: 11400000, guid: c549d5f4404db504c85ad57c5f7f0444, type: 2}
   lockedData: {fileID: 11400000, guid: 5e43578f0da946940868f47962d5ff51, type: 2}
+  lockedDialogue: {fileID: 0}
   charIndex: 0
   hoverCursor: 5
   interactSoundEvent: event:/Sounds/UI/SoundsSceneTransition
@@ -1836,7 +1838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200901809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.29, y: -0.21, z: 0.4}
+  m_LocalPosition: {x: -1.29, y: -0.21, z: 0.4}
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1884,8 +1886,9 @@ MonoBehaviour:
   OneTime: 0
   hideOnStart: 0
   unlockedOnStage: 1
-  requiredItem: {fileID: 0}
+  requiredItem: {fileID: 11400000, guid: e861a804f1901804cbf0dfd9d9227e92, type: 2}
   lockedData: {fileID: 0}
+  lockedDialogue: {fileID: 11400000, guid: aa49f122e7d40e04f9843bf48773367f, type: 2}
   charIndex: 1
   hoverCursor: 5
   interactSoundEvent: 
@@ -2168,11 +2171,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 294146206648491336, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
-        type: 3}
-      propertyPath: flashBack
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1712180062, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -2180,6 +2178,15 @@ PrefabInstance:
     - target: {fileID: 4599713005042605893, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 294146206648491336, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: flashBack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 139706204, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4218,12 +4225,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 040da5b37f89b554da4a82d9b2bd5bf4,
         type: 2}
-    - target: {fileID: 4757630665772093109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+    - target: {fileID: 2321846843388983274, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2321846843388983274, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+    - target: {fileID: 4757630665772093109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_IsActive
       value: 1

@@ -555,6 +555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
   OneTime: 0
+  hideOnStart: 0
   unlockedOnStage: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
@@ -572,7 +573,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CityPresent
+          m_StringArgument: ReceptionPresent
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 190934627}
@@ -1951,11 +1952,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: b29a67a2f3c5ab84b905cc269cd2d159,
         type: 2}
-    - target: {fileID: 4757630665772093109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7742616349829940400, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1965,6 +1961,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.601
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757630665772093109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8822042503807116703, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
@@ -2459,6 +2460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
   OneTime: 1
+  hideOnStart: 0
   unlockedOnStage: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
@@ -2675,7 +2677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961290282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.75, y: -5.17, z: 0}
+  m_LocalPosition: {x: 10.75, y: -5.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -22,12 +22,13 @@ MonoBehaviour:
   - text: I'll take your silence as a yes.
     typeDelay: 0.01
     messageSound: 
-  nextDialogue: {fileID: 0}
+  initial: 0
+  nextDialogue: {fileID: 11400000, guid: d11a9437c22cedb4c80a887609ca67b1, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 11400000, guid: e861a804f1901804cbf0dfd9d9227e92, type: 2}
-  showItem: 0
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

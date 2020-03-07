@@ -13,6 +13,7 @@ public class Interactable : MonoBehaviour
     public int unlockedOnStage = 0;
     public Items requiredItem;
     public Items lockedData;
+    public Dialogue lockedDialogue;
     public int charIndex = 0;
     public CursorSprite hoverCursor = CursorSprite.BigHand;
     [Space]
@@ -44,8 +45,16 @@ public class Interactable : MonoBehaviour
         {
             if (!Inventory.instance.INV_FindItem(requiredItem))
             {
-                DescriptionUI.instance.ExamineItem(lockedData);
-                return;
+                if(lockedData != null)
+                {
+                    DescriptionUI.instance.ExamineItem(lockedData);
+                    return;
+                }
+                if(lockedDialogue != null)
+                {
+                    DialogueManager.instance.EnterDialogue(lockedDialogue);
+                    return;
+                }
             }
         }
         onInteract.Invoke();

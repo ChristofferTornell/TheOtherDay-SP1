@@ -34,7 +34,6 @@ public class DialogueBox : MonoBehaviour
 
     public void InitializeDialogueUI()
     {
-        Debug.Log("initialize dialogue");
         dialogueEnded = false;
         currentDialogue = DialogueManager.instance.currentDialogue;
         ResetChoiceTimer();
@@ -57,9 +56,8 @@ public class DialogueBox : MonoBehaviour
     }
     private void Update()
     {
-        if (DialogueManager.dialogueActive && currentDialogue.noChoiceDialogue == null && Input.GetButtonDown(interactionButton))
+        if (DialogueManager.dialogueActive && currentDialogue.choiceButtons.Length == 0 && Input.GetButtonDown(interactionButton))
         {
-            Debug.Log("bum");
             DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;
             DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
         }
@@ -161,6 +159,15 @@ public class DialogueBox : MonoBehaviour
     void CheckExistingDialogue()
     {
         StopAllCoroutines();
+
+        if (currentDialogue.flashbackEvent != 0)
+        {
+            if (GlobalData.instance.stage == 0)
+            {
+                Flashback1events.instance.PlayEvent(currentDialogue.flashbackEvent);
+            }
+        }
+
         if (choiceButtonsExist)
         {
             foreach (Transform child in choiceButtonLayout.transform)
@@ -169,7 +176,6 @@ public class DialogueBox : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
-        Debug.Log(currentDialogue + " next dialogue: " + currentDialogue.nextDialogue);
         if (currentDialogue.nextDialogue == null)
         {
             if (currentDialogue.choiceButtons.Length == 0)
@@ -186,11 +192,11 @@ public class DialogueBox : MonoBehaviour
     }
     public void UpdateDialogueUI()
     {
-        Debug.Log("updating dialogue UI .." + currentDialogue);
         if (dialogueEnded)
         {
             return;
         }
+
         //nextButtonObject.gameObject.SetActive(true);
         if (DialogueManager.instance.currentDialogue != null)
         {
@@ -209,10 +215,6 @@ public class DialogueBox : MonoBehaviour
         if (currentDialogue.item != null)
         {
             Inventory.instance.INV_AddItem(currentDialogue.item);
-        }
-        if (currentDialogue.showItem && FlashbackEvents.instance != null && FlashbackEvents.instance.objectAppear != null)
-        {
-            FlashbackEvents.instance.ShowObject();
         }
 
         Dialogue.CharacterEmotion rileyEmotion;

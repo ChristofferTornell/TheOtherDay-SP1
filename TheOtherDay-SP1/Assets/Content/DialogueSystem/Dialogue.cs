@@ -35,7 +35,7 @@ public class Dialogue : ScriptableObject
     public bool exitFlashback = false;
     [Space]
     public Items item;
-    public bool showItem;
+    public int flashbackEvent;
     [Space]
     public float TimeLimitSeconds = 0;
     public Dialogue noChoiceDialogue = null;

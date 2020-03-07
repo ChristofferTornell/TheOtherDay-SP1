@@ -8,6 +8,7 @@ public class PuzzleMaster : MonoBehaviour
     public string goToSceneOnClear;
     public bool exitFlashbackOnClear = false;
     public Dialogue clearDialogue;
+    public Dialogue wrongItemDialogue;
     
     public void RecieveItem()
     {
@@ -29,6 +30,11 @@ public class PuzzleMaster : MonoBehaviour
                     SceneChanger.instance.ExitFlashback(goToSceneOnClear);
                 }
                 return;
+            }
+            else
+            {
+                DialogueManager.instance.EnterDialogue(wrongItemDialogue);
+                PuzzleMouse.RemoveItem();
             }
         }
     }

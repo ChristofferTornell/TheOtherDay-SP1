@@ -19,19 +19,19 @@ MonoBehaviour:
   changeReputation: 0
   italic: 0
   messages:
-  - text: 'Too much to drink, huh? Explains why
-
-      you look like, uh, crap. No offence.'
+  - text: Too much to drink, huh? Explains why you look like, uh, crap. No offence.
     typeDelay: 0.01
     messageSound: 
   - text: "Well, I heard something about a pony and some sister.\r\n\n"
     typeDelay: 0.01
     messageSound: 
+  initial: 0
+  nextDialogue: {fileID: 0}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 0}
+  flashbackEvent: 0
   TimeLimitSeconds: 10
   noChoiceDialogue: {fileID: 11400000, guid: 5e40effd428a5f94e83773145fa50dd0, type: 2}
   choiceButtons:

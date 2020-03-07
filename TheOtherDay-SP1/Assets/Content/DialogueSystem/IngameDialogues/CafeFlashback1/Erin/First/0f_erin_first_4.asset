@@ -23,16 +23,17 @@ MonoBehaviour:
       to fall off just because my sister has decided that this is the day I go crazy.
     typeDelay: 0.01
     messageSound: 
+  initial: 0
   nextDialogue: {fileID: 0}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
   showItem: 0
-  TimeLimitSeconds: 0
-  noChoiceDialogue: {fileID: 0}
+  TimeLimitSeconds: 10
+  noChoiceDialogue: {fileID: 11400000, guid: 774a310a02cb74c43bea38f1901a6e8c, type: 2}
   choiceButtons:
   - buttonText: Sure thing
     nextDialogue: {fileID: 11400000, guid: f7cdf8ba9c8591d40bf1fc269a4a9b86, type: 2}
   - buttonText: If I have to
-    nextDialogue: {fileID: 0}
+    nextDialogue: {fileID: 11400000, guid: 774a310a02cb74c43bea38f1901a6e8c, type: 2}

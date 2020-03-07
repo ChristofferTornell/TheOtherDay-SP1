@@ -15,19 +15,21 @@ MonoBehaviour:
   speaker: {fileID: 11400000, guid: ecd1378815b872248a4c06eb0a786cd8, type: 2}
   speakerEmotion: 1
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
-  listenerEmotion: 2
+  listenerEmotion: 0
   changeReputation: 0
   italic: 0
   messages:
   - text: "Oh hey, I remember you. Still not marrying that friend of yours, I take
-      it? \nA shame. But hey, them\u2019s the breaks. What can I get you?\r\n"
+      it? A shame. But hey, them\u2019s the breaks. What can I get you?\r\n"
     typeDelay: 0.01
     messageSound: 
+  initial: 0
+  nextDialogue: {fileID: 11400000, guid: 30caeaff3b9b18c4fa6556cfebb2b78e, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: 30caeaff3b9b18c4fa6556cfebb2b78e, type: 2}
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

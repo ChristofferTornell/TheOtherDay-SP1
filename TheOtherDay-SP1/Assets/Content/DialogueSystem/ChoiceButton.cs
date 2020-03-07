@@ -25,9 +25,13 @@ public class ChoiceButton : MonoBehaviour
         currentDialogue = DialogueManager.instance.currentDialogue;
         alpha = 1f;
     }
-
+    public void OnMouseDown()
+    {
+        GoToNextDialogue();
+    }
     public void GoToNextDialogue()
     {
+        Debug.Log("press choice button");
         DialogueManager.instance.currentDialogue = currentDialogue.choiceButtons[myId].nextDialogue;
         DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
     }

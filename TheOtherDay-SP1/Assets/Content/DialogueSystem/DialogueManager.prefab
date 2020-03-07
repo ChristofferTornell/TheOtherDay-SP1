@@ -282,7 +282,7 @@ RectTransform:
   m_GameObject: {fileID: 2406047994667913844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4670344911138750771}
   m_Father: {fileID: 2406047995587537437}
@@ -723,6 +723,7 @@ MonoBehaviour:
   choiceButton: {fileID: 7344817434139619220, guid: 413b33028c53b0f4fa607e6a5ccba8a1,
     type: 3}
   choiceTimerTextObject: {fileID: 2423256893509784018}
+  interactionButton: Interact Button
   typeSoundDelay: 0.03
 --- !u!1 &2406047995587537411
 GameObject:
@@ -829,7 +830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.4}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1547,21 +1548,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightProfile
       objectReference: {fileID: 0}
-    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: listenerFadeColor.r
-      value: 0.2735849
-      objectReference: {fileID: 0}
-    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: listenerFadeColor.g
-      value: 0.2735849
-      objectReference: {fileID: 0}
-    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: listenerFadeColor.b
-      value: 0.2735849
-      objectReference: {fileID: 0}
     - target: {fileID: 2146713060814842012, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1651,6 +1637,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: listenerFadeColor.r
+      value: 0.2735849
+      objectReference: {fileID: 0}
+    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: listenerFadeColor.g
+      value: 0.2735849
+      objectReference: {fileID: 0}
+    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: listenerFadeColor.b
+      value: 0.2735849
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6561d94be3f8ce249bdeba75c6e92cf9, type: 3}

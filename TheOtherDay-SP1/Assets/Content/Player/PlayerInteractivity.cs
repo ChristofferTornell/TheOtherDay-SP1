@@ -7,7 +7,7 @@ public class PlayerInteractivity : MonoBehaviour
 {
     [SerializeField] private string interactionButton;
 
-    private List<Interactable> interactables = new List<Interactable>();
+    [HideInInspector] public List<Interactable> interactables = new List<Interactable>();
     public GameObject interactUI;
 
     private void Start()
@@ -20,7 +20,7 @@ public class PlayerInteractivity : MonoBehaviour
         if (collision.GetComponent<Interactable>())
         {
             interactables.Add(collision.GetComponent<Interactable>());
-            interactUI.SetActive(true);
+            UpdateInteractUI();
         }
     }
 
@@ -29,6 +29,19 @@ public class PlayerInteractivity : MonoBehaviour
         if (collision.GetComponent<Interactable>())
         {
             interactables.Remove(collision.GetComponent<Interactable>());
+            UpdateInteractUI();
+        }
+    }
+    
+    private void UpdateInteractUI()
+    {
+        if(interactables.Count > 0)
+        {
+            interactUI.SetActive(true);
+
+        }
+        else
+        {
             interactUI.SetActive(false);
         }
     }
@@ -57,11 +70,5 @@ public class PlayerInteractivity : MonoBehaviour
                 // Do something with the object
             }
         }
-        if (DialogueManager.dialogueActive)
-        {
-            Debug.Log("currentDialogue: " + currentDialogue);
-        }
-
-
     }
 }

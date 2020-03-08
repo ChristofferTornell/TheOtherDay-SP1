@@ -12,6 +12,7 @@ public class PuzzleMaster : MonoBehaviour
     
     public void RecieveItem()
     {
+        bool correctItem = false;
         //DeselectItem
         if (PuzzleMouse.itemOnMouse == null)
         {
@@ -19,6 +20,7 @@ public class PuzzleMaster : MonoBehaviour
         }
         for (int i = 0; i < requiredItems.Length; i++)
         {
+           
             if (PuzzleMouse.itemOnMouse == requiredItems[i].item && !requiredItems[i].isGiven)
             {
                 if (requiredItems[i].recievedDialogue != null)
@@ -33,12 +35,17 @@ public class PuzzleMaster : MonoBehaviour
                     Debug.Log("Exit flashback");
                     SceneChanger.instance.ExitFlashback(goToSceneOnClear);
                 }
+                correctItem = true;
                 return;
+
             }
-            else
+        }
+        if (correctItem == false)
+        {
+            PuzzleMouse.RemoveItem();
+            if (wrongItemDialogue != null)
             {
                 DialogueManager.instance.EnterDialogue(wrongItemDialogue);
-                PuzzleMouse.RemoveItem();
             }
         }
     }

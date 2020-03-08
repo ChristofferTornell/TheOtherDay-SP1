@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1574386544078953940}
   - component: {fileID: 1574386544078953943}
   m_Layer: 0
-  m_Name: ItemCoffee
+  m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,10 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
-  OneTime: 1
+  changeCursorOnHover: 1
+  hideOnStart: 0
   unlockedOnStage: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
+  lockedDialogue: {fileID: 0}
   charIndex: 0
   hoverCursor: 5
   interactSoundEvent: 

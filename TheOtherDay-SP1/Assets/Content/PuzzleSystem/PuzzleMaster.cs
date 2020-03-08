@@ -13,6 +13,10 @@ public class PuzzleMaster : MonoBehaviour
     public void RecieveItem()
     {
         //DeselectItem
+        if (PuzzleMouse.itemOnMouse == null)
+        {
+            return;
+        }
         for (int i = 0; i < requiredItems.Length; i++)
         {
             if (PuzzleMouse.itemOnMouse == requiredItems[i].item && !requiredItems[i].isGiven)

@@ -8,7 +8,7 @@ using FMODUnity;
 public class Interactable : MonoBehaviour
 {
     public bool savePlayerPosition = false;
-    public bool OneTime = false;
+    public bool changeCursorOnHover = false;
     public bool hideOnStart = false;
     public int unlockedOnStage = 0;
     public Items requiredItem;
@@ -67,7 +67,7 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (!DialogueManager.dialogueActive)
+        if (!DialogueManager.dialogueActive && changeCursorOnHover)
         {
             gameController.ChangeCursor(hoverCursor);
         }

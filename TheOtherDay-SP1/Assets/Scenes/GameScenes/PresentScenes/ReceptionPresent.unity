@@ -400,7 +400,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 126223357
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 4468bcc49e192494eaa5bf7d8e62e4d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -622,11 +622,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
-  OneTime: 0
+  changeCursorOnHover: 0
   hideOnStart: 0
   unlockedOnStage: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
+  lockedDialogue: {fileID: 0}
   charIndex: 2
   hoverCursor: 5
   interactSoundEvent: 
@@ -1279,11 +1280,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
-  OneTime: 0
+  changeCursorOnHover: 0
   hideOnStart: 0
   unlockedOnStage: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
+  lockedDialogue: {fileID: 0}
   charIndex: 0
   hoverCursor: 1
   interactSoundEvent: event:/Sounds/UI/SoundsSceneTransition
@@ -2359,11 +2361,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
-  OneTime: 0
+  changeCursorOnHover: 0
   hideOnStart: 0
   unlockedOnStage: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
+  lockedDialogue: {fileID: 0}
   charIndex: 0
   hoverCursor: 1
   interactSoundEvent: event:/Sounds/UI/SoundsSceneTransition

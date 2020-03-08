@@ -39,7 +39,6 @@ public class Flashback2events : MonoBehaviour
     {
         if (initialDialogue != null)
         {
-            Debug.Log("Dialogue manager: " + DialogueManager.instance);
             DialogueManager.instance.EnterDialogue(initialDialogue);
         }
     }

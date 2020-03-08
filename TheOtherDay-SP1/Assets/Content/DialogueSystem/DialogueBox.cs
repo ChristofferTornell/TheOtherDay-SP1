@@ -166,6 +166,13 @@ public class DialogueBox : MonoBehaviour
             {
                 Flashback1events.instance.PlayEvent(currentDialogue.flashbackEvent);
             }
+            if (GlobalData.instance.stage == 1)
+            {
+                if (HotelEvents.instance != null)
+                {
+                    HotelEvents.instance.PlayEvent(currentDialogue.flashbackEvent);
+                }
+            }
         }
 
         if (choiceButtonsExist)

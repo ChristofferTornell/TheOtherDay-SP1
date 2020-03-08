@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour
         dialogueBoxUI.gameObject.SetActive(true);
         dialogueBoxUI.InitializeDialogueUI();
         PlayerMovement.playerMovementLocked = true;
-        DescriptionUI.instance.gameObject.SetActive(false);
+        DescriptionUI.instance.descriptionBoxObj.SetActive(false);
         dialogueActive = true;
     }
 
@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
         
         if(PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().interactables.Count > 0)
         {
-            DescriptionUI.instance.gameObject.SetActive(true);
+            PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().interactUI.SetActive(true);
         }
         
         /*

@@ -8,7 +8,6 @@ public class SceneChanger : MonoBehaviour
 {
     public static UnityAction<SceneChanger> onChange = delegate { };
 
-    public Animator animator = null;
     [SerializeField] private float sceneChangeDelay = 1f;
     public static SceneChanger instance;
 
@@ -57,11 +56,11 @@ public class SceneChanger : MonoBehaviour
 
         onChange(this);
 
-        SceneTransition.instance.TRAN_FadeIn(fadeInColor);
+        if (sceneName != "Main Menu") SceneTransition.instance.TRAN_FadeIn(fadeInColor);
 
         yield return new WaitForSeconds(sceneChangeDelay);
 
-        SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
+        if (sceneName != "Main Menu") SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
 
         SceneManager.LoadScene(sceneName);
 

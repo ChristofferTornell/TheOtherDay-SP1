@@ -13,6 +13,13 @@ public class PlayerInteractivity : MonoBehaviour
     private void Start()
     {
         if (interactionButton.Length == 0) { Debug.LogError("PlayerInteractivity - The interactionButton string is empty"); }
+        SceneChanger.onChange += OnSceneChange;
+    }
+
+    public void OnSceneChange(SceneChanger sceneChanger)
+    {
+        interactables.Clear();
+        UpdateInteractUI();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,6 +35,7 @@ public class PlayerInteractivity : MonoBehaviour
     {
         if (collision.GetComponent<Interactable>())
         {
+
             interactables.Remove(collision.GetComponent<Interactable>());
             UpdateInteractUI();
         }
@@ -55,7 +63,7 @@ public class PlayerInteractivity : MonoBehaviour
     void Update()
     {
         // Interact with the Object using the useButton
-        if (interactables[0] && Input.GetButtonDown(interactionButton))
+        if (interactables.Count > 0 && Input.GetButtonDown(interactionButton))
         {
             if (!DialogueManager.dialogueActive)
             {

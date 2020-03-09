@@ -11,6 +11,7 @@ public class Interactable : MonoBehaviour
     public bool changeCursorOnHover = false;
     public bool hideOnStart = false;
     public int unlockedOnStage = 0;
+    public bool lockedByEvent;
     public Items requiredItem;
     public Items lockedData;
     public Dialogue lockedDialogue;
@@ -57,6 +58,11 @@ public class Interactable : MonoBehaviour
                 }
             }
         }
+        if (lockedByEvent)
+        {
+            DialogueManager.instance.EnterDialogue(lockedDialogue);
+            return;
+        }
         onInteract.Invoke();
         /*
         if (OneTime) { DestroyThis(); }
@@ -67,18 +73,26 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (!DialogueManager.dialogueActive && changeCursorOnHover)
+        if (!DialogueManager.dialogueActive)
         {
-            gameController.ChangeCursor(hoverCursor);
+            PuzzleMouse.overInteractable = true;
+
+            if (!PuzzleMouse.itemOnMouse)
+            {
+                PuzzleMouse.hoverText.text = gameObject.name;
+            }
+
+            if (changeCursorOnHover) { gameController.ChangeCursor(hoverCursor); }
         }
+
         // Play highlight effects on the object
     }
 
     private void OnMouseExit()
     {
-
         gameController.ResetCursor();
-
+        PuzzleMouse.overInteractable = false;
+        PuzzleMouse.hoverText.text = null;
     }
 
     private void OnMouseDown()

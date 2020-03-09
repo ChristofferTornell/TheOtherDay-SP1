@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public Animator animator = null;
+    public static UnityAction<SceneChanger> onChange = delegate { };
+
     [SerializeField] private float sceneChangeDelay = 1f;
     public static SceneChanger instance;
 
@@ -24,6 +26,17 @@ public class SceneChanger : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        onChange += OnChange;
+    }
+
+    void OnChange(SceneChanger sceneChanger)
+    {
+        Debug.Log("Changing scene");
+    }
+  
+
     private IEnumerator CoChangeScene(string sceneName)
     {
         // Scene change effect(s) can be put here
@@ -41,11 +54,13 @@ public class SceneChanger : MonoBehaviour
             fadeOutColor = Color.black;
         }
 
-        SceneTransition.instance.TRAN_FadeIn(fadeInColor);
+        onChange(this);
+
+        if (sceneName != "Main Menu") SceneTransition.instance.TRAN_FadeIn(fadeInColor);
 
         yield return new WaitForSeconds(sceneChangeDelay);
 
-        SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
+        if (sceneName != "Main Menu") SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
 
         SceneManager.LoadScene(sceneName);
 

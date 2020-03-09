@@ -19,11 +19,10 @@ MonoBehaviour:
   changeReputation: 0
   italic: 0
   messages:
-  - text: Welcome, how may I help you? [PH]
+  - text: Yes, can I help you with something?
     typeDelay: 0.01
     messageSound: 
-  initial: 0
-  nextDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: be25e36fc234eb84bb14126dbff7cf68, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

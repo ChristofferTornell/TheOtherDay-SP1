@@ -7,6 +7,7 @@ public class PuzzleMouse : MonoBehaviour
 {
     public static Items itemOnMouse = null;
     private static Image itemSprite;
+    public static bool overInteractable = false;
 
     private void Start()
     {
@@ -28,6 +29,14 @@ public class PuzzleMouse : MonoBehaviour
         itemOnMouse = null;
         itemSprite.enabled = false;
         itemSprite.sprite = null;
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && !overInteractable || Input.GetKeyDown(KeyCode.Escape))
+        {
+            RemoveItem();
+        }
     }
 
     private void FixedUpdate()

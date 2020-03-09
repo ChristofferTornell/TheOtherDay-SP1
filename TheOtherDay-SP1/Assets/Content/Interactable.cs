@@ -71,14 +71,14 @@ public class Interactable : MonoBehaviour
         {
             gameController.ChangeCursor(hoverCursor);
         }
+        PuzzleMouse.overInteractable = true;
         // Play highlight effects on the object
     }
 
     private void OnMouseExit()
     {
-
         gameController.ResetCursor();
-
+        PuzzleMouse.overInteractable = false;
     }
 
     private void OnMouseDown()

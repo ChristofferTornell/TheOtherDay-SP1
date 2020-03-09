@@ -61,7 +61,6 @@ public class PlayerInteractivity : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(interactables.Count);
         // Interact with the Object using the useButton
         if (interactables[0] && Input.GetButtonDown(interactionButton))
         {

@@ -11,6 +11,10 @@ public class SceneChanger : MonoBehaviour
     [SerializeField] private float sceneChangeDelay = 1f;
     public static SceneChanger instance;
 
+    [FMODUnity.EventRef] public string enterFlashbackSound;
+    [FMODUnity.EventRef] public string exitFlashbackSound;
+
+
     private Color fadeInColor;
     private Color fadeOutColor;
 
@@ -94,6 +98,7 @@ public class SceneChanger : MonoBehaviour
     public void EnterFlashback(string sceneName)
     {
         Debug.Log("Interactable - Entering flashback: " + sceneName);
+        FMODUnity.RuntimeManager.PlayOneShot(enterFlashbackSound);
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }
@@ -101,6 +106,7 @@ public class SceneChanger : MonoBehaviour
     public void ExitFlashback(string sceneName)
     {
         Debug.Log("Interactable - Returning to present: " + sceneName);
+        FMODUnity.RuntimeManager.PlayOneShot(exitFlashbackSound);
         GlobalData.instance.stage++;
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);

@@ -67,11 +67,13 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (!DialogueManager.dialogueActive && changeCursorOnHover)
+        if (!DialogueManager.dialogueActive)
         {
-            gameController.ChangeCursor(hoverCursor);
+            PuzzleMouse.overInteractable = true;
+            PuzzleMouse.hoverText.text = gameObject.name;
+            if (changeCursorOnHover) { gameController.ChangeCursor(hoverCursor); }
         }
-        PuzzleMouse.overInteractable = true;
+
         // Play highlight effects on the object
     }
 
@@ -79,6 +81,7 @@ public class Interactable : MonoBehaviour
     {
         gameController.ResetCursor();
         PuzzleMouse.overInteractable = false;
+        PuzzleMouse.hoverText.text = null;
     }
 
     private void OnMouseDown()

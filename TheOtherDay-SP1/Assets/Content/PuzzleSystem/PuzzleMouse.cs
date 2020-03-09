@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PuzzleMouse : MonoBehaviour
 {
@@ -9,11 +10,16 @@ public class PuzzleMouse : MonoBehaviour
     private static Image itemSprite;
     public static bool overInteractable = false;
 
+    public static TextMeshProUGUI hoverText = null;
+
     private void Start()
     {
         itemSprite = GetComponent<Image>();
         itemSprite.sprite = null;
         itemSprite.enabled = false;
+
+        hoverText = GetComponentInChildren<TextMeshProUGUI>();
+        hoverText.text = null;
     }
 
     public static void SetItemOnMouse(Items item)

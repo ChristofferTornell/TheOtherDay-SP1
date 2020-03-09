@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 2Jason_repeatable_2c_1
+  m_Name: 2Jason_repeatable_0c_0
   m_EditorClassIdentifier: 
-  speaker: {fileID: 11400000, guid: ecd1378815b872248a4c06eb0a786cd8, type: 2}
-  speakerEmotion: 1
-  listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
-  listenerEmotion: 2
+  speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  speakerEmotion: 2
+  listener: {fileID: 11400000, guid: ecd1378815b872248a4c06eb0a786cd8, type: 2}
+  listenerEmotion: 0
   changeReputation: 0
   italic: 0
   messages:
-  - text: "Just gotta take one step at a time, right? If I were you I\u2019d slow
-      down a little; you\u2019re rushing around like a headless chicken."
+  - text: Any idea what I should do? Feeling kinda screwed at the moment.
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 11400000, guid: c16bb0e2e32bf9b4492d25c2559231e7, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: b76d42b00b1c04446b3a70c31d745c8f, type: 2}
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

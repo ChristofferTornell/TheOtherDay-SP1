@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 2Jason_repeatable_2c_2
+  m_Name: 2Jason_repeatable_0c_2
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   speakerEmotion: 0
@@ -22,11 +22,12 @@ MonoBehaviour:
   - text: No can do, Jason. I mean, shit, the time frame is tight enough as it is.
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 11400000, guid: 0a00360b3387ad746bfef9aa1f90a449, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: 0a00360b3387ad746bfef9aa1f90a449, type: 2}
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

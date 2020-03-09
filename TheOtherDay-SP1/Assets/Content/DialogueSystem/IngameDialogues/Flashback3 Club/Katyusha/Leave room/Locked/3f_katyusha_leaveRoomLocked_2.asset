@@ -10,29 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 3f_katyusha_leaveRoom_0
+  m_Name: 3f_katyusha_leaveRoomLocked_2
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: 01c44b970609f204c80fc359a7fe9730, type: 2}
-  speakerEmotion: 3
+  speakerEmotion: 0
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
   messages:
-  - text: Hey, where do you think you're going?
-    typeDelay: 0.01
+  - text: You throw up next to shoes. I don't let back in.
+    typeDelay: 0.02
     messageSound: 
-  initial: 0
-  nextDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 7eb9c2e9e6132bc45b95736a8953893f, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
   flashbackEvent: 0
-  TimeLimitSeconds: 10
-  noChoiceDialogue: {fileID: 11400000, guid: b5ecf4072c27b6343876663261222df2, type: 2}
-  choiceButtons:
-  - buttonText: My friends...
-    nextDialogue: {fileID: 11400000, guid: 41510c36cf11d654ba3ec5c218f07159, type: 2}
-  - buttonText: Fuck off
-    nextDialogue: {fileID: 11400000, guid: aeb49e1e61bb0c54c8d2996c2d7eabe5, type: 2}
+  TimeLimitSeconds: 0
+  noChoiceDialogue: {fileID: 0}
+  choiceButtons: []

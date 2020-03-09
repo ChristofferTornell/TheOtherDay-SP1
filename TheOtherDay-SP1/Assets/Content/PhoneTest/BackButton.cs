@@ -9,6 +9,7 @@ public class BackButton : MonoBehaviour
     public Phone phone;
     public Button _HomeButton;
     public Button _BackButton;
+    public Button _OutsideButton;
     public List<GameObject> MessageMenus;
     public GameObject LogMenu;
     private GameObject[] MessageBubbles;
@@ -19,16 +20,16 @@ public class BackButton : MonoBehaviour
 
     private void Start()
     {
-        parent = GameObject.Find("Video player paretn");
+        parent = vp.transform.parent.gameObject;
         _HomeButton.onClick.AddListener(HomeButton);
         _BackButton.onClick.AddListener(BackbuttonFunc);
+        _OutsideButton.onClick.AddListener(OutsideButton);
         vp.loopPointReached += EndReached;
     }
 
     void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
-        vp.playbackSpeed = 0;
-        Debug.Log("end");
+        //vp.playbackSpeed = 0;
         parent.SetActive(false);
     }
 
@@ -47,7 +48,7 @@ public class BackButton : MonoBehaviour
             MessageMenus.RemoveRange(1, MessageMenus.Count - 1);
             if (phone.Zoomed)
             {
-                phone.Zoom();
+                phone.Zoom(false);
             }
         }
         else if(phone.Page == 1)
@@ -59,6 +60,38 @@ public class BackButton : MonoBehaviour
             SettingsMenu.SetActive(false);
         }
         phone.Page = -1;
+    }
+
+    private void OutsideButton()
+    {
+        if (phone.Page == 0)
+        {
+            if (MessageBubbles != null)
+            {
+                ResetMessages();
+            }
+            for (int i = MessageMenus.Count - 1; i >= 0; i--)
+            {
+                MessageMenus[i].SetActive(false);
+            }
+            MessageMenus.RemoveRange(1, MessageMenus.Count - 1);
+            if (phone.Zoomed)
+            {
+                phone.ani.Play("Zoom out 0");
+            }
+        }
+        else if (phone.Page == 1)
+        {
+            LogMenu.SetActive(false);
+            phone.ani.Play("Down");
+        }
+        else if (phone.Page == 2)
+        {
+            SettingsMenu.SetActive(false);
+            phone.ani.Play("Down");
+        }
+        phone.Page = -1;
+        phone.Pulled = false;
     }
 
     public void AddToList(GameObject obj)
@@ -111,7 +144,7 @@ public class BackButton : MonoBehaviour
                     MessageMenus[i].SetActive(false);
                     if(i == 0)
                     {
-                        phone.Zoom();
+                        phone.Zoom(false);
                         phone.Page = -1;
                     }
                     else
@@ -131,6 +164,18 @@ public class BackButton : MonoBehaviour
         {
             SettingsMenu.SetActive(false);
             phone.Page = -1;
+        }
+    }
+
+    private void Update()
+    {
+        if (phone.Pulled)
+        {
+            _OutsideButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            _OutsideButton.gameObject.SetActive(false);
         }
     }
 }

@@ -11,6 +11,7 @@ public class Interactable : MonoBehaviour
     public bool changeCursorOnHover = false;
     public bool hideOnStart = false;
     public int unlockedOnStage = 0;
+    public bool lockedByEvent;
     public Items requiredItem;
     public Items lockedData;
     public Dialogue lockedDialogue;
@@ -56,6 +57,11 @@ public class Interactable : MonoBehaviour
                     return;
                 }
             }
+        }
+        if (lockedByEvent)
+        {
+            DialogueManager.instance.EnterDialogue(lockedDialogue);
+            return;
         }
         onInteract.Invoke();
         /*

@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 3f_katyusha_leaveRoom_0d_0
+  m_Name: 3f_katyusha_leaveRoomLocked_0
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: 01c44b970609f204c80fc359a7fe9730, type: 2}
-  speakerEmotion: 0
+  speakerEmotion: 3
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
   messages:
-  - text: "Are you that gone that you can't \teven keep up with a conversation?"
-    typeDelay: 0.01
+  - text: Hey, where you think you going?
+    typeDelay: 0.02
     messageSound: 
-  initial: 0
-  nextDialogue: {fileID: 11400000, guid: d14494db4d9cac840a7aeaa061dfab0d, type: 2}
+  nextDialogue: {fileID: 11400000, guid: 044825402bafc1745af429fae1cc2110, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

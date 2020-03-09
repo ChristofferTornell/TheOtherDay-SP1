@@ -7,6 +7,7 @@ public class FlashbackClubEvents : MonoBehaviour
     public static FlashbackClubEvents instance;
     public Dialogue initialDialogue;
     public float dialogueDelay = 0.2f;
+    public Interactable door;
 
     void Awake()
     {
@@ -22,6 +23,11 @@ public class FlashbackClubEvents : MonoBehaviour
         if (eventIndex == 1)
         {
             Debug.Log("Play Riley puking animation");
+        }
+        if (eventIndex == 2)
+        {
+            Debug.Log("Unlock door");
+            door.locked = true;
         }
     }
 

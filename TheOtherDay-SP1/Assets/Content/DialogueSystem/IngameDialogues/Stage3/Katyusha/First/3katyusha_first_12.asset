@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
+  m_Name: 3katyusha_first_12
+  m_EditorClassIdentifier: 
+  speaker: {fileID: 11400000, guid: 01c44b970609f204c80fc359a7fe9730, type: 2}
+  speakerEmotion: 2
+  listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  listenerEmotion: 0
+  changeReputation: 0
+  italic: 0
+  messages:
+  - text: Ugh, and here I tell you to drink water after having stomach all over street.
+      Waste of words.
+    typeDelay: 0.02
+    messageSound: 
+  nextDialogue: {fileID: 0}
+  triggerScene: 
+  enterFlashback: 0
+  exitFlashback: 0
+  item: {fileID: 0}
+  flashbackEvent: 0
+  TimeLimitSeconds: 10
+  noChoiceDialogue: {fileID: 11400000, guid: 7eb8d8156bf9d3e4486f9af811f05610, type: 2}
+  choiceButtons:
+  - buttonText: We spoke?
+    nextDialogue: {fileID: 11400000, guid: eccb9b3f5693a1746a049a091388304a, type: 2}
+  - buttonText: You saw us leave?
+    nextDialogue: {fileID: 11400000, guid: 126e8a52a2c7a0942b8720affe0054a2, type: 2}

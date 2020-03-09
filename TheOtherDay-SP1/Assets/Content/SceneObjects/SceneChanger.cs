@@ -40,7 +40,7 @@ public class SceneChanger : MonoBehaviour
     private IEnumerator CoChangeScene(string sceneName)
     {
         // Scene change effect(s) can be put here
-        // --------------------------------------
+        // -------------------------------------
 
         if (sceneName == "CityPresent")
         {
@@ -59,10 +59,27 @@ public class SceneChanger : MonoBehaviour
         if (sceneName != "Main Menu") SceneTransition.instance.TRAN_FadeIn(fadeInColor);
 
         yield return new WaitForSeconds(sceneChangeDelay);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        Debug.Log("Loading scene: " + sceneName);
+        operation.allowSceneActivation = false;
 
-        if (sceneName != "Main Menu") SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
+        while (!operation.isDone)
+        {
+            if (operation.progress >= 0.9f)
+            {
+                Debug.Log("Activating scene: " + sceneName);
+                operation.allowSceneActivation = true;
+                SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
+            }
 
-        SceneManager.LoadScene(sceneName);
+            yield return null;
+        }
+
+        //Play fade out when the operation is coplmete
+
+        //if (operation.isDone) SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
+
+        //SceneManager.LoadScene(sceneName);
 
         yield return null;
     }

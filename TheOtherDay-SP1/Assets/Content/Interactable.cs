@@ -70,7 +70,12 @@ public class Interactable : MonoBehaviour
         if (!DialogueManager.dialogueActive)
         {
             PuzzleMouse.overInteractable = true;
-            PuzzleMouse.hoverText.text = gameObject.name;
+
+            if (!PuzzleMouse.itemOnMouse)
+            {
+                PuzzleMouse.hoverText.text = gameObject.name;
+            }
+
             if (changeCursorOnHover) { gameController.ChangeCursor(hoverCursor); }
         }
 

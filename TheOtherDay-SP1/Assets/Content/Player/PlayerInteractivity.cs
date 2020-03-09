@@ -19,6 +19,7 @@ public class PlayerInteractivity : MonoBehaviour
     public void OnSceneChange(SceneChanger sceneChanger)
     {
         interactables.Clear();
+        UpdateInteractUI();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,7 +63,7 @@ public class PlayerInteractivity : MonoBehaviour
     void Update()
     {
         // Interact with the Object using the useButton
-        if (interactables[0] && Input.GetButtonDown(interactionButton))
+        if (interactables.Count > 0 && Input.GetButtonDown(interactionButton))
         {
             if (!DialogueManager.dialogueActive)
             {

@@ -19,15 +19,16 @@ MonoBehaviour:
   changeReputation: 0
   italic: 0
   messages:
-  - text: "So, I may or may not have dropped my friend\u2019s wedding ring, \nand
-      now I have to find it before meeting her tonight.\r\n"
+  - text: "So, I may or may not have dropped my friend\u2019s wedding ring, and now
+      I have to find it before meeting her tonight.\r\n"
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 11400000, guid: bb91cf0ce02efd4408334ec65ccefe1b, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: bb91cf0ce02efd4408334ec65ccefe1b, type: 2}
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

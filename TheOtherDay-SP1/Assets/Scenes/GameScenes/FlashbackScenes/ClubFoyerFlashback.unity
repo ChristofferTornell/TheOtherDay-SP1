@@ -576,6 +576,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 294146206648491336, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: flashBack
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1712180062, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -583,11 +588,6 @@ PrefabInstance:
     - target: {fileID: 4599713005042605893, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294146206648491336, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
-        type: 3}
-      propertyPath: flashBack
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1052,16 +1052,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: leftBoundary
-      value: 
-      objectReference: {fileID: 1906554690}
-    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: rightBoundary
-      value: 
-      objectReference: {fileID: 1594913646}
     - target: {fileID: 1844750349108326845, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: startingPosition
@@ -1077,6 +1067,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: leftBoundary
+      value: 
+      objectReference: {fileID: 1906554690}
+    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: rightBoundary
+      value: 
+      objectReference: {fileID: 1594913646}
     - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: sceneData
@@ -2000,8 +2000,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9f3154285b29b47b46d7b06aec4cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDialogue: {fileID: 11400000, guid: b8d902e9a868956428013686f3c40000, type: 2}
+  sceneDataIndex: 9
+  objectAppear: {fileID: 0}
   dialogueDelay: 0.2
+  initialDialogue: {fileID: 11400000, guid: b8d902e9a868956428013686f3c40000, type: 2}
   door: {fileID: 276117534}
 --- !u!1 &2080197566
 GameObject:

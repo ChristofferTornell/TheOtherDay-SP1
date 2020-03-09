@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -280,6 +280,53 @@ Transform:
   m_Father: {fileID: 1225819508}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &195739376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 195739377}
+  - component: {fileID: 195739378}
+  m_Layer: 0
+  m_Name: SceneEventHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &195739377
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195739376}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -134.01158, y: 3.5379715, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &195739378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195739376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6dd7e4273107448a81c7b6c252cd93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneDataIndex: 5
+  objectAppear: {fileID: 0}
+  dialogueDelay: 0.2
+  initialDialogue: {fileID: 11400000, guid: e3049039e9ff66340aa3963aa5abeffa, type: 2}
 --- !u!1 &271888116
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,9 +459,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
-  OneTime: 0
+  changeCursorOnHover: 0
   hideOnStart: 0
   unlockedOnStage: 0
+  lockedByEvent: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
   lockedDialogue: {fileID: 0}
@@ -632,16 +680,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: leftBoundary
-      value: 
-      objectReference: {fileID: 1172983415}
-    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: rightBoundary
-      value: 
-      objectReference: {fileID: 519599871}
     - target: {fileID: 1844750349108326845, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: startingPosition
@@ -656,6 +694,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: leftBoundary
+      value: 
+      objectReference: {fileID: 1172983415}
+    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: rightBoundary
+      value: 
+      objectReference: {fileID: 519599871}
+    - target: {fileID: 2321846843708220558, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
@@ -712,11 +765,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2321846843708220558, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6feaf60f489aa7444a205dbb2b5fbeb6, type: 3}
@@ -1342,9 +1390,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
-  OneTime: 0
+  changeCursorOnHover: 0
   hideOnStart: 0
   unlockedOnStage: 0
+  lockedByEvent: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
   lockedDialogue: {fileID: 0}

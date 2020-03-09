@@ -27,7 +27,7 @@ public class FlashbackClubEvents : MonoBehaviour
         if (eventIndex == 2)
         {
             Debug.Log("Unlock door");
-            door.locked = true;
+            door.lockedByEvent = false;
         }
     }
 

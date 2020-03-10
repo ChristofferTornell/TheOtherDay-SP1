@@ -42,27 +42,27 @@ public class GameController : MonoBehaviour
         switch (cursor)
         {
             case CursorSprite.SmallPointer:
-                Cursor.SetCursor(smallPointer, cursorOffset, CursorMode.Auto);
+                Cursor.SetCursor(smallPointer, cursorOffset, CursorMode.ForceSoftware);
                 return;
 
             case CursorSprite.BigPointer:
-                Cursor.SetCursor(bigPointer, cursorOffset, CursorMode.Auto);
+                Cursor.SetCursor(bigPointer, cursorOffset, CursorMode.ForceSoftware);
                 return;
 
             case CursorSprite.SmallGlass:
-                Cursor.SetCursor(smallGlass, cursorOffset, CursorMode.Auto);
+                Cursor.SetCursor(smallGlass, cursorOffset, CursorMode.ForceSoftware);
                 return;
 
             case CursorSprite.BigGlass:
-                Cursor.SetCursor(bigGlass, cursorOffset, CursorMode.Auto);
+                Cursor.SetCursor(bigGlass, cursorOffset, CursorMode.ForceSoftware);
                 return;
 
             case CursorSprite.SmallHand:
-                Cursor.SetCursor(smallHand, new Vector2(8, 10f), CursorMode.Auto);
+                Cursor.SetCursor(smallHand, new Vector2(8, 10f), CursorMode.ForceSoftware);
                 return;
 
             case CursorSprite.BigHand:
-                Cursor.SetCursor(bigHand, new Vector2(8, 10f), CursorMode.Auto);
+                Cursor.SetCursor(bigHand, new Vector2(8, 10f), CursorMode.ForceSoftware);
                 return;
         }
     }

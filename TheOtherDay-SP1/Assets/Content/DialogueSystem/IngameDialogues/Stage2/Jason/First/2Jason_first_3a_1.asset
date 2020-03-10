@@ -19,16 +19,17 @@ MonoBehaviour:
   changeReputation: 0
   italic: 0
   messages:
-  - text: "Damn, no kidding? That\u2019s\u2026 whew. Not sure what to say. \nI bet
-      you can pull through, though. We didn\u2019t find anything this morning, sorry
-      to say.\r\n"
+  - text: "Damn, no kidding? That\u2019s\u2026 whew. Not sure what to say. I bet you
+      can pull through, though. We didn\u2019t find anything this morning, sorry to
+      say.\r\n"
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 11400000, guid: c678bd0b202918e42a606a2a912b0c65, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: c678bd0b202918e42a606a2a912b0c65, type: 2}
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

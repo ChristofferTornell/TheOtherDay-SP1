@@ -19,15 +19,16 @@ MonoBehaviour:
   changeReputation: -1
   italic: 0
   messages:
-  - text: "Yeah, my friend Erin dropped her wedding ring last night, \nand we have
-      to find it before the rehearsal."
+  - text: Yeah, my friend Erin dropped her wedding ring last night, and we have to
+      find it before the rehearsal.
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 11400000, guid: 3c63dcfa83cc58c4b9b7f8e5fb5c1227, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: 3c63dcfa83cc58c4b9b7f8e5fb5c1227, type: 2}
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

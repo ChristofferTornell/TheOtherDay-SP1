@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -836,11 +836,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
-  OneTime: 0
+  changeCursorOnHover: 0
+  isInteractableWithSpace: 1
   hideOnStart: 0
   unlockedOnStage: 0
+  lockedByEvent: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
+  lockedDialogue: {fileID: 0}
   charIndex: 0
   hoverCursor: 5
   interactSoundEvent: event:/Sounds/UI/SoundsSceneTransition
@@ -1156,6 +1159,53 @@ MonoBehaviour:
   - {x: 7.882267, y: -5.8553867, z: 0}
   - {x: 1.3463087, y: 0.21789742, z: 0}
   - {x: -1.1076059, y: 0.6953025, z: 0}
+--- !u!1 &900100162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 900100164}
+  - component: {fileID: 900100163}
+  m_Layer: 0
+  m_Name: SceneEventHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &900100163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900100162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18deb90e5ade5cf48b81c46566490913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneDataIndex: 4
+  objectAppear: {fileID: 0}
+  dialogueDelay: 0.2
+  initialDialogue: {fileID: 0}
+--- !u!4 &900100164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900100162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03308606, y: -3.4771235, z: -131.43906}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &904741147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,13 +1791,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
-  OneTime: 0
+  changeCursorOnHover: 1
+  isInteractableWithSpace: 1
   hideOnStart: 0
   unlockedOnStage: 0
+  lockedByEvent: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
+  lockedDialogue: {fileID: 0}
   charIndex: 1
-  hoverCursor: 5
+  hoverCursor: 2
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -3881,16 +3934,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene Essentials
       objectReference: {fileID: 0}
-    - target: {fileID: 4415259249700216488, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732617407535675623, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.42
-      objectReference: {fileID: 0}
     - target: {fileID: 1243228700668701290, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3950,6 +3993,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1844750349108326845, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: startingPosition
+      value: 
+      objectReference: {fileID: 1502381114}
+    - target: {fileID: 3732617407535675623, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4415259249700216488, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.87
+      objectReference: {fileID: 0}
     - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: player
@@ -3965,11 +4023,6 @@ PrefabInstance:
       propertyPath: rightBoundary
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1844750349108326845, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: startingPosition
-      value: 
-      objectReference: {fileID: 1502381114}
     - target: {fileID: 4757630665772093109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_IsActive

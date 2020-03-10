@@ -19,15 +19,16 @@ MonoBehaviour:
   changeReputation: 1
   italic: 0
   messages:
-  - text: "Yeah, I hear you. I\u2019ll let you know if we find anything, \nbut when
+  - text: "Yeah, I hear you. I\u2019ll let you know if we find anything, but when
       we cleaned up this morning there was no ring around."
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 11400000, guid: fc20afb036ba92c448fff46467a0961d, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: fc20afb036ba92c448fff46467a0961d, type: 2}
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

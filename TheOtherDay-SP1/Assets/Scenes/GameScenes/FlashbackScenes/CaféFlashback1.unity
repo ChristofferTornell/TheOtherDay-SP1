@@ -816,14 +816,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
-  changeCursorOnHover: 0
+  changeCursorOnHover: 1
+  isInteractableWithSpace: 1
   hideOnStart: 0
   unlockedOnStage: 1
+  lockedByEvent: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
   lockedDialogue: {fileID: 0}
   charIndex: 7
-  hoverCursor: 5
+  hoverCursor: 2
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -1000,8 +1002,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
   changeCursorOnHover: 0
+  isInteractableWithSpace: 1
   hideOnStart: 0
   unlockedOnStage: 0
+  lockedByEvent: 0
   requiredItem: {fileID: 11400000, guid: c549d5f4404db504c85ad57c5f7f0444, type: 2}
   lockedData: {fileID: 11400000, guid: 5e43578f0da946940868f47962d5ff51, type: 2}
   lockedDialogue: {fileID: 0}
@@ -1883,14 +1887,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
-  changeCursorOnHover: 0
+  changeCursorOnHover: 1
+  isInteractableWithSpace: 1
   hideOnStart: 0
   unlockedOnStage: 1
+  lockedByEvent: 0
   requiredItem: {fileID: 11400000, guid: e861a804f1901804cbf0dfd9d9227e92, type: 2}
   lockedData: {fileID: 0}
   lockedDialogue: {fileID: 11400000, guid: aa49f122e7d40e04f9843bf48773367f, type: 2}
   charIndex: 1
-  hoverCursor: 5
+  hoverCursor: 2
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -2176,10 +2182,6 @@ PrefabInstance:
       propertyPath: flashBack
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 139706204, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1712180062, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -2187,6 +2189,10 @@ PrefabInstance:
     - target: {fileID: 4599713005042605893, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 139706204, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4035,9 +4041,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a21b16942ec714459340e44332612bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDialogue: {fileID: 11400000, guid: ebe2d428ac917c940afca989c8549ced, type: 2}
+  sceneDataIndex: 0
   objectAppear: {fileID: 1574386543475610814}
   dialogueDelay: 0.1
+  initialDialogue: {fileID: 11400000, guid: ebe2d428ac917c940afca989c8549ced, type: 2}
 --- !u!1 &2128855873
 GameObject:
   m_ObjectHideFlags: 0
@@ -4224,7 +4231,7 @@ PrefabInstance:
     - target: {fileID: 1574386544078953947, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
       propertyPath: m_Name
-      value: ItemCoffee
+      value: Coffee-To-Go
       objectReference: {fileID: 0}
     - target: {fileID: 1574386544078953947, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}

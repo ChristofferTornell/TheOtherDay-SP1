@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -557,6 +557,7 @@ MonoBehaviour:
   changeCursorOnHover: 0
   hideOnStart: 0
   unlockedOnStage: 0
+  lockedByEvent: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
   lockedDialogue: {fileID: 0}
@@ -1912,16 +1913,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: leftBoundary
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: rightBoundary
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1844750349108326845, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: cursorOffset.x
@@ -1937,22 +1928,6 @@ PrefabInstance:
       propertyPath: startingPosition
       value: 
       objectReference: {fileID: 1961290283}
-    - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: sceneData
-      value: 
-      objectReference: {fileID: 11400000, guid: b29a67a2f3c5ab84b905cc269cd2d159,
-        type: 2}
-    - target: {fileID: 7742616349829940400, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.653
-      objectReference: {fileID: 0}
-    - target: {fileID: 7742616349829940400, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.601
-      objectReference: {fileID: 0}
     - target: {fileID: 1874563062861499967, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1963,10 +1938,36 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: leftBoundary
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: rightBoundary
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: sceneData
+      value: 
+      objectReference: {fileID: 11400000, guid: b29a67a2f3c5ab84b905cc269cd2d159,
+        type: 2}
     - target: {fileID: 4757630665772093109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742616349829940400, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.653
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742616349829940400, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.601
       objectReference: {fileID: 0}
     - target: {fileID: 8822042503807116703, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
@@ -2463,6 +2464,7 @@ MonoBehaviour:
   changeCursorOnHover: 0
   hideOnStart: 0
   unlockedOnStage: 0
+  lockedByEvent: 0
   requiredItem: {fileID: 0}
   lockedData: {fileID: 0}
   lockedDialogue: {fileID: 0}
@@ -2815,8 +2817,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cada9acc27a5ba74cb11ab6d300b1a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDialogue: {fileID: 11400000, guid: f506eabc13f047b4da2a03d75820afe4, type: 2}
+  sceneDataIndex: 1
+  objectAppear: {fileID: 0}
   dialogueDelay: 0.2
+  initialDialogue: {fileID: 11400000, guid: f506eabc13f047b4da2a03d75820afe4, type: 2}
 --- !u!4 &2005301736
 Transform:
   m_ObjectHideFlags: 0

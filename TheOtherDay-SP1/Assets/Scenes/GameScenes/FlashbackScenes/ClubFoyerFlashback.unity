@@ -250,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
   changeCursorOnHover: 0
+  isInteractableWithSpace: 1
   hideOnStart: 0
   unlockedOnStage: 0
   lockedByEvent: 1
@@ -305,7 +306,7 @@ PrefabInstance:
     - target: {fileID: 1574386544078953947, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
       propertyPath: m_Name
-      value: Gum
+      value: Chewing Gum
       objectReference: {fileID: 0}
     - target: {fileID: 1574386544078953941, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
@@ -576,6 +577,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 294146206648491336, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
+        type: 3}
+      propertyPath: flashBack
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1712180062, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -583,11 +589,6 @@ PrefabInstance:
     - target: {fileID: 4599713005042605893, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 294146206648491336, guid: 9f5dde217f7f5a54097d220b2b2c1d96,
-        type: 3}
-      propertyPath: flashBack
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -838,7 +839,7 @@ PrefabInstance:
     - target: {fileID: 1574386544078953947, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
       propertyPath: m_Name
-      value: WaterBottle
+      value: Bottle of Water
       objectReference: {fileID: 0}
     - target: {fileID: 1574386544078953941, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
@@ -986,7 +987,7 @@ PrefabInstance:
     - target: {fileID: 4415259249700216488, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.06
+      value: -0.81
       objectReference: {fileID: 0}
     - target: {fileID: 3732617407535675623, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
@@ -1052,16 +1053,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: leftBoundary
-      value: 
-      objectReference: {fileID: 1906554690}
-    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: rightBoundary
-      value: 
-      objectReference: {fileID: 1594913646}
     - target: {fileID: 1844750349108326845, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: startingPosition
@@ -1077,6 +1068,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: leftBoundary
+      value: 
+      objectReference: {fileID: 1906554690}
+    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: rightBoundary
+      value: 
+      objectReference: {fileID: 1594913646}
     - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: sceneData
@@ -1264,7 +1265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378344428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.65, y: -2.17, z: -312.88672}
+  m_LocalPosition: {x: -1.15, y: -2.17, z: -312.88672}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1328,6 +1329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
   changeCursorOnHover: 0
+  isInteractableWithSpace: 1
   hideOnStart: 0
   unlockedOnStage: 0
   lockedByEvent: 0
@@ -1506,7 +1508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
-  changeCursorOnHover: 0
+  changeCursorOnHover: 1
+  isInteractableWithSpace: 1
   hideOnStart: 0
   unlockedOnStage: 0
   lockedByEvent: 0
@@ -1514,7 +1517,7 @@ MonoBehaviour:
   lockedData: {fileID: 0}
   lockedDialogue: {fileID: 0}
   charIndex: 4
-  hoverCursor: 5
+  hoverCursor: 2
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -1568,7 +1571,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600159377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.53, y: -2.12, z: 0}
+  m_LocalPosition: {x: -3.03, y: -2.12, z: 0}
   m_LocalScale: {x: 16.349274, y: 16.349274, z: 16.349274}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1587,7 +1590,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.046057004, y: 0}
+  m_Offset: {x: 0.0018739812, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.52113676, y: 0.5}
@@ -1598,7 +1601,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.20788601, y: 0.55}
+  m_Size: {x: 0.18462008, y: 0.55}
   m_EdgeRadius: 0
 --- !u!114 &1600159383
 MonoBehaviour:
@@ -2000,9 +2003,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9f3154285b29b47b46d7b06aec4cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDialogue: {fileID: 11400000, guid: b8d902e9a868956428013686f3c40000, type: 2}
+  sceneDataIndex: 9
+  objectAppear: {fileID: 0}
   dialogueDelay: 0.2
+  initialDialogue: {fileID: 11400000, guid: b8d902e9a868956428013686f3c40000, type: 2}
   door: {fileID: 276117534}
+  doorToFoyer: {fileID: 0}
+  rileyCharIndex: 0
 --- !u!1 &2080197566
 GameObject:
   m_ObjectHideFlags: 0

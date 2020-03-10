@@ -2,42 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlashbackClubEvents : MonoBehaviour
+public class FlashbackClubEvents : SceneEvents
 {
-    public static FlashbackClubEvents instance;
-    public Dialogue initialDialogue;
-    public float dialogueDelay = 0.2f;
     public Interactable door;
-
-    void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-        instance = this;
-    }
-
-    public void PlayEvent(int eventIndex)
+    public Interactable doorToFoyer;
+    public int rileyCharIndex;
+    public override void PlayEvent(int eventIndex)
     {
         if (eventIndex == 1)
         {
-            Debug.Log("Play Riley puking animation");
+            Debug.Log("Make riley drunk");
+            GlobalData.instance.charaters[rileyCharIndex].isDrunk = true;
         }
         if (eventIndex == 2)
+        {
+            doorToFoyer.lockedByEvent = false;
+        }
+        if (eventIndex == 3)
+        {
+            Debug.Log("Play Riley puking animation");
+        }
+        if (eventIndex == 4)
         {
             Debug.Log("Unlock door");
             door.lockedByEvent = false;
         }
-    }
-
-    void InitDialogue()
-    {
-        if (initialDialogue != null)
+        if(eventIndex == 5)
         {
-            Debug.Log("Dialogue manager: " + DialogueManager.instance);
-            DialogueManager.instance.EnterDialogue(initialDialogue);
+            Debug.Log("Make riley sober");
+            GlobalData.instance.charaters[rileyCharIndex].isDrunk = false;
         }
     }
-
 }

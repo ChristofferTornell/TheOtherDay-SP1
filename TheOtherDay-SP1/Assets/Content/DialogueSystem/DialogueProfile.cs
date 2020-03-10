@@ -27,6 +27,10 @@ public class DialogueProfile : MonoBehaviour
         {
             if (GlobalData.instance.flashBack)
             {
+                if (myCharacter.isDrunk)
+                {
+                    return myCharacter.dialogueImageFlashbackDrunkNormal;
+                }
                 return myCharacter.dialogueImageFlashbackNormal;
             }
             else
@@ -38,6 +42,10 @@ public class DialogueProfile : MonoBehaviour
         {
             if (GlobalData.instance.flashBack)
             {
+                if (myCharacter.isDrunk)
+                {
+                    return myCharacter.dialogueImageFlashbackDrunkHappy;
+                }
                 return myCharacter.dialogueImageFlashbackHappy;
             }
             else
@@ -49,6 +57,10 @@ public class DialogueProfile : MonoBehaviour
         {
             if (GlobalData.instance.flashBack)
             {
+                if (myCharacter.isDrunk)
+                {
+                    return myCharacter.dialogueImageFlashbackDrunkSad;
+                }
                 return myCharacter.dialogueImageFlashbackSad;
             }
             else
@@ -61,6 +73,10 @@ public class DialogueProfile : MonoBehaviour
         {
             if (GlobalData.instance.flashBack)
             {
+                if (myCharacter.isDrunk)
+                {
+                    return myCharacter.dialogueImageFlashbackDrunkAngry;
+                }
                 return myCharacter.dialogueImageFlashbackAngry;
             }
             else
@@ -69,7 +85,7 @@ public class DialogueProfile : MonoBehaviour
             }
 
         }
-        Debug.Log("Error, mood doesnt have sprite");
+        Debug.Log("Error, mood: " + mood + " doesnt have sprite");
         return myCharacter.dialogueImageFlashbackNormal;
 
 

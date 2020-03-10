@@ -6,9 +6,10 @@ using TMPro;
 
 public class Inventory : MonoBehaviour
 {
+    [FMODUnity.EventRef] public string addItemSoundEvent;
     public GameObject itemBar;
     public ItemSlot[] itemSlots;
-
+    
     [HideInInspector] public static Inventory instance;
 
     private void Awake()
@@ -65,6 +66,7 @@ public class Inventory : MonoBehaviour
         {
             if (iSlot.myItem == null)
             {
+                FMODUnity.RuntimeManager.PlayOneShot(addItemSoundEvent);
                 Debug.Log("Adding item " + item.myName);
                 iSlot.UpdateSlot(item);
                 

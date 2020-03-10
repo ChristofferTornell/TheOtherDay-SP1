@@ -2,27 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HotelEvents : MonoBehaviour
+public class HotelEvents : SceneEvents
 {
-    public Dialogue initialDialogue;
-    public static HotelEvents instance;
-    public float dialogueDelay = 0.2f;
-
-    void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-        instance = this;
-    }
-
-    void Start()
-    {
-        Invoke("InitDialogue", dialogueDelay);
-    }
-
-    public void PlayEvent(int eventIndex)
+    public override void PlayEvent(int eventIndex)
     {
         if (eventIndex == 1)
         {
@@ -34,11 +16,4 @@ public class HotelEvents : MonoBehaviour
         }
     }
 
-    void InitDialogue()
-    {
-        if (initialDialogue != null)
-        {
-            DialogueManager.instance.EnterDialogue(initialDialogue);
-        }
-    }
 }

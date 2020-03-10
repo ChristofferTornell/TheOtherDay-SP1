@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 139706205}
   - component: {fileID: 139706204}
   - component: {fileID: 139706206}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Black Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139706202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1.2407178, y: 1.2407178, z: 1.2407178}
   m_Children: []
   m_Father: {fileID: 1712180062}
@@ -153,7 +153,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &1712180064
 MonoBehaviour:
@@ -241,6 +241,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 0
   flashBack: 0
+  sceneDataList:
+  - {fileID: 11400000, guid: 040da5b37f89b554da4a82d9b2bd5bf4, type: 2}
+  - {fileID: 11400000, guid: b29a67a2f3c5ab84b905cc269cd2d159, type: 2}
+  - {fileID: 11400000, guid: 5038b5b031a3d8b45b9a416de6eb616d, type: 2}
+  - {fileID: 11400000, guid: 88940644344047d4c82994ff7a7fca59, type: 2}
+  - {fileID: 11400000, guid: db7ce4cf5d6b78644b768c39a2af37b8, type: 2}
+  - {fileID: 11400000, guid: 5b0b6ff187ddfcd45a7e1282ef7e20b0, type: 2}
+  - {fileID: 11400000, guid: 9cad881504b53b14bb73622b533cb406, type: 2}
+  - {fileID: 11400000, guid: be2a501b12b24244aa225f53e3f83123, type: 2}
+  - {fileID: 11400000, guid: acf4d233ef55d984886c6816d0663214, type: 2}
+  - {fileID: 11400000, guid: b8d01b9c433d9054a9f29caacba209b0, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 47da64e698d98d447b722c3d1401e604, type: 2}
   charaters:
   - {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   - {fileID: 11400000, guid: ecd1378815b872248a4c06eb0a786cd8, type: 2}
@@ -250,6 +264,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2e209c002f374304a945f083f4e9d4e4, type: 2}
   - {fileID: 11400000, guid: 931d8ee79da164545a8170c8f69c77c4, type: 2}
   - {fileID: 11400000, guid: d33bd45ba7ad34940acad0b9a00a5a21, type: 2}
+  - {fileID: 11400000, guid: ee92580b7fbc0534bbd4bf3f396ff8c7, type: 2}
   reputation: 0
 --- !u!114 &1074403432
 MonoBehaviour:

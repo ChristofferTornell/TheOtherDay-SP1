@@ -250,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
   changeCursorOnHover: 0
+  isInteractableWithSpace: 1
   hideOnStart: 0
   unlockedOnStage: 0
   lockedByEvent: 1
@@ -305,7 +306,7 @@ PrefabInstance:
     - target: {fileID: 1574386544078953947, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
       propertyPath: m_Name
-      value: Gum
+      value: Chewing Gum
       objectReference: {fileID: 0}
     - target: {fileID: 1574386544078953941, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
@@ -838,7 +839,7 @@ PrefabInstance:
     - target: {fileID: 1574386544078953947, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
       propertyPath: m_Name
-      value: WaterBottle
+      value: Bottle of Water
       objectReference: {fileID: 0}
     - target: {fileID: 1574386544078953941, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
@@ -1328,6 +1329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 1
   changeCursorOnHover: 0
+  isInteractableWithSpace: 1
   hideOnStart: 0
   unlockedOnStage: 0
   lockedByEvent: 0
@@ -1506,7 +1508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
-  changeCursorOnHover: 0
+  changeCursorOnHover: 1
+  isInteractableWithSpace: 1
   hideOnStart: 0
   unlockedOnStage: 0
   lockedByEvent: 0
@@ -1514,7 +1517,7 @@ MonoBehaviour:
   lockedData: {fileID: 0}
   lockedDialogue: {fileID: 0}
   charIndex: 4
-  hoverCursor: 5
+  hoverCursor: 2
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:

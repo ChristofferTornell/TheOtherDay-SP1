@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
   changeCursorOnHover: 0
+  isInteractableWithSpace: 1
   hideOnStart: 0
   unlockedOnStage: 0
   lockedByEvent: 1
@@ -860,7 +861,7 @@ PrefabInstance:
     - target: {fileID: 1574386544078953947, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
       propertyPath: m_Name
-      value: Item
+      value: Champagne
       objectReference: {fileID: 0}
     - target: {fileID: 1574386544078953941, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
@@ -1573,6 +1574,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2790882053760658962, guid: cf9830669b551cf4692019b60ec32006,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2790882053760658962, guid: cf9830669b551cf4692019b60ec32006,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3959102652018152215, guid: cf9830669b551cf4692019b60ec32006,
         type: 3}
       propertyPath: onInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1609,6 +1620,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4d7d7d025d817f844af1a24ea2aa6e21,
         type: 3}
+    - target: {fileID: 2503385044256842180, guid: cf9830669b551cf4692019b60ec32006,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2503385044256842180, guid: cf9830669b551cf4692019b60ec32006,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.48
+      objectReference: {fileID: 0}
     - target: {fileID: 2226120959034768416, guid: cf9830669b551cf4692019b60ec32006,
         type: 3}
       propertyPath: requiredItems.Array.data[0].item

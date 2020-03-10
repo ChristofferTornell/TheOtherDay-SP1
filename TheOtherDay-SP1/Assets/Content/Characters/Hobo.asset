@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2dcb94960c18fa419ccd5c56abb7acb, type: 3}
+  m_Name: Hobo
+  m_EditorClassIdentifier: 
+  name: Hobo
+  description: This is a hobo, and he just be vibin' doe.
+  contactImage: {fileID: 21300000, guid: 165bfef1a04422c4fb7a59fece666a42, type: 3}
+  dialogueImageFlashbackNormal: {fileID: 21300000, guid: 165bfef1a04422c4fb7a59fece666a42,
+    type: 3}
+  dialogueImageFlashbackHappy: {fileID: 21300000, guid: 0e570b5d855fbd0498ee92e6d0b27367,
+    type: 3}
+  dialogueImageFlashbackSad: {fileID: 21300000, guid: ad80a2fd4d422d84e8dcf65fe7748c37,
+    type: 3}
+  dialogueImageFlashbackAngry: {fileID: 21300000, guid: 7f54304f9a6e31f4c88bdbcb0474979a,
+    type: 3}
+  dialogueImagePresentNormal: {fileID: 21300000, guid: 165bfef1a04422c4fb7a59fece666a42,
+    type: 3}
+  dialogueImagePresentHappy: {fileID: 21300000, guid: 0e570b5d855fbd0498ee92e6d0b27367,
+    type: 3}
+  dialogueImagePresentSad: {fileID: 21300000, guid: ad80a2fd4d422d84e8dcf65fe7748c37,
+    type: 3}
+  dialogueImagePresentAngry: {fileID: 21300000, guid: 7f54304f9a6e31f4c88bdbcb0474979a,
+    type: 3}
+  dialogueImageFlashbackDrunkNormal: {fileID: 0}
+  dialogueImageFlashbackDrunkHappy: {fileID: 0}
+  dialogueImageFlashbackDrunkSad: {fileID: 0}
+  dialogueImageFlashbackDrunkAngry: {fileID: 0}
+  isDrunk: 0
+  font: {fileID: 11400000, guid: 06188d2604db92e4786bc502162be7d4, type: 2}
+  color: {r: 0.22831361, g: 0.3018868, b: 0.012815944, a: 1}
+  typingSound: event:/Sounds/NPC/Dialogue/SoundsNPCDiaHobo
+  dialogues:
+  - dialogue: {fileID: 11400000, guid: b988fc54dd0228043b50a1317a5e7979, type: 2}
+    dialogueSpoken: {fileID: 11400000, guid: b988fc54dd0228043b50a1317a5e7979, type: 2}
+    hasSpoken: 1
+    dialogueFlashback: {fileID: 0}
+    dialogueFlashbackSpoken: {fileID: 0}
+    hasSpokenFlashback: 0
+  - dialogue: {fileID: 11400000, guid: b988fc54dd0228043b50a1317a5e7979, type: 2}
+    dialogueSpoken: {fileID: 11400000, guid: b988fc54dd0228043b50a1317a5e7979, type: 2}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 0}
+    dialogueFlashbackSpoken: {fileID: 0}
+    hasSpokenFlashback: 0
+  - dialogue: {fileID: 11400000, guid: b988fc54dd0228043b50a1317a5e7979, type: 2}
+    dialogueSpoken: {fileID: 11400000, guid: b988fc54dd0228043b50a1317a5e7979, type: 2}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 0}
+    dialogueFlashbackSpoken: {fileID: 0}
+    hasSpokenFlashback: 0
+  - dialogue: {fileID: 11400000, guid: b988fc54dd0228043b50a1317a5e7979, type: 2}
+    dialogueSpoken: {fileID: 11400000, guid: b988fc54dd0228043b50a1317a5e7979, type: 2}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 0}
+    dialogueFlashbackSpoken: {fileID: 0}
+    hasSpokenFlashback: 0
+  - dialogue: {fileID: 11400000, guid: b988fc54dd0228043b50a1317a5e7979, type: 2}
+    dialogueSpoken: {fileID: 11400000, guid: b988fc54dd0228043b50a1317a5e7979, type: 2}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 0}
+    dialogueFlashbackSpoken: {fileID: 0}
+    hasSpokenFlashback: 0
+  sms: []

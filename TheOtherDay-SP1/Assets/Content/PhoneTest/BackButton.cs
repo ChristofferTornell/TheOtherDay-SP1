@@ -15,16 +15,14 @@ public class BackButton : MonoBehaviour
     private GameObject[] MessageBubbles;
     public GameObject SettingsMenu;
 
-    public VideoPlayer vp;
     private GameObject parent;
 
     private void Start()
     {
-        parent = vp.transform.parent.gameObject;
         _HomeButton.onClick.AddListener(HomeButton);
         _BackButton.onClick.AddListener(BackbuttonFunc);
         _OutsideButton.onClick.AddListener(OutsideButton);
-        vp.loopPointReached += EndReached;
+        //vp.loopPointReached += EndReached;
     }
 
     void EndReached(UnityEngine.Video.VideoPlayer vp)
@@ -88,6 +86,10 @@ public class BackButton : MonoBehaviour
         else if (phone.Page == 2)
         {
             SettingsMenu.SetActive(false);
+            phone.ani.Play("Down");
+        }
+        else if(phone.Page == -1)
+        {
             phone.ani.Play("Down");
         }
         phone.Page = -1;

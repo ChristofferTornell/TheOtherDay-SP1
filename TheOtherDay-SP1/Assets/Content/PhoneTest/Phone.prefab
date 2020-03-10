@@ -12305,6 +12305,7 @@ MonoBehaviour:
   phone: {fileID: 9001126136877757145}
   _HomeButton: {fileID: 727829932}
   _BackButton: {fileID: 139335480}
+  _OutsideButton: {fileID: 7067101198854025529}
   MessageMenus:
   - {fileID: 9001126137696709466}
   LogMenu: {fileID: 9001126136664251591}
@@ -12700,6 +12701,7 @@ GameObject:
   - component: {fileID: 9001126136877757147}
   - component: {fileID: 9001126136877757146}
   - component: {fileID: 9001126136877757145}
+  - component: {fileID: 9001126138116304654}
   m_Layer: 5
   m_Name: Phone
   m_TagString: Untagged
@@ -12783,7 +12785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7ab69bc1b81484ab0103577b536444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PullUpKey: 112
+  Pulled: 0
   PullSpeed: 28
   SettingsPage: {fileID: 9001126138213167936}
   SettingsButton: {fileID: 1642263911}
@@ -12795,9 +12797,28 @@ MonoBehaviour:
   AlbumButton: {fileID: 9001126137356103820}
   AlbumPage: {fileID: 9001126138377271818}
   PullUpButton: {fileID: 9001126138705868323}
-  PullDownButton: {fileID: 7067101198854025529}
+  ani: {fileID: 9001126138116304654}
   Page: 0
   Zoomed: 0
+--- !u!95 &9001126138116304654
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001126136877757144}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 80ac9701b59d6b74da3fc1c9ee9f32fe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9001126137023728477
 GameObject:
   m_ObjectHideFlags: 0
@@ -13411,14 +13432,14 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 9001126136877757145}
         m_MethodName: Zoom
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -13915,7 +13936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9001126138213167938
 RectTransform:
   m_ObjectHideFlags: 0

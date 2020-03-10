@@ -2,59 +2,97 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Inventory : MonoBehaviour
 {
-    public Items[] items;
-    public Image[] image;
-    public GameObject[] itemSlots;
-    [Range(0, 2)]
-    public int[] type;
+    [FMODUnity.EventRef] public string addItemSoundEvent;
+    public GameObject itemBar;
+    public ItemSlot[] itemSlots;
+    
+    [HideInInspector] public static Inventory instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+
+    }
 
     private void Start()
     {
-        SetItems();
+        //inventoryManager = InventoryData.instance.manager;
+        //inventoryManager.itemSlots = new ItemSlot[itemSlotAmount];
+        /*
+        for (int i = 0; i < itemSlotAmount; i++)
+        {
+            GameObject iSlotObj = Instantiate(itemSlotObj);
+            iSlotObj.transform.SetParent(itemBar.transform);
+            ItemSlot iSlot = iSlotObj.GetComponent<ItemSlot>();
+            iSlot.slotIndex = i;
+            inventoryManager.itemSlots[i] = iSlot;
+            iSlot.inventory = this;
+        }
+        */
     }
 
+    public void INV_Hide()
+    {
+        itemBar.SetActive(false);
+        foreach(ItemSlot iSlot in itemSlots)
+        {
+            iSlot.menu.SetActive(false);
+        }
+    }
+
+    public void INV_Appear()
+    {
+        itemBar.SetActive(true);
+    }
     public void INV_AddItem(Items item)
     {
-        for(int i = 0; i < itemSlots.Length; i++)
+        if (!GlobalData.instance.flashBack)
         {
-            if(type[i] == 0)
+            Debug.Log("cant add item outside of flashback");
+            return;
+        }
+        foreach (ItemSlot iSlot in itemSlots)
+        {
+            if (iSlot.myItem == null)
             {
-                Debug.Log("Adding item " + item.name);
-                image[i].sprite = item.sprite;
-                switch (item.name)
-                {
-                    case "Water Bottle":
-                        type[i] = 1;
-                    break;
-
-                    case "Backpack":
-                        type[i] = 2;
-                    break;
-                }
+                FMODUnity.RuntimeManager.PlayOneShot(addItemSoundEvent);
+                Debug.Log("Adding item " + item.myName);
+                iSlot.UpdateSlot(item);
+                
                 return;
             }
         }
     }
 
-    public void INV_RemoveItem(int slot)
+    public bool INV_FindItem(Items item)
     {
-        type[slot] = 0;
-        image[slot].sprite = items[0].sprite;
-    }
-
-    public void INV_UseItem(int type)
-    {
-
-    }
-
-    private void SetItems()
-    {
-        for (int i = 0; i < image.Length; i++)
+        foreach (ItemSlot iSlot in itemSlots)
         {
-            image[i].sprite = items[type[i]].sprite;
+            if (iSlot.myItem == item)
+            {
+                Debug.Log("Found item " + item.myName);
+                return true;
+            }
         }
+        return false;
+    }
+
+    public Sprite nullSprite;
+
+    public void INV_ClearItemSlot(ItemSlot _itemSlot)
+    {
+        _itemSlot.myItem = null;
+        _itemSlot.myItemIcon.UpdateSprite(nullSprite);
     }
 }

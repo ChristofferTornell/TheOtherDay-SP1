@@ -13,14 +13,65 @@ MonoBehaviour:
   m_Name: Katyusha
   m_EditorClassIdentifier: 
   name: Katyusha
-  contactImage: {fileID: 21300000, guid: 34745eb2056682443b10c84a79c8a6a6, type: 3}
-  dialogueImageNormal: {fileID: 21300000, guid: 34745eb2056682443b10c84a79c8a6a6,
+  description: This is Katyusha.
+  contactImage: {fileID: 21300000, guid: 34ab7f1f072592942bf5f32cc575839a, type: 3}
+  dialogueImageFlashbackNormal: {fileID: 21300000, guid: 34ab7f1f072592942bf5f32cc575839a,
     type: 3}
-  dialogueImageHappy: {fileID: 21300000, guid: 6ff12a432139f9149953bc4723e43aa4, type: 3}
-  dialogueImageSad: {fileID: 21300000, guid: 2a33b5146bc14464bb6f4a29f29126b3, type: 3}
-  font: {fileID: 11400000, guid: 9a6e7fbdb43d4f145b169bbc9b0328bb, type: 2}
-  color: {r: 0.66967785, g: 0.7900989, b: 0.9528302, a: 1}
-  typingSound: 
+  dialogueImageFlashbackHappy: {fileID: 21300000, guid: 8d80244ffb1600b4db78979cb2819775,
+    type: 3}
+  dialogueImageFlashbackSad: {fileID: 21300000, guid: 3771a15381b389547a4e111486020d9f,
+    type: 3}
+  dialogueImageFlashbackAngry: {fileID: 21300000, guid: e24c6bbd2c86e364b960823dc45d0453,
+    type: 3}
+  dialogueImagePresentNormal: {fileID: 21300000, guid: 34ab7f1f072592942bf5f32cc575839a,
+    type: 3}
+  dialogueImagePresentHappy: {fileID: 21300000, guid: 8d80244ffb1600b4db78979cb2819775,
+    type: 3}
+  dialogueImagePresentSad: {fileID: 21300000, guid: 3771a15381b389547a4e111486020d9f,
+    type: 3}
+  dialogueImagePresentAngry: {fileID: 21300000, guid: e24c6bbd2c86e364b960823dc45d0453,
+    type: 3}
+  dialogueImageFlashbackDrunkNormal: {fileID: 0}
+  dialogueImageFlashbackDrunkHappy: {fileID: 0}
+  dialogueImageFlashbackDrunkSad: {fileID: 0}
+  dialogueImageFlashbackDrunkAngry: {fileID: 0}
+  isDrunk: 0
+  font: {fileID: 11400000, guid: 06188d2604db92e4786bc502162be7d4, type: 2}
+  color: {r: 0.105286576, g: 0.20220718, b: 0.24528301, a: 1}
+  typingSound: event:/Sounds/NPC/Dialogue/SoundsNPCDiaKatyusha
+  dialogues:
+  - dialogue: {fileID: 0}
+    dialogueSpoken: {fileID: 0}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 0}
+    dialogueFlashbackSpoken: {fileID: 0}
+    hasSpokenFlashback: 0
+  - dialogue: {fileID: 0}
+    dialogueSpoken: {fileID: 0}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 0}
+    dialogueFlashbackSpoken: {fileID: 0}
+    hasSpokenFlashback: 0
+  - dialogue: {fileID: 0}
+    dialogueSpoken: {fileID: 0}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 0}
+    dialogueFlashbackSpoken: {fileID: 0}
+    hasSpokenFlashback: 0
+  - dialogue: {fileID: 11400000, guid: f46c607b47364934cb4666b700a272c8, type: 2}
+    dialogueSpoken: {fileID: 11400000, guid: e0425258e9d3b1e4d8433b13a114d067, type: 2}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 11400000, guid: 212faf1e4ebd28748ad228c76a5bd4d7,
+      type: 2}
+    dialogueFlashbackSpoken: {fileID: 11400000, guid: 212faf1e4ebd28748ad228c76a5bd4d7,
+      type: 2}
+    hasSpokenFlashback: 0
+  - dialogue: {fileID: 11400000, guid: e0425258e9d3b1e4d8433b13a114d067, type: 2}
+    dialogueSpoken: {fileID: 11400000, guid: e0425258e9d3b1e4d8433b13a114d067, type: 2}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 0}
+    dialogueFlashbackSpoken: {fileID: 0}
+    hasSpokenFlashback: 0
   sms:
   - hej
   - 

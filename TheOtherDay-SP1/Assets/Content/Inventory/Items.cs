@@ -2,11 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Item", menuName = "Item")]
+[CreateAssetMenu(fileName = "ItemTemplate", menuName = "ScriptableObjects/Items/ItemTemplate", order = 0)]
+
 public class Items : ScriptableObject
 {
-    public Sprite sprite;
-    public new string name;
+    public Sprite icon;
+    public string myName;
+    public bool useable = false;
+    public ItemSlot myItemSlot;
+
     [TextArea(3, 7)]
     public string description;
+
+    public virtual void OnUse()
+    {
+       
+    }
 }

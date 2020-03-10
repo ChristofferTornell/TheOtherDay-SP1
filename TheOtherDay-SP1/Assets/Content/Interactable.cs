@@ -8,39 +8,100 @@ using FMODUnity;
 public class Interactable : MonoBehaviour
 {
     public bool savePlayerPosition = false;
-    public bool mouseInteraction = false;
-    public bool OneTime = false;
+    public bool changeCursorOnHover = false;
+    public bool isInteractableWithSpace = true;
+    public bool hideOnStart = false;
+    public int unlockedOnStage = 0;
+    public bool lockedByEvent;
+    public Items requiredItem;
+    public Items lockedData;
+    public Dialogue lockedDialogue;
+    public int charIndex = 0;
+    public CursorSprite hoverCursor = CursorSprite.BigHand;
     [Space]
-    [SerializeField] private float sceneChangeDelay = 1f;
-    public CharacterData characterdata = null;
     [Header("Audio")]
-    [FMODUnity.EventRef] public string changeSceneSoundEvent;
+    [FMODUnity.EventRef] public string interactSoundEvent;
 
     [Header("Events")]
     [SerializeField] private UnityEvent onInteract; // Byter man namn på denna kommer alla existerande interactables att förlora sina events
+    [SerializeField] private UnityEvent onMouseInteract;
+    private GameController gameController;
+
+    private void Start()
+    {
+        gameController = FindObjectOfType<GameController>();
+        if (hideOnStart)
+        {
+            //gameObject.SetActive(false);
+        }
+    }
 
     public void Interact()
     {
-        if (!mouseInteraction)
+        if (lockedData != null && unlockedOnStage > GlobalData.instance.stage)
         {
-            onInteract.Invoke();
-            if (OneTime) { DestroyThis(); }
+            DescriptionUI.instance.ExamineItem(lockedData);
+            return;
         }
+        if (requiredItem != null)
+        {
+            if (!Inventory.instance.INV_FindItem(requiredItem))
+            {
+                if(lockedData != null)
+                {
+                    DescriptionUI.instance.ExamineItem(lockedData);
+                    return;
+                }
+                if(lockedDialogue != null)
+                {
+                    DialogueManager.instance.EnterDialogue(lockedDialogue);
+                    return;
+                }
+            }
+        }
+        if (lockedByEvent)
+        {
+            DialogueManager.instance.EnterDialogue(lockedDialogue);
+            return;
+        }
+        onInteract.Invoke();
+        /*
+        if (OneTime) { DestroyThis(); }
+
         else { Debug.Log(gameObject.name + "can only be interacted with using the mouse"); }
+        */
     }
 
     private void OnMouseEnter()
     {
+        if (!DialogueManager.dialogueActive)
+        {
+            PuzzleMouse.overInteractable = true;
+
+            if (!PuzzleMouse.itemOnMouse)
+            {
+                PuzzleMouse.hoverText.text = gameObject.name;
+            }
+
+            if (changeCursorOnHover) { gameController.ChangeCursor(hoverCursor); }
+        }
+
         // Play highlight effects on the object
+    }
+
+    private void OnMouseExit()
+    {
+        gameController.ResetCursor();
+        PuzzleMouse.overInteractable = false;
+        PuzzleMouse.hoverText.text = null;
     }
 
     private void OnMouseDown()
     {
-        if (mouseInteraction)
+        Debug.Log("Pressed on interactable");
+        if (!DialogueManager.dialogueActive)
         {
-            Debug.Log("Interacting with " + gameObject.name + " using mouse");
-            onInteract.Invoke();
-            if (OneTime) { DestroyThis(); }
+            onMouseInteract.Invoke();
         }
     }
 
@@ -49,32 +110,35 @@ public class Interactable : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private IEnumerator ChangeScene(string sceneName)
-    {
-        // Scene change effect(s) can be put here
-        // --------------------------------------
-        //FMODUnity.RuntimeManager.PlayOneShot(changeSceneSoundEvent); SOUND IMPLEMENTATION
-
-        yield return new WaitForSeconds(sceneChangeDelay);
-
-        SceneManager.LoadScene(sceneName);
-
-        yield return null;
-    }
-
     // IE_ = Interactivity Event
     public void IE_ChangeScene(string sceneName)
     {
-        Debug.Log("Interactable - Changing Scene to: " + sceneName);
-        StartCoroutine(ChangeScene(sceneName));
-        GameController.Pause(true);
+        SceneChanger.instance.ChangeScene(sceneName);
     }
 
+    public void IE_EnterFlashback(string sceneName)
+    {
+        SceneChanger.instance.EnterFlashback(sceneName);
+    }
+
+    public void IE_ExitFlashback(string sceneName)
+    {
+        SceneChanger.instance.ExitFlashback(sceneName);
+    }
+
+    public void IE_DestroySelf()
+    {
+        Destroy(gameObject);
+    }
+
+
     // Needs testing
-    public void IE_PlayAudio(AudioClip audioClip)
+    public void IE_PlayAudio()
     {
         // Play interaction audio here <---
         Debug.Log("Interactable - Playing audio: " + " ->Audio source here<-");
+        FMODUnity.RuntimeManager.PlayOneShot(interactSoundEvent);
+
     }
 
     private void IE_PlayScreenEffect()
@@ -82,9 +146,71 @@ public class Interactable : MonoBehaviour
         // PH, make public when done
     }
 
-    public void IE_PlayDialogue(Dialogue dialogue)
+    public void IE_GiveItem()
     {
-        // Play the dialogue here
+        if (PuzzleMouse.itemOnMouse != null)
+        {
+            GetComponent<PuzzleMaster>().RecieveItem();
+        }
+    }
+
+    public void IE_PlayDialogueSpecific(Dialogue dialogue)
+    {
+        DialogueManager.instance.EnterDialogue(dialogue);
+    }
+    public void IE_PlayDialogue()
+    {
+        CharacterData charData = GlobalData.instance.charaters[charIndex];
+
+        Dialogue _initDialogue = null;
+        int _stage = GlobalData.instance.stage;
+
+        if (!GlobalData.instance.flashBack)
+        {
+            if (!charData.dialogues[_stage].hasSpoken)
+            {
+                _initDialogue = charData.dialogues[_stage].dialogue;
+            }
+            else
+            {
+                _initDialogue = charData.dialogues[_stage].dialogueSpoken;
+            }
+        }
+        else
+        {
+            if (!charData.dialogues[_stage].hasSpokenFlashback)
+            {
+                _initDialogue = charData.dialogues[_stage].dialogueFlashback;
+            }
+            else
+            {
+                _initDialogue = charData.dialogues[_stage].dialogueFlashbackSpoken;
+            }
+        }
+        if (GetComponent<PuzzleMaster>() != null)
+        {
+            PuzzleMaster pMaster = GetComponent<PuzzleMaster>();
+            if (pMaster.PuzzleClear())
+            {
+                _initDialogue = pMaster.clearDialogue;
+                DialogueManager.instance.EnterDialogue(_initDialogue);
+                return;
+            }
+        }
+        if (_initDialogue != null)
+        {
+            if (GlobalData.instance.flashBack)
+            {
+                charData.dialogues[_stage].hasSpokenFlashback = true;
+            }
+            else
+            {
+                charData.dialogues[_stage].hasSpoken = true;
+            }
+
+            DialogueManager.instance.EnterDialogue(_initDialogue);
+        }
+
     }
 
 }

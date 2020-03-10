@@ -8,29 +8,36 @@ using UnityEngine.UI;
 
 public class Dialogue : ScriptableObject
 {
-
     public enum CharacterEmotion
     {
         normal,
         happy,
-        sad
+        sad,
+        angry
     };
 
     [Header ("Customization")]
     public CharacterData speaker;
     public CharacterEmotion speakerEmotion = CharacterEmotion.normal;
-    [FMODUnity.EventRef] public string messageVocalizationSound;
 
     public CharacterData listener;
     public CharacterEmotion listenerEmotion = CharacterEmotion.normal;
 
-    [TextArea(15, 20)]
-    public string message = "";
-    public float typeDelay = 0.01f;
-
-    [Header ("Insertables")]
+    public int changeReputation;
+    public bool italic;
+    public Message[] messages;
+    [Header("Insertables")]
     public Dialogue nextDialogue = null;
+    [Space]
+    public string triggerScene;
+    public bool enterFlashback = false;
+    public bool exitFlashback = false;
+    [Space]
+    public Items item;
+    public int flashbackEvent;
+    [Space]
     public float TimeLimitSeconds = 0;
+    public Dialogue noChoiceDialogue = null;
     public ChoiceButtonBlueprint[] choiceButtons = null;
 }
 

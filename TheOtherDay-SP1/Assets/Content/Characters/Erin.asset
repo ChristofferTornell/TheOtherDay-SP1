@@ -13,15 +13,69 @@ MonoBehaviour:
   m_Name: Erin
   m_EditorClassIdentifier: 
   name: Erin
-  contactImage: {fileID: 21300000, guid: fd6854869ed1aed4f96f909c4b18e369, type: 3}
-  dialogueImageNormal: {fileID: 21300000, guid: fd6854869ed1aed4f96f909c4b18e369,
+  description: This is Erin.
+  contactImage: {fileID: 21300000, guid: c5fbe9cbaaaefac44b1ba56b675f1c42, type: 3}
+  dialogueImageFlashbackNormal: {fileID: 21300000, guid: c5fbe9cbaaaefac44b1ba56b675f1c42,
     type: 3}
-  dialogueImageHappy: {fileID: 21300000, guid: 6ff12a432139f9149953bc4723e43aa4, type: 3}
-  dialogueImageSad: {fileID: 21300000, guid: 2a33b5146bc14464bb6f4a29f29126b3, type: 3}
-  font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  color: {r: 0.66967785, g: 0.7900989, b: 0.9528302, a: 1}
-  typingSound: 
+  dialogueImageFlashbackHappy: {fileID: 21300000, guid: a50bc0b242717f34095b44b4faea5663,
+    type: 3}
+  dialogueImageFlashbackSad: {fileID: 21300000, guid: f79ecfbf603373347960a013db3222c6,
+    type: 3}
+  dialogueImageFlashbackAngry: {fileID: 21300000, guid: 45b853100597df14e8aac604e5fa4ffa,
+    type: 3}
+  dialogueImagePresentNormal: {fileID: 21300000, guid: c5fbe9cbaaaefac44b1ba56b675f1c42,
+    type: 3}
+  dialogueImagePresentHappy: {fileID: 21300000, guid: a50bc0b242717f34095b44b4faea5663,
+    type: 3}
+  dialogueImagePresentSad: {fileID: 21300000, guid: f79ecfbf603373347960a013db3222c6,
+    type: 3}
+  dialogueImagePresentAngry: {fileID: 21300000, guid: 45b853100597df14e8aac604e5fa4ffa,
+    type: 3}
+  dialogueImageFlashbackDrunkNormal: {fileID: 0}
+  dialogueImageFlashbackDrunkHappy: {fileID: 0}
+  dialogueImageFlashbackDrunkSad: {fileID: 0}
+  dialogueImageFlashbackDrunkAngry: {fileID: 0}
+  isDrunk: 0
+  font: {fileID: 11400000, guid: 06188d2604db92e4786bc502162be7d4, type: 2}
+  color: {r: 0.23584908, g: 0.23106067, b: 0.08788716, a: 1}
+  typingSound: event:/Sounds/NPC/Dialogue/SoundsNPCDiaErin
+  dialogues:
+  - dialogue: {fileID: 0}
+    dialogueSpoken: {fileID: 0}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 11400000, guid: bdfc0367f56eb7346b31f5570e68869b,
+      type: 2}
+    dialogueFlashbackSpoken: {fileID: 11400000, guid: f4899d88093548841a31afab87b549ba,
+      type: 2}
+    hasSpokenFlashback: 1
+  - dialogue: {fileID: 0}
+    dialogueSpoken: {fileID: 0}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 0}
+    dialogueFlashbackSpoken: {fileID: 0}
+    hasSpokenFlashback: 0
+  - dialogue: {fileID: 0}
+    dialogueSpoken: {fileID: 0}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 0}
+    dialogueFlashbackSpoken: {fileID: 0}
+    hasSpokenFlashback: 0
+  - dialogue: {fileID: 0}
+    dialogueSpoken: {fileID: 0}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 11400000, guid: d1889ddf77a89444c84f669a50a26bc6,
+      type: 2}
+    dialogueFlashbackSpoken: {fileID: 11400000, guid: d1889ddf77a89444c84f669a50a26bc6,
+      type: 2}
+    hasSpokenFlashback: 0
+  - dialogue: {fileID: 0}
+    dialogueSpoken: {fileID: 0}
+    hasSpoken: 0
+    dialogueFlashback: {fileID: 0}
+    dialogueFlashbackSpoken: {fileID: 0}
+    hasSpokenFlashback: 0
   sms:
-  - hej
-  - 
-  - 
+  - "Hey, Riles. Still sleeping, huh?\r\nI suppose you went at it pretty hard last
+    night.\r\nJust don\u2019t forget the dress rehearsal at 6PM, okay?\r\nTry to look
+    presentable, and don\u2019t forget the ring!\r\nSee you tonight, love you~"
+  - YOU LOST MY RING?? WTF!??!?!!!??

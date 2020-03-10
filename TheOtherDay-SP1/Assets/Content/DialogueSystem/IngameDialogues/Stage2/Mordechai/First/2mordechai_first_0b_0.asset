@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
+  m_Name: 2mordechai_first_0b_0
+  m_EditorClassIdentifier: 
+  speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  speakerEmotion: 1
+  listener: {fileID: 11400000, guid: 697c03abe2da6a34e9cc67fe00994873, type: 2}
+  listenerEmotion: 1
+  changeReputation: 0
+  italic: 0
+  messages:
+  - text: Yeah, that's what a night in this place looks like.
+    typeDelay: 0.01
+    messageSound: 
+  nextDialogue: {fileID: 11400000, guid: 3e1c2f87cc88bd941a3d0b618359f920, type: 2}
+  triggerScene: 
+  enterFlashback: 0
+  exitFlashback: 0
+  item: {fileID: 0}
+  flashbackEvent: 0
+  TimeLimitSeconds: 0
+  noChoiceDialogue: {fileID: 0}
+  choiceButtons: []

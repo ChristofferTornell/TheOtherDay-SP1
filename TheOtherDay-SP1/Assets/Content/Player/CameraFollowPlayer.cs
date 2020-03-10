@@ -20,12 +20,15 @@ public class CameraFollowPlayer : MonoBehaviour
     {
         originalSmoothTime = smoothTime;
         smoothTime = 0f;
+
+        if (FindObjectOfType<PlayerMovement>())
+        {
+            player = FindObjectOfType<PlayerMovement>().transform;
+        }
     }
 
     void Start()
     {
-        player = FindObjectOfType<PlayerMovement>().transform;
-
         // Place the camera on the player
         if (player)
         {
@@ -44,6 +47,21 @@ public class CameraFollowPlayer : MonoBehaviour
         yield return new WaitForSeconds(delay);
         smoothTime = originalSmoothTime;
         yield return null;
+    }
+
+    private void Update()
+    {
+        if (!player)
+        {
+            if (FindObjectOfType<PlayerMovement>())
+            {
+                player = FindObjectOfType<PlayerMovement>().transform;
+            }
+            else
+            {
+                Debug.LogError("Unable to find an object with PlayerMovement");
+            }
+        }
     }
 
     // Update is called once per frame

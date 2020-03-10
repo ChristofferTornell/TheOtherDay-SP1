@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
+  m_Name: hobo_0
+  m_EditorClassIdentifier: 
+  speaker: {fileID: 11400000, guid: ee92580b7fbc0534bbd4bf3f396ff8c7, type: 2}
+  speakerEmotion: 0
+  listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  listenerEmotion: 0
+  changeReputation: 0
+  italic: 0
+  messages:
+  - text: Psst, hey, kiddo
+    typeDelay: 0.03
+    messageSound: 
+  - text: '...'
+    typeDelay: 0.1
+    messageSound: 
+  - text: ' want some alcohol?'
+    typeDelay: 0.1
+    messageSound: 
+  nextDialogue: {fileID: 11400000, guid: d1d51c215e3e52749b15d93023b23d20, type: 2}
+  triggerScene: 
+  enterFlashback: 0
+  exitFlashback: 0
+  item: {fileID: 0}
+  flashbackEvent: 0
+  TimeLimitSeconds: 0
+  noChoiceDialogue: {fileID: 0}
+  choiceButtons: []

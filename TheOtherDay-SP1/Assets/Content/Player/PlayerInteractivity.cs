@@ -7,18 +7,30 @@ public class PlayerInteractivity : MonoBehaviour
 {
     [SerializeField] private string interactionButton;
 
-    private Interactable interactableObject = null;
+    [HideInInspector] public List<Interactable> interactables = new List<Interactable>();
+    public GameObject interactUI;
 
     private void Start()
     {
         if (interactionButton.Length == 0) { Debug.LogError("PlayerInteractivity - The interactionButton string is empty"); }
+        SceneChanger.onChange += OnSceneChange;
+    }
+
+    public void OnSceneChange(SceneChanger sceneChanger)
+    {
+        interactables.Clear();
+        UpdateInteractUI();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<Interactable>())
         {
-            interactableObject = collision.GetComponent<Interactable>();
+            if (collision.GetComponent<Interactable>().isInteractableWithSpace)
+            {
+                interactables.Add(collision.GetComponent<Interactable>());
+                UpdateInteractUI();
+            }
         }
     }
 
@@ -26,24 +38,65 @@ public class PlayerInteractivity : MonoBehaviour
     {
         if (collision.GetComponent<Interactable>())
         {
-            interactableObject = null;
+            if (collision.GetComponent<Interactable>().isInteractableWithSpace)
+            {
+                interactables.Remove(collision.GetComponent<Interactable>());
+                UpdateInteractUI();
+            }
         }
+    }
+
+    private void CheckInteractUI()
+    {
+        bool updateUI = false;
+        foreach (Interactable _interactable in interactables)
+        {
+            if (_interactable.isInteractableWithSpace)
+            {
+                updateUI = true;
+            }
+        }
+        if (updateUI == true)
+        {
+            UpdateInteractUI();
+        }
+    }
+    private void UpdateInteractUI()
+    {
+        if (interactables.Count > 0)
+        {
+            interactUI.SetActive(true);
+
+        }
+        else
+        {
+            interactUI.SetActive(false);
+        }
+    }
+
+    [HideInInspector] public Dialogue currentDialogue;
+    public void UpdateDialogue()
+    {
+        currentDialogue = DialogueManager.instance.currentDialogue;
     }
 
     void Update()
     {
         // Interact with the Object using the useButton
-        if (interactableObject && Input.GetButtonDown(interactionButton))
+        if (interactables.Count > 0 && Input.GetButtonDown(interactionButton))
         {
-            //Debug.Log("Doing something with " + interactableObject.name);
-
-            if (interactableObject.savePlayerPosition)
+            if (!DialogueManager.dialogueActive)
             {
-                SavedPositions.NewPosition(GameController.currentScene, new Vector2(interactableObject.transform.position.x, gameObject.transform.position.y));
-            }
+                Debug.Log("Doing something with " + interactables[0].name);
 
-            interactableObject.Interact();
-            // Do something with the object
+                if (interactables[0].savePlayerPosition)
+                {
+                    SavedPositions.NewPosition(GameController.currentScene, new Vector2(interactables[0].transform.position.x, gameObject.transform.position.y));
+                }
+
+                interactables[0].Interact();
+                // Do something with the object
+            }
         }
     }
 }

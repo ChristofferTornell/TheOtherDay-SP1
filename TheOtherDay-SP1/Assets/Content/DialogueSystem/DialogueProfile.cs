@@ -25,21 +25,68 @@ public class DialogueProfile : MonoBehaviour
     {
         if (mood == Dialogue.CharacterEmotion.normal)
         {
-            return myCharacter.dialogueImageNormal;
-            
+            if (GlobalData.instance.flashBack)
+            {
+                if (myCharacter.isDrunk)
+                {
+                    return myCharacter.dialogueImageFlashbackDrunkNormal;
+                }
+                return myCharacter.dialogueImageFlashbackNormal;
+            }
+            else
+            {
+                return myCharacter.dialogueImagePresentNormal;
+            }
         }
         if (mood == Dialogue.CharacterEmotion.happy)
         {
-            return myCharacter.dialogueImageHappy;
-
+            if (GlobalData.instance.flashBack)
+            {
+                if (myCharacter.isDrunk)
+                {
+                    return myCharacter.dialogueImageFlashbackDrunkHappy;
+                }
+                return myCharacter.dialogueImageFlashbackHappy;
+            }
+            else
+            {
+                return myCharacter.dialogueImagePresentHappy;
+            }
         }
         if (mood == Dialogue.CharacterEmotion.sad)
         {
-            return myCharacter.dialogueImageSad;
+            if (GlobalData.instance.flashBack)
+            {
+                if (myCharacter.isDrunk)
+                {
+                    return myCharacter.dialogueImageFlashbackDrunkSad;
+                }
+                return myCharacter.dialogueImageFlashbackSad;
+            }
+            else
+            {
+                return myCharacter.dialogueImagePresentSad;
+            }
 
         }
-        Debug.Log("Error, mood doesnt have sprite");
-        return myCharacter.dialogueImageNormal;
+        if (mood == Dialogue.CharacterEmotion.angry)
+        {
+            if (GlobalData.instance.flashBack)
+            {
+                if (myCharacter.isDrunk)
+                {
+                    return myCharacter.dialogueImageFlashbackDrunkAngry;
+                }
+                return myCharacter.dialogueImageFlashbackAngry;
+            }
+            else
+            {
+                return myCharacter.dialogueImagePresentAngry;
+            }
+
+        }
+        Debug.Log("Error, mood: " + mood + " doesnt have sprite");
+        return myCharacter.dialogueImageFlashbackNormal;
 
 
     }

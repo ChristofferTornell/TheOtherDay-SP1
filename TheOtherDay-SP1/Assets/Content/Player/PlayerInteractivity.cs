@@ -26,8 +26,11 @@ public class PlayerInteractivity : MonoBehaviour
     {
         if (collision.GetComponent<Interactable>())
         {
-            interactables.Add(collision.GetComponent<Interactable>());
-            UpdateInteractUI();
+            if (collision.GetComponent<Interactable>().isInteractableWithSpace)
+            {
+                interactables.Add(collision.GetComponent<Interactable>());
+                UpdateInteractUI();
+            }
         }
     }
 
@@ -35,12 +38,29 @@ public class PlayerInteractivity : MonoBehaviour
     {
         if (collision.GetComponent<Interactable>())
         {
-
-            interactables.Remove(collision.GetComponent<Interactable>());
-            UpdateInteractUI();
+            if (collision.GetComponent<Interactable>().isInteractableWithSpace)
+            {
+                interactables.Remove(collision.GetComponent<Interactable>());
+                UpdateInteractUI();
+            }
         }
     }
 
+    private void CheckInteractUI()
+    {
+        bool updateUI = false;
+        foreach (Interactable _interactable in interactables)
+        {
+            if (_interactable.isInteractableWithSpace)
+            {
+                updateUI = true;
+            }
+        }
+        if (updateUI == true)
+        {
+            UpdateInteractUI();
+        }
+    }
     private void UpdateInteractUI()
     {
         if (interactables.Count > 0)

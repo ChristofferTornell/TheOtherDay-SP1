@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
 {
     public bool savePlayerPosition = false;
     public bool changeCursorOnHover = false;
+    public bool isInteractableWithSpace = true;
     public bool hideOnStart = false;
     public int unlockedOnStage = 0;
     public bool lockedByEvent;

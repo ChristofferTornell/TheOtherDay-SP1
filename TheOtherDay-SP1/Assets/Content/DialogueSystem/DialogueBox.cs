@@ -199,6 +199,7 @@ public class DialogueBox : MonoBehaviour
         {
             currentDialogue = DialogueManager.instance.currentDialogue;
         }
+        Debug.Log("current dialogue: "+ currentDialogue);
         nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
         if (PlayerMovement.playerInstance != null)
         {

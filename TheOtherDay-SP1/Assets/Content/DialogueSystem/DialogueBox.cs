@@ -163,7 +163,7 @@ public class DialogueBox : MonoBehaviour
         if (currentDialogue.flashbackEvent != 0)
         {
 
-            SceneEvents.instance.PlayEvent(currentDialogue.flashbackEvent);
+            SceneEvents.instance.CheckEvent(currentDialogue.flashbackEvent);
         }
 
         if (choiceButtonsExist)

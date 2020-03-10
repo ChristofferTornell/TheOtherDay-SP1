@@ -23,6 +23,10 @@ public class SceneEvents : MonoBehaviour
     void Start()
     {
         sceneData = GlobalData.instance.sceneDataList[sceneDataIndex];
+        if (sceneData.hasVisited)
+        {
+            return;
+        }
         if (objectAppear != null)
         {
             objectAppear.SetActive(false);
@@ -36,6 +40,14 @@ public class SceneEvents : MonoBehaviour
             Debug.Log("Dialogue manager: " + DialogueManager.instance);
             DialogueManager.instance.EnterDialogue(initialDialogue);
         }
+    }
+    public void CheckEvent(int eventIndex)
+    {
+        if (sceneData.hasVisited)
+        {
+            return;
+        }
+        PlayEvent(eventIndex);
     }
     public virtual void PlayEvent(int eventIndex)
     {

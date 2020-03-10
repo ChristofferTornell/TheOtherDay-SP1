@@ -23,4 +23,23 @@ public class GlobalData : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+    private void Start()
+    {
+        foreach (SceneData sData in sceneDataList)
+        {
+            if (sData != null)
+            {
+                sData.hasVisited = false;
+
+            }
+        }
+        foreach(CharacterData cData in charaters)
+        {
+            foreach (DialogueContainer dContainer in cData.dialogues)
+            {
+                dContainer.hasSpoken = false;
+                dContainer.hasSpokenFlashback = false;
+            }
+        }
+    }
 }

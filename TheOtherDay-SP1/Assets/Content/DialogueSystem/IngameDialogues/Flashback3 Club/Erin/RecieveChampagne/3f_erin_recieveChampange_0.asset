@@ -22,13 +22,12 @@ MonoBehaviour:
   - text: Tonight is the night to kiss strangers and text my ex.
     typeDelay: 0.01
     messageSound: 
-  initial: 0
   nextDialogue: {fileID: 11400000, guid: a5a03088313b6264297de399688e4ad2, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  flashbackEvent: 0
+  flashbackEvent: 1
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

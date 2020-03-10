@@ -6,15 +6,16 @@ public class FlashbackClubEvents : SceneEvents
 {
     public Interactable door;
     public Interactable doorToFoyer;
+    public int rileyCharIndex;
     public override void PlayEvent(int eventIndex)
     {
         if (eventIndex == 1)
         {
             Debug.Log("Make riley drunk");
+            GlobalData.instance.charaters[rileyCharIndex].isDrunk = true;
         }
         if (eventIndex == 2)
         {
-            Debug.Log("Unlock tofoyer door");
             doorToFoyer.lockedByEvent = false;
         }
         if (eventIndex == 3)
@@ -25,6 +26,11 @@ public class FlashbackClubEvents : SceneEvents
         {
             Debug.Log("Unlock door");
             door.lockedByEvent = false;
+        }
+        if(eventIndex == 5)
+        {
+            Debug.Log("Make riley sober");
+            GlobalData.instance.charaters[rileyCharIndex].isDrunk = false;
         }
     }
 }

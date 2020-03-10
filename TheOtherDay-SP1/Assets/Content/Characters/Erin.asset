@@ -31,8 +31,13 @@ MonoBehaviour:
     type: 3}
   dialogueImagePresentAngry: {fileID: 21300000, guid: 45b853100597df14e8aac604e5fa4ffa,
     type: 3}
+  dialogueImageFlashbackDrunkNormal: {fileID: 0}
+  dialogueImageFlashbackDrunkHappy: {fileID: 0}
+  dialogueImageFlashbackDrunkSad: {fileID: 0}
+  dialogueImageFlashbackDrunkAngry: {fileID: 0}
+  isDrunk: 0
   font: {fileID: 11400000, guid: 06188d2604db92e4786bc502162be7d4, type: 2}
-  color: {r: 0.21960784, g: 0.38039216, b: 0.19215687, a: 1}
+  color: {r: 0.23584908, g: 0.23106067, b: 0.08788716, a: 1}
   typingSound: event:/Sounds/NPC/Dialogue/SoundsNPCDiaErin
   dialogues:
   - dialogue: {fileID: 0}
@@ -40,7 +45,7 @@ MonoBehaviour:
     hasSpoken: 0
     dialogueFlashback: {fileID: 11400000, guid: bdfc0367f56eb7346b31f5570e68869b,
       type: 2}
-    dialogueFlashbackSpoken: {fileID: 11400000, guid: bdfc0367f56eb7346b31f5570e68869b,
+    dialogueFlashbackSpoken: {fileID: 11400000, guid: f4899d88093548841a31afab87b549ba,
       type: 2}
     hasSpokenFlashback: 1
   - dialogue: {fileID: 0}
@@ -58,8 +63,10 @@ MonoBehaviour:
   - dialogue: {fileID: 0}
     dialogueSpoken: {fileID: 0}
     hasSpoken: 0
-    dialogueFlashback: {fileID: 0}
-    dialogueFlashbackSpoken: {fileID: 0}
+    dialogueFlashback: {fileID: 11400000, guid: d1889ddf77a89444c84f669a50a26bc6,
+      type: 2}
+    dialogueFlashbackSpoken: {fileID: 11400000, guid: d1889ddf77a89444c84f669a50a26bc6,
+      type: 2}
     hasSpokenFlashback: 0
   - dialogue: {fileID: 0}
     dialogueSpoken: {fileID: 0}

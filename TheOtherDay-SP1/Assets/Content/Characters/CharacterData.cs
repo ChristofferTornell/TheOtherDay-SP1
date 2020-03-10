@@ -14,12 +14,20 @@ public class CharacterData : ScriptableObject
     public Sprite dialogueImageFlashbackHappy;
     public Sprite dialogueImageFlashbackSad;
     public Sprite dialogueImageFlashbackAngry;
-
+    [Space]
     public Sprite dialogueImagePresentNormal;
     public Sprite dialogueImagePresentHappy;
     public Sprite dialogueImagePresentSad;
     public Sprite dialogueImagePresentAngry;
 
+    [Header("Riley only")]
+    public Sprite dialogueImageFlashbackDrunkNormal;
+    public Sprite dialogueImageFlashbackDrunkHappy;
+    public Sprite dialogueImageFlashbackDrunkSad;
+    public Sprite dialogueImageFlashbackDrunkAngry;
+    public bool isDrunk = false;
+
+    [Header ("Customizables")]
 
     public TMPro.TMP_FontAsset font;
     public Color color;

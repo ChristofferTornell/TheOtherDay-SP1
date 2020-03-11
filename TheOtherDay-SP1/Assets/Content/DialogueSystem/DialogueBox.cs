@@ -23,11 +23,12 @@ public class DialogueBox : MonoBehaviour
     private bool choiceButtonsExist = false;
     private bool choiceTimerInitiated = false;
     private float choiceTimerCounter = 0;
+    private bool typingFinished = false;
     public TextMeshProUGUI choiceTimerTextObject = null;
     private List<GameObject> choiceButtons = new List<GameObject>();
     [SerializeField] private string interactionButton = "Interact Button";
 
-
+    
     private float typeSoundCounter;
     public float typeSoundDelay = 0.1f;
     private bool typeSoundReady;
@@ -52,6 +53,7 @@ public class DialogueBox : MonoBehaviour
     {
         choiceTimerCounter = currentDialogue.TimeLimitSeconds;
         choiceTimerInitiated = false;
+        typingFinished = false;
         choiceTimerTextObject.gameObject.SetActive(false);
     }
     private void Update()
@@ -73,9 +75,9 @@ public class DialogueBox : MonoBehaviour
         }
 
 
-        if (currentDialogue.TimeLimitSeconds > 0 && choiceTimerInitiated == false)
+        if (currentDialogue.TimeLimitSeconds > 0 && choiceTimerInitiated == false && typingFinished)
         {
-            choiceTimerTextObject.gameObject.SetActive(true);
+            //choiceTimerTextObject.gameObject.SetActive(true);
             choiceTimerInitiated = true;
             choiceTimerCounter = currentDialogue.TimeLimitSeconds;
 
@@ -139,6 +141,24 @@ public class DialogueBox : MonoBehaviour
                 yield return new WaitForSeconds(_message.typeDelay);
             }
         }
+        if (currentDialogue.nextDialogue == null)
+        {
+            if (currentDialogue.choiceButtons.Length > 0)
+            {
+                nextButtonObject.gameObject.SetActive(false);
+
+                for (int i = 0; i < currentDialogue.choiceButtons.Length; i++)
+                {
+                    GameObject _choiceButton = Instantiate(choiceButton);
+                    _choiceButton.transform.SetParent(choiceButtonLayout.transform);
+                    _choiceButton.GetComponent<ChoiceButton>().textObject.text = currentDialogue.choiceButtons[i].buttonText;
+                    _choiceButton.GetComponent<ChoiceButton>().myId = i;
+                    choiceButtons.Add(_choiceButton);
+                }
+                choiceButtonsExist = true;
+            }
+        }
+        typingFinished = true;
     }
 
     public void CheckSceneTrigger()
@@ -295,24 +315,6 @@ public class DialogueBox : MonoBehaviour
             StartCoroutine(AutotypeText());
         }
 
-        if (currentDialogue.nextDialogue == null)
-        {
-            if (currentDialogue.choiceButtons.Length > 0)
-            {
-                nextButtonObject.gameObject.SetActive(false);
-
-                for (int i = 0; i < currentDialogue.choiceButtons.Length; i++)
-                {
-                    GameObject _choiceButton = Instantiate(choiceButton);
-                    _choiceButton.transform.SetParent(choiceButtonLayout.transform);
-                    _choiceButton.GetComponent<ChoiceButton>().textObject.text = currentDialogue.choiceButtons[i].buttonText;
-                    _choiceButton.GetComponent<ChoiceButton>().myId = i;
-                    choiceButtons.Add(_choiceButton);
-                }
-                choiceButtonsExist = true;
-                return;
-            }
-        }
 
     }
 

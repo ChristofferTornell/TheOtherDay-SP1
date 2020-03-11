@@ -16,17 +16,19 @@ MonoBehaviour:
   speakerEmotion: 0
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   listenerEmotion: 0
+  changeReputation: 0
   italic: 0
   messages:
   - text: I see. Well, I am sure you will find it eventually. Now, if you'll excuse
-      me, I have some work to do?
+      me, I have some work to do.
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 11400000, guid: 9e79f7cddca4bbb47a0ba1e746d0d28f, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: 9e79f7cddca4bbb47a0ba1e746d0d28f, type: 2}
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

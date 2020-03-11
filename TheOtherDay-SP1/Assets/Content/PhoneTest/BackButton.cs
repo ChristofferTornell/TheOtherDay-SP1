@@ -60,6 +60,7 @@ public class BackButton : MonoBehaviour
         phone.Page = -1;
     }
 
+    private bool hasClosedPhone = false;
     private void OutsideButton()
     {
         if (phone.Page == 0)
@@ -94,6 +95,11 @@ public class BackButton : MonoBehaviour
         }
         phone.Page = -1;
         phone.Pulled = false;
+        if (HotelEvents.instance != null && !hasClosedPhone)
+        {
+            HotelEvents.instance.CheckEvent(2);
+            hasClosedPhone = true;
+        }
     }
 
     public void AddToList(GameObject obj)

@@ -65,12 +65,18 @@ public class Phone : MonoBehaviour
        AlbumPage.SetActive(state);
     }
 
+    private bool hasOpenedPhone = false;
     private void PullUp()
     {
         PressingTime = 0;
         ani.Play("Up");
         Pulled = true;
         //PullDownButton.gameObject.SetActive(true);
+        if (HotelEvents.instance != null && !hasOpenedPhone)
+        {
+            HotelEvents.instance.CheckEvent(2);
+            hasOpenedPhone = true;
+        }
         PullUpButton.gameObject.SetActive(false);
     }
 

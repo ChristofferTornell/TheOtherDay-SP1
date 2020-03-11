@@ -77,7 +77,7 @@ public class DialogueBox : MonoBehaviour
 
         if (currentDialogue.TimeLimitSeconds > 0 && choiceTimerInitiated == false && typingFinished)
         {
-            choiceTimerTextObject.gameObject.SetActive(true);
+            //choiceTimerTextObject.gameObject.SetActive(true);
             choiceTimerInitiated = true;
             choiceTimerCounter = currentDialogue.TimeLimitSeconds;
 

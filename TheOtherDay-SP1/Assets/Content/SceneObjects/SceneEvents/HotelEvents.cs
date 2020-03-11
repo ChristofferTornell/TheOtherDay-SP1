@@ -9,18 +9,23 @@ public class HotelEvents : SceneEvents
     public Interactable hotelDoor;
 
     private bool event2Cleared = false;
+
     public override void PlayEvent(int eventIndex)
     {
         if (eventIndex == 1)
         {
             //show screen
         }
-        if (eventIndex == 2 && !event2Cleared)
+        else if (eventIndex == 2 && !event2Cleared)
         {
             DialogueManager.instance.EnterDialogue(openPhoneDialogue);
             event2Cleared = true;
         }
-        if (eventIndex == 3)
+        else if (eventIndex == 3)
+        {
+            hasViewedErinConvo = true;
+        }
+        else if (eventIndex == 4)
         {
             DialogueManager.instance.EnterDialogue(closePhoneDialogue);
             hotelDoor.lockedByEvent = false;

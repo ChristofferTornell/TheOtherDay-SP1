@@ -28,7 +28,7 @@ public class Phone : MonoBehaviour
 
     public Animator ani;
 
-    [HideInInspector]public int Page = -1;
+    [HideInInspector] public int Page = -1;
 
     [HideInInspector]public bool Zoomed = false;
     

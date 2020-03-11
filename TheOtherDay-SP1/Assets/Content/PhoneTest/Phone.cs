@@ -71,6 +71,9 @@ public class Phone : MonoBehaviour
         PressingTime = 0;
         ani.Play("Up");
         Pulled = true;
+        PlayerMovement.playerInstance.animator.SetBool("phone", true); // Riley tar upp telefonen
+        PlayerMovement.playerMovementLocked = true; // Och kan inte röra sig när den är uppe
+
         //PullDownButton.gameObject.SetActive(true);
         if (HotelEvents.instance != null && !hasOpenedPhone)
         {

@@ -95,6 +95,8 @@ public class BackButton : MonoBehaviour
         }
         phone.Page = -1;
         phone.Pulled = false;
+        PlayerMovement.playerInstance.animator.SetBool("phone", false); // Riley lägger ner telefonen
+        PlayerMovement.playerMovementLocked = false; // Och kan röra sig igen
         if (HotelEvents.instance != null && !hasClosedPhone)
         {
             HotelEvents.instance.CheckEvent(2);

@@ -65,7 +65,7 @@ public class DialogueBox : MonoBehaviour
     }
     private void Update()
     {
-        if (DialogueManager.dialogueActive && currentDialogue.choiceButtons.Length == 0 && Input.GetKeyDown(KeyCode.A))
+        if (DialogueManager.dialogueActive && currentDialogue.choiceButtons.Length == 0 && Input.GetKeyDown(KeyCode.Space))
         {
             GoToNextDialogue(); 
         }

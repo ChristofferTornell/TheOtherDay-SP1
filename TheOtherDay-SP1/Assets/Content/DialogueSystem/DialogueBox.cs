@@ -56,12 +56,18 @@ public class DialogueBox : MonoBehaviour
         typingFinished = false;
         choiceTimerTextObject.gameObject.SetActive(false);
     }
+
+    public void GoToNextDialogue()
+    {
+        Debug.Log("going to next dialogue");
+        DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;
+        DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
+    }
     private void Update()
     {
-        if (DialogueManager.dialogueActive && currentDialogue.choiceButtons.Length == 0 && Input.GetButtonDown(interactionButton))
+        if (DialogueManager.dialogueActive && currentDialogue.choiceButtons.Length == 0 && Input.GetKeyDown(KeyCode.A))
         {
-            DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;
-            DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
+            GoToNextDialogue(); 
         }
 
         if (!typeSoundReady)
@@ -145,8 +151,6 @@ public class DialogueBox : MonoBehaviour
         {
             if (currentDialogue.choiceButtons.Length > 0)
             {
-                nextButtonObject.gameObject.SetActive(false);
-
                 for (int i = 0; i < currentDialogue.choiceButtons.Length; i++)
                 {
                     GameObject _choiceButton = Instantiate(choiceButton);
@@ -159,6 +163,11 @@ public class DialogueBox : MonoBehaviour
             }
         }
         typingFinished = true;
+        if (currentDialogue.choiceButtons.Length == 0)
+        {
+            nextButtonObject.gameObject.SetActive(true);
+
+        }
     }
 
     public void CheckSceneTrigger()
@@ -213,13 +222,13 @@ public class DialogueBox : MonoBehaviour
         {
             return;
         }
+        nextButtonObject.gameObject.SetActive(false);
 
-        //nextButtonObject.gameObject.SetActive(true);
         if (DialogueManager.instance.currentDialogue != null)
         {
             currentDialogue = DialogueManager.instance.currentDialogue;
         }
-        nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
+        //nextButtonObject.GetComponent<NextDialogueButton>().UpdateDialogue();
         if (PlayerMovement.playerInstance != null)
         {
             PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().UpdateDialogue();

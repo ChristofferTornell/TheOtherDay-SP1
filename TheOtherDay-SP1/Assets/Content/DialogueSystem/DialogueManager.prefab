@@ -522,7 +522,6 @@ GameObject:
   - component: {fileID: 2406047995323731747}
   - component: {fileID: 2406047995323731744}
   - component: {fileID: 2406047995323731745}
-  - component: {fileID: 2297643206589238417}
   m_Layer: 5
   m_Name: NextDialogueButton
   m_TagString: Untagged
@@ -631,7 +630,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2297643206589238417}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToNextDialogue
         m_Mode: 1
         m_Arguments:
@@ -644,19 +643,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &2297643206589238417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2406047995323731751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d17387431bd942144850b96ab49a025b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentDialogue: {fileID: 0}
 --- !u!1 &2406047995370010983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,6 +1534,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightProfile
       objectReference: {fileID: 0}
+    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: listenerFadeColor.r
+      value: 0.2735849
+      objectReference: {fileID: 0}
+    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: listenerFadeColor.g
+      value: 0.2735849
+      objectReference: {fileID: 0}
+    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
+        type: 3}
+      propertyPath: listenerFadeColor.b
+      value: 0.2735849
+      objectReference: {fileID: 0}
     - target: {fileID: 2146713060814842012, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1637,21 +1638,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: listenerFadeColor.r
-      value: 0.2735849
-      objectReference: {fileID: 0}
-    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: listenerFadeColor.g
-      value: 0.2735849
-      objectReference: {fileID: 0}
-    - target: {fileID: -8203681799900776488, guid: 6561d94be3f8ce249bdeba75c6e92cf9,
-        type: 3}
-      propertyPath: listenerFadeColor.b
-      value: 0.2735849
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6561d94be3f8ce249bdeba75c6e92cf9, type: 3}

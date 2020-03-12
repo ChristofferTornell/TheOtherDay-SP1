@@ -9,7 +9,6 @@ public class DialogueManager : MonoBehaviour
     public static bool dialogueActive = false;
 
     public static DialogueManager instance;
-
     void Awake()
     {
         if (instance != null)
@@ -17,7 +16,6 @@ public class DialogueManager : MonoBehaviour
             Destroy(gameObject);
         }
         instance = this;
-
         dialogueBoxUI.gameObject.SetActive(false);
     }
 

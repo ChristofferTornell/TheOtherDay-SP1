@@ -150,6 +150,8 @@ GameObject:
   - component: {fileID: 7533981237017971077}
   - component: {fileID: 6083303559570746255}
   - component: {fileID: 418902852}
+  - component: {fileID: 4608557293714374274}
+  - component: {fileID: 1973965597371469522}
   m_Layer: 0
   m_Name: PlayerPrefab [PH]
   m_TagString: Untagged
@@ -288,6 +290,74 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4608557293714374274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7533981237017971076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74fe852a72e218c4d80c4fa495b20e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredItems:
+  - isGiven: 0
+    item: {fileID: 11400000, guid: a4e2233002e3c0e48976f0cb071c3d3f, type: 2}
+    recievedDialogue: {fileID: 11400000, guid: f091469a8170e4844ae39d88c849da8a, type: 2}
+  - isGiven: 0
+    item: {fileID: 11400000, guid: fc2d591c64248a84f893c63066575941, type: 2}
+    recievedDialogue: {fileID: 11400000, guid: 3ef3666b1a5180e4b96f2290109be2c0, type: 2}
+  goToSceneOnClear: 
+  exitFlashbackOnClear: 0
+  clearDialogue: {fileID: 0}
+  wrongItemDialogue: {fileID: 0}
+--- !u!114 &1973965597371469522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7533981237017971076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c833995a30f0534e869b9c70f364dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savePlayerPosition: 0
+  changeCursorOnHover: 0
+  isInteractableWithSpace: 0
+  hideOnStart: 0
+  unlockedOnStage: 0
+  lockedByEvent: 0
+  requiredItem: {fileID: 0}
+  lockedData: {fileID: 0}
+  lockedDialogue: {fileID: 0}
+  charIndex: 0
+  hoverCursor: 5
+  interactSoundEvent: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onMouseInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1973965597371469522}
+        m_MethodName: IE_GiveItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &7866796441345853984
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,7 +40,6 @@ public class SceneEvents : MonoBehaviour
     {
         if (initialDialogue != null)
         {
-            Debug.Log("Dialogue manager: " + DialogueManager.instance);
             DialogueManager.instance.EnterDialogue(initialDialogue);
         }
     }

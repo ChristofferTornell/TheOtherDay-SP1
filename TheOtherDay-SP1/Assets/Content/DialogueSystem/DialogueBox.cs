@@ -28,7 +28,6 @@ public class DialogueBox : MonoBehaviour
     private List<GameObject> choiceButtons = new List<GameObject>();
     [SerializeField] private string interactionButton = "Interact Button";
 
-    
     private float typeSoundCounter;
     public float typeSoundDelay = 0.1f;
     private bool typeSoundReady;

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Phone : MonoBehaviour
 {
+    public Dialogue appFlashbackLockedDialogue;
     [HideInInspector]public bool Pulled = false;
     private float PressingDelta = 0.6f;
     private float PressingTime = 0;
@@ -28,7 +29,7 @@ public class Phone : MonoBehaviour
 
     public Animator ani;
 
-    [HideInInspector]public int Page = -1;
+    [HideInInspector] public int Page = -1;
 
     [HideInInspector]public bool Zoomed = false;
     
@@ -42,27 +43,56 @@ public class Phone : MonoBehaviour
         //PullDownButton.onClick.AddListener(PullDown);
     }
 
+    bool FlashbackChecker()
+    {
+        if (GlobalData.instance.flashBack)
+        {
+            DialogueManager.instance.EnterDialogue(appFlashbackLockedDialogue);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     void EnableSettings(bool state)
     {
+        if (FlashbackChecker())
+        {
+            return;
+        }
         Page = 2;
         SettingsPage.SetActive(state);
     }
 
     void EnableMessage(bool state)
     {
+        if (FlashbackChecker())
+        {
+            return;
+        }
+        Zoom(true);
         Page = 0;
         MessagePage.SetActive(state);
     }
 
     void EnableLog(bool state)
     {
+        if (FlashbackChecker())
+        {
+            return;
+        }
         Page = 1;
         LogPage.SetActive(state);
     }
 
     void EnableAlbum(bool state)
     {
-       AlbumPage.SetActive(state);
+        if (FlashbackChecker())
+        {
+            return;
+        }
+        AlbumPage.SetActive(state);
     }
 
     private bool hasOpenedPhone = false;

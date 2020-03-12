@@ -63,6 +63,10 @@ public class BackButton : MonoBehaviour
     private bool hasClosedPhone = false;
     private void OutsideButton()
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
         if (phone.Page == 0)
         {
             if (MessageBubbles != null)
@@ -99,9 +103,10 @@ public class BackButton : MonoBehaviour
         PlayerMovement.playerMovementLocked = false; // Och kan röra sig igen
         if (HotelEvents.instance != null && !hasClosedPhone)
         {
-            HotelEvents.instance.CheckEvent(2);
+            HotelEvents.instance.CheckEvent(4);
             hasClosedPhone = true;
         }
+        
     }
 
     public void AddToList(GameObject obj)
@@ -141,6 +146,10 @@ public class BackButton : MonoBehaviour
     
     private void BackbuttonFunc()
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
         if(phone.Page == 0)
         {
             if(MessageBubbles != null)

@@ -7,9 +7,12 @@ public class SceneEvents : MonoBehaviour
     public int sceneDataIndex;
     private SceneData sceneData;
     public static SceneEvents instance;
+
     public GameObject objectAppear;
     public float dialogueDelay = 0.2f;
     public Dialogue initialDialogue;
+
+    public bool hasViewedErinConvo = false;
 
     void Awake()
     {

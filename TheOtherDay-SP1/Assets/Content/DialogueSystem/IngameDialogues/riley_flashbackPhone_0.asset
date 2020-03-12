@@ -10,19 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 4twins_first_0b_1
+  m_Name: riley_flashbackPhone_0
   m_EditorClassIdentifier: 
-  speaker: {fileID: 11400000, guid: 2e209c002f374304a945f083f4e9d4e4, type: 2}
-  speakerEmotion: 1
-  listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
-  listenerEmotion: 1
+  speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  speakerEmotion: 0
+  listener: {fileID: 0}
+  listenerEmotion: 0
   changeReputation: 0
   italic: 0
   messages:
-  - text: I'm glad to hear it! Now, what can we do for you? Another pizza?
+  - text: I don't feel like checking my phone right now
     typeDelay: 0.01
     messageSound: 
-  nextDialogue: {fileID: 11400000, guid: cef461653b3c4f84992c5c01c0880980, type: 2}
+  - text: '...'
+    typeDelay: 0.05
+    messageSound: 
+  nextDialogue: {fileID: 0}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

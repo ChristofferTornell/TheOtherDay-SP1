@@ -17,7 +17,7 @@ public class Interactable : MonoBehaviour
     public Items lockedData;
     public Dialogue lockedDialogue;
     public int charIndex = 0;
-    public CursorSprite hoverCursor = CursorSprite.BigHand;
+    public CursorSprite hoverCursor = CursorSprite.Hand;
     [Space]
     [Header("Audio")]
     [FMODUnity.EventRef] public string interactSoundEvent;

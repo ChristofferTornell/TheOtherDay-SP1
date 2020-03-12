@@ -4,22 +4,21 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public enum CursorSprite { SmallPointer, BigPointer, SmallGlass, BigGlass, SmallHand, BigHand }
+//public enum CursorSprite { SmallPointer, BigPointer, SmallGlass, BigGlass, SmallHand, BigHand }
+
+public enum CursorSprite { Pointer, MagnifyingGlass, Hand }
 
 public class GameController : MonoBehaviour
 {
     public static bool pause = false;
     public static string currentScene;
-    public CursorSprite defaultCursor = CursorSprite.BigPointer;
+    public CursorSprite defaultCursor = CursorSprite.Pointer;
     public Vector2 cursorOffset = Vector2.zero;
 
     [Header("Cursor Textures")]
-    public Texture2D smallPointer = null;
-    public Texture2D bigPointer = null;
-    public Texture2D smallGlass = null;
-    public Texture2D bigGlass = null;
-    public Texture2D smallHand = null;
-    public Texture2D bigHand = null;
+    public Texture2D pointer = null;
+    public Texture2D magnifyingGlass = null;
+    public Texture2D hand = null;
     [Space]
 
     [SerializeField] private Transform startingPosition = null;
@@ -41,28 +40,16 @@ public class GameController : MonoBehaviour
     {
         switch (cursor)
         {
-            case CursorSprite.SmallPointer:
-                Cursor.SetCursor(smallPointer, cursorOffset, CursorMode.ForceSoftware);
+            case CursorSprite.Pointer:
+                Cursor.SetCursor(pointer, cursorOffset, CursorMode.ForceSoftware);
                 return;
 
-            case CursorSprite.BigPointer:
-                Cursor.SetCursor(bigPointer, cursorOffset, CursorMode.ForceSoftware);
+            case CursorSprite.MagnifyingGlass:
+                Cursor.SetCursor(magnifyingGlass, cursorOffset, CursorMode.ForceSoftware);
                 return;
 
-            case CursorSprite.SmallGlass:
-                Cursor.SetCursor(smallGlass, cursorOffset, CursorMode.ForceSoftware);
-                return;
-
-            case CursorSprite.BigGlass:
-                Cursor.SetCursor(bigGlass, cursorOffset, CursorMode.ForceSoftware);
-                return;
-
-            case CursorSprite.SmallHand:
-                Cursor.SetCursor(smallHand, new Vector2(8, 10f), CursorMode.ForceSoftware);
-                return;
-
-            case CursorSprite.BigHand:
-                Cursor.SetCursor(bigHand, new Vector2(8, 10f), CursorMode.ForceSoftware);
+            case CursorSprite.Hand:
+                Cursor.SetCursor(hand, new Vector2(8, 10f), CursorMode.ForceSoftware);
                 return;
         }
     }

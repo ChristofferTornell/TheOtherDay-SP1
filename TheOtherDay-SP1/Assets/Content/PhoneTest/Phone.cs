@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Phone : MonoBehaviour
 {
+
+
     public Dialogue appFlashbackLockedDialogue;
     [HideInInspector]public bool Pulled = false;
     private float PressingDelta = 0.6f;
@@ -32,7 +34,12 @@ public class Phone : MonoBehaviour
     [HideInInspector] public int Page = -1;
 
     [HideInInspector]public bool Zoomed = false;
-    
+
+    [FMODUnity.EventRef] public string buttonPressSound;
+    [FMODUnity.EventRef] public string messageAppPressSound;
+    [FMODUnity.EventRef] public string logAppPressSound;
+    [FMODUnity.EventRef] public string pullUpPhoneSound;
+
     private void Start()
     {
         SettingsButton.onClick.AddListener(delegate { EnableSettings(true); });
@@ -74,6 +81,7 @@ public class Phone : MonoBehaviour
         Zoom(true);
         Page = 0;
         MessagePage.SetActive(state);
+        FMODUnity.RuntimeManager.PlayOneShot(messageAppPressSound);
     }
 
     void EnableLog(bool state)
@@ -84,6 +92,7 @@ public class Phone : MonoBehaviour
         }
         Page = 1;
         LogPage.SetActive(state);
+        FMODUnity.RuntimeManager.PlayOneShot(logAppPressSound);
     }
 
     void EnableAlbum(bool state)
@@ -111,6 +120,8 @@ public class Phone : MonoBehaviour
             hasOpenedPhone = true;
         }
         PullUpButton.gameObject.SetActive(false);
+        FMODUnity.RuntimeManager.PlayOneShot(pullUpPhoneSound);
+
     }
 
     public void Zoom(bool state)

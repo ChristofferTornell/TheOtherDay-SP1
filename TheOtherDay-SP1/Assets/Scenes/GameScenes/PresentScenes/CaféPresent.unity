@@ -1192,6 +1192,7 @@ MonoBehaviour:
   objectAppear: {fileID: 0}
   dialogueDelay: 0.2
   initialDialogue: {fileID: 0}
+  hasViewedErinConvo: 0
 --- !u!4 &900100164
 Transform:
   m_ObjectHideFlags: 0
@@ -2014,7 +2015,7 @@ PrefabInstance:
     - target: {fileID: 7533981237017971076, guid: 599f8094af025e74ebb11687569938ff,
         type: 3}
       propertyPath: m_Name
-      value: PlayerPrefab [PH]
+      value: Riley
       objectReference: {fileID: 0}
     - target: {fileID: 7533981237017971072, guid: 599f8094af025e74ebb11687569938ff,
         type: 3}

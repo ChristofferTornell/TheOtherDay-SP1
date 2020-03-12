@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 4608557293714374274}
   - component: {fileID: 1973965597371469522}
   m_Layer: 0
-  m_Name: PlayerPrefab [PH]
+  m_Name: Riley
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
-  changeCursorOnHover: 0
+  changeCursorOnHover: 1
   isInteractableWithSpace: 0
   hideOnStart: 0
   unlockedOnStage: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
   lockedData: {fileID: 0}
   lockedDialogue: {fileID: 0}
   charIndex: 0
-  hoverCursor: 5
+  hoverCursor: 2
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:

@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class FlashbackClubEvents : SceneEvents
 {
+    public AnimationClip pukingAnimation;
+    public Animator playerAnimator;
     public Interactable door;
     public Interactable doorToFoyer;
     public int rileyCharIndex;
+    private bool pukeTrigger;
+    private float pukeCounter;
+    //public Dialogue postPukeDialogue;
     public override void PlayEvent(int eventIndex)
     {
         if (eventIndex == 1)
@@ -21,6 +26,9 @@ public class FlashbackClubEvents : SceneEvents
         if (eventIndex == 3)
         {
             Debug.Log("Play Riley puking animation");
+            playerAnimator.Play(pukingAnimation.name);
+            pukeTrigger = true;
+            GameController.pause = true;
         }
         if (eventIndex == 4)
         {
@@ -31,6 +39,19 @@ public class FlashbackClubEvents : SceneEvents
         {
             Debug.Log("Make riley sober");
             GlobalData.instance.charaters[rileyCharIndex].isDrunk = false;
+        }
+    }
+    void Update()
+    {
+        if (pukeTrigger)
+        {
+            pukeCounter += Time.deltaTime;
+            if(pukeCounter >= pukingAnimation.length)
+            {
+                GameController.pause = false;
+                pukeTrigger = false;
+                //DialogueManager.instance.EnterDialogue(postPukeDialogue);
+            }
         }
     }
 }

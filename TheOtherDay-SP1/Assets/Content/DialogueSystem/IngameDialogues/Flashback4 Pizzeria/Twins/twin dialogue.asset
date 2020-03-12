@@ -10,24 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 3f_katyusha_initial_1
+  m_Name: twin dialogue
   m_EditorClassIdentifier: 
-  speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  speaker: {fileID: 0}
   speakerEmotion: 0
-  listener: {fileID: 11400000, guid: 01c44b970609f204c80fc359a7fe9730, type: 2}
+  listener: {fileID: 0}
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
-  messages:
-  - text: Feel it.
-    typeDelay: 0.01
-    messageSound: 
+  messages: []
   nextDialogue: {fileID: 0}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  flashbackEvent: 3
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

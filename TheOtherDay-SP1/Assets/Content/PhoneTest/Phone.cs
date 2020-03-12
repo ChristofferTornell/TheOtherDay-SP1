@@ -64,10 +64,6 @@ public class Phone : MonoBehaviour
     }
     void EnableSettings(bool state)
     {
-        if (FlashbackChecker())
-        {
-            return;
-        }
         Page = 2;
         SettingsPage.SetActive(state);
     }

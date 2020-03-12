@@ -7,6 +7,8 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] public Dialogue currentDialogue = null;
     public DialogueBox dialogueBoxUI = null;
     public static bool dialogueActive = false;
+    public GameObject phone;
+
 
     public static DialogueManager instance;
     void Awake()
@@ -30,6 +32,7 @@ public class DialogueManager : MonoBehaviour
         dialogueBoxUI.InitializeDialogueUI();
         PlayerMovement.playerMovementLocked = true;
         DescriptionUI.instance.descriptionBoxObj.SetActive(false);
+        phone.SetActive(false);
         dialogueActive = true;
     }
 
@@ -40,6 +43,7 @@ public class DialogueManager : MonoBehaviour
             Inventory.instance.INV_Appear();
         }
         dialogueBoxUI.gameObject.SetActive(false);
+        phone.SetActive(true);
         PlayerMovement.playerMovementLocked = false;
         
         if(PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().interactables.Count > 0)

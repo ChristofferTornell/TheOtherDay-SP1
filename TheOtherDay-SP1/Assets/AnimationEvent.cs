@@ -11,8 +11,8 @@ public class AnimationEvent : MonoBehaviour
         Debug.Log("PrintEvent");
     }
 
-    public void InstantiateVomit(float x, float y)
+    public void InstantiateVomit()
     {
-        GameObject vomit = Instantiate(vomitSprite, new Vector3(gameObject.transform.position.x + x, gameObject.transform.position.y + y, gameObject.transform.position.z), Quaternion.identity);        
+        GameObject vomit = Instantiate(vomitSprite, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z * 0), Quaternion.identity);        
     }
 }

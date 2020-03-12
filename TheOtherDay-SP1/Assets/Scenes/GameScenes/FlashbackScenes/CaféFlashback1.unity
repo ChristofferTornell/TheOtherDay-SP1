@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -721,6 +721,7 @@ GameObject:
   - component: {fileID: 460207184}
   - component: {fileID: 460207183}
   - component: {fileID: 460207182}
+  - component: {fileID: 460207181}
   m_Layer: 0
   m_Name: Erin
   m_TagString: Untagged
@@ -728,6 +729,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &460207181
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460207180}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bedbef7e7841a3c4b8b7a4793d80709d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &460207182
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -745,7 +765,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3, y: 0.48}
+    oldSize: {x: 0.13, y: 0.43}
     newSize: {x: 0.3, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -792,7 +812,8 @@ SpriteRenderer:
   m_SortingLayerID: 126223357
   m_SortingLayer: 4
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 4d7d7d025d817f844af1a24ea2aa6e21, type: 3}
+  m_Sprite: {fileID: 8341423108156732496, guid: dbf1b6251fc155f4ebf80e8770d7bd94,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

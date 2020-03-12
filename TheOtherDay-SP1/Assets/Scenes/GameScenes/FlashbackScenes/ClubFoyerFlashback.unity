@@ -1617,8 +1617,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredItems:
   - isGiven: 0
-    item: {fileID: 11400000, guid: fc2d591c64248a84f893c63066575941, type: 2}
-    recievedDialogue: {fileID: 11400000, guid: 3ef3666b1a5180e4b96f2290109be2c0, type: 2}
+    item: {fileID: 0}
+    recievedDialogue: {fileID: 0}
   goToSceneOnClear: 
   exitFlashbackOnClear: 0
   clearDialogue: {fileID: 0}
@@ -2007,6 +2007,7 @@ MonoBehaviour:
   objectAppear: {fileID: 0}
   dialogueDelay: 0.2
   initialDialogue: {fileID: 11400000, guid: b8d902e9a868956428013686f3c40000, type: 2}
+  hasViewedErinConvo: 0
   door: {fileID: 276117534}
   doorToFoyer: {fileID: 0}
   rileyCharIndex: 0

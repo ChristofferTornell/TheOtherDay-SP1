@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 8975596522450461370}
   - component: {fileID: 6079213709485845360}
   - component: {fileID: 597207823}
+  - component: {fileID: 6847476642799343845}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -136,6 +137,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6847476642799343845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2576117161930802413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa454a558cb3f848a374c7f89f34a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rileyVomitSound: event:/Sounds/UI/SoundsUIInventoryPickUp
 --- !u!1 &7533981237017971076
 GameObject:
   m_ObjectHideFlags: 0

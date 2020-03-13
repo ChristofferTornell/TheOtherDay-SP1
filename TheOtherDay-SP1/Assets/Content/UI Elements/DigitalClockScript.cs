@@ -49,6 +49,17 @@ public class DigitalClockScript : MonoBehaviour
         SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
+    public IEnumerator FlashbackTimeChange()
+    {
+        // Pause scene change
+        // A time parameter the clock should rapidly change to
+        // When the last few numbers are close, slow down the ticking for extra juice
+        // Player sound effects
+        // When done, resume scene change
+
+        yield return null;
+    }
+
     private void Update()
     {
         if (!GameController.pause) { seconds += Time.deltaTime * timeFactor; }

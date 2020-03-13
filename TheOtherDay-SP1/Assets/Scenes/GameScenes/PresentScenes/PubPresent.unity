@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -469,7 +469,7 @@ MonoBehaviour:
   lockedData: {fileID: 0}
   lockedDialogue: {fileID: 0}
   charIndex: 3
-  hoverCursor: 2
+  hoverCursor: 1
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -667,11 +667,27 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: sceneData
+      value: 
+      objectReference: {fileID: 11400000, guid: 5b0b6ff187ddfcd45a7e1282ef7e20b0,
+        type: 2}
     - target: {fileID: 1844750349108326845, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: startingPosition
       value: 
       objectReference: {fileID: 1534729769}
+    - target: {fileID: 1874563062861499967, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874563062861499967, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3732617407535675623, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -697,6 +713,11 @@ PrefabInstance:
       propertyPath: rightBoundary
       value: 
       objectReference: {fileID: 519599871}
+    - target: {fileID: 2321846843708220558, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4083815747545121426, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -741,27 +762,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: sceneData
-      value: 
-      objectReference: {fileID: 11400000, guid: 5b0b6ff187ddfcd45a7e1282ef7e20b0,
-        type: 2}
-    - target: {fileID: 1874563062861499967, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1874563062861499967, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2321846843708220558, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2321846843443626412, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}

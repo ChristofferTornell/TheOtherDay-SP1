@@ -16,6 +16,8 @@ public class SceneTransition : MonoBehaviour
     public AnimationClip fadeInAnimation = null;
     public AnimationClip fadeOutAnimation = null;
 
+    public DigitalClockScript digitalClock = null;
+
     public static SceneTransition instance;
 
     void Awake()

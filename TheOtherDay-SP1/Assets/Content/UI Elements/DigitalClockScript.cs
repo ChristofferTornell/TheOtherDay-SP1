@@ -10,6 +10,7 @@ public class DigitalClockScript : MonoBehaviour
 
     [Header("Time")]
     public float timeFactor = 10f;
+    [Space]
     [SerializeField] private float seconds;
     public float minutes;
     public float hours;
@@ -18,7 +19,6 @@ public class DigitalClockScript : MonoBehaviour
     public TextMeshProUGUI hoursDisplay = null;
     public TextMeshProUGUI minutesDisplay = null;
     public Color displayColor;
-    public int displayColorAlpha = 255;
 
     private bool changingTime = false;
     private float timeChangeAmount = 0;
@@ -31,7 +31,6 @@ public class DigitalClockScript : MonoBehaviour
         minutes = digitalClockObject.minutes;
         hours = digitalClockObject.hours;
 
-        displayColor.a = displayColorAlpha;
         hoursDisplay.color = displayColor;
         minutesDisplay.color = displayColor;
 
@@ -50,41 +49,20 @@ public class DigitalClockScript : MonoBehaviour
         SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
-    private void Update()
+    public IEnumerator FlashbackTimeChange()
     {
-        //if (!GameController.pause) { seconds += Time.deltaTime * timeFactor; }
+        // Pause scene change
+        // A time parameter the clock should rapidly change to
+        // When the last few numbers are close, slow down the ticking for extra juice
+        // Player sound effects
+        // When done, resume scene change
 
-        //if (hours > 9)
-        //{
-        //    hoursDisplay.text = hours + ":";
-        //}
-        //else { hoursDisplay.text = "0" + hours + ":"; }
-
-        //if (minutes > 9)
-        //{
-        //    minutesDisplay.text = minutes.ToString();
-        //}
-        //else { minutesDisplay.text = "0" + minutes.ToString(); }
-
-        //if (seconds >= 60)
-        //{
-        //    minutes ++;
-        //    seconds = 0;
-        //}
-        //if (minutes >= 60)
-        //{
-        //    hours++;
-        //    minutes = 0;
-        //}
-        //if (hours >= 24)
-        //{
-        //    hours = 0;
-        //}
+        yield return null;
     }
 
-    void UpdateTime()
+    private void Update()
     {
-        minutes += timeChangeAmount;
+        if (!GameController.pause) { seconds += Time.deltaTime * timeFactor; }
 
         if (hours > 9)
         {
@@ -112,6 +90,38 @@ public class DigitalClockScript : MonoBehaviour
         {
             hours = 0;
         }
+    }
+
+    void UpdateTime()
+    {
+        //minutes += timeChangeAmount;
+
+        //if (hours > 9)
+        //{
+        //    hoursDisplay.text = hours + ":";
+        //}
+        //else { hoursDisplay.text = "0" + hours + ":"; }
+
+        //if (minutes > 9)
+        //{
+        //    minutesDisplay.text = minutes.ToString();
+        //}
+        //else { minutesDisplay.text = "0" + minutes.ToString(); }
+
+        //if (seconds >= 60)
+        //{
+        //    minutes++;
+        //    seconds = 0;
+        //}
+        //if (minutes >= 60)
+        //{
+        //    hours++;
+        //    minutes = 0;
+        //}
+        //if (hours >= 24)
+        //{
+        //    hours = 0;
+        //}
 
         digitalClockObject.seconds = seconds;
         digitalClockObject.minutes = minutes;
@@ -130,10 +140,5 @@ public class DigitalClockScript : MonoBehaviour
             timeChangeAmount = minutes;
             changingTime = true;
         }
-    }
-
-    public void SetTime(float hours, float minutes)
-    {
-
     }
 }

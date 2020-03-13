@@ -8,6 +8,18 @@ public class ExitPrompt : MonoBehaviour
     public Button yes;
     public Button no;
 
+    private void Start()
+    {
+        if(yes != null)
+        {
+            yes.onClick.AddListener(Yes);
+        }
+        if(no != null)
+        {
+            no.onClick.AddListener(No);
+        }
+    }
+
     public void Yes()
     {
         Application.Quit();

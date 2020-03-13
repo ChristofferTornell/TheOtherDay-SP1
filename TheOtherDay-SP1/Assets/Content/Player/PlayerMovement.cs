@@ -35,10 +35,10 @@ public class PlayerMovement : MonoBehaviour
 
     private float originalMovementSpeed;
     [Space]
-    [FMODUnity.EventRef] public string footStepEvent;
-    FMOD.Studio.EventInstance footStepInstance;
+    //[FMODUnity.EventRef] public string footStepEvent;
+    //FMOD.Studio.EventInstance footStepInstance;
     private bool footStepInstanceActive;
-    [FMODUnity.ParamRef] public string footStepParameter;
+    public AnimationSound animationSound;
 
     void Awake()
     {
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
         originalMovementSpeed = movementSpeed;
 
-        footStepInstance = FMODUnity.RuntimeManager.CreateInstance(footStepEvent);
+        //footStepInstance = FMODUnity.RuntimeManager.CreateInstance(footStepEvent);
 
         rb = GetComponent<Rigidbody2D>();
         if (horizontalAxis.Length == 0) { Debug.LogError("The horizontalAxis string is empty"); }
@@ -92,10 +92,10 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("New Position: " + newPosition);
             transform.position = newPosition;
         }
-        footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        
         MusicPlayer musicPlayer = FindObjectOfType<MusicPlayer>();
         float _sceneIndex = musicPlayer.sceneData.footstepIndex;
-        //footStepInstance.setParameterByName(footStepParameter, _sceneIndex); //SOUND IMPLEMENTATION
+        animationSound.footstepIndex = _sceneIndex;
 
     }
 
@@ -132,24 +132,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("walking", true);
             animator.SetInteger("direction", 0);
         }
-
-        if (rb.velocity == Vector2.zero)
-        {
-            if (footStepInstanceActive)
-            {
-                footStepInstanceActive = false;
-                footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            }
-        }
-        else
-        {
-            if (!footStepInstanceActive)
-            {
-                footStepInstanceActive = true;
-                footStepInstance.start();
-
-            }
-        }
     }
 
     private void Update()
@@ -184,11 +166,12 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 rb.velocity = Vector2.zero;
+
                 if (footStepInstanceActive)
                 {
                     footStepInstanceActive = false;
 
-                    footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    //footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 }
             }
         }
@@ -199,7 +182,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 footStepInstanceActive = false;
 
-                footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                //footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
     }

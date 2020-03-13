@@ -150,6 +150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rileyVomitSound: event:/Sounds/UI/SoundsUIInventoryPickUp
+  rileyFootstepSound: event:/Sounds/Riley/SoundsRileyFootsteps
+  footStepParameter: 
+  footstepIndex: 0
 --- !u!1 &7533981237017971076
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,8 +216,7 @@ MonoBehaviour:
   horizontalAxis: Horizontal
   movementSpeed: 450
   sprintingSpeed: 1000
-  footStepEvent: event:/Sounds/Riley/SoundsRileyFootsteps
-  footStepParameter: 
+  animationSound: {fileID: 0}
 --- !u!114 &8567838526866476067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   savePlayerPosition: 0
-  changeCursorOnHover: 1
+  changeCursorOnHover: 0
   isInteractableWithSpace: 0
   hideOnStart: 0
   unlockedOnStage: 0
@@ -349,7 +351,7 @@ MonoBehaviour:
   lockedData: {fileID: 0}
   lockedDialogue: {fileID: 0}
   charIndex: 0
-  hoverCursor: 2
+  hoverCursor: 0
   interactSoundEvent: 
   onInteract:
     m_PersistentCalls:
@@ -444,10 +446,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 450}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

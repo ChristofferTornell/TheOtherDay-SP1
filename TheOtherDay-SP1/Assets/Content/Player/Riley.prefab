@@ -150,6 +150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rileyVomitSound: event:/Sounds/UI/SoundsUIInventoryPickUp
+  rileyFootstepSound: event:/Sounds/Riley/SoundsRileyFootsteps
+  footStepParameter: 
+  footstepIndex: 0
 --- !u!1 &7533981237017971076
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,8 +216,7 @@ MonoBehaviour:
   horizontalAxis: Horizontal
   movementSpeed: 450
   sprintingSpeed: 1000
-  footStepEvent: event:/Sounds/Riley/SoundsRileyFootsteps
-  footStepParameter: 
+  animationSound: {fileID: 0}
 --- !u!114 &8567838526866476067
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -42,6 +42,9 @@ public class Phone : MonoBehaviour
 
     private void Start()
     {
+        PlayerMovement.playerInstance.animator.SetBool("phone", false);
+        PlayerMovement.playerMovementLocked = false;
+    
         SettingsButton.onClick.AddListener(delegate { EnableSettings(true); });
         MessageButton.onClick.AddListener(delegate { EnableMessage(true); });
         LogButton.onClick.AddListener(delegate { EnableLog(true); });
@@ -112,7 +115,7 @@ public class Phone : MonoBehaviour
         //PullDownButton.gameObject.SetActive(true);
         if (HotelEvents.instance != null && !hasOpenedPhone)
         {
-            HotelEvents.instance.CheckEvent(2);
+            HotelEvents.instance.CheckEvent(10);
             hasOpenedPhone = true;
         }
         PullUpButton.gameObject.SetActive(false);

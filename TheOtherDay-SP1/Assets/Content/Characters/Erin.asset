@@ -47,7 +47,7 @@ MonoBehaviour:
       type: 2}
     dialogueFlashbackSpoken: {fileID: 11400000, guid: f4899d88093548841a31afab87b549ba,
       type: 2}
-    hasSpokenFlashback: 1
+    hasSpokenFlashback: 0
   - dialogue: {fileID: 0}
     dialogueSpoken: {fileID: 0}
     hasSpoken: 0
@@ -71,8 +71,10 @@ MonoBehaviour:
   - dialogue: {fileID: 0}
     dialogueSpoken: {fileID: 0}
     hasSpoken: 0
-    dialogueFlashback: {fileID: 0}
-    dialogueFlashbackSpoken: {fileID: 0}
+    dialogueFlashback: {fileID: 11400000, guid: d8681ddf967f86f4292162bde5b37cc4,
+      type: 2}
+    dialogueFlashbackSpoken: {fileID: 11400000, guid: d8681ddf967f86f4292162bde5b37cc4,
+      type: 2}
     hasSpokenFlashback: 0
   sms:
   - "Hey, Riles. Still sleeping, huh?\r\nI suppose you went at it pretty hard last

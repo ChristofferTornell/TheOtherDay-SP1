@@ -16,7 +16,7 @@ public class HotelEvents : SceneEvents
         {
             //show screen
         }
-        else if (eventIndex == 2 && !event2Cleared)
+        else if (eventIndex == 10 && !event2Cleared)
         {
             DialogueManager.instance.EnterDialogue(openPhoneDialogue);
             event2Cleared = true;
@@ -27,9 +27,20 @@ public class HotelEvents : SceneEvents
         }
         else if (eventIndex == 4)
         {
-            DialogueManager.instance.EnterDialogue(closePhoneDialogue);
+            if (hasViewedErinConvo)
+            {
+                DialogueManager.instance.EnterDialogue(closePhoneDialogue);
+                hotelDoor.lockedByEvent = false;
+            }
+        }
+    }
+    public override void CustomStart()
+    {
+        Debug.Log("check visisted");
+        if (sceneData.hasVisited)
+        {
+            Debug.Log("has visisted");
             hotelDoor.lockedByEvent = false;
         }
     }
-
 }

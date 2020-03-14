@@ -26,6 +26,7 @@ public class FlashbackClubEvents : SceneEvents
         if (eventIndex == 3)
         {
             Debug.Log("Play Riley puking animation");
+            playerAnimator = FindObjectOfType<PlayerMovement>().animator;
             playerAnimator.Play(pukingAnimation.name);
             pukeTrigger = true;
             GameController.pause = true;

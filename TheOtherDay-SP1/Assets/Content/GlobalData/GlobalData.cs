@@ -35,6 +35,7 @@ public class GlobalData : MonoBehaviour
         }
         foreach(CharacterData cData in charaters)
         {
+            cData.isDrunk = false;
             foreach (DialogueContainer dContainer in cData.dialogues)
             {
                 dContainer.hasSpoken = false;

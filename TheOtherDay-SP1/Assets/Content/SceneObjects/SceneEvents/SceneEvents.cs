@@ -5,7 +5,7 @@ using UnityEngine;
 public class SceneEvents : MonoBehaviour
 {
     public int sceneDataIndex;
-    private SceneData sceneData;
+    protected SceneData sceneData;
     public static SceneEvents instance;
 
     public GameObject objectAppear;
@@ -26,6 +26,7 @@ public class SceneEvents : MonoBehaviour
     void Start()
     {
         sceneData = GlobalData.instance.sceneDataList[sceneDataIndex];
+        CustomStart();
         if (sceneData.hasVisited)
         {
             return;
@@ -58,5 +59,9 @@ public class SceneEvents : MonoBehaviour
     void OnDestroy()
     {
         sceneData.hasVisited = true;
+    }
+    public virtual void CustomStart()
+    {
+
     }
 }

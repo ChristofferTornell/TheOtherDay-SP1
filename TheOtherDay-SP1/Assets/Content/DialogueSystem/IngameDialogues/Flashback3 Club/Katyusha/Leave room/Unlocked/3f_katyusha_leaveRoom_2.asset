@@ -22,10 +22,10 @@ MonoBehaviour:
   - text: I promise.
     typeDelay: 0.01
     messageSound: 
-  nextDialogue: {fileID: 11400000, guid: 4779ced97f7e9104582b94797715b6ec, type: 2}
-  triggerScene: 
+  nextDialogue: {fileID: 0}
+  triggerScene: ClubFoyerPresent
   enterFlashback: 0
-  exitFlashback: 0
+  exitFlashback: 1
   item: {fileID: 0}
   flashbackEvent: 5
   TimeLimitSeconds: 0

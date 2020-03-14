@@ -47,12 +47,12 @@ public class Interactable : MonoBehaviour
         {
             if (!Inventory.instance.INV_FindItem(requiredItem))
             {
-                if(lockedData != null)
+                if (lockedData != null)
                 {
                     DescriptionUI.instance.ExamineItem(lockedData);
                     return;
                 }
-                if(lockedDialogue != null)
+                if (lockedDialogue != null)
                 {
                     DialogueManager.instance.EnterDialogue(lockedDialogue);
                     return;
@@ -78,12 +78,15 @@ public class Interactable : MonoBehaviour
         {
             PuzzleMouse.overInteractable = true;
 
-            if (!PuzzleMouse.itemOnMouse)
+            if (changeCursorOnHover)
             {
-                PuzzleMouse.hoverText.text = gameObject.name;
-            }
+                if (!PuzzleMouse.itemOnMouse)
+                {
+                    PuzzleMouse.hoverText.text = gameObject.name;
+                }
 
-            if (changeCursorOnHover) { gameController.ChangeCursor(hoverCursor); }
+                gameController.ChangeCursor(hoverCursor);
+            }
         }
 
         // Play highlight effects on the object

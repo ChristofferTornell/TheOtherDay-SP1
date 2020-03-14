@@ -2,17 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlashbackPizzeriaEvents : MonoBehaviour
+public class FlashbackPizzeriaEvents : SceneEvents
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string goodEndingScene;
+    public string weirdEndingScene;
 
-    // Update is called once per frame
-    void Update()
+    public override void PlayEvent(int eventIndex)
     {
-        
+        if (eventIndex == 1)
+        {
+            //Riley drop ring animation
+        }
+        if (eventIndex == 2)
+        {
+          
+            if (GlobalData.instance.reputation < 0)
+            {
+                SceneChanger.instance.ChangeScene(weirdEndingScene);
+            }
+            else
+            {
+                SceneChanger.instance.ChangeScene(goodEndingScene);
+            }
+            
+        }
     }
 }

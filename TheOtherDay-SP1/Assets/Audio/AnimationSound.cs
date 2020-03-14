@@ -9,14 +9,13 @@ public class AnimationSound : MonoBehaviour
 
     public void PlayFootstepSound()
     {
-        Debug.Log("footstep sound");
-        //FMOD.Studio.EventInstance footStepInstance = FMODUnity.RuntimeManager.CreateInstance(rileyFootstepSound);
-        //footStepInstance.setParameterByName(footStepParameter, footstepIndex);
-        //footStepInstance.start();
+        FMOD.Studio.EventInstance footStepInstance = FMODUnity.RuntimeManager.CreateInstance(rileyFootstepSound);
+        footStepInstance.setParameterByName(footStepParameter, footstepIndex);
+        footStepInstance.start();
     }
     public void PlayVomitSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(rileyVomitSound);
+        //FMODUnity.RuntimeManager.PlayOneShot(rileyVomitSound);
     }
 }
 

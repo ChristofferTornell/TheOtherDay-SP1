@@ -58,7 +58,6 @@ public class DialogueBox : MonoBehaviour
 
     public void GoToNextDialogue()
     {
-        Debug.Log("going to next dialogue");
         DialogueManager.instance.currentDialogue = currentDialogue.nextDialogue;
         DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
     }

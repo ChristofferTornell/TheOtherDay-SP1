@@ -12,7 +12,7 @@ public class ConversationButton : MonoBehaviour
         myButton.onClick.AddListener(GoToMessages);
     }
 
-    private void GoToMessages()
+    public void GoToMessages()
     {
         if (HotelEvents.instance != null)
         {

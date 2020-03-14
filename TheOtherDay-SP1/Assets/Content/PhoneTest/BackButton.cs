@@ -98,7 +98,7 @@ public class BackButton : MonoBehaviour
             phone.ani.Play("Down");
         }
         phone.Page = -1;
-        phone.Pulled = false;
+        Phone.Pulled = false;
         PlayerMovement.playerInstance.animator.SetBool("phone", false); // Riley lägger ner telefonen
         PlayerMovement.playerMovementLocked = false; // Och kan röra sig igen
         if (HotelEvents.instance != null && !hasClosedPhone)
@@ -188,7 +188,7 @@ public class BackButton : MonoBehaviour
 
     private void Update()
     {
-        if (phone.Pulled)
+        if (Phone.Pulled)
         {
             _OutsideButton.gameObject.SetActive(true);
         }

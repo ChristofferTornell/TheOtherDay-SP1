@@ -8,7 +8,7 @@ public class Phone : MonoBehaviour
 
 
     public Dialogue appFlashbackLockedDialogue;
-    [HideInInspector]public bool Pulled = false;
+    [HideInInspector]public static bool Pulled = false;
     private float PressingDelta = 0.6f;
     private float PressingTime = 0;
     public float PullSpeed = 40;

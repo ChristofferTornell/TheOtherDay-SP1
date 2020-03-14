@@ -74,7 +74,7 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (!DialogueManager.dialogueActive)
+        if (!DialogueManager.dialogueActive && !Phone.Pulled)
         {
             PuzzleMouse.overInteractable = true;
 
@@ -102,7 +102,7 @@ public class Interactable : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log("Pressed on interactable");
-        if (!DialogueManager.dialogueActive)
+        if (!DialogueManager.dialogueActive && !Phone.Pulled)
         {
             onMouseInteract.Invoke();
         }

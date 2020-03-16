@@ -36,7 +36,7 @@ public class FlashbackClubEvents : SceneEvents
             Debug.Log("Unlock door");
             door.lockedByEvent = false;
         }
-        if(eventIndex == 5)
+        if (eventIndex == 5)
         {
             Debug.Log("Make riley sober");
             GlobalData.instance.charaters[rileyCharIndex].isDrunk = false;

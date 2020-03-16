@@ -108,6 +108,7 @@ public class SceneChanger : MonoBehaviour
         Debug.Log("Interactable - Returning to present: " + sceneName);
         FMODUnity.RuntimeManager.PlayOneShot(exitFlashbackSound);
         GlobalData.instance.stage++;
+        Notes.instance.ProgressToNextEntry();
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }

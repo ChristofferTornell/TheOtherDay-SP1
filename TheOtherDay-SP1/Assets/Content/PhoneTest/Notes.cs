@@ -33,10 +33,12 @@ public class Notes : MonoBehaviour
             GlobalData.instance.logEntries[i].textObj = textObjects[i];
         }
     }
+
     void InitializeLog()
     {
         for (int i = 0; i < GlobalData.instance.logEntries.Length; i++)
         {
+            GlobalData.instance.logEntries[i].textObj.text = GlobalData.instance.logEntries[i].message;
             GlobalData.instance.logEntries[i].index = i;
             if (i == 0)
             {
@@ -48,7 +50,7 @@ public class Notes : MonoBehaviour
             }
         }
     }
-
+    
     public void ProgressToNextEntry()
     {
         GlobalData.instance.logStage++;

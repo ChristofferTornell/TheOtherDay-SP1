@@ -23,35 +23,50 @@ public class FlashbackTransitionClock : MonoBehaviour
     public Image hour2Display = null;
 
     [Header("Digital number images")]
-    public Image dn0 = null;
-    public Image dn1 = null;
-    public Image dn2 = null;
-    public Image dn3 = null;
-    public Image dn4 = null;
-    public Image dn5 = null;
-    public Image dn6 = null;
-    public Image dn7 = null;
-    public Image dn8 = null;
-    public Image dn9 = null;
+    public Sprite dn0 = null;
+    public Sprite dn1 = null;
+    public Sprite dn2 = null;
+    public Sprite dn3 = null;
+    public Sprite dn4 = null;
+    public Sprite dn5 = null;
+    public Sprite dn6 = null;
+    public Sprite dn7 = null;
+    public Sprite dn8 = null;
+    public Sprite dn9 = null;
 
-    public IEnumerator FlashbackTimeChange()
+    private float timeMeasure = 0;
+    private bool changingTime = false;
+
+    private void Start()
     {
+        minute1Display.sprite = NumberToImage(minute1);
+        minute2Display.sprite = NumberToImage(minute2);
+        hour1Display.sprite = NumberToImage(hour1);
+        hour2Display.sprite = NumberToImage(hour2);
 
-        // Pause scene change
-        // A time parameter the clock should rapidly change to
-        // When the last few numbers are close, slow down the ticking for extra juice
-        // Player sound effects
-        // When done, resume scene change
+        StartCoroutine(FlashbackTimeChange(false, 3));
+    }
 
-        // Accelerate ticking speed on start
-        // Deccelerate when closing in on target
+    public IEnumerator FlashbackTimeChange(bool backInTime, float changeInHours)
+    {
+        float speed = 1;
+        float max = changeInHours * 60f;
+
+        this.backInTime = backInTime;
+
+        while (timeMeasure < max - 1)
+        {
+            timeMeasure += Time.deltaTime * speed;
+            minute1 += Time.deltaTime * speed;
+            minute1Display.sprite = NumberToImage(minute1);
+        }
 
         yield return null;
     }
 
-    private Image NumberToImage(float number)
+    private Sprite NumberToImage(float number)
     {
-        switch (number)
+        switch (Mathf.FloorToInt(number))
         {
             case 0:
                 return dn0;
@@ -74,56 +89,49 @@ public class FlashbackTransitionClock : MonoBehaviour
             case 9:
                 return dn9;
         }
-        Debug.LogError("That number doesn't have a corresponding image");
-        return null;
+        //Debug.LogError("That number doesn't have a corresponding image");
+        return dn0;
     }
 
     private void Update()
     {
-        // 08:00
-        // 07:59
-        // 24:00
-        // 23:59
-        // 20:00
-        // 19:59
-
         if (backInTime)
         {
             if (minute1 < 0)
             {
                 minute2--;
-                minute2Display = NumberToImage(minute2);
+                minute2Display.sprite = NumberToImage(minute2);
                 minute1 = 9;
-                minute1Display = NumberToImage(minute1);
+                minute1Display.sprite = NumberToImage(minute1);
             }
 
             if (minute2 < 0)
             {
                 hour1--;
-                hour1Display = NumberToImage(hour1);
+                hour1Display.sprite = NumberToImage(hour1);
                 minute2 = 5;
-                minute2Display = NumberToImage(minute2);
+                minute2Display.sprite = NumberToImage(minute2);
             }
 
             if (hour1 < 0)
             {
                 hour2--;
-                hour2Display = NumberToImage(hour2);
+                hour2Display.sprite = NumberToImage(hour2);
                 hour1 = 9;
-                hour1Display = NumberToImage(hour1);
+                hour1Display.sprite = NumberToImage(hour1);
 
             }
 
             if (hour2 < 0)
             {
                 hour2 = 2;
-                hour2Display = NumberToImage(hour2);
+                hour2Display.sprite = NumberToImage(hour2);
                 hour1 = 3;
-                hour1Display = NumberToImage(hour1);
+                hour1Display.sprite = NumberToImage(hour1);
                 minute2 = 5;
-                minute2Display = NumberToImage(minute2);
+                minute2Display.sprite = NumberToImage(minute2);
                 minute1 = 9;
-                minute1Display = NumberToImage(minute1);
+                minute1Display.sprite = NumberToImage(minute1);
             }
         }
 
@@ -133,42 +141,42 @@ public class FlashbackTransitionClock : MonoBehaviour
             if (minute2 == 6 && minute1 > 0)
             {
                 minute1 = 0;
-                minute1Display = NumberToImage(minute1);
+                minute1Display.sprite = NumberToImage(minute1);
                 minute2 = 0;
-                minute2Display = NumberToImage(minute2);
+                minute2Display.sprite = NumberToImage(minute2);
                 hour1++;
             }
 
             if (minute1 > 9)
             {
                 minute2++;
-                minute2Display = NumberToImage(minute2);
+                minute2Display.sprite = NumberToImage(minute2);
                 minute1 = 0;
-                minute1Display = NumberToImage(minute1);
+                minute1Display.sprite = NumberToImage(minute1);
             }
 
-            if (minute2 > 9)
+            if (minute2 > 5)
             {
                 hour1++;
-                hour1Display = NumberToImage(hour1);
+                hour1Display.sprite = NumberToImage(hour1);
                 minute2 = 0;
-                minute2Display = NumberToImage(minute2);
+                minute2Display.sprite = NumberToImage(minute2);
             }
 
-            if (hour2 == 2 && hour1 > 4)
+            if (hour2 == 2 && hour1 == 4)
             {
                 hour1 = 0;
-                hour1Display = NumberToImage(hour1);
+                hour1Display.sprite = NumberToImage(hour1);
                 hour2 = 0;
-                hour2Display = NumberToImage(hour2);
+                hour2Display.sprite = NumberToImage(hour2);
             }
 
             if (hour1 > 9)
             {
                 hour2++;
-                hour2Display = NumberToImage(hour2);
+                hour2Display.sprite = NumberToImage(hour2);
                 hour1 = 0;
-                hour1Display = NumberToImage(hour1);
+                hour1Display.sprite = NumberToImage(hour1);
             }
         }
     }

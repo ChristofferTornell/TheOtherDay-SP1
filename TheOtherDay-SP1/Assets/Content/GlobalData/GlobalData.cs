@@ -9,6 +9,8 @@ public class GlobalData : MonoBehaviour
     public bool flashBack;
     public SceneData[] sceneDataList;
     public CharacterData[] charaters;
+    public int logStage = -1;
+    public LogEntry[] logEntries;
     public int reputation = 0;
 
     private void Awake()
@@ -30,7 +32,6 @@ public class GlobalData : MonoBehaviour
             if (sData != null)
             {
                 sData.hasVisited = false;
-
             }
         }
         foreach(CharacterData cData in charaters)
@@ -41,6 +42,11 @@ public class GlobalData : MonoBehaviour
                 dContainer.hasSpoken = false;
                 dContainer.hasSpokenFlashback = false;
             }
+        }
+        foreach (LogEntry lEntry in logEntries)
+        {
+            lEntry.visible = false;
+            lEntry.complete = false;
         }
     }
 }

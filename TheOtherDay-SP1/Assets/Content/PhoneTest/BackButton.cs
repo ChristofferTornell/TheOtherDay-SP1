@@ -11,6 +11,7 @@ public class BackButton : MonoBehaviour
     public Button _BackButton;
     public Button _OutsideButton;
     public List<GameObject> MessageMenus;
+    public GameObject GennyMessageSquare;
     public GameObject LogMenu;
     private GameObject[] MessageBubbles;
     public GameObject SettingsMenu;
@@ -58,9 +59,11 @@ public class BackButton : MonoBehaviour
             SettingsMenu.SetActive(false);
         }
         phone.Page = -1;
+        GennyMessageSquare.SetActive(true);
     }
 
     private bool hasClosedPhone = false;
+
     private void OutsideButton()
     {
         if (DialogueManager.dialogueActive)
@@ -98,6 +101,7 @@ public class BackButton : MonoBehaviour
             phone.ani.Play("Down");
         }
         phone.Page = -1;
+        GennyMessageSquare.SetActive(true);
         Phone.Pulled = false;
         PlayerMovement.playerInstance.animator.SetBool("phone", false); // Riley lägger ner telefonen
         PlayerMovement.playerMovementLocked = false; // Och kan röra sig igen
@@ -146,6 +150,7 @@ public class BackButton : MonoBehaviour
     
     private void BackbuttonFunc()
     {
+        GennyMessageSquare.SetActive(true);
         if (DialogueManager.dialogueActive)
         {
             return;
@@ -195,6 +200,11 @@ public class BackButton : MonoBehaviour
         else
         {
             _OutsideButton.gameObject.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OutsideButton();
         }
     }
 }

@@ -9,7 +9,7 @@ public class GlobalData : MonoBehaviour
     public bool flashBack;
     public SceneData[] sceneDataList;
     public CharacterData[] charaters;
-    public int logStage = -1;
+    public int logStage = -2;
     public LogEntry[] logEntries;
     public int reputation = 0;
 

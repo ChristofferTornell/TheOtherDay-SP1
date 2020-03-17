@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Notes : MonoBehaviour
 {
     public static Notes instance = null;
     public TextMeshProUGUI[] textObjects;
+    public GameObject page1Entries;
+    public GameObject page2Entries;
+    public Button forwardButton;
+    public Button backButton;
 
     private void Awake()
     {
@@ -38,10 +43,11 @@ public class Notes : MonoBehaviour
     {
         for (int i = 0; i < GlobalData.instance.logEntries.Length; i++)
         {
-            GlobalData.instance.logEntries[i].textObj.text = GlobalData.instance.logEntries[i].message;
+            GlobalData.instance.logEntries[i].textObj.text = "* " + GlobalData.instance.logEntries[i].message;
             GlobalData.instance.logEntries[i].index = i;
             if (i == 0)
             {
+                Debug.Log("showing first entry");
                 ShowEntry(GlobalData.instance.logEntries[i]);
             }
             if (GlobalData.instance.logEntries[i].complete)
@@ -54,7 +60,7 @@ public class Notes : MonoBehaviour
     public void ProgressToNextEntry()
     {
         GlobalData.instance.logStage++;
-        if (GlobalData.instance.logStage < GlobalData.instance.logEntries.Length)
+        if (GlobalData.instance.logStage < GlobalData.instance.logEntries.Length && GlobalData.instance.logStage >= 0)
         {
             EntryComplete(GlobalData.instance.logEntries[GlobalData.instance.logStage]);
         }

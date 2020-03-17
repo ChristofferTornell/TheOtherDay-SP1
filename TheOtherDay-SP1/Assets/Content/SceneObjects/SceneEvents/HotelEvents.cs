@@ -10,27 +10,34 @@ public class HotelEvents : SceneEvents
 
     private bool event2Cleared = false;
 
+    private bool hasProgressed = false;
     public override void PlayEvent(int eventIndex)
     {
         if (eventIndex == 1)
         {
             //show screen
         }
+
         else if (eventIndex == 10 && !event2Cleared)
         {
             DialogueManager.instance.EnterDialogue(openPhoneDialogue);
             event2Cleared = true;
         }
-        else if (eventIndex == 3)
+        else if (eventIndex == 11)
         {
-            hasViewedErinConvo = true;
-        }
-        else if (eventIndex == 4)
-        {
-            if (hasViewedErinConvo)
+            if (hasViewedErinConvo && !hasProgressed)
             {
+                hasProgressed = true;
                 DialogueManager.instance.EnterDialogue(closePhoneDialogue);
                 hotelDoor.lockedByEvent = false;
+            }
+        }
+        else if (eventIndex == 12)
+        {
+            if (!hasViewedErinConvo)
+            {
+                Notes.instance.ProgressToNextEntry();
+                hasViewedErinConvo = true;
             }
         }
     }

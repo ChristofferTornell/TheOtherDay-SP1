@@ -16,7 +16,7 @@ public class ConversationButton : MonoBehaviour
     {
         if (HotelEvents.instance != null)
         {
-            HotelEvents.instance.CheckEvent(3);
+            HotelEvents.instance.CheckEvent(12);
         }
     }
 }

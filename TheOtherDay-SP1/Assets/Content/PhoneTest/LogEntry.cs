@@ -7,8 +7,8 @@ using TMPro;
 public class LogEntry
 {
     public string message;
-    public bool complete = false;
-    public bool visible = false;
-    public int index;
-    public TextMeshProUGUI textObj;
+    [HideInInspector] public bool complete = false;
+    [HideInInspector] public bool visible = false;
+    [HideInInspector] public int index;
+    [HideInInspector] public TextMeshProUGUI textObj;
 }

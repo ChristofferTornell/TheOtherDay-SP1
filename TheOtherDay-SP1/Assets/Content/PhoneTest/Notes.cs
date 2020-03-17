@@ -44,6 +44,7 @@ public class Notes : MonoBehaviour
         for (int i = 0; i < GlobalData.instance.logEntries.Length; i++)
         {
             GlobalData.instance.logEntries[i].textObj.text = "* " + GlobalData.instance.logEntries[i].message;
+            Debug.Log(GlobalData.instance.logEntries[i].textObj.transform.localPosition);
             GlobalData.instance.logEntries[i].index = i;
             if (i == 0)
             {

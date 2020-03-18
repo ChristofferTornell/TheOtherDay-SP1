@@ -13,6 +13,7 @@ public class FlashbackTime : ScriptableObject
     public float hour1;
     public float hour2;
     [Space]
+    [Tooltip("Whether this time is during a flashback or not, which determines if the clock goes backwards or not")]
     public bool flashback = false;
 }
 
@@ -20,6 +21,7 @@ public class FlashbackTransitionClock : MonoBehaviour
 {
     public static FlashbackTransitionClock instance;
     public float speed = 50f;
+    public float duration = 3f;
     [SerializeField] private bool backInTime = false;
     [SerializeField] private float delay = 2f;
     public FlashbackTime startingTime;
@@ -54,6 +56,8 @@ public class FlashbackTransitionClock : MonoBehaviour
     private bool clockDone = false;
     private float timeDifference = 0;
 
+    float timetracker = 0;
+
     void Awake()
     {
         if (instance == null)
@@ -82,6 +86,8 @@ public class FlashbackTransitionClock : MonoBehaviour
 
     void CalculateTimeDifference()
     {
+        // Difference in virtual hours
+        // 1 IRL minute = 1 virtual hour on (speed = 1)
         float difference = (Mathf.Abs(hour2 - targetTime.hour2) * 10) + Mathf.Abs(hour1 - targetTime.hour1);
         Debug.Log("Time difference: " + difference);
         timeDifference = difference;
@@ -118,12 +124,14 @@ public class FlashbackTransitionClock : MonoBehaviour
         yield return new WaitUntil(() => clockDone);
         Debug.Log("FlashbackClock - Continuing courotine");
 
+        // The transition has a set duration. And the speed of which the clock goes should account for this.
+
         yield return null;
     }
 
     private void StartClock()
     {
-        if (!clockDone) Debug.Log("FlashbackClock - Ticking");
+        //if (!clockDone) Debug.Log("FlashbackClock - Ticking");
 
         if (!backInTime && minute1 >= targetTime.minute1 && minute2 >= targetTime.minute2 && hour1 >= targetTime.hour1 && hour2 >= targetTime.hour2)
         {
@@ -193,6 +201,8 @@ public class FlashbackTransitionClock : MonoBehaviour
             StartClock();
         }
 
+        timetracker += Time.deltaTime;
+
         // If going back in time
         if (minute1 < 0)
         {
@@ -251,6 +261,7 @@ public class FlashbackTransitionClock : MonoBehaviour
 
         if (minute2 > 5)
         {
+            Debug.Log(timetracker);
             hour1++;
             hour1Display.sprite = NumberToImage(hour1);
             minute2 = 0;

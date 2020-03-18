@@ -446,7 +446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdbf6eafceef6849b0cbdbca563a841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  speed: 50
+  duration: 3
   backInTime: 0
   delay: 2
   startingTime: {fileID: 11400000, guid: 881843c16adc57541875983daa558017, type: 2}
@@ -461,7 +462,6 @@ MonoBehaviour:
   hour1Display: {fileID: 1084997401}
   hour2Display: {fileID: 903070637}
   dn0: {fileID: 21300000, guid: ad52fcd7ce965094bada10b846d3ef45, type: 3}
-  dn1: {fileID: 21300000, guid: c053732c4708c5244a1ffaf5aec2173c, type: 3}
   dn2: {fileID: 21300000, guid: 80ce5a8f79e7b7742b7fa7bada8c7f77, type: 3}
   dn3: {fileID: 21300000, guid: 0d88e84f0c9e7cd41b04e471c5754bc9, type: 3}
   dn4: {fileID: 21300000, guid: a1dab7a637ad059429f41299b6090935, type: 3}
@@ -469,6 +469,7 @@ MonoBehaviour:
   dn6: {fileID: 21300000, guid: 1fec153a4e4ae8047ba5d30386354b87, type: 3}
   dn7: {fileID: 21300000, guid: c3749aa93652330428558cd78ceb5976, type: 3}
   dn8: {fileID: 21300000, guid: 86f9ee6e976eceb4eb8ce899ba9dc8a3, type: 3}
+  dn1: {fileID: 21300000, guid: c053732c4708c5244a1ffaf5aec2173c, type: 3}
   dn9: {fileID: 21300000, guid: 13efcf0aa5fe4a34a9e79f2367346ab2, type: 3}
 --- !u!1001 &572917715
 PrefabInstance:

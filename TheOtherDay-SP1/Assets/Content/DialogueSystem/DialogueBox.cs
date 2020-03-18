@@ -28,6 +28,7 @@ public class DialogueBox : MonoBehaviour
     private List<GameObject> choiceButtons = new List<GameObject>();
     [SerializeField] private string interactionButton = "Interact Button";
 
+    public float universalTypeDelayMultiplier = 1;
     private float typeSoundCounter;
     public float typeSoundDelay = 0.1f;
     private bool typeSoundReady;
@@ -142,7 +143,7 @@ public class DialogueBox : MonoBehaviour
                     typeSoundReady = false;
                 }
 
-                yield return new WaitForSeconds(_message.typeDelay);
+                yield return new WaitForSeconds(_message.typeDelay * universalTypeDelayMultiplier);
             }
         }
         if (currentDialogue.nextDialogue == null)

@@ -35,7 +35,7 @@ public class SceneEvents : MonoBehaviour
         {
             objectAppear.SetActive(false);
         }
-        Invoke("InitDialogue", dialogueDelay);
+        Invoke("InitDialogue", dialogueDelay * 0);
     }
     void InitDialogue()
     {

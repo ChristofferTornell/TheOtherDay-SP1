@@ -44,9 +44,12 @@ public class DialogueManager : MonoBehaviour
         }
         dialogueBoxUI.gameObject.SetActive(false);
         //phone.SetActive(true);
-        PlayerMovement.playerMovementLocked = false;
-        
-        if(PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().interactables.Count > 0)
+        if (!Phone.Pulled)
+        {
+            PlayerMovement.playerMovementLocked = false;
+        }
+
+        if (PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().interactables.Count > 0)
         {
             PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().interactUI.SetActive(true);
         }

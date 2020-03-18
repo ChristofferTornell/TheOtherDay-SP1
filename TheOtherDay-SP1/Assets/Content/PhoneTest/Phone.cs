@@ -26,6 +26,7 @@ public class Phone : MonoBehaviour
     //public Button PullDownButton;
 
     public Animator ani;
+    public BackButton bb;
 
     [HideInInspector] public int Page = -1;
 
@@ -168,6 +169,15 @@ public class Phone : MonoBehaviour
         else
         {
             PullUpButton.gameObject.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && Pulled)
+        {
+            bb.OutsideButton();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && !Pulled)
+        {
+            PullUp();
         }
     }
 }

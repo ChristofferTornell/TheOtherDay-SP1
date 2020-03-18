@@ -12,44 +12,47 @@ public class FlashbackTime : ScriptableObject
     public float minute2;
     public float hour1;
     public float hour2;
+    [Space]
+    public bool flashback = false;
 }
 
 public class FlashbackTransitionClock : MonoBehaviour
 {
+    public static FlashbackTransitionClock instance;
     public float speed = 50f;
-    public bool backInTime = false;
-    public float delay = 2f;
+    [SerializeField] private bool backInTime = false;
+    [SerializeField] private float delay = 2f;
     public FlashbackTime startingTime;
     public FlashbackTime targetTime;
 
     [Header("Time")]
-    public float minute1;
-    public float minute2;
-    public float hour1;
-    public float hour2;
+    [SerializeField] private float minute1;
+    [SerializeField] private float minute2;
+    [SerializeField] private float hour1;
+    [SerializeField] private float hour2;
 
     [Header("Display")]
-    public Image minute1Display = null;
-    public Image minute2Display = null;
-    public Image dividerDisplay = null;
-    public Image hour1Display = null;
-    public Image hour2Display = null;
+    [SerializeField] private Image minute1Display = null;
+    [SerializeField] private Image minute2Display = null;
+    [SerializeField] private Image dividerDisplay = null;
+    [SerializeField] private Image hour1Display = null;
+    [SerializeField] private Image hour2Display = null;
 
     [Header("Digital number images")]
-    public Sprite dn0 = null;
-    public Sprite dn1 = null;
-    public Sprite dn2 = null;
-    public Sprite dn3 = null;
-    public Sprite dn4 = null;
-    public Sprite dn5 = null;
-    public Sprite dn6 = null;
-    public Sprite dn7 = null;
-    public Sprite dn8 = null;
-    public Sprite dn9 = null;
+    [SerializeField] private Sprite dn0 = null;
+    [SerializeField] private Sprite dn2 = null;
+    [SerializeField] private Sprite dn3 = null;
+    [SerializeField] private Sprite dn4 = null;
+    [SerializeField] private Sprite dn5 = null;
+    [SerializeField] private Sprite dn6 = null;
+    [SerializeField] private Sprite dn7 = null;
+    [SerializeField] private Sprite dn8 = null;
+    [SerializeField] private Sprite dn1 = null;
+    [SerializeField] private Sprite dn9 = null;
 
-    public static FlashbackTransitionClock instance;
-    private bool done = false;
     private bool startClock = false;
+    private bool clockDone = false;
+    private float timeDifference = 0;
 
     void Awake()
     {
@@ -66,13 +69,24 @@ public class FlashbackTransitionClock : MonoBehaviour
 
     private void Start()
     {
+        minute1 = startingTime.minute1;
+        minute2 = startingTime.minute2;
+        hour1 = startingTime.hour1;
+        hour2 = startingTime.hour2;
+
         minute1Display.sprite = NumberToImage(minute1);
         minute2Display.sprite = NumberToImage(minute2);
         hour1Display.sprite = NumberToImage(hour1);
         hour2Display.sprite = NumberToImage(hour2);
-
-        //StartCoroutine(FlashbackTimeChange(false, 3));
     }
+
+    void CalculateTimeDifference()
+    {
+        float difference = (Mathf.Abs(hour2 - targetTime.hour2) * 10) + Mathf.Abs(hour1 - targetTime.hour1);
+        Debug.Log("Time difference: " + difference);
+        timeDifference = difference;
+    }
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -91,7 +105,7 @@ public class FlashbackTransitionClock : MonoBehaviour
     public IEnumerator FlashbackTimeChange(FlashbackTime targetTime)
     {
         Debug.Log("FlashbackClock - Starting courotine");
-        if (startingTime.hour1 > targetTime.hour1 && startingTime.hour2 > targetTime.hour2)
+        if (targetTime.flashback)
         {
             backInTime = true;
         }
@@ -101,7 +115,7 @@ public class FlashbackTransitionClock : MonoBehaviour
 
         startClock = true;
 
-        yield return new WaitUntil(() => done);
+        yield return new WaitUntil(() => clockDone);
         Debug.Log("FlashbackClock - Continuing courotine");
 
         yield return null;
@@ -109,31 +123,33 @@ public class FlashbackTransitionClock : MonoBehaviour
 
     private void StartClock()
     {
-        Debug.Log("FlashbackClock - Ticking");
-        minute1 += Time.deltaTime * speed;
-        minute1Display.sprite = NumberToImage(minute1);
-        if (!backInTime && minute1 != targetTime.minute1 && minute2 != targetTime.minute2 && hour1 != targetTime.hour1 && hour2 != targetTime.hour2)
+        if (!clockDone) Debug.Log("FlashbackClock - Ticking");
+
+        if (!backInTime && minute1 >= targetTime.minute1 && minute2 >= targetTime.minute2 && hour1 >= targetTime.hour1 && hour2 >= targetTime.hour2)
+        {
+            Debug.Log("FlashbackClock - Ticking Done");
+            clockDone = true;
+            startClock = false;
+            return;
+        }
+        else if (!backInTime)
         {
             minute1 += Time.deltaTime * speed;
             minute1Display.sprite = NumberToImage(minute1);
         }
-        else if (!backInTime && minute1 >= targetTime.minute1 && minute2 >= targetTime.minute2 && hour1 >= targetTime.hour1 && hour2 >= targetTime.hour2)
+        if (minute1 <= targetTime.minute1) { Debug.Log("test"); }
+
+        if (backInTime && minute1 <= (targetTime.minute1 + 1) && minute2 <= targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
         {
-            done = true;
+            Debug.Log("FlashbackClock - Ticking Done");
+            clockDone = true;
             startClock = false;
             return;
         }
-
-        if (backInTime && minute1 != targetTime.minute1 && minute2 != targetTime.minute2 && hour1 != targetTime.hour1 && hour2 != targetTime.hour2)
+        else if (backInTime)
         {
             minute1 -= Time.deltaTime * speed;
             minute1Display.sprite = NumberToImage(minute1);
-        }
-        else if(backInTime && minute1 <= targetTime.minute1 && minute2 <= targetTime.minute2 && hour1 <= targetTime.hour1 && hour2 <= targetTime.hour2)
-        {
-            done = true;
-            startClock = false;
-            return;
         }
     }
 
@@ -162,7 +178,6 @@ public class FlashbackTransitionClock : MonoBehaviour
             case 9:
                 return dn9;
         }
-        //Debug.LogError("That number doesn't have a corresponding image");
         return dn0;
     }
 
@@ -177,9 +192,6 @@ public class FlashbackTransitionClock : MonoBehaviour
         {
             StartClock();
         }
-
-        //minute1 -= Time.deltaTime * speed;
-        //minute1Display.sprite = NumberToImage(minute1);
 
         // If going back in time
         if (minute1 < 0)

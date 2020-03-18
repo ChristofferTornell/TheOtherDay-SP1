@@ -215,9 +215,9 @@ public class BackButton : MonoBehaviour
             _OutsideButton.gameObject.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && Phone.Pulled)
         {
-            OutsideButton();
+            //OutsideButton();
         }
     }
 }

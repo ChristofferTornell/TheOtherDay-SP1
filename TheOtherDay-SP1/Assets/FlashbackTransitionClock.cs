@@ -4,12 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+[CreateAssetMenu]
+public class FlashbackTime : ScriptableObject
+{
+    [Header("The digital time (h2 h1 : m2 m1)")]
+    public float minute1;
+    public float minute2;
+    public float hour1;
+    public float hour2;
+}
+
 public class FlashbackTransitionClock : MonoBehaviour
 {
+    public float speed = 50f;
     public bool backInTime = false;
+    public float delay = 2f;
+    public FlashbackTime startingTime;
+    public FlashbackTime targetTime;
 
     [Header("Time")]
-    [Space]
     public float minute1;
     public float minute2;
     public float hour1;
@@ -34,8 +47,22 @@ public class FlashbackTransitionClock : MonoBehaviour
     public Sprite dn8 = null;
     public Sprite dn9 = null;
 
-    private float timeMeasure = 0;
-    private bool changingTime = false;
+    public static FlashbackTransitionClock instance;
+    private bool done = false;
+    private bool startClock = false;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            DontDestroyOnLoad(this);
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
@@ -44,24 +71,70 @@ public class FlashbackTransitionClock : MonoBehaviour
         hour1Display.sprite = NumberToImage(hour1);
         hour2Display.sprite = NumberToImage(hour2);
 
-        StartCoroutine(FlashbackTimeChange(false, 3));
+        //StartCoroutine(FlashbackTimeChange(false, 3));
+    }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    public IEnumerator FlashbackTimeChange(bool backInTime, float changeInHours)
+    private void OnDisable()
     {
-        float speed = 1;
-        float max = changeInHours * 60f;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
-        this.backInTime = backInTime;
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
 
-        while (timeMeasure < max - 1)
+    }
+
+    public IEnumerator FlashbackTimeChange(FlashbackTime targetTime)
+    {
+        Debug.Log("FlashbackClock - Starting courotine");
+        if (startingTime.hour1 > targetTime.hour1 && startingTime.hour2 > targetTime.hour2)
         {
-            timeMeasure += Time.deltaTime * speed;
+            backInTime = true;
+        }
+        else { backInTime = false; }
+
+        yield return new WaitForSeconds(delay);
+
+        startClock = true;
+
+        yield return new WaitUntil(() => done);
+        Debug.Log("FlashbackClock - Continuing courotine");
+
+        yield return null;
+    }
+
+    private void StartClock()
+    {
+        Debug.Log("FlashbackClock - Ticking");
+        minute1 += Time.deltaTime * speed;
+        minute1Display.sprite = NumberToImage(minute1);
+        if (!backInTime && minute1 != targetTime.minute1 && minute2 != targetTime.minute2 && hour1 != targetTime.hour1 && hour2 != targetTime.hour2)
+        {
             minute1 += Time.deltaTime * speed;
             minute1Display.sprite = NumberToImage(minute1);
         }
+        else if (!backInTime && minute1 >= targetTime.minute1 && minute2 >= targetTime.minute2 && hour1 >= targetTime.hour1 && hour2 >= targetTime.hour2)
+        {
+            done = true;
+            startClock = false;
+            return;
+        }
 
-        yield return null;
+        if (backInTime && minute1 != targetTime.minute1 && minute2 != targetTime.minute2 && hour1 != targetTime.hour1 && hour2 != targetTime.hour2)
+        {
+            minute1 -= Time.deltaTime * speed;
+            minute1Display.sprite = NumberToImage(minute1);
+        }
+        else if(backInTime && minute1 <= targetTime.minute1 && minute2 <= targetTime.minute2 && hour1 <= targetTime.hour1 && hour2 <= targetTime.hour2)
+        {
+            done = true;
+            startClock = false;
+            return;
+        }
     }
 
     private Sprite NumberToImage(float number)
@@ -95,89 +168,97 @@ public class FlashbackTransitionClock : MonoBehaviour
 
     private void Update()
     {
-        if (backInTime)
+        if (Input.GetKeyDown(KeyCode.T))
         {
-            if (minute1 < 0)
-            {
-                minute2--;
-                minute2Display.sprite = NumberToImage(minute2);
-                minute1 = 9;
-                minute1Display.sprite = NumberToImage(minute1);
-            }
-
-            if (minute2 < 0)
-            {
-                hour1--;
-                hour1Display.sprite = NumberToImage(hour1);
-                minute2 = 5;
-                minute2Display.sprite = NumberToImage(minute2);
-            }
-
-            if (hour1 < 0)
-            {
-                hour2--;
-                hour2Display.sprite = NumberToImage(hour2);
-                hour1 = 9;
-                hour1Display.sprite = NumberToImage(hour1);
-
-            }
-
-            if (hour2 < 0)
-            {
-                hour2 = 2;
-                hour2Display.sprite = NumberToImage(hour2);
-                hour1 = 3;
-                hour1Display.sprite = NumberToImage(hour1);
-                minute2 = 5;
-                minute2Display.sprite = NumberToImage(minute2);
-                minute1 = 9;
-                minute1Display.sprite = NumberToImage(minute1);
-            }
+            StartCoroutine(FlashbackTimeChange(targetTime));
         }
 
-        // If going forward in time
-        else
+        if (startClock)
         {
-            if (minute2 == 6 && minute1 > 0)
-            {
-                minute1 = 0;
-                minute1Display.sprite = NumberToImage(minute1);
-                minute2 = 0;
-                minute2Display.sprite = NumberToImage(minute2);
-                hour1++;
-            }
+            StartClock();
+        }
 
-            if (minute1 > 9)
-            {
-                minute2++;
-                minute2Display.sprite = NumberToImage(minute2);
-                minute1 = 0;
-                minute1Display.sprite = NumberToImage(minute1);
-            }
+        //minute1 -= Time.deltaTime * speed;
+        //minute1Display.sprite = NumberToImage(minute1);
 
-            if (minute2 > 5)
-            {
-                hour1++;
-                hour1Display.sprite = NumberToImage(hour1);
-                minute2 = 0;
-                minute2Display.sprite = NumberToImage(minute2);
-            }
+        // If going back in time
+        if (minute1 < 0)
+        {
+            minute2--;
+            minute2Display.sprite = NumberToImage(minute2);
+            minute1 = 9;
+            minute1Display.sprite = NumberToImage(minute1);
+        }
 
-            if (hour2 == 2 && hour1 == 4)
-            {
-                hour1 = 0;
-                hour1Display.sprite = NumberToImage(hour1);
-                hour2 = 0;
-                hour2Display.sprite = NumberToImage(hour2);
-            }
+        if (minute2 < 0)
+        {
+            hour1--;
+            hour1Display.sprite = NumberToImage(hour1);
+            minute2 = 5;
+            minute2Display.sprite = NumberToImage(minute2);
+        }
 
-            if (hour1 > 9)
-            {
-                hour2++;
-                hour2Display.sprite = NumberToImage(hour2);
-                hour1 = 0;
-                hour1Display.sprite = NumberToImage(hour1);
-            }
+        if (hour1 < 0)
+        {
+            hour2--;
+            hour2Display.sprite = NumberToImage(hour2);
+            hour1 = 9;
+            hour1Display.sprite = NumberToImage(hour1);
+        }
+
+        if (hour2 < 0)
+        {
+            hour2 = 2;
+            hour2Display.sprite = NumberToImage(hour2);
+            hour1 = 3;
+            hour1Display.sprite = NumberToImage(hour1);
+            minute2 = 5;
+            minute2Display.sprite = NumberToImage(minute2);
+            minute1 = 9;
+            minute1Display.sprite = NumberToImage(minute1);
+        }
+
+
+        // If going forward in time
+        if (minute2 == 6 && minute1 > 0)
+        {
+            minute1 = 0;
+            minute1Display.sprite = NumberToImage(minute1);
+            minute2 = 0;
+            minute2Display.sprite = NumberToImage(minute2);
+            hour1++;
+        }
+
+        if (minute1 > 9)
+        {
+            minute2++;
+            minute2Display.sprite = NumberToImage(minute2);
+            minute1 = 0;
+            minute1Display.sprite = NumberToImage(minute1);
+        }
+
+        if (minute2 > 5)
+        {
+            hour1++;
+            hour1Display.sprite = NumberToImage(hour1);
+            minute2 = 0;
+            minute2Display.sprite = NumberToImage(minute2);
+        }
+
+        if (hour2 == 2 && hour1 == 4)
+        {
+            hour1 = 0;
+            hour1Display.sprite = NumberToImage(hour1);
+            hour2 = 0;
+            hour2Display.sprite = NumberToImage(hour2);
+        }
+
+        if (hour1 > 9)
+        {
+            hour2++;
+            hour2Display.sprite = NumberToImage(hour2);
+            hour1 = 0;
+            hour1Display.sprite = NumberToImage(hour1);
         }
     }
 }

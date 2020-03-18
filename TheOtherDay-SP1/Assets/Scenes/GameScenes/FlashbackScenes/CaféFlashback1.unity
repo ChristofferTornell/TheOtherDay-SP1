@@ -1785,6 +1785,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1203240253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 260659776512054744, guid: 7e293ced32bf0ff40bef3328881fa0fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 260659776631202196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1203240254 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 260659776512054745, guid: 7e293ced32bf0ff40bef3328881fa0fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 260659776631202196}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1203240256 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 260659776512054747, guid: 7e293ced32bf0ff40bef3328881fa0fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 260659776631202196}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1213304119
 GameObject:
   m_ObjectHideFlags: 0
@@ -3881,6 +3899,14 @@ MonoBehaviour:
   dialogueDelay: 0
   initialDialogue: {fileID: 11400000, guid: ebe2d428ac917c940afca989c8549ced, type: 2}
   hasViewedErinConvo: 0
+  erin: {fileID: 1203240253}
+  erinSpriteRenderer: {fileID: 1203240256}
+  walkingAnimation: {fileID: 7400000, guid: 3d4d61bcff4e8a041bc741ed5b41b5e4, type: 2}
+  erinAnimator: {fileID: 1203240254}
+  erinWalkSpeed: 3
+  walkingDuration: 2
+  alphaDecrease: 0.01
+  postWalkDialogue: {fileID: 11400000, guid: d11a9437c22cedb4c80a887609ca67b1, type: 2}
 --- !u!1 &2128855873
 GameObject:
   m_ObjectHideFlags: 0

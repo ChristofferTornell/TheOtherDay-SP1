@@ -62,7 +62,7 @@ public class DigitalClockScript : MonoBehaviour
 
     private void Update()
     {
-        if (!GameController.pause) { seconds += Time.deltaTime * timeFactor; }
+        if (!GameController.pause && !GlobalData.instance.flashBack) { seconds += Time.deltaTime * timeFactor; }
 
         if (hours > 9)
         {

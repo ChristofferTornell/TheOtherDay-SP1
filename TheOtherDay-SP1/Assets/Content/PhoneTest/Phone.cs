@@ -63,12 +63,20 @@ public class Phone : MonoBehaviour
     }
     void EnableSettings(bool state)
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
         Page = 2;
         SettingsPage.SetActive(state);
     }
 
     void EnableMessage(bool state)
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
         if (FlashbackChecker())
         {
             return;
@@ -81,6 +89,10 @@ public class Phone : MonoBehaviour
 
     void EnableLog(bool state)
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
         if (FlashbackChecker())
         {
             return;
@@ -92,6 +104,10 @@ public class Phone : MonoBehaviour
 
     void EnableAlbum(bool state)
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
         if (FlashbackChecker())
         {
             return;
@@ -102,6 +118,10 @@ public class Phone : MonoBehaviour
     private bool hasOpenedPhone = false;
     private void PullUp()
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
         PressingTime = 0;
         ani.Play("Up");
         Pulled = true;

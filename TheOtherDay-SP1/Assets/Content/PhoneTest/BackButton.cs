@@ -6,6 +6,7 @@ using UnityEngine.Video;
 
 public class BackButton : MonoBehaviour
 {
+    public static BackButton instance;
     public Phone phone;
     public Button _HomeButton;
     public Button _BackButton;
@@ -17,6 +18,18 @@ public class BackButton : MonoBehaviour
     public GameObject SettingsMenu;
 
     private GameObject parent;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -64,7 +77,7 @@ public class BackButton : MonoBehaviour
 
     private bool hasClosedPhone = false;
 
-    private void OutsideButton()
+    public void OutsideButton()
     {
         if (DialogueManager.dialogueActive)
         {

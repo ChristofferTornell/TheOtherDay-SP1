@@ -32,6 +32,7 @@ public class DialogueManager : MonoBehaviour
         dialogueBoxUI.InitializeDialogueUI();
         PlayerMovement.playerMovementLocked = true;
         DescriptionUI.instance.descriptionBoxObj.SetActive(false);
+        if (Phone.Pulled && !currentDialogue.ignorePhone) { BackButton.instance.OutsideButton(); };
         //phone.SetActive(false);
         dialogueActive = true;
     }

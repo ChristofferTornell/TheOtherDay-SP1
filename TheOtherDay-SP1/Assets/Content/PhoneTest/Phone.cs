@@ -118,6 +118,10 @@ public class Phone : MonoBehaviour
     private bool hasOpenedPhone = false;
     private void PullUp()
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
         PressingTime = 0;
         ani.Play("Up");
         Pulled = true;

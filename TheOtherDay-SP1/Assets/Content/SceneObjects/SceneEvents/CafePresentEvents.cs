@@ -8,6 +8,7 @@ public class CafePresentEvents : SceneEvents
     {
         if(eventIndex == 1)
         {
+            Debug.Log("talked to jason present");
             GlobalData.instance.stage++;
             Notes.instance.ProgressToNextEntry();
         }

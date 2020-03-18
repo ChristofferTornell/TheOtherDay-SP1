@@ -152,6 +152,10 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetInteger("direction", 1);
             }
         }
+        else
+        {
+            animator.SetBool("walking", false);
+        }
     }
 
     void FixedUpdate()

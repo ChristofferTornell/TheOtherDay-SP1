@@ -64,6 +64,10 @@ public class Interactable : MonoBehaviour
             DialogueManager.instance.EnterDialogue(lockedDialogue);
             return;
         }
+        if (Phone.Pulled)
+        {
+            return;
+        }
         onInteract.Invoke();
         /*
         if (OneTime) { DestroyThis(); }

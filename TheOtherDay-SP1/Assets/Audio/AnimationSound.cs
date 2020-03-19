@@ -5,7 +5,7 @@ public class AnimationSound : MonoBehaviour
     [FMODUnity.EventRef] public string rileyVomitSound;
     [FMODUnity.EventRef] public string rileyFootstepSound;
     [FMODUnity.ParamRef] public string footStepParameter;
-    [HideInInspector] public float footstepIndex = 0f;
+    [HideInInspector] public float footstepIndex = 1f;
 
     public void PlayFootstepSound()
     {

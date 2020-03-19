@@ -94,8 +94,7 @@ public class PlayerMovement : MonoBehaviour
         }
         
         MusicPlayer musicPlayer = FindObjectOfType<MusicPlayer>();
-        Debug.Log("Music player: " + musicPlayer);
-        //animationSound.footstepIndex = musicPlayer.sceneData.footstepIndex;
+        animationSound.footstepIndex = musicPlayer.sceneData.footstepIndex;
     }
 
     void PlayerInput()

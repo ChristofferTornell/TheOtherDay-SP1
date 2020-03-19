@@ -19,7 +19,6 @@ public class Flashback1events : SceneEvents
     {
         if (eventIndex == 1)
         {
-            Debug.Log("Play erin animation");
             erinAnimator.Play(walkingAnimation.name);
             erin.GetComponent<BoxCollider2D>().enabled = false;
             walkTrigger = true;

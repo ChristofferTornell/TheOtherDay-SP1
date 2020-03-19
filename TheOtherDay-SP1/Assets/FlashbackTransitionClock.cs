@@ -108,7 +108,7 @@ public class FlashbackTransitionClock : MonoBehaviour
 
     }
 
-    public IEnumerator FlashbackTimeChange(FlashbackTime targetTime)
+    public IEnumerator TRAN_FlashbackTimeChange(FlashbackTime targetTime)
     {
         Debug.Log("FlashbackClock - Starting courotine");
         if (targetTime.flashback)
@@ -193,7 +193,7 @@ public class FlashbackTransitionClock : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            StartCoroutine(FlashbackTimeChange(targetTime));
+            StartCoroutine(TRAN_FlashbackTimeChange(targetTime));
         }
 
         if (startClock)

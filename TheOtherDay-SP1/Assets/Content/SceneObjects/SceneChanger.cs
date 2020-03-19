@@ -40,7 +40,6 @@ public class SceneChanger : MonoBehaviour
         Debug.Log("Changing scene");
     }
   
-
     private IEnumerator CoChangeScene(string sceneName)
     {
         // Scene change effect(s) can be put here

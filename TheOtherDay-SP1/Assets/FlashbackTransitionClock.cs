@@ -4,26 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-[CreateAssetMenu]
-public class FlashbackTime : ScriptableObject
-{
-    [Header("The digital time (h2 h1 : m2 m1)")]
-    public float minute1;
-    public float minute2;
-    public float hour1;
-    public float hour2;
-    [Space]
-    [Tooltip("Whether this time is during a flashback or not, which determines if the clock goes backwards or not")]
-    public bool flashback = false;
-}
-
 public class FlashbackTransitionClock : MonoBehaviour
 {
     public static FlashbackTransitionClock instance;
     public float speed = 50f;
     public float duration = 3f;
     [SerializeField] private bool backInTime = false;
-    [SerializeField] private float delay = 2f;
+    [SerializeField] private float startDelay = 2f;
+    [SerializeField] private float waitTimeWhenDone = 2f;
     public FlashbackTime startingTime;
     public FlashbackTime targetTime;
     [HideInInspector] public bool done = false;
@@ -64,6 +52,8 @@ public class FlashbackTransitionClock : MonoBehaviour
 
     void Awake()
     {
+        Display(false);
+
         if (instance == null)
         {
             DontDestroyOnLoad(this);
@@ -72,6 +62,27 @@ public class FlashbackTransitionClock : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void Display(bool boolean)
+    {
+        if (boolean)
+        {
+            minute1Display.enabled = true;
+            minute2Display.enabled = true;
+            dividerDisplay.enabled = true;
+            hour1Display.enabled = true;
+            hour2Display.enabled = true;
+        }
+
+        if (!boolean)
+        {
+            minute1Display.enabled = false;
+            minute2Display.enabled = false;
+            dividerDisplay.enabled = false;
+            hour1Display.enabled = false;
+            hour2Display.enabled = false;
         }
     }
 
@@ -126,13 +137,16 @@ public class FlashbackTransitionClock : MonoBehaviour
         }
         else { backInTime = false; }
 
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(startDelay);
 
         startClock = true;
 
         yield return new WaitUntil(() => clockDone);
         Debug.Log("FlashbackClock - Continuing courotine");
 
+        // Play reverse animation
+        yield return new WaitForSeconds(waitTimeWhenDone);
+        done = true;
         // The transition has a set duration. And the speed of which the clock goes should account for this.
 
         yield return null;
@@ -142,11 +156,12 @@ public class FlashbackTransitionClock : MonoBehaviour
     {
         //if (!clockDone) Debug.Log("FlashbackClock - Ticking");
 
-        if (!backInTime && minute1 >= targetTime.minute1 && minute2 >= targetTime.minute2 && hour1 >= targetTime.hour1 && hour2 >= targetTime.hour2)
+        if (!backInTime && minute1 == targetTime.minute1 && minute2 == targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
         {
             Debug.Log("FlashbackClock - Ticking Done");
             clockDone = true;
             startClock = false;
+            startingTime = targetTime;
             return;
         }
         else if (!backInTime)
@@ -154,13 +169,13 @@ public class FlashbackTransitionClock : MonoBehaviour
             minute1 += Time.deltaTime * speed;
             minute1Display.sprite = NumberToImage(minute1);
         }
-        if (minute1 <= targetTime.minute1) { Debug.Log("test"); }
 
         if (backInTime && minute1 <= (targetTime.minute1 + 1) && minute2 <= targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
         {
             Debug.Log("FlashbackClock - Ticking Done");
             clockDone = true;
             startClock = false;
+            startingTime = targetTime;
             return;
         }
         else if (backInTime)
@@ -270,7 +285,6 @@ public class FlashbackTransitionClock : MonoBehaviour
 
         if (minute2 > 5)
         {
-            Debug.Log(timetracker);
             hour1++;
             hour1Display.sprite = NumberToImage(hour1);
             minute2 = 0;

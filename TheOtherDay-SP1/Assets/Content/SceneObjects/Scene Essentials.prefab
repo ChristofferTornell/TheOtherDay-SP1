@@ -1731,6 +1731,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9063160883304019301, guid: 245ced831aab25b48a7175440957cee1,
+        type: 3}
+      propertyPath: flashbackTimeList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063160883304019301, guid: 245ced831aab25b48a7175440957cee1,
+        type: 3}
+      propertyPath: flashbackTimeList.Array.data[0].flashbackName
+      value: "Caf\xE9Flashback"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063160883304019301, guid: 245ced831aab25b48a7175440957cee1,
+        type: 3}
+      propertyPath: flashbackTimeList.Array.data[0].flashbackTime
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ce3e9c8b56a6e3448afbb3dd0a94142,
+        type: 2}
+    - target: {fileID: 9063160883304019301, guid: 245ced831aab25b48a7175440957cee1,
+        type: 3}
+      propertyPath: flashbackTimeList.Array.data[1].flashbackName
+      value: HotelPresent
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063160883304019301, guid: 245ced831aab25b48a7175440957cee1,
+        type: 3}
+      propertyPath: flashbackTimeList.Array.data[1].flashbackTime
+      value: 
+      objectReference: {fileID: 11400000, guid: ff7fa4b872528b241b3cca88de694cdd,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 245ced831aab25b48a7175440957cee1, type: 3}
 --- !u!4 &7742616349829940400 stripped

@@ -26,12 +26,16 @@ public class FlashbackTransitionClock : MonoBehaviour
     [SerializeField] private float delay = 2f;
     public FlashbackTime startingTime;
     public FlashbackTime targetTime;
+    [HideInInspector] public bool done = false;
+
+    [Space]
+    public DigitalClockObject digitalClockObject = null;
 
     [Header("Time")]
-    [SerializeField] private float minute1;
-    [SerializeField] private float minute2;
-    [SerializeField] private float hour1;
-    [SerializeField] private float hour2;
+    public float minute1;
+    public float minute2;
+    public float hour1;
+    public float hour2;
 
     [Header("Display")]
     [SerializeField] private Image minute1Display = null;
@@ -83,36 +87,41 @@ public class FlashbackTransitionClock : MonoBehaviour
         hour1Display.sprite = NumberToImage(hour1);
         hour2Display.sprite = NumberToImage(hour2);
     }
+    public void ConvertTime(float minutes, float hours)
+    {
+        minute2 = Mathf.Floor(minutes / 10);
+        minute1 = minutes - (minute2 * 10);
+        hour2 = Mathf.Floor(hours / 10);
+        hour1 = hours - (hours * 10);
+
+        // Divide minutes by 10. Mathf.FloorToInt that number.
+        // To get minute2. Use that floored number, multiply by 10 and subtract that from minutes and put into minute1
+        // Convert to FlashbackTransitionClock time for use in startingTime
+        Debug.Log("Converted digitalClock time:" + hours + ":" + minutes + " to flashbackClock time: " + hour2 + hour1 + ":" + minute2 + minute1);
+    }
 
     void CalculateTimeDifference()
     {
         // Difference in virtual hours
-        // 1 IRL minute = 1 virtual hour on (speed = 1)
+        // 1 IRL minute = 1 virtual hour (on speed = 1)
         float difference = (Mathf.Abs(hour2 - targetTime.hour2) * 10) + Mathf.Abs(hour1 - targetTime.hour1);
         Debug.Log("Time difference: " + difference);
         timeDifference = difference;
     }
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-
-    }
-
-    public IEnumerator TRAN_FlashbackTimeChange(FlashbackTime targetTime)
+    public IEnumerator TRAN_StartTransition(FlashbackTime targetTime)
     {
         Debug.Log("FlashbackClock - Starting courotine");
+
+        this.targetTime = targetTime;
         if (targetTime.flashback)
         {
+            ConvertTime(digitalClockObject.minutes, digitalClockObject.hours);
+            startingTime.minute1 = minute1;
+            startingTime.minute2 = minute2;
+            startingTime.hour1 = hour1;
+            startingTime.hour1 = hour2;
+
             backInTime = true;
         }
         else { backInTime = false; }
@@ -129,7 +138,7 @@ public class FlashbackTransitionClock : MonoBehaviour
         yield return null;
     }
 
-    private void StartClock()
+    private void RunClock()
     {
         //if (!clockDone) Debug.Log("FlashbackClock - Ticking");
 
@@ -193,12 +202,12 @@ public class FlashbackTransitionClock : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            StartCoroutine(TRAN_FlashbackTimeChange(targetTime));
+            StartCoroutine(TRAN_StartTransition(targetTime));
         }
 
         if (startClock)
         {
-            StartClock();
+            RunClock();
         }
 
         timetracker += Time.deltaTime;

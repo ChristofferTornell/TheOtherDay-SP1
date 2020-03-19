@@ -49,17 +49,6 @@ public class DigitalClockScript : MonoBehaviour
         SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
-    public IEnumerator FlashbackTimeChange()
-    {
-        // Pause scene change
-        // A time parameter the clock should rapidly change to
-        // When the last few numbers are close, slow down the ticking for extra juice
-        // Player sound effects
-        // When done, resume scene change
-
-        yield return null;
-    }
-
     private void Update()
     {
         if (!GameController.pause && !GlobalData.instance.flashBack) { seconds += Time.deltaTime * timeFactor; }
@@ -92,45 +81,21 @@ public class DigitalClockScript : MonoBehaviour
         }
     }
 
-    void UpdateTime()
+    void SaveTime()
     {
-        //minutes += timeChangeAmount;
-
-        //if (hours > 9)
-        //{
-        //    hoursDisplay.text = hours + ":";
-        //}
-        //else { hoursDisplay.text = "0" + hours + ":"; }
-
-        //if (minutes > 9)
-        //{
-        //    minutesDisplay.text = minutes.ToString();
-        //}
-        //else { minutesDisplay.text = "0" + minutes.ToString(); }
-
-        //if (seconds >= 60)
-        //{
-        //    minutes++;
-        //    seconds = 0;
-        //}
-        //if (minutes >= 60)
-        //{
-        //    hours++;
-        //    minutes = 0;
-        //}
-        //if (hours >= 24)
-        //{
-        //    hours = 0;
-        //}
-
         digitalClockObject.seconds = seconds;
         digitalClockObject.minutes = minutes;
         digitalClockObject.hours = hours;
+        Debug.Log("Saved present time");
     }
 
     void OnSceneUnloaded(Scene scene)
     {
-        UpdateTime();
+        // Unsure if this will work as intended
+        if (!GlobalData.instance.flashBack)
+        {
+            SaveTime();
+        }
     }
 
     public void ChangeTime(float minutes)

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -452,6 +452,8 @@ MonoBehaviour:
   delay: 2
   startingTime: {fileID: 11400000, guid: 881843c16adc57541875983daa558017, type: 2}
   targetTime: {fileID: 11400000, guid: 9285c1c5fea01cc479a2c5dd30da38ea, type: 2}
+  done: 0
+  digitalClockObject: {fileID: 11400000, guid: 3dbb5d5d7b1981a479729c443875b2fe, type: 2}
   minute1: 0
   minute2: 0
   hour1: 0
@@ -772,6 +774,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7819943469563494720, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: flashbackTimeList.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7819943469563494720, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}

@@ -6,6 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    [System.Serializable]
+    public class SceneAndTime
+    {
+        [SerializeField] private string flashbackName = null;
+        [SerializeField] private FlashbackTime flashbackTime = null;
+
+        public FlashbackTime GetSceneTime(string sceneName)
+        {
+            if (sceneName == flashbackName)
+            {
+                return flashbackTime;
+            }
+            else return null;
+        }
+    }
+
     public static UnityAction<SceneChanger> onChange = delegate { };
 
     [SerializeField] private float sceneChangeDelay = 1f;
@@ -14,10 +30,14 @@ public class SceneChanger : MonoBehaviour
     [FMODUnity.EventRef] public string enterFlashbackSound;
     [FMODUnity.EventRef] public string exitFlashbackSound;
 
+    public List<SceneAndTime> flashbackTimeList = new List<SceneAndTime>();
 
     private Color fadeInColor;
     private Color fadeOutColor;
 
+    private bool flashbackTransition = false;
+    private FlashbackTime flashbackTime = null;
+    
     void Awake()
     {
         if (instance == null)
@@ -39,11 +59,21 @@ public class SceneChanger : MonoBehaviour
     {
         Debug.Log("Changing scene");
     }
-  
+
     private IEnumerator CoChangeScene(string sceneName)
     {
-        // Scene change effect(s) can be put here
-        // -------------------------------------
+        onChange(this);
+
+        if (flashbackTransition)
+        {          
+            for (int i = 0; i < flashbackTimeList.Count; i++)
+            {
+                if (flashbackTimeList[i].GetSceneTime(sceneName))
+                {
+                    flashbackTime = flashbackTimeList[i].GetSceneTime(sceneName);
+                }
+            }
+        }
 
         if (sceneName == "CityPresent")
         {
@@ -57,8 +87,6 @@ public class SceneChanger : MonoBehaviour
             fadeOutColor = Color.black;
         }
 
-        onChange(this);
-
         if (sceneName != "Main Menu") SceneTransition.instance.TRAN_FadeIn(fadeInColor);
 
         yield return new WaitForSeconds(sceneChangeDelay);
@@ -66,13 +94,36 @@ public class SceneChanger : MonoBehaviour
         Debug.Log("Loading scene: " + sceneName);
         operation.allowSceneActivation = false;
 
+        // When faded in:
+        // Play flashbackTransition after it comes into screen from animation
+        // When clock is done, reverse the animation and then change scen
+
         while (!operation.isDone)
         {
             if (operation.progress >= 0.9f)
             {
-                Debug.Log("Activating scene: " + sceneName);
-                operation.allowSceneActivation = true;
-                SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
+                if (flashbackTransition)
+                {
+                    if (flashbackTime)
+                    {
+                        FlashbackTransitionClock.instance.StartCoroutine(FlashbackTransitionClock.instance.TRAN_StartTransition(flashbackTime));
+                    }
+                    else { Debug.LogError("SceneChanger - Can't find flashbackTime from: " + sceneName); }
+
+                    if (FlashbackTransitionClock.instance.done)
+                    {
+                        Debug.Log("Activating scene: " + sceneName);
+                        operation.allowSceneActivation = true;
+                        SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
+                    }
+                }
+
+                if (!flashbackTransition)
+                {
+                    Debug.Log("Activating scene: " + sceneName);
+                    operation.allowSceneActivation = true;
+                    SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
+                }
             }
 
             yield return null;
@@ -89,25 +140,32 @@ public class SceneChanger : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
-        Debug.Log("Interactable - Changing Scene to: " + sceneName);
+        Debug.Log("SceneChanger - Changing Scene to: " + sceneName);
+        flashbackTransition = false;
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }
 
     public void EnterFlashback(string sceneName)
     {
-        Debug.Log("Interactable - Entering flashback: " + sceneName);
+        // Save current time into DigitalClockObject
+
+        Debug.Log("SceneChanger - Entering flashback: " + sceneName);
         FMODUnity.RuntimeManager.PlayOneShot(enterFlashbackSound);
+        flashbackTransition = true;
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }
 
     public void ExitFlashback(string sceneName)
     {
-        Debug.Log("Interactable - Returning to present: " + sceneName);
+        // Get saved time from DigitalClockObject
+
+        Debug.Log("SceneChanger - Returning to present: " + sceneName);
         FMODUnity.RuntimeManager.PlayOneShot(exitFlashbackSound);
         GlobalData.instance.stage++;
         Notes.instance.ProgressToNextEntry();
+        flashbackTransition = true;
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }

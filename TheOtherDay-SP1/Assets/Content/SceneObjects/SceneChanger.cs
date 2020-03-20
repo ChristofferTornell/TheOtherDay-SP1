@@ -30,7 +30,6 @@ public class SceneChanger : MonoBehaviour
     [FMODUnity.EventRef] public string enterFlashbackSound;
     [FMODUnity.EventRef] public string exitFlashbackSound;
 
-    public FlashbackTime presentTime = null;
     public List<SceneAndTime> flashbackTimeList = new List<SceneAndTime>();
 
     private Color fadeInColor;
@@ -38,9 +37,10 @@ public class SceneChanger : MonoBehaviour
 
     private bool flashbackTransition = false;
     private bool enteringFlashback = false;
-    private FlashbackTime flashbackTime = null;
     private bool startedTransition = false;
-    
+    private FlashbackTime flashbackTime = null;
+    private bool ranOnChange = false;
+
     void Awake()
     {
         if (instance == null)
@@ -65,7 +65,12 @@ public class SceneChanger : MonoBehaviour
 
     private IEnumerator CoChangeScene(string sceneName)
     {
-        onChange(this);
+        if (!ranOnChange)
+        {
+            onChange(this);
+            ranOnChange = true;
+        }
+
         if (flashbackTransition)
         {          
             for (int i = 0; i < flashbackTimeList.Count; i++)
@@ -82,7 +87,6 @@ public class SceneChanger : MonoBehaviour
             fadeInColor = Color.gray;
             fadeOutColor = Color.gray;
         }
-
         else
         {
             fadeInColor = Color.black;
@@ -106,19 +110,28 @@ public class SceneChanger : MonoBehaviour
             {
                 if (flashbackTransition)
                 {
-                    if (flashbackTime && !startedTransition)
+                    if (enteringFlashback)
+                    {
+                        if (flashbackTime && !startedTransition)
+                        {
+                            FlashbackTransitionClock.instance.Display(true);
+                            FlashbackTransitionClock.instance.StartCoroutine(FlashbackTransitionClock.instance.TRAN_StartTransition(flashbackTime));
+                            startedTransition = true;
+                        }
+                        else if (!flashbackTime)
+                        {
+                            Debug.LogError("SceneChanger - Can't find flashbackTime from: " + sceneName);
+                            Debug.Log("Activating scene: " + sceneName);
+                            operation.allowSceneActivation = true;
+                            SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
+                            FlashbackTransitionClock.instance.Display(false);
+                        }
+                    }
+                    if (!enteringFlashback && !startedTransition)
                     {
                         FlashbackTransitionClock.instance.Display(true);
-                        FlashbackTransitionClock.instance.StartCoroutine(FlashbackTransitionClock.instance.TRAN_StartTransition(flashbackTime));
+                        FlashbackTransitionClock.instance.StartCoroutine(FlashbackTransitionClock.instance.TRAN_StartTransition(FlashbackTransitionClock.instance.presentTime));
                         startedTransition = true;
-                    }
-                    else if (!flashbackTime)
-                    {
-                        Debug.LogError("SceneChanger - Can't find flashbackTime from: " + sceneName);
-                        Debug.Log("Activating scene: " + sceneName);
-                        operation.allowSceneActivation = true;
-                        SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
-                        FlashbackTransitionClock.instance.Display(false);
                     }
 
                     if (FlashbackTransitionClock.instance.done)
@@ -155,6 +168,7 @@ public class SceneChanger : MonoBehaviour
     {
         Debug.Log("SceneChanger - Changing Scene to: " + sceneName);
         flashbackTransition = false;
+        enteringFlashback = false;
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }

@@ -11,8 +11,8 @@ public class DigitalClockObject : ScriptableObject
 
     private void Awake()
     {
-        seconds = 0;
-        minutes = 0;
-        hours = 13;
+        seconds = 0f;
+        minutes = 0f;
+        hours = 13f;
     }
 }

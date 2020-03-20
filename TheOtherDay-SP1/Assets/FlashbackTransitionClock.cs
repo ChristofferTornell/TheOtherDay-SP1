@@ -9,11 +9,12 @@ public class FlashbackTransitionClock : MonoBehaviour
     public static FlashbackTransitionClock instance;
     public float speed = 50f;
     public float duration = 3f;
-    [SerializeField] private bool backInTime = false;
+    private bool backInTime = false;
     [SerializeField] private float startDelay = 2f;
     [SerializeField] private float waitTimeWhenDone = 2f;
     public FlashbackTime startingTime;
     public FlashbackTime targetTime;
+    [HideInInspector] public FlashbackTime presentTime;
     [HideInInspector] public bool done = false;
 
     [Space]
@@ -48,10 +49,15 @@ public class FlashbackTransitionClock : MonoBehaviour
     private bool clockDone = false;
     private float timeDifference = 0;
 
-    float timetracker = 0;
-
     void Awake()
     {
+        presentTime = new FlashbackTime();
+        presentTime.minute1 = 0;
+        presentTime.minute2 = 0;
+        presentTime.hour1 = 3;
+        presentTime.hour2 = 1;
+        presentTime.flashback = false;
+
         Display(false);
 
         if (instance == null)
@@ -63,6 +69,19 @@ public class FlashbackTransitionClock : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        minute1 = startingTime.minute1;
+        minute2 = startingTime.minute2;
+        hour1 = startingTime.hour1;
+        hour2 = startingTime.hour2;
+
+        minute1Display.sprite = NumberToImage(minute1);
+        minute2Display.sprite = NumberToImage(minute2);
+        hour1Display.sprite = NumberToImage(hour1);
+        hour2Display.sprite = NumberToImage(hour2);
     }
 
     public void Display(bool boolean)
@@ -86,29 +105,17 @@ public class FlashbackTransitionClock : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void SavePresentTime(float minutes, float hours)
     {
-        minute1 = startingTime.minute1;
-        minute2 = startingTime.minute2;
-        hour1 = startingTime.hour1;
-        hour2 = startingTime.hour2;
-
-        minute1Display.sprite = NumberToImage(minute1);
-        minute2Display.sprite = NumberToImage(minute2);
-        hour1Display.sprite = NumberToImage(hour1);
-        hour2Display.sprite = NumberToImage(hour2);
-    }
-    public void ConvertTime(float minutes, float hours)
-    {
-        minute2 = Mathf.Floor(minutes / 10);
-        minute1 = minutes - (minute2 * 10);
-        hour2 = Mathf.Floor(hours / 10);
-        hour1 = hours - (hours * 10);
+        presentTime.minute2 = Mathf.Abs(Mathf.Floor(minutes / 10));
+        presentTime.minute1 = Mathf.Abs(minutes - (presentTime.minute2 * 10));
+        presentTime.hour2 = Mathf.Abs(Mathf.Floor(hours / 10));
+        presentTime.hour1 = Mathf.Abs(hours - (presentTime.hour2 * 10));
 
         // Divide minutes by 10. Mathf.FloorToInt that number.
         // To get minute2. Use that floored number, multiply by 10 and subtract that from minutes and put into minute1
         // Convert to FlashbackTransitionClock time for use in startingTime
-        Debug.Log("Converted digitalClock time:" + hours + ":" + minutes + " to flashbackClock time: " + hour2 + hour1 + ":" + minute2 + minute1);
+        Debug.Log("Converted digitalClock time:" + hours + ":" + minutes + " to flashbackClock time: " + presentTime.hour2 + presentTime.hour1 + ":" + presentTime.minute2 + presentTime.minute1);
     }
 
     void CalculateTimeDifference()
@@ -127,12 +134,8 @@ public class FlashbackTransitionClock : MonoBehaviour
         this.targetTime = targetTime;
         if (targetTime.flashback)
         {
-            ConvertTime(digitalClockObject.minutes, digitalClockObject.hours);
-            startingTime.minute1 = minute1;
-            startingTime.minute2 = minute2;
-            startingTime.hour1 = hour1;
-            startingTime.hour1 = hour2;
-
+            SavePresentTime(digitalClockObject.minutes, digitalClockObject.hours);
+            startingTime = presentTime;
             backInTime = true;
         }
         else { backInTime = false; }
@@ -154,8 +157,6 @@ public class FlashbackTransitionClock : MonoBehaviour
 
     private void RunClock()
     {
-        //if (!clockDone) Debug.Log("FlashbackClock - Ticking");
-
         if (!backInTime && minute1 == targetTime.minute1 && minute2 == targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
         {
             Debug.Log("FlashbackClock - Ticking Done");
@@ -215,17 +216,10 @@ public class FlashbackTransitionClock : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            StartCoroutine(TRAN_StartTransition(targetTime));
-        }
-
         if (startClock)
         {
             RunClock();
         }
-
-        timetracker += Time.deltaTime;
 
         // If going back in time
         if (minute1 < 0)

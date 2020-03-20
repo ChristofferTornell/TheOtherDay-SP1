@@ -12,5 +12,5 @@ public class FlashbackTime : ScriptableObject
     public float hour2;
     [Space]
     [Tooltip("Whether this time is during a flashback or not, which determines if the clock goes backwards or not")]
-    public bool flashback = false;
+    public bool flashback;
 }

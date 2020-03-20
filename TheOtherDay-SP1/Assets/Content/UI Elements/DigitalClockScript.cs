@@ -86,6 +86,7 @@ public class DigitalClockScript : MonoBehaviour
         digitalClockObject.seconds = seconds;
         digitalClockObject.minutes = minutes;
         digitalClockObject.hours = hours;
+        FlashbackTransitionClock.instance.SavePresentTime(minutes, hours);
         Debug.Log("Saved present time");
     }
 

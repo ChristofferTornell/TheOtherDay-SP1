@@ -67,7 +67,7 @@ public class Inventory : MonoBehaviour
             if (iSlot.myItem == null)
             {
                 FMODUnity.RuntimeManager.PlayOneShot(addItemSoundEvent);
-                Debug.Log("Adding item " + item.myName);
+                //Debug.Log("Adding item " + item.myName);
                 iSlot.UpdateSlot(item);
                 
                 return;
@@ -81,7 +81,7 @@ public class Inventory : MonoBehaviour
         {
             if (iSlot.myItem == item)
             {
-                Debug.Log("Found item " + item.myName);
+                //Debug.Log("Found item " + item.myName);
                 return true;
             }
         }

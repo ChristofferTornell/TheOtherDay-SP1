@@ -105,7 +105,7 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("Pressed on interactable");
+        //Debug.Log("Pressed on interactable");
         if (!DialogueManager.dialogueActive && !Phone.Pulled)
         {
             onMouseInteract.Invoke();

@@ -66,7 +66,6 @@ public class SceneChanger : MonoBehaviour
     private IEnumerator CoChangeScene(string sceneName)
     {
         onChange(this);
-
         if (flashbackTransition)
         {          
             for (int i = 0; i < flashbackTimeList.Count; i++)
@@ -91,8 +90,8 @@ public class SceneChanger : MonoBehaviour
         }
 
         if (sceneName != "Main Menu") SceneTransition.instance.TRAN_FadeIn(fadeInColor);
-
         yield return new WaitForSeconds(sceneChangeDelay);
+        UpdateSceneMusic(sceneName);
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
         Debug.Log("Loading scene: " + sceneName);
         operation.allowSceneActivation = false;
@@ -180,5 +179,26 @@ public class SceneChanger : MonoBehaviour
         enteringFlashback = false;
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
+    }
+    private void UpdateSceneMusic(string sceneName)
+    {
+        if (GlobalData.instance != null)
+        {
+            string nextMusic = GlobalData.instance.GetMusicInScene(sceneName);
+            string nextAmbience = GlobalData.instance.GetAmbienceInScene(sceneName);
+            if (MusicPlayer.instance != null)
+            {
+                if (nextMusic != GlobalData.instance.GetMusicInScene(SceneManager.GetActiveScene().name))
+                {
+                    MusicPlayer.instance.locationMusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    MusicPlayer.instance.ResetToNewMusic(nextMusic);
+                }
+                if (nextAmbience != GlobalData.instance.GetAmbienceInScene(SceneManager.GetActiveScene().name))
+                {
+                    MusicPlayer.instance.locationAmbienceInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    MusicPlayer.instance.ResetToNewAmbience(nextAmbience);
+                }
+            }
+        }
     }
 }

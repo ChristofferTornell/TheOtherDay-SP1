@@ -53,4 +53,28 @@ public class GlobalData : MonoBehaviour
         stage = 0;
         flashBack = false;
     }
+    public string GetMusicInScene(string sceneName)
+    {
+        foreach (SceneData sData in sceneDataList)
+        {
+            if (sData.name == sceneName)
+            {
+                return sData.sceneMusic;
+            }
+        }
+        Debug.Log("Scene doesnt have music: " + sceneName);
+        return null;
+    }
+    public string GetAmbienceInScene(string sceneName)
+    {
+        foreach (SceneData sData in sceneDataList)
+        {
+            if (sData.name == sceneName)
+            {
+                return sData.sceneAmbience;
+            }
+        }
+        Debug.Log("Scene doesnt have ambience: " + sceneName);
+        return null;
+    }
 }

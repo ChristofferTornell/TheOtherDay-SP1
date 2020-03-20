@@ -33,7 +33,7 @@ public class ChoiceButton : MonoBehaviour
     }
     public void GoToNextDialogue()
     {
-        Debug.Log("press choice button");
+        //Debug.Log("press choice button");
         DialogueManager.instance.currentDialogue = currentDialogue.choiceButtons[myId].nextDialogue;
         DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
     }

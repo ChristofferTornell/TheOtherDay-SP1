@@ -87,7 +87,7 @@ public class PlayerInteractivity : MonoBehaviour
         {
             if (!DialogueManager.dialogueActive)
             {
-                Debug.Log("Doing something with " + interactables[0].name);
+                //Debug.Log("Doing something with " + interactables[0].name);
 
                 if (interactables[0].savePlayerPosition)
                 {

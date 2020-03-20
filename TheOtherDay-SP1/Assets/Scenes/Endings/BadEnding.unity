@@ -432,27 +432,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 503625857}
     m_Modifications:
-    - target: {fileID: 3472422064321824548, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: time
-      value: 11.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3472422064321824548, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: image
-      value: 
-      objectReference: {fileID: 1655186723}
-    - target: {fileID: 6327365038663508565, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f53e21acd6cf58e4abd8ae18fd2c08a2,
-        type: 3}
-    - target: {fileID: 6850956334486887116, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 971168797572620853, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: m_Name
@@ -568,12 +547,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c642ee122bef57f4bac2322a8c250151,
-        type: 3}
     - target: {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: messages.Array.size
@@ -666,6 +639,33 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c642ee122bef57f4bac2322a8c250151,
+        type: 3}
+    - target: {fileID: 6850956334486887116, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327365038663508565, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f53e21acd6cf58e4abd8ae18fd2c08a2,
+        type: 3}
+    - target: {fileID: 3472422064321824548, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: time
+      value: 11.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472422064321824548, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 1655186723}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a18260cac05ee14c856108d765ae502, type: 3}
 --- !u!1 &437119594 stripped
@@ -1803,7 +1803,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4932292680316305429}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4932292680316305432}
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &4932292680316305429
@@ -1848,6 +1859,7 @@ GameObject:
   - component: {fileID: 4932292680316305434}
   - component: {fileID: 4932292680316305429}
   - component: {fileID: 4932292680316305428}
+  - component: {fileID: 4932292680316305432}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1875,6 +1887,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 116}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4932292680316305432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4932292680316305430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d46ebbaf5f695e40be15ee732e0eb14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yes: {fileID: 4932292680316305428}
+  no: {fileID: 0}
 --- !u!222 &4932292680316305434
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1957,7 +1983,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Click to continue
+  m_text: Click to return to menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 06188d2604db92e4786bc502162be7d4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

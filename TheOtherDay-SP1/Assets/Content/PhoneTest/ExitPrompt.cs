@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ExitPrompt : MonoBehaviour
 {
@@ -28,5 +29,9 @@ public class ExitPrompt : MonoBehaviour
     public void No()
     {
         Destroy(gameObject);
+    }
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }

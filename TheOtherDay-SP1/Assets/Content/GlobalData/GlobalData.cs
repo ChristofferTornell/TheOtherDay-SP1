@@ -48,5 +48,9 @@ public class GlobalData : MonoBehaviour
             lEntry.visible = false;
             lEntry.complete = false;
         }
+        reputation = 0;
+        logStage = -2;
+        stage = 0;
+        flashBack = false;
     }
 }

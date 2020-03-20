@@ -38,6 +38,14 @@ public class Interactable : MonoBehaviour
 
     public void Interact()
     {
+        if (Phone.Pulled)
+        {
+            return;
+        }
+        if (GameController.pause)
+        {
+            return;
+        }
         if (lockedData != null && unlockedOnStage > GlobalData.instance.stage)
         {
             DescriptionUI.instance.ExamineItem(lockedData);
@@ -63,11 +71,7 @@ public class Interactable : MonoBehaviour
         {
             DialogueManager.instance.EnterDialogue(lockedDialogue);
             return;
-        }
-        if (Phone.Pulled)
-        {
-            return;
-        }
+        }        
         onInteract.Invoke();
         /*
         if (OneTime) { DestroyThis(); }

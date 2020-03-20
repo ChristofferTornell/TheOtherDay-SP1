@@ -63,7 +63,7 @@ public class GlobalData : MonoBehaviour
             }
         }
         Debug.Log("Scene doesnt have music: " + sceneName);
-        return null;
+        return "none";
     }
     public string GetAmbienceInScene(string sceneName)
     {
@@ -75,6 +75,6 @@ public class GlobalData : MonoBehaviour
             }
         }
         Debug.Log("Scene doesnt have ambience: " + sceneName);
-        return null;
+        return "none";
     }
 }

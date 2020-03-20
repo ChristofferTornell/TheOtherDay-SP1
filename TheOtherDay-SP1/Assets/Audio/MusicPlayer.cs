@@ -31,13 +31,14 @@ public class MusicPlayer : MonoBehaviour
     {
         string sceneMusicEvent = sceneData.sceneMusic;
         locationMusicInstance = FMODUnity.RuntimeManager.CreateInstance(sceneMusicEvent);
-        Debug.Log("hash start: " + locationMusicInstance.GetHashCode());
         locationMusicInstance.start();
     }
     public void ResetToNewMusic(string _sceneMusic)
     {
-        if (_sceneMusic == null && _sceneMusic == "")
+        Debug.Log("scene music: " + _sceneMusic);
+        if (_sceneMusic == "none")
         {
+            Debug.Log("scene music null");
             return;
         }
         locationMusicInstance = FMODUnity.RuntimeManager.CreateInstance(_sceneMusic);
@@ -51,8 +52,9 @@ public class MusicPlayer : MonoBehaviour
     }
     public void ResetToNewAmbience(string _sceneAmbience)
     {
-        if (_sceneAmbience == null && _sceneAmbience == "")
+        if (_sceneAmbience == "none")
         {
+            Debug.Log("scene ambience null");
             return;
         }
         locationAmbienceInstance = FMODUnity.RuntimeManager.CreateInstance(_sceneAmbience);

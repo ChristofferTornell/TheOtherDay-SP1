@@ -20,8 +20,11 @@ public class DigitalClockScript : MonoBehaviour
     public TextMeshProUGUI minutesDisplay = null;
     public Color displayColor;
 
+    [Header("Bad Ending")]
+    public string badEndingScene = "BadEnding";
     private bool changingTime = false;
     private float timeChangeAmount = 0;
+    private bool triggerEnd = false;
 
     private void Start()
     {
@@ -78,6 +81,12 @@ public class DigitalClockScript : MonoBehaviour
         if (hours >= 24)
         {
             hours = 0;
+        }
+        if (hours == 18 && !GlobalData.instance.flashBack && !triggerEnd)
+        {
+
+            SceneChanger.instance.ChangeScene(badEndingScene);
+            triggerEnd = true;
         }
     }
 

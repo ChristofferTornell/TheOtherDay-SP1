@@ -63,6 +63,10 @@ public class PlayerInteractivity : MonoBehaviour
     }
     private void UpdateInteractUI()
     {
+        if (GameController.pause)
+        {
+            return;
+        }
         if (interactables.Count > 0)
         {
             interactUI.SetActive(true);

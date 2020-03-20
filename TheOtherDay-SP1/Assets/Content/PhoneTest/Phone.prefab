@@ -1025,7 +1025,7 @@ RectTransform:
   - {fileID: 8939198825460757424}
   - {fileID: 3376359976006935521}
   m_Father: {fileID: 9001126138072577976}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8544,7 +8544,7 @@ RectTransform:
   m_LocalScale: {x: 0.15009865, y: 0.38161612, z: 0}
   m_Children: []
   m_Father: {fileID: 9001126138072577976}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15172,10 +15172,10 @@ RectTransform:
   - {fileID: 9001126137612808573}
   - {fileID: 9001126137356103821}
   - {fileID: 9001126137476371737}
-  - {fileID: 9001126138705868322}
   - {fileID: 1642263910}
   - {fileID: 206166194}
   - {fileID: 6410974275964613037}
+  - {fileID: 9001126138705868322}
   m_Father: {fileID: 9001126136877757140}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15443,7 +15443,7 @@ RectTransform:
   m_LocalScale: {x: 0.60871077, y: 0.87621146, z: 2.8244114}
   m_Children: []
   m_Father: {fileID: 9001126138072577976}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15616,11 +15616,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9001126138072577976}
     m_Modifications:
-    - target: {fileID: 4083815748229106080, guid: 4d7ebf88934778743a8f645cc336cab4,
-        type: 3}
-      propertyPath: m_Name
-      value: Digital Clock
-      objectReference: {fileID: 0}
     - target: {fileID: 1196433855054110972, guid: 4d7ebf88934778743a8f645cc336cab4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15659,7 +15654,7 @@ PrefabInstance:
     - target: {fileID: 1196433855054110972, guid: 4d7ebf88934778743a8f645cc336cab4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1196433855054110972, guid: 4d7ebf88934778743a8f645cc336cab4,
         type: 3}
@@ -15741,6 +15736,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4083815748229106080, guid: 4d7ebf88934778743a8f645cc336cab4,
+        type: 3}
+      propertyPath: m_Name
+      value: Digital Clock
+      objectReference: {fileID: 0}
     - target: {fileID: 4083815748229106083, guid: 4d7ebf88934778743a8f645cc336cab4,
         type: 3}
       propertyPath: hours
@@ -15750,6 +15750,26 @@ PrefabInstance:
         type: 3}
       propertyPath: timeFactor
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083815748350200802, guid: 4d7ebf88934778743a8f645cc336cab4,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083815748350200802, guid: 4d7ebf88934778743a8f645cc336cab4,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083815748350200802, guid: 4d7ebf88934778743a8f645cc336cab4,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083815748350200802, guid: 4d7ebf88934778743a8f645cc336cab4,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083815748422585809, guid: 4d7ebf88934778743a8f645cc336cab4,
         type: 3}
@@ -15772,26 +15792,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083815748422585809, guid: 4d7ebf88934778743a8f645cc336cab4,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083815748350200802, guid: 4d7ebf88934778743a8f645cc336cab4,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083815748350200802, guid: 4d7ebf88934778743a8f645cc336cab4,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083815748350200802, guid: 4d7ebf88934778743a8f645cc336cab4,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083815748350200802, guid: 4d7ebf88934778743a8f645cc336cab4,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 1

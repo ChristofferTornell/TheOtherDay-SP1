@@ -85,12 +85,13 @@ public class Interactable : MonoBehaviour
         if (!DialogueManager.dialogueActive && !Phone.Pulled)
         {
             PuzzleMouse.overInteractable = true;
+            PuzzleMouse.currentlyHovered = this;
 
             if (changeCursorOnHover)
             {
                 if (!PuzzleMouse.itemOnMouse)
                 {
-                    PuzzleMouse.hoverText.text = gameObject.name;
+                    PuzzleMouse.SetHoverText(gameObject.name);
                 }
 
                 gameController.ChangeCursor(hoverCursor);
@@ -104,6 +105,7 @@ public class Interactable : MonoBehaviour
     {
         gameController.ResetCursor();
         PuzzleMouse.overInteractable = false;
+        PuzzleMouse.currentlyHovered = null;
         PuzzleMouse.hoverText.text = null;
     }
 

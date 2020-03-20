@@ -32,6 +32,7 @@ public class DialogueManager : MonoBehaviour
         dialogueBoxUI.InitializeDialogueUI();
         PlayerMovement.playerMovementLocked = true;
         DescriptionUI.instance.descriptionBoxObj.SetActive(false);
+        PuzzleMouse.RemoveItem();
         if (Phone.Pulled && !currentDialogue.ignorePhone) { BackButton.instance.OutsideButton(); };
         //phone.SetActive(false);
         dialogueActive = true;
@@ -53,6 +54,15 @@ public class DialogueManager : MonoBehaviour
         if (PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().interactables.Count > 0)
         {
             PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().interactUI.SetActive(true);
+        }
+        if (PuzzleMouse.overInteractable)
+        {
+            if(PuzzleMouse.currentlyHovered != null)
+            {
+                PuzzleMouse.SetHoverText(PuzzleMouse.currentlyHovered.gameObject.name);
+                GameController gameController = FindObjectOfType<GameController>();
+                gameController.ChangeCursor(PuzzleMouse.currentlyHovered.hoverCursor);
+            }
         }
         
         /*

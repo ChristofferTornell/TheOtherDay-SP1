@@ -16,7 +16,7 @@ public class FlashbackPizzeriaEvents : SceneEvents
         if (eventIndex == 2)
         {
           
-            if (GlobalData.instance.reputation < 0)
+            if (GlobalData.instance.reputation < -1)
             {
                 SceneChanger.instance.ChangeScene(weirdEndingScene);
             }

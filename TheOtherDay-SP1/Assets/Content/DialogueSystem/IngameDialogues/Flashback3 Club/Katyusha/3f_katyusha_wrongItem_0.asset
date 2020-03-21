@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 3f_katyusha_recieveWaterBottle_0
+  m_Name: 3f_katyusha_wrongItem_0
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: 01c44b970609f204c80fc359a7fe9730, type: 2}
   speakerEmotion: 0
@@ -19,11 +19,11 @@ MonoBehaviour:
   changeReputation: 0
   italic: 0
   messages:
-  - text: I think you need that more than me.
+  - text: Please do not touch with sticky finger. Put it back.
     typeDelay: 0.01
     messageSound: 
-  initial: 0
-  nextDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 77beeceea5f49524fa72656b6b445333, type: 2}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

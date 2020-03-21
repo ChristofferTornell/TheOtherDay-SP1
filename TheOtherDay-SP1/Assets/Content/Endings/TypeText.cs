@@ -14,6 +14,7 @@ public class TypeText : MonoBehaviour
     {
         foreach (Message _message in messages)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(_message.messageSound);
             for (int i = 0; i < _message.text.Length; i++)
             {
                 textOBJ.text += _message.text[i];

@@ -117,7 +117,7 @@ public class DialogueBox : MonoBehaviour
         }
         foreach (Message _message in currentDialogue.messages)
         {
-            //FMODUnity.RuntimeManager.PlayOneShot(_message.messageSound); //SOUND IMPLEMENTATION
+            FMODUnity.RuntimeManager.PlayOneShot(_message.messageSound); //SOUND IMPLEMENTATION
             /*
             if (_message.bold)
             {

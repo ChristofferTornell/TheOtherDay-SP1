@@ -21,7 +21,7 @@ MonoBehaviour:
   messages:
   - text: 'Hum... not here... '
     typeDelay: 0.05
-    messageSound: 
+    messageSound: event:/Sounds/NPC/Dialogue/SoundsNPCAnneliseLostAndFoundShort
   - text: 'Wah! '
     typeDelay: 0.001
     messageSound: 
@@ -30,7 +30,7 @@ MonoBehaviour:
     messageSound: 
   - text: 'No, not there either.... '
     typeDelay: 0.05
-    messageSound: 
+    messageSound: event:/Sounds/NPC/Dialogue/SoundNPCAnneliseLostAndFoundLong
   nextDialogue: {fileID: 11400000, guid: cdea52a9335c4fa48894989a0f9264e3, type: 2}
   ignorePhone: 0
   triggerScene: 

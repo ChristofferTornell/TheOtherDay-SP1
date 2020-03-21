@@ -547,6 +547,58 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6850956334486887116, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7819680851895432734}
+    - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 437119594}
+    - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c642ee122bef57f4bac2322a8c250151,
+        type: 3}
+    - target: {fileID: 6327365038663508565, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f53e21acd6cf58e4abd8ae18fd2c08a2,
+        type: 3}
+    - target: {fileID: 3472422064321824548, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: time
+      value: 11.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472422064321824548, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 1655186723}
     - target: {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: messages.Array.size
@@ -614,58 +666,6 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 7819680851895432734}
-    - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 437119594}
-    - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c642ee122bef57f4bac2322a8c250151,
-        type: 3}
-    - target: {fileID: 6850956334486887116, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6327365038663508565, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f53e21acd6cf58e4abd8ae18fd2c08a2,
-        type: 3}
-    - target: {fileID: 3472422064321824548, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: time
-      value: 11.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3472422064321824548, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: image
-      value: 
-      objectReference: {fileID: 1655186723}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a18260cac05ee14c856108d765ae502, type: 3}
 --- !u!1 &437119594 stripped
@@ -1271,6 +1271,19 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
+    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: af7dcff6b1c78b94494537d5ee86a01e,
+        type: 3}
+    - target: {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: messages.Array.data[0].text
+      value: '...and so, despite their best efforts, Riley never ended up finding
+        the ring in time for the dress rehearsal. Unable to lie to Erin, they let
+        her know what had happened the night before. '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a18260cac05ee14c856108d765ae502, type: 3}
 --- !u!1 &1615941413
@@ -1621,20 +1634,20 @@ MonoBehaviour:
   - text: "Perhaps the two of them might mend their wounded bonds over time, but this
       is a gash that\u2019s hard to heal."
     typeDelay: 0.05
-    messageSound: 
+    messageSound: event:/Sounds/Endings/CutsceneBadBottle1
   - text: ' '
     typeDelay: 2
     messageSound: 
   - text: After all, a wedding like this is quite unique, and Riley had botched it
       all thanks to some drink.
     typeDelay: 0.05
-    messageSound: 
+    messageSound: event:/Sounds/Endings/CutsceneBadBottle2
   - text: ' '
     typeDelay: 2
     messageSound: 
   - text: For better or worse, Riley vowed to never drink again.
     typeDelay: 0.05
-    messageSound: 
+    messageSound: event:/Sounds/Endings/CutsceneBadBottleRoll
   textOBJ: {fileID: 4932292679425174657}
   nextButton: {fileID: 4932292680316305430}
 --- !u!222 &4932292679425174663

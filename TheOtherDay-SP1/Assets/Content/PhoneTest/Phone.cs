@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Phone : MonoBehaviour
 {
     public Dialogue appFlashbackLockedDialogue;
     [HideInInspector]public static bool Pulled = false;
     private float PressingTime = 0;
+    public TextMeshProUGUI dayTextObj;
 
     public GameObject SettingsPage;
     public Button SettingsButton;
@@ -37,10 +39,22 @@ public class Phone : MonoBehaviour
     [FMODUnity.EventRef] public string logAppPressSound;
     [FMODUnity.EventRef] public string pullUpPhoneSound;
 
+    private void CheckDay()
+    {
+        if (GlobalData.instance.flashBack)
+        {
+            dayTextObj.text = "FRI";
+        }
+        else
+        {
+            dayTextObj.text = "SAT";
+        }
+    }
     private void Start()
     {
         PlayerMovement.playerInstance.animator.SetBool("phone", false);
         PlayerMovement.playerMovementLocked = false;
+        Invoke("CheckDay", 0.01f);
     
         SettingsButton.onClick.AddListener(delegate { EnableSettings(true); });
         MessageButton.onClick.AddListener(delegate { EnableMessage(true); });

@@ -18,6 +18,7 @@ public class BackButton : MonoBehaviour
     public GameObject SettingsMenu;
 
     private GameObject parent;
+    [FMODUnity.EventRef] public string closePhoneSound;
 
     private void Awake()
     {
@@ -114,10 +115,13 @@ public class BackButton : MonoBehaviour
             phone.ani.Play("Down");
         }
         phone.Page = -1;
+
+        FMODUnity.RuntimeManager.PlayOneShot(closePhoneSound);
         GennyMessageSquare.SetActive(true);
         Phone.Pulled = false;
         PlayerMovement.playerInstance.animator.SetBool("phone", false); // Riley lägger ner telefonen
         PlayerMovement.playerMovementLocked = false; // Och kan röra sig igen
+        
         if (HotelEvents.instance != null)
         {
             HotelEvents.instance.CheckEvent(11);

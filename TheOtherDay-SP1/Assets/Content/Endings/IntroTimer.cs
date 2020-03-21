@@ -26,8 +26,8 @@ public class IntroTimer : MonoBehaviour
     void ChangeScene()
     {
         timerTrigger = true;
-        SceneChanger.instance.ChangeScene(changeSceneTo);
         GlobalData.instance.stage++;
         GlobalData.instance.logStage++;
+        SceneChanger.instance.ChangeScene(changeSceneTo);
     }
 }

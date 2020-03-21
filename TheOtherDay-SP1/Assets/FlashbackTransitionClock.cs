@@ -135,7 +135,7 @@ public class FlashbackTransitionClock : MonoBehaviour
         this.targetTime = targetTime;
         if (targetTime.flashback)
         {
-            digitalClockObject.ConvertFlashbackTime(targetTime.minute1, targetTime.minute2, targetTime.hour1, targetTime.hour2);
+            GlobalData.instance.currentFlashbackTime = targetTime;
             SavePresentTime(digitalClockObject.minutes, digitalClockObject.hours);
             startingTime = presentTime;
             backInTime = true;

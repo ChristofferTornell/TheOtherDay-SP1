@@ -30,18 +30,17 @@ public class DigitalClockScript : MonoBehaviour
     {
         if (timeFactor <= 0) { timeFactor = 1; }
 
-        if (GlobalData.instance.flashBack)
-        {
-            seconds = digitalClockObject.seconds;
-            minutes = digitalClockObject.flashbackMinutes;
-            hours = digitalClockObject.flashbackHours;
-        }
-
         if (!GlobalData.instance.flashBack)
         {
             seconds = digitalClockObject.seconds;
             minutes = digitalClockObject.minutes;
             hours = digitalClockObject.hours;
+        }
+
+        if (GlobalData.instance.flashBack && GlobalData.instance.currentFlashbackTime)
+        {
+            ConvertFlashbackTime(GlobalData.instance.currentFlashbackTime.minute1, GlobalData.instance.currentFlashbackTime.minute2,
+                GlobalData.instance.currentFlashbackTime.hour1, GlobalData.instance.currentFlashbackTime.hour2);
         }
 
 
@@ -61,6 +60,12 @@ public class DigitalClockScript : MonoBehaviour
         else { minutesDisplay.text = "0" + minutes.ToString(); }
 
         SceneManager.sceneUnloaded += OnSceneUnloaded;
+    }
+    public void ConvertFlashbackTime(float m1, float m2, float h1, float h2)
+    {
+        seconds = 0;
+        minutes = (m2 * 10) + m1;
+        hours = (h2 * 10) + h1;
     }
 
     private void Update()

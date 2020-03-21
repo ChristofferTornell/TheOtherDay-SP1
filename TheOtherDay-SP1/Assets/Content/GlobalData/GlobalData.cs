@@ -7,6 +7,7 @@ public class GlobalData : MonoBehaviour
     public static GlobalData instance;
     public int stage = 0;
     public bool flashBack;
+    [HideInInspector] public FlashbackTime currentFlashbackTime = null;
     public SceneData[] sceneDataList;
     public CharacterData[] charaters;
     public int logStage = -2;

@@ -30,9 +30,20 @@ public class DigitalClockScript : MonoBehaviour
     {
         if (timeFactor <= 0) { timeFactor = 1; }
 
-        seconds = digitalClockObject.seconds;
-        minutes = digitalClockObject.minutes;
-        hours = digitalClockObject.hours;
+        if (GlobalData.instance.flashBack)
+        {
+            seconds = digitalClockObject.seconds;
+            minutes = digitalClockObject.flashbackMinutes;
+            hours = digitalClockObject.flashbackHours;
+        }
+
+        if (!GlobalData.instance.flashBack)
+        {
+            seconds = digitalClockObject.seconds;
+            minutes = digitalClockObject.minutes;
+            hours = digitalClockObject.hours;
+        }
+
 
         hoursDisplay.color = displayColor;
         minutesDisplay.color = displayColor;

@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 public class FlashbackTransitionClock : MonoBehaviour
 {
     public static FlashbackTransitionClock instance;
-    public float speed = 50f;
-    public float duration = 3f;
+    public float speedFactor = 30;
     private bool backInTime = false;
     [SerializeField] private float startDelay = 2f;
     [SerializeField] private float waitTimeWhenDone = 2f;
@@ -16,6 +15,7 @@ public class FlashbackTransitionClock : MonoBehaviour
     public FlashbackTime targetTime;
     [HideInInspector] public FlashbackTime presentTime;
     [HideInInspector] public bool done = false;
+    private Animator anim = null;
 
     [Space]
     public DigitalClockObject digitalClockObject = null;
@@ -45,12 +45,15 @@ public class FlashbackTransitionClock : MonoBehaviour
     [SerializeField] private Sprite dn1 = null;
     [SerializeField] private Sprite dn9 = null;
 
+    private float speed = 1;
     private bool startClock = false;
     private bool clockDone = false;
     private float timeDifference = 0;
 
     void Awake()
     {
+        anim = GetComponentInChildren<Animator>();
+
         presentTime = new FlashbackTime();
         presentTime.minute1 = 0;
         presentTime.minute2 = 0;
@@ -111,25 +114,23 @@ public class FlashbackTransitionClock : MonoBehaviour
         presentTime.minute1 = Mathf.Abs(minutes - (presentTime.minute2 * 10));
         presentTime.hour2 = Mathf.Abs(Mathf.Floor(hours / 10));
         presentTime.hour1 = Mathf.Abs(hours - (presentTime.hour2 * 10));
-
-        // Divide minutes by 10. Mathf.FloorToInt that number.
-        // To get minute2. Use that floored number, multiply by 10 and subtract that from minutes and put into minute1
-        // Convert to FlashbackTransitionClock time for use in startingTime
         Debug.Log("Converted digitalClock time:" + hours + ":" + minutes + " to flashbackClock time: " + presentTime.hour2 + presentTime.hour1 + ":" + presentTime.minute2 + presentTime.minute1);
     }
 
-    void CalculateTimeDifference()
+    float CalculateTimeDifference(FlashbackTime targetTime)
     {
         // Difference in virtual hours
         // 1 IRL minute = 1 virtual hour (on speed = 1)
-        float difference = (Mathf.Abs(hour2 - targetTime.hour2) * 10) + Mathf.Abs(hour1 - targetTime.hour1);
-        Debug.Log("Time difference: " + difference);
-        timeDifference = difference;
+        float difference = ((Mathf.Abs(hour2 - targetTime.hour2) + 1) * 10) + Mathf.Abs(hour1 - targetTime.hour1 + 1);
+        Debug.Log("Time difference: " + hour2 + " - " + targetTime.hour2 + " * 10 " + hour1 + " - " + targetTime.hour1 + " = " + difference);
+        return difference;
     }
 
     public IEnumerator TRAN_StartTransition(FlashbackTime targetTime)
     {
         Debug.Log("FlashbackClock - Starting courotine");
+
+        speed = CalculateTimeDifference(targetTime) * speedFactor;
 
         this.targetTime = targetTime;
         if (targetTime.flashback)
@@ -139,18 +140,19 @@ public class FlashbackTransitionClock : MonoBehaviour
             backInTime = true;
         }
         else { backInTime = false; }
-
+        
         yield return new WaitForSeconds(startDelay);
-
+        anim.SetTrigger("start");
+        yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[0].length);
         startClock = true;
 
         yield return new WaitUntil(() => clockDone);
         Debug.Log("FlashbackClock - Continuing courotine");
 
-        // Play reverse animation
         yield return new WaitForSeconds(waitTimeWhenDone);
+        anim.SetTrigger("done");
+        yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[1].length * 2f);
         done = true;
-        // The transition has a set duration. And the speed of which the clock goes should account for this.
 
         yield return null;
     }

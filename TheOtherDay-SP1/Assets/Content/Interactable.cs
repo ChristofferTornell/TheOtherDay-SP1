@@ -205,9 +205,12 @@ public class Interactable : MonoBehaviour
             PuzzleMaster pMaster = GetComponent<PuzzleMaster>();
             if (pMaster.PuzzleClear())
             {
-                _initDialogue = pMaster.clearDialogue;
-                DialogueManager.instance.EnterDialogue(_initDialogue);
-                return;
+                if (pMaster.clearDialogue != null)
+                {
+                    _initDialogue = pMaster.clearDialogue;
+                    DialogueManager.instance.EnterDialogue(_initDialogue);
+                    return;
+                }
             }
         }
         if (_initDialogue != null)

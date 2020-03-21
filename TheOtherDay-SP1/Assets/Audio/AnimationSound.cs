@@ -15,7 +15,7 @@ public class AnimationSound : MonoBehaviour
     }
     public void PlayVomitSound()
     {
-        //FMODUnity.RuntimeManager.PlayOneShot(rileyVomitSound);
+        FMODUnity.RuntimeManager.PlayOneShot(rileyVomitSound);
     }
 }
 

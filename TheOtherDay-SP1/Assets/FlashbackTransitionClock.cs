@@ -48,7 +48,6 @@ public class FlashbackTransitionClock : MonoBehaviour
     private float speed = 1;
     private bool startClock = false;
     private bool clockDone = false;
-    private float timeDifference = 0;
 
     void Awake()
     {
@@ -133,6 +132,9 @@ public class FlashbackTransitionClock : MonoBehaviour
         speed = CalculateTimeDifference(targetTime) * speedFactor;
 
         this.targetTime = targetTime;
+        Debug.Log("FlashbackClock - startingTime: " + startingTime + " (" + startingTime.hour2 + startingTime.hour1 + ":" + startingTime.minute2
+            + startingTime.minute1 + "), targetTime: " + targetTime + " (" + targetTime.hour2 + targetTime.hour1 + ":" + targetTime.minute2
+            + targetTime.minute1 + ")");
         if (targetTime.flashback)
         {
             GlobalData.instance.currentFlashbackTime = targetTime;

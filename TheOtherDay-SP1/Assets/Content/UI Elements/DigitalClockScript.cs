@@ -43,7 +43,6 @@ public class DigitalClockScript : MonoBehaviour
                 GlobalData.instance.currentFlashbackTime.hour1, GlobalData.instance.currentFlashbackTime.hour2);
         }
 
-
         hoursDisplay.color = displayColor;
         minutesDisplay.color = displayColor;
 
@@ -100,7 +99,6 @@ public class DigitalClockScript : MonoBehaviour
         }
         if (hours == 18 && !GlobalData.instance.flashBack && !triggerEnd)
         {
-
             SceneChanger.instance.ChangeScene(badEndingScene);
             triggerEnd = true;
         }

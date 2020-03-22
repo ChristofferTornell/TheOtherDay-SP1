@@ -63,6 +63,10 @@ public class PlayerInteractivity : MonoBehaviour
     }
     private void UpdateInteractUI()
     {
+        if (GameController.pause)
+        {
+            return;
+        }
         if (interactables.Count > 0)
         {
             interactUI.SetActive(true);
@@ -87,7 +91,7 @@ public class PlayerInteractivity : MonoBehaviour
         {
             if (!DialogueManager.dialogueActive)
             {
-                Debug.Log("Doing something with " + interactables[0].name);
+                //Debug.Log("Doing something with " + interactables[0].name);
 
                 if (interactables[0].savePlayerPosition)
                 {

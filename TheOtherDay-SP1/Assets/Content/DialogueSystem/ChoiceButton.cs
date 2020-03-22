@@ -22,6 +22,8 @@ public class ChoiceButton : MonoBehaviour
     }
     void Start()
     {
+        float scaler = 2000;
+        button.GetComponent<RectTransform>().localScale = new Vector2(Screen.width/scaler * 9, Screen.height/scaler * 16);
         currentDialogue = DialogueManager.instance.currentDialogue;
         alpha = 1f;
     }
@@ -31,7 +33,7 @@ public class ChoiceButton : MonoBehaviour
     }
     public void GoToNextDialogue()
     {
-        Debug.Log("press choice button");
+        //Debug.Log("press choice button");
         DialogueManager.instance.currentDialogue = currentDialogue.choiceButtons[myId].nextDialogue;
         DialogueManager.instance.dialogueBoxUI.TakeNewDialogue();
     }

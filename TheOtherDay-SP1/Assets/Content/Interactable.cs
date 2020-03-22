@@ -17,7 +17,7 @@ public class Interactable : MonoBehaviour
     public Items lockedData;
     public Dialogue lockedDialogue;
     public int charIndex = 0;
-    public CursorSprite hoverCursor = CursorSprite.BigHand;
+    public CursorSprite hoverCursor = CursorSprite.Hand;
     [Space]
     [Header("Audio")]
     [FMODUnity.EventRef] public string interactSoundEvent;
@@ -38,6 +38,14 @@ public class Interactable : MonoBehaviour
 
     public void Interact()
     {
+        if (Phone.Pulled)
+        {
+            return;
+        }
+        if (GameController.pause)
+        {
+            return;
+        }
         if (lockedData != null && unlockedOnStage > GlobalData.instance.stage)
         {
             DescriptionUI.instance.ExamineItem(lockedData);
@@ -47,12 +55,12 @@ public class Interactable : MonoBehaviour
         {
             if (!Inventory.instance.INV_FindItem(requiredItem))
             {
-                if(lockedData != null)
+                if (lockedData != null)
                 {
                     DescriptionUI.instance.ExamineItem(lockedData);
                     return;
                 }
-                if(lockedDialogue != null)
+                if (lockedDialogue != null)
                 {
                     DialogueManager.instance.EnterDialogue(lockedDialogue);
                     return;
@@ -63,7 +71,7 @@ public class Interactable : MonoBehaviour
         {
             DialogueManager.instance.EnterDialogue(lockedDialogue);
             return;
-        }
+        }        
         onInteract.Invoke();
         /*
         if (OneTime) { DestroyThis(); }
@@ -74,16 +82,20 @@ public class Interactable : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (!DialogueManager.dialogueActive)
+        if (!DialogueManager.dialogueActive && !Phone.Pulled)
         {
             PuzzleMouse.overInteractable = true;
+            PuzzleMouse.currentlyHovered = this;
 
-            if (!PuzzleMouse.itemOnMouse)
+            if (changeCursorOnHover)
             {
-                PuzzleMouse.hoverText.text = gameObject.name;
-            }
+                if (!PuzzleMouse.itemOnMouse)
+                {
+                    PuzzleMouse.SetHoverText(gameObject.name);
+                }
 
-            if (changeCursorOnHover) { gameController.ChangeCursor(hoverCursor); }
+                gameController.ChangeCursor(hoverCursor);
+            }
         }
 
         // Play highlight effects on the object
@@ -93,13 +105,14 @@ public class Interactable : MonoBehaviour
     {
         gameController.ResetCursor();
         PuzzleMouse.overInteractable = false;
+        PuzzleMouse.currentlyHovered = null;
         PuzzleMouse.hoverText.text = null;
     }
 
     private void OnMouseDown()
     {
-        Debug.Log("Pressed on interactable");
-        if (!DialogueManager.dialogueActive)
+        //Debug.Log("Pressed on interactable");
+        if (!DialogueManager.dialogueActive && !Phone.Pulled)
         {
             onMouseInteract.Invoke();
         }
@@ -192,9 +205,12 @@ public class Interactable : MonoBehaviour
             PuzzleMaster pMaster = GetComponent<PuzzleMaster>();
             if (pMaster.PuzzleClear())
             {
-                _initDialogue = pMaster.clearDialogue;
-                DialogueManager.instance.EnterDialogue(_initDialogue);
-                return;
+                if (pMaster.clearDialogue != null)
+                {
+                    _initDialogue = pMaster.clearDialogue;
+                    DialogueManager.instance.EnterDialogue(_initDialogue);
+                    return;
+                }
             }
         }
         if (_initDialogue != null)

@@ -19,14 +19,15 @@ MonoBehaviour:
   changeReputation: 0
   italic: 0
   messages:
-  - text: Well, that narrows t down.
+  - text: Well, that narrows it down.
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 11400000, guid: 09807fe54e80931498ddf6ed817f021f, type: 2}
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: 09807fe54e80931498ddf6ed817f021f, type: 2}
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

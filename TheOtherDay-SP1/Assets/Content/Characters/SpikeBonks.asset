@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2dcb94960c18fa419ccd5c56abb7acb, type: 3}
+  m_Name: SpikeBonks
+  m_EditorClassIdentifier: 
+  name: Spike Bonks
+  description: This is Spike Bonks.
+  contactImage: {fileID: 21300000, guid: b1025ba38fce74f439abf1591e837686, type: 3}
+  dialogueImageFlashbackNormal: {fileID: 21300000, guid: e881463c59a645f41813b7f138703cd6,
+    type: 3}
+  dialogueImageFlashbackHappy: {fileID: 21300000, guid: ac3adc774d7e712408fa367b67bc07f2,
+    type: 3}
+  dialogueImageFlashbackSad: {fileID: 21300000, guid: e881463c59a645f41813b7f138703cd6,
+    type: 3}
+  dialogueImageFlashbackAngry: {fileID: 21300000, guid: 82895b7c69b19b14785f7f441245224b,
+    type: 3}
+  dialogueImagePresentNormal: {fileID: 21300000, guid: e881463c59a645f41813b7f138703cd6,
+    type: 3}
+  dialogueImagePresentHappy: {fileID: 21300000, guid: ac3adc774d7e712408fa367b67bc07f2,
+    type: 3}
+  dialogueImagePresentSad: {fileID: 21300000, guid: e881463c59a645f41813b7f138703cd6,
+    type: 3}
+  dialogueImagePresentAngry: {fileID: 21300000, guid: 82895b7c69b19b14785f7f441245224b,
+    type: 3}
+  dialogueImageFlashbackDrunkNormal: {fileID: 0}
+  dialogueImageFlashbackDrunkHappy: {fileID: 0}
+  dialogueImageFlashbackDrunkSad: {fileID: 0}
+  dialogueImageFlashbackDrunkAngry: {fileID: 0}
+  isDrunk: 0
+  font: {fileID: 11400000, guid: 06188d2604db92e4786bc502162be7d4, type: 2}
+  color: {r: 0.16981131, g: 0, b: 0.10265576, a: 1}
+  typingSound: event:/Sounds/NPC/Dialogue/SoundsNPCDiaHobo
+  dialogues: []
+  sms: []

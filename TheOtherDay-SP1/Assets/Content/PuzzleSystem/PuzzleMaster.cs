@@ -9,7 +9,7 @@ public class PuzzleMaster : MonoBehaviour
     public bool exitFlashbackOnClear = false;
     public Dialogue clearDialogue;
     public Dialogue wrongItemDialogue;
-    
+
     public void RecieveItem()
     {
         bool correctItem = false;
@@ -20,16 +20,17 @@ public class PuzzleMaster : MonoBehaviour
         }
         for (int i = 0; i < requiredItems.Length; i++)
         {
-           
+
             if (PuzzleMouse.itemOnMouse == requiredItems[i].item && !requiredItems[i].isGiven)
             {
+
+                requiredItems[i].isGiven = true;
+                Inventory.instance.INV_ClearItemSlot(PuzzleMouse.itemOnMouse.myItemSlot);
+                PuzzleMouse.RemoveItem();
                 if (requiredItems[i].recievedDialogue != null)
                 {
                     DialogueManager.instance.EnterDialogue(requiredItems[i].recievedDialogue);
                 }
-                requiredItems[i].isGiven = true;
-                Inventory.instance.INV_ClearItemSlot(PuzzleMouse.itemOnMouse.myItemSlot);
-                PuzzleMouse.RemoveItem();
                 if (PuzzleClear() && exitFlashbackOnClear)
                 {
                     Debug.Log("Exit flashback");

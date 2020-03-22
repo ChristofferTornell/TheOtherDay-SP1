@@ -16,11 +16,12 @@ MonoBehaviour:
   speakerEmotion: 0
   listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   listenerEmotion: 0
+  changeReputation: 0
   italic: 0
   messages:
   - text: 'Hum... not here... '
-    typeDelay: 0.1
-    messageSound: 
+    typeDelay: 0.05
+    messageSound: event:/Sounds/NPC/Dialogue/SoundsNPCAnneliseLostAndFoundShort
   - text: 'Wah! '
     typeDelay: 0.001
     messageSound: 
@@ -28,13 +29,15 @@ MonoBehaviour:
     typeDelay: 0.01
     messageSound: 
   - text: 'No, not there either.... '
-    typeDelay: 0.1
-    messageSound: 
+    typeDelay: 0.05
+    messageSound: event:/Sounds/NPC/Dialogue/SoundNPCAnneliseLostAndFoundLong
+  nextDialogue: {fileID: 11400000, guid: cdea52a9335c4fa48894989a0f9264e3, type: 2}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: cdea52a9335c4fa48894989a0f9264e3, type: 2}
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

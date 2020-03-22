@@ -5,11 +5,14 @@ using UnityEngine;
 public class SceneEvents : MonoBehaviour
 {
     public int sceneDataIndex;
-    private SceneData sceneData;
+    protected SceneData sceneData;
     public static SceneEvents instance;
+
     public GameObject objectAppear;
     public float dialogueDelay = 0.2f;
     public Dialogue initialDialogue;
+
+    public bool hasViewedErinConvo = false;
 
     void Awake()
     {
@@ -23,6 +26,7 @@ public class SceneEvents : MonoBehaviour
     void Start()
     {
         sceneData = GlobalData.instance.sceneDataList[sceneDataIndex];
+        CustomStart();
         if (sceneData.hasVisited)
         {
             return;
@@ -31,13 +35,12 @@ public class SceneEvents : MonoBehaviour
         {
             objectAppear.SetActive(false);
         }
-        Invoke("InitDialogue", dialogueDelay);
+        Invoke("InitDialogue", dialogueDelay * 0);
     }
     void InitDialogue()
     {
         if (initialDialogue != null)
         {
-            Debug.Log("Dialogue manager: " + DialogueManager.instance);
             DialogueManager.instance.EnterDialogue(initialDialogue);
         }
     }
@@ -56,5 +59,9 @@ public class SceneEvents : MonoBehaviour
     void OnDestroy()
     {
         sceneData.hasVisited = true;
+    }
+    public virtual void CustomStart()
+    {
+
     }
 }

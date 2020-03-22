@@ -6,16 +6,31 @@ using UnityEngine.Video;
 
 public class BackButton : MonoBehaviour
 {
+    public static BackButton instance;
     public Phone phone;
     public Button _HomeButton;
     public Button _BackButton;
     public Button _OutsideButton;
     public List<GameObject> MessageMenus;
+    public GameObject GennyMessageSquare;
     public GameObject LogMenu;
     private GameObject[] MessageBubbles;
     public GameObject SettingsMenu;
 
     private GameObject parent;
+    [FMODUnity.EventRef] public string closePhoneSound;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -58,10 +73,17 @@ public class BackButton : MonoBehaviour
             SettingsMenu.SetActive(false);
         }
         phone.Page = -1;
+        GennyMessageSquare.SetActive(true);
     }
 
-    private void OutsideButton()
+    private bool hasClosedPhone = false;
+
+    public void OutsideButton()
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
         if (phone.Page == 0)
         {
             if (MessageBubbles != null)
@@ -93,7 +115,19 @@ public class BackButton : MonoBehaviour
             phone.ani.Play("Down");
         }
         phone.Page = -1;
-        phone.Pulled = false;
+
+        FMODUnity.RuntimeManager.PlayOneShot(closePhoneSound);
+        GennyMessageSquare.SetActive(true);
+        Phone.Pulled = false;
+        PlayerMovement.playerInstance.animator.SetBool("phone", false); // Riley lägger ner telefonen
+        PlayerMovement.playerMovementLocked = false; // Och kan röra sig igen
+        
+        if (HotelEvents.instance != null)
+        {
+            HotelEvents.instance.CheckEvent(11);
+            hasClosedPhone = true;
+        }
+
     }
 
     public void AddToList(GameObject obj)
@@ -133,6 +167,11 @@ public class BackButton : MonoBehaviour
     
     private void BackbuttonFunc()
     {
+        GennyMessageSquare.SetActive(true);
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
         if(phone.Page == 0)
         {
             if(MessageBubbles != null)
@@ -171,13 +210,18 @@ public class BackButton : MonoBehaviour
 
     private void Update()
     {
-        if (phone.Pulled)
+        if (Phone.Pulled)
         {
             _OutsideButton.gameObject.SetActive(true);
         }
         else
         {
             _OutsideButton.gameObject.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && Phone.Pulled)
+        {
+            //OutsideButton();
         }
     }
 }

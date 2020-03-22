@@ -35,10 +35,10 @@ public class PlayerMovement : MonoBehaviour
 
     private float originalMovementSpeed;
     [Space]
-    [FMODUnity.EventRef] public string footStepEvent;
-    FMOD.Studio.EventInstance footStepInstance;
+    //[FMODUnity.EventRef] public string footStepEvent;
+    //FMOD.Studio.EventInstance footStepInstance;
     private bool footStepInstanceActive;
-    [FMODUnity.ParamRef] public string footStepParameter;
+    public AnimationSound animationSound;
 
     void Awake()
     {
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
         originalMovementSpeed = movementSpeed;
 
-        footStepInstance = FMODUnity.RuntimeManager.CreateInstance(footStepEvent);
+        //footStepInstance = FMODUnity.RuntimeManager.CreateInstance(footStepEvent);
 
         rb = GetComponent<Rigidbody2D>();
         if (horizontalAxis.Length == 0) { Debug.LogError("The horizontalAxis string is empty"); }
@@ -92,11 +92,9 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("New Position: " + newPosition);
             transform.position = newPosition;
         }
-        footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        
         MusicPlayer musicPlayer = FindObjectOfType<MusicPlayer>();
-        float _sceneIndex = musicPlayer.sceneData.footstepIndex;
-        //footStepInstance.setParameterByName(footStepParameter, _sceneIndex); //SOUND IMPLEMENTATION
-
+        animationSound.footstepIndex = musicPlayer.sceneData.footstepIndex;
     }
 
     void PlayerInput()
@@ -120,16 +118,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.right * movementSpeed * Time.deltaTime;
 
             animator.SetBool("walking", true);
-            animator.SetInteger("direction", 1);
-
-            //if (GlobalData.instance.flashBack)
-            //{
-            //    animator.Play(WalkRightFresh.name);
-            //}
-            //else
-            //{
-            //    animator.Play(WalkRight.name);
-            //}               
+            animator.SetInteger("direction", 1);             
         }
 
         // Left
@@ -140,34 +129,6 @@ public class PlayerMovement : MonoBehaviour
 
             animator.SetBool("walking", true);
             animator.SetInteger("direction", 0);
-
-            //if (GlobalData.instance.flashBack)
-            //{
-            //    animator.Play(WalkLeftFresh.name);
-            //}   
-
-            //else
-            //{
-            //    animator.Play(WalkLeft.name);
-            //}
-        }
-
-        if (rb.velocity == Vector2.zero)
-        {
-            if (footStepInstanceActive)
-            {
-                footStepInstanceActive = false;
-                footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            }
-        }
-        else
-        {
-            if (!footStepInstanceActive)
-            {
-                footStepInstanceActive = true;
-                footStepInstance.start();
-
-            }
         }
     }
 
@@ -176,20 +137,23 @@ public class PlayerMovement : MonoBehaviour
         if (GlobalData.instance.flashBack) { animator.SetBool("flashback", true); }
         else { animator.SetBool("flashback", false); }
 
-        if (lookDirection == Vector2.left && Input.GetAxisRaw(horizontalAxis) == 0)
+        if (!playerMovementLocked)
         {
-            animator.SetBool("walking", false);
-            animator.SetInteger("direction", 0);
-            //if (GlobalData.instance.flashBack) { animator.Play(IdleLeftFresh.name); }
-            //else { animator.Play(IdleLeft.name); }
-        }
+            if (lookDirection == Vector2.left && Input.GetAxisRaw(horizontalAxis) == 0)
+            {
+                animator.SetBool("walking", false);
+                animator.SetInteger("direction", 0);
+            }
 
-        if (lookDirection == Vector2.right && Input.GetAxisRaw(horizontalAxis) == 0)
+            if (lookDirection == Vector2.right && Input.GetAxisRaw(horizontalAxis) == 0)
+            {
+                animator.SetBool("walking", false);
+                animator.SetInteger("direction", 1);
+            }
+        }
+        else
         {
             animator.SetBool("walking", false);
-            animator.SetInteger("direction", 1);
-            //if (GlobalData.instance.flashBack) { animator.Play(IdleRightFresh.name); }
-            //else { animator.Play(IdleRight.name); }
         }
     }
 
@@ -204,11 +168,12 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 rb.velocity = Vector2.zero;
+
                 if (footStepInstanceActive)
                 {
                     footStepInstanceActive = false;
 
-                    footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                    //footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 }
             }
         }
@@ -219,7 +184,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 footStepInstanceActive = false;
 
-                footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                //footStepInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
     }

@@ -15,6 +15,8 @@ public class DescriptionUI : MonoBehaviour
     public float boxExitDelay = 1f;
     private bool timerTrigger = false;
 
+    private bool currentlyExamining = false;
+
     private void Awake()
     {
         if (instance != null)
@@ -26,17 +28,30 @@ public class DescriptionUI : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+    }
 
+    void ResetDescription()
+    {
+        StopAllCoroutines();
+        descriptionBoxDescriptionTextObj.text = "";
     }
 
     public void ExamineItem(Items _item)
     {
+        if (currentlyExamining)
+        {
+            ResetDescription();
+        }
         StartCoroutine(AutotypeText(_item.description, typeDelay));
         descriptionBoxObj.SetActive(true);
     }
 
     public void ExamineNPC(CharacterData _char)
     {
+        if (currentlyExamining)
+        {
+            ResetDescription();
+        }
         if (PuzzleMouse.itemOnMouse == null)
         {
             StartCoroutine(AutotypeText(_char.description, typeDelay));

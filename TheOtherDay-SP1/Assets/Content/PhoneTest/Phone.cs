@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Phone : MonoBehaviour
 {
-    [HideInInspector]public bool Pulled = false;
-    private float PressingDelta = 0.6f;
+    public Dialogue appFlashbackLockedDialogue;
+    [HideInInspector]public static bool Pulled = false;
     private float PressingTime = 0;
-    public float PullSpeed = 40;
+    public TextMeshProUGUI dayTextObj;
 
     public GameObject SettingsPage;
     public Button SettingsButton;
@@ -27,13 +28,34 @@ public class Phone : MonoBehaviour
     //public Button PullDownButton;
 
     public Animator ani;
+    public BackButton bb;
 
-    [HideInInspector]public int Page = -1;
+    [HideInInspector] public int Page = -1;
 
     [HideInInspector]public bool Zoomed = false;
-    
+
+    [FMODUnity.EventRef] public string buttonPressSound;
+    [FMODUnity.EventRef] public string messageAppPressSound;
+    [FMODUnity.EventRef] public string logAppPressSound;
+    [FMODUnity.EventRef] public string pullUpPhoneSound;
+
+    private void CheckDay()
+    {
+        if (GlobalData.instance.flashBack)
+        {
+            dayTextObj.text = "FRI";
+        }
+        else
+        {
+            dayTextObj.text = "SAT";
+        }
+    }
     private void Start()
     {
+        PlayerMovement.playerInstance.animator.SetBool("phone", false);
+        PlayerMovement.playerMovementLocked = false;
+        Invoke("CheckDay", 0.01f);
+    
         SettingsButton.onClick.AddListener(delegate { EnableSettings(true); });
         MessageButton.onClick.AddListener(delegate { EnableMessage(true); });
         LogButton.onClick.AddListener(delegate { EnableLog(true); });
@@ -42,36 +64,94 @@ public class Phone : MonoBehaviour
         //PullDownButton.onClick.AddListener(PullDown);
     }
 
+    bool FlashbackChecker()
+    {
+        if (GlobalData.instance.flashBack)
+        {
+            DialogueManager.instance.EnterDialogue(appFlashbackLockedDialogue);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     void EnableSettings(bool state)
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
         Page = 2;
         SettingsPage.SetActive(state);
     }
 
     void EnableMessage(bool state)
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
+        if (FlashbackChecker())
+        {
+            return;
+        }
+        Zoom(true);
         Page = 0;
         MessagePage.SetActive(state);
+        FMODUnity.RuntimeManager.PlayOneShot(messageAppPressSound);
     }
 
     void EnableLog(bool state)
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
+        if (FlashbackChecker())
+        {
+            return;
+        }
         Page = 1;
         LogPage.SetActive(state);
+        FMODUnity.RuntimeManager.PlayOneShot(logAppPressSound);
     }
 
     void EnableAlbum(bool state)
     {
-       AlbumPage.SetActive(state);
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
+        if (FlashbackChecker())
+        {
+            return;
+        }
+        AlbumPage.SetActive(state);
     }
 
+    private bool hasOpenedPhone = false;
     private void PullUp()
     {
+        if (DialogueManager.dialogueActive)
+        {
+            return;
+        }
         PressingTime = 0;
         ani.Play("Up");
         Pulled = true;
+        PlayerMovement.playerInstance.animator.SetBool("phone", true); // Riley tar upp telefonen
+        PlayerMovement.playerMovementLocked = true; // Och kan inte röra sig när den är uppe
+
         //PullDownButton.gameObject.SetActive(true);
+        if (HotelEvents.instance != null && !hasOpenedPhone)
+        {
+            HotelEvents.instance.CheckEvent(10);
+            hasOpenedPhone = true;
+        }
         PullUpButton.gameObject.SetActive(false);
+        FMODUnity.RuntimeManager.PlayOneShot(pullUpPhoneSound);
+
     }
 
     public void Zoom(bool state)
@@ -103,6 +183,15 @@ public class Phone : MonoBehaviour
         else
         {
             PullUpButton.gameObject.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && Pulled)
+        {
+            bb.OutsideButton();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && !Pulled)
+        {
+            PullUp();
         }
     }
 }

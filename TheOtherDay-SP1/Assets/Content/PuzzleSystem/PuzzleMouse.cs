@@ -9,6 +9,7 @@ public class PuzzleMouse : MonoBehaviour
     public static Items itemOnMouse = null;
     private static Image itemSprite;
     public static bool overInteractable = false;
+    public static Interactable currentlyHovered;
 
     public static TextMeshProUGUI hoverText = null;
 
@@ -30,11 +31,18 @@ public class PuzzleMouse : MonoBehaviour
         Debug.Log("Placing " + item.name + " on mouse with " + itemSprite.name + " sprite");
     }
 
+    public static void SetHoverText(string _text)
+    {
+        hoverText.text = _text;
+    }
     public static void RemoveItem()
     {
         itemOnMouse = null;
         itemSprite.enabled = false;
         itemSprite.sprite = null;
+        hoverText.text = "";
+        GameController gameController = FindObjectOfType<GameController>();
+        gameController.ResetCursor();
     }
 
     private void Update()

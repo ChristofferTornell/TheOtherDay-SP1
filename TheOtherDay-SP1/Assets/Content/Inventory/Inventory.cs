@@ -57,6 +57,7 @@ public class Inventory : MonoBehaviour
     }
     public void INV_AddItem(Items item)
     {
+        PuzzleMouse.RemoveItem();
         if (!GlobalData.instance.flashBack)
         {
             Debug.Log("cant add item outside of flashback");
@@ -67,7 +68,7 @@ public class Inventory : MonoBehaviour
             if (iSlot.myItem == null)
             {
                 FMODUnity.RuntimeManager.PlayOneShot(addItemSoundEvent);
-                Debug.Log("Adding item " + item.myName);
+                //Debug.Log("Adding item " + item.myName);
                 iSlot.UpdateSlot(item);
                 
                 return;
@@ -81,7 +82,7 @@ public class Inventory : MonoBehaviour
         {
             if (iSlot.myItem == item)
             {
-                Debug.Log("Found item " + item.myName);
+                //Debug.Log("Found item " + item.myName);
                 return true;
             }
         }

@@ -29,6 +29,8 @@ public class Dialogue : ScriptableObject
     [Header("Insertables")]
     public Dialogue nextDialogue = null;
     [Space]
+    public bool ignorePhone = false;
+    [Space]
     public string triggerScene;
     public bool enterFlashback = false;
     public bool exitFlashback = false;

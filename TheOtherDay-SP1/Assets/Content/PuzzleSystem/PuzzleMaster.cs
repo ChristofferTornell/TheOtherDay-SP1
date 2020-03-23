@@ -19,13 +19,16 @@ public class PuzzleMaster : MonoBehaviour
         {
             return;
         }
-        for (int i = 0; i < optionalItems.Length; i++)
+        if (optionalItems != null)
         {
-            if (PuzzleMouse.itemOnMouse == optionalItems[i].item)
+            for (int i = 0; i < optionalItems.Length; i++)
             {
-                PuzzleMouse.RemoveItem();
-                DialogueManager.instance.EnterDialogue(optionalItems[i].recievedDialogue);
-                return;
+                if (PuzzleMouse.itemOnMouse == optionalItems[i].item)
+                {
+                    PuzzleMouse.RemoveItem();
+                    DialogueManager.instance.EnterDialogue(optionalItems[i].recievedDialogue);
+                    return;
+                }
             }
         }
         for (int i = 0; i < requiredItems.Length; i++)

@@ -12,8 +12,8 @@ public class DigitalClockScript : MonoBehaviour
     public float timeFactor = 10f;
     [Space]
     [SerializeField] private float seconds;
-    public float minutes;
-    public float hours;
+    public static float minutes;
+    public static float hours;
 
     [Header("Display")]
     public TextMeshProUGUI hoursDisplay = null;
@@ -22,6 +22,7 @@ public class DigitalClockScript : MonoBehaviour
 
     [Header("Bad Ending")]
     public string badEndingScene = "BadEnding";
+
     private bool changingTime = false;
     private float timeChangeAmount = 0;
     private bool triggerEnd = false;
@@ -29,19 +30,6 @@ public class DigitalClockScript : MonoBehaviour
     private void Start()
     {
         if (timeFactor <= 0) { timeFactor = 1; }
-
-        if (!GlobalData.instance.flashBack)
-        {
-            seconds = digitalClockObject.seconds;
-            minutes = digitalClockObject.minutes;
-            hours = digitalClockObject.hours;
-        }
-
-        if (GlobalData.instance.flashBack && GlobalData.instance.currentFlashbackTime)
-        {
-            ConvertFlashbackTime(GlobalData.instance.currentFlashbackTime.minute1, GlobalData.instance.currentFlashbackTime.minute2,
-                GlobalData.instance.currentFlashbackTime.hour1, GlobalData.instance.currentFlashbackTime.hour2);
-        }
 
         hoursDisplay.color = displayColor;
         minutesDisplay.color = displayColor;
@@ -58,13 +46,49 @@ public class DigitalClockScript : MonoBehaviour
         }
         else { minutesDisplay.text = "0" + minutes.ToString(); }
 
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
+        Debug.Log("Flashback:" + GlobalData.instance.flashBack);
+        StartCoroutine(Delayer());
+
+        SceneChanger.onChange += OnSceneUnloaded;
     }
+
+    IEnumerator Delayer()
+    {
+        yield return new WaitForSeconds(0.14f);
+
+        if (GlobalData.instance.flashBack == true)
+        {
+            DisplayFlashbackTime();
+        }
+
+        if (GlobalData.instance.flashBack == false)
+        {
+            DisplayPresentTime();
+        }
+
+        yield return null;
+    }
+
     public void ConvertFlashbackTime(float m1, float m2, float h1, float h2)
     {
-        seconds = 0;
         minutes = (m2 * 10) + m1;
         hours = (h2 * 10) + h1;
+    }
+
+    private void DisplayPresentTime()
+    {
+        //seconds = digitalClockObject.seconds;
+        //minutes = digitalClockObject.minutes;
+        //hours = digitalClockObject.hours;
+        Debug.Log("DigitalClockScript - Displaying present time");
+        ConvertFlashbackTime(FlashbackTransitionClock.instance.presentTime.minute1, FlashbackTransitionClock.instance.presentTime.minute2,
+            FlashbackTransitionClock.instance.presentTime.hour1, FlashbackTransitionClock.instance.presentTime.hour2);
+    }
+    private void DisplayFlashbackTime()
+    {
+        Debug.Log("DigitalClockScript - Displaying flashback time");
+        ConvertFlashbackTime(FlashbackTransitionClock.instance.currentFlashbackTime.minute1, FlashbackTransitionClock.instance.currentFlashbackTime.minute2,
+            FlashbackTransitionClock.instance.currentFlashbackTime.hour1, FlashbackTransitionClock.instance.currentFlashbackTime.hour2);
     }
 
     private void Update()
@@ -104,16 +128,20 @@ public class DigitalClockScript : MonoBehaviour
         }
     }
 
+    //void ApplyToObject()
+    //{
+    //    digitalClockObject.seconds = seconds;
+    //    digitalClockObject.minutes = minutes;
+    //    digitalClockObject.hours = hours;
+    //}
+
     void SaveTime()
     {
-        digitalClockObject.seconds = seconds;
-        digitalClockObject.minutes = minutes;
-        digitalClockObject.hours = hours;
         FlashbackTransitionClock.instance.SavePresentTime(minutes, hours);
         Debug.Log("Saved present time");
     }
 
-    void OnSceneUnloaded(Scene scene)
+    void OnSceneUnloaded(SceneChanger changer)
     {
         // Unsure if this will work as intended
         if (!GlobalData.instance.flashBack)

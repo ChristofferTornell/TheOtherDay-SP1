@@ -53,6 +53,7 @@ public class GlobalData : MonoBehaviour
         logStage = -2;
         stage = 0;
         flashBack = false;
+        Debug.Log("Flashback:" + instance.flashBack);
     }
     public string GetMusicInScene(string sceneName)
     {

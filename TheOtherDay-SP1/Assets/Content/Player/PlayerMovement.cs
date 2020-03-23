@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (newPosition != Vector2.zero)
         {
-            Debug.Log("New Position: " + newPosition);
+            //Debug.Log("New Position: " + newPosition);
             transform.position = newPosition;
         }
         

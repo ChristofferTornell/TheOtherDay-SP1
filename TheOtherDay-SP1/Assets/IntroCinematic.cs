@@ -13,10 +13,14 @@ public class IntroCinematic : MonoBehaviour
 
     private void Start()
     {
+        GameController.pause = true;
         img = gameObject.GetComponent<Image>();
         StartCoroutine(Intro());
     }
-
+    private void OnDestroy()
+    {
+        GameController.pause = false;
+    }
 
     void Update()
     {

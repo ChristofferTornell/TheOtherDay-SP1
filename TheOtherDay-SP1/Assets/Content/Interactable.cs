@@ -46,10 +46,18 @@ public class Interactable : MonoBehaviour
         {
             return;
         }
-        if (lockedData != null && unlockedOnStage > GlobalData.instance.stage)
+        if (unlockedOnStage > GlobalData.instance.stage)
         {
-            DescriptionUI.instance.ExamineItem(lockedData);
-            return;
+            if (lockedData != null)
+            {
+                DescriptionUI.instance.ExamineItem(lockedData);
+                return;
+            }
+            if (lockedDialogue != null)
+            {
+                DialogueManager.instance.EnterDialogue(lockedDialogue);
+                return;
+            }
         }
         if (requiredItem != null)
         {

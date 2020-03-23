@@ -19,14 +19,16 @@ MonoBehaviour:
   changeReputation: 0
   italic: 0
   messages:
-  - text: What can I get you?
+  - text: You need anything else?
     typeDelay: 0.01
     messageSound: 
+  nextDialogue: {fileID: 11400000, guid: 478b26fa0a15698448a34937d436b66f, type: 2}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  nextDialogue: {fileID: 11400000, guid: 478b26fa0a15698448a34937d436b66f, type: 2}
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

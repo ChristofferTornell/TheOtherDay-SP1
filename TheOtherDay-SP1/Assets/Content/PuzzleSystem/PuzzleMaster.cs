@@ -5,6 +5,7 @@ using UnityEngine;
 public class PuzzleMaster : MonoBehaviour
 {
     public RequiredItem[] requiredItems;
+    public OptionalItem[] optionalItems;
     public string goToSceneOnClear;
     public bool exitFlashbackOnClear = false;
     public Dialogue clearDialogue;
@@ -18,9 +19,20 @@ public class PuzzleMaster : MonoBehaviour
         {
             return;
         }
+        if (optionalItems != null)
+        {
+            for (int i = 0; i < optionalItems.Length; i++)
+            {
+                if (PuzzleMouse.itemOnMouse == optionalItems[i].item)
+                {
+                    PuzzleMouse.RemoveItem();
+                    DialogueManager.instance.EnterDialogue(optionalItems[i].recievedDialogue);
+                    return;
+                }
+            }
+        }
         for (int i = 0; i < requiredItems.Length; i++)
         {
-
             if (PuzzleMouse.itemOnMouse == requiredItems[i].item && !requiredItems[i].isGiven)
             {
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Blink : MonoBehaviour
 {
@@ -10,6 +11,16 @@ public class Blink : MonoBehaviour
     public GameObject NoteDot;
     private bool NewMessage = false;
     private bool NewNote = false;
+    private Scene current;
+
+    private void Start()
+    {
+        current = SceneManager.GetActiveScene();
+        if(current.name == "HotelPresent")
+        {
+            NewMessage = true;
+        }
+    }
 
     private void Update()
     {

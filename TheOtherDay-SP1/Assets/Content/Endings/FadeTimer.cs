@@ -12,6 +12,8 @@ public class FadeTimer : MonoBehaviour
     public float time;
     private float Alpha = 1;
     public float FadeRate = 0.005f;
+    [FMODUnity.EventRef] public string onFadeCompleteSound;
+    private bool soundTrigger = false;
 
     private void Start()
     {
@@ -35,6 +37,14 @@ public class FadeTimer : MonoBehaviour
             {
                 Alpha -= FadeRate;
                 image.color = new Color(1, 1, 1, Alpha);
+            }
+            else
+            {
+                if (!soundTrigger && onFadeCompleteSound != "")
+                {
+                    soundTrigger = true;
+                    FMODUnity.RuntimeManager.PlayOneShot(onFadeCompleteSound);
+                }
             }
         }
         else if (Counter > time && text != null)

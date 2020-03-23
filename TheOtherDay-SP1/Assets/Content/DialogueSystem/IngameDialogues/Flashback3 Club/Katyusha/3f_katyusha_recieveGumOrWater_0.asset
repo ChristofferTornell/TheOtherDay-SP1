@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 3f_katyusha_recieveGum_0
+  m_Name: 3f_katyusha_recieveGumOrWater_0
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: 01c44b970609f204c80fc359a7fe9730, type: 2}
   speakerEmotion: 0
@@ -19,15 +19,16 @@ MonoBehaviour:
   changeReputation: 0
   italic: 0
   messages:
-  - text: Here, have some gum. For the taste. That was quite a lot.
+  - text: I think you need more than me.
     typeDelay: 0.01
     messageSound: 
   nextDialogue: {fileID: 0}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  flashbackEvent: 4
+  flashbackEvent: 0
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 4f_twins_recieveMoney_5
+  m_Name: 4f_twins_postPickUp_0
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
   speakerEmotion: 0
@@ -19,14 +19,15 @@ MonoBehaviour:
   changeReputation: 0
   italic: 0
   messages:
-  - text: Oh no. *play animation for drop and pickup ring*
+  - text: Oops, dropped my ring haha.
     typeDelay: 0.01
     messageSound: 
   nextDialogue: {fileID: 0}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: e861a804f1901804cbf0dfd9d9227e92, type: 2}
   flashbackEvent: 2
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}

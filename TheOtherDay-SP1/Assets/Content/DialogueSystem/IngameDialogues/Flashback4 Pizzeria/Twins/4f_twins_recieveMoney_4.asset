@@ -22,12 +22,13 @@ MonoBehaviour:
   - text: That will be 6 dollars please.
     typeDelay: 0.01
     messageSound: 
-  nextDialogue: {fileID: 11400000, guid: 13bb08ad0ac060849b51282e7b1c802d, type: 2}
+  nextDialogue: {fileID: 0}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0
   item: {fileID: 0}
-  flashbackEvent: 0
+  flashbackEvent: 1
   TimeLimitSeconds: 0
   noChoiceDialogue: {fileID: 0}
   choiceButtons: []

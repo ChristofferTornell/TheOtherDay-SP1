@@ -6,12 +6,23 @@ public class FlashbackPizzeriaEvents : SceneEvents
 {
     public string goodEndingScene;
     public string weirdEndingScene;
+    [Space]
+    public AnimationClip pickUpAnimation;
+    public Animator playerAnimator;
+
+    private bool pickUpTrigger;
+    private float pickUpCounter;
+    public Dialogue postPickUpDialogue;
 
     public override void PlayEvent(int eventIndex)
     {
         if (eventIndex == 1)
         {
-            //Riley drop ring animation
+            Debug.Log("Play Riley puking animation");
+            playerAnimator = FindObjectOfType<PlayerMovement>().animator;
+            playerAnimator.Play(pickUpAnimation.name);
+            pickUpTrigger = true;
+            GameController.pause = true;
         }
         if (eventIndex == 2)
         {
@@ -25,6 +36,19 @@ public class FlashbackPizzeriaEvents : SceneEvents
                 SceneChanger.instance.ChangeScene(goodEndingScene);
             }
             
+        }
+    }
+    void Update()
+    {
+        if (pickUpTrigger)
+        {
+            pickUpCounter += Time.deltaTime;
+            if (pickUpCounter >= pickUpAnimation.length)
+            {
+                GameController.pause = false;
+                pickUpTrigger = false;
+                DialogueManager.instance.EnterDialogue(postPickUpDialogue);
+            }
         }
     }
 }

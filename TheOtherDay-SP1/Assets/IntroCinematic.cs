@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class IntroCinematic : MonoBehaviour
 {
+    [SerializeField] private string changeSceneTo = "HotelPresent";
+
     public Sprite[] sprite;
     public float[] duration;
     private Image img;
@@ -13,6 +15,22 @@ public class IntroCinematic : MonoBehaviour
     {
         img = gameObject.GetComponent<Image>();
         StartCoroutine(Intro());
+    }
+
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            ChangeScene();
+        }
+    }
+
+    void ChangeScene()
+    {
+        GlobalData.instance.stage++;
+        GlobalData.instance.logStage++;
+        SceneChanger.instance.ChangeScene(changeSceneTo);
     }
 
     IEnumerator Intro()
@@ -25,5 +43,6 @@ public class IntroCinematic : MonoBehaviour
                 img.sprite = sprite[i + 1];
             }
         }
+        ChangeScene();
     }
 }

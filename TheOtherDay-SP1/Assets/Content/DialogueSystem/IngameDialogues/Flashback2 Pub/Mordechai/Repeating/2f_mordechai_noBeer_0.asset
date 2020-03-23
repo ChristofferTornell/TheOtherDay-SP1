@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
-  m_Name: 2f_mordechai_repeating_0
+  m_Name: 2f_mordechai_noBeer_0
   m_EditorClassIdentifier: 
   speaker: {fileID: 11400000, guid: 697c03abe2da6a34e9cc67fe00994873, type: 2}
   speakerEmotion: 0
@@ -19,7 +19,7 @@ MonoBehaviour:
   changeReputation: 0
   italic: 0
   messages:
-  - text: You need anything else?
+  - text: What can I get you?
     typeDelay: 0.01
     messageSound: 
   nextDialogue: {fileID: 11400000, guid: 478b26fa0a15698448a34937d436b66f, type: 2}

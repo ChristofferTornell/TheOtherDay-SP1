@@ -10,17 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2dcb94960c18fa419ccd5c56abb7acb, type: 3}
-  m_Name: Genny
+  m_Name: Genevieve
   m_EditorClassIdentifier: 
-  name: Genny
+  name: Genevieve
   description: Random Character that Riley messages
   contactImage: {fileID: 21300000, guid: c7966b3c028e33a4089d52775fb79155, type: 3}
   dialogueImageFlashbackNormal: {fileID: 0}
   dialogueImageFlashbackHappy: {fileID: 0}
   dialogueImageFlashbackSad: {fileID: 0}
+  dialogueImageFlashbackAngry: {fileID: 0}
   dialogueImagePresentNormal: {fileID: 0}
   dialogueImagePresentHappy: {fileID: 0}
   dialogueImagePresentSad: {fileID: 0}
+  dialogueImagePresentAngry: {fileID: 0}
+  dialogueImageFlashbackDrunkNormal: {fileID: 0}
+  dialogueImageFlashbackDrunkHappy: {fileID: 0}
+  dialogueImageFlashbackDrunkSad: {fileID: 0}
+  dialogueImageFlashbackDrunkAngry: {fileID: 0}
+  isDrunk: 0
   font: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
   typingSound: 

@@ -46,7 +46,7 @@ public class Interactable : MonoBehaviour
         {
             return;
         }
-        if (unlockedOnStage > GlobalData.instance.stage)
+        if ((requiredItem != null && !Inventory.instance.INV_FindItem(requiredItem) || unlockedOnStage > GlobalData.instance.stage))
         {
             if (lockedData != null)
             {
@@ -59,27 +59,12 @@ public class Interactable : MonoBehaviour
                 return;
             }
         }
-        if (requiredItem != null)
-        {
-            if (!Inventory.instance.INV_FindItem(requiredItem))
-            {
-                if (lockedData != null)
-                {
-                    DescriptionUI.instance.ExamineItem(lockedData);
-                    return;
-                }
-                if (lockedDialogue != null)
-                {
-                    DialogueManager.instance.EnterDialogue(lockedDialogue);
-                    return;
-                }
-            }
-        }
+
         if (lockedByEvent)
         {
             DialogueManager.instance.EnterDialogue(lockedDialogue);
             return;
-        }        
+        }
         onInteract.Invoke();
         /*
         if (OneTime) { DestroyThis(); }

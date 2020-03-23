@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -553,12 +553,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: dc1c051e89e863443bca70c573b6bab0,
-        type: 3}
     - target: {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: messages.Array.size
@@ -700,6 +694,12 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dc1c051e89e863443bca70c573b6bab0,
+        type: 3}
     - target: {fileID: 971168796822654413, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: m_text
@@ -844,12 +844,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
-    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: af684ff9af95f974f83c94260d78d401,
-        type: 3}
     - target: {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: messages.Array.size
@@ -972,6 +966,12 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: af684ff9af95f974f83c94260d78d401,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a18260cac05ee14c856108d765ae502, type: 3}
 --- !u!1 &273784169
@@ -1185,6 +1185,7 @@ MonoBehaviour:
   text: {fileID: 0}
   time: 12.8
   FadeRate: 0.005
+  onFadeCompleteSound: 
 --- !u!1 &866845757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,6 +1240,7 @@ MonoBehaviour:
   text: {fileID: 0}
   time: 2
   FadeRate: 1
+  onFadeCompleteSound: event:/Sounds/Endings/CutsceneGoodDoorOpen
 --- !u!114 &866845760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1492,6 +1494,7 @@ MonoBehaviour:
   text: {fileID: 0}
   time: 5.4
   FadeRate: 0.005
+  onFadeCompleteSound: 
 --- !u!114 &1311053786 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 971168797752393482, guid: 7a18260cac05ee14c856108d765ae502,
@@ -1702,7 +1705,7 @@ MonoBehaviour:
     messageSound: 
   - text: " \n"
     typeDelay: 0.5
-    messageSound: event:/Sounds/Endings/CutsceneGoodDoorOpen
+    messageSound: 
   - text: They arrived at the dress rehearsal on time,
     typeDelay: 0.05
     messageSound: 
@@ -2329,3 +2332,4 @@ MonoBehaviour:
   text: {fileID: 7293038172652094184}
   time: 2
   FadeRate: 0.001
+  onFadeCompleteSound: 

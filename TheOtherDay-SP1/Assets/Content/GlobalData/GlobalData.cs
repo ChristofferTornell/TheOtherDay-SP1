@@ -6,13 +6,17 @@ public class GlobalData : MonoBehaviour
 {
     public static GlobalData instance;
     public int stage = 0;
+    private int startingStage = 0;
     public bool flashBack;
     [HideInInspector] public FlashbackTime currentFlashbackTime = null;
     public SceneData[] sceneDataList;
     public CharacterData[] charaters;
     public int logStage = -2;
+    private int startingLogStage = -2;
     public LogEntry[] logEntries;
     public int reputation = 0;
+    private int startingReputation = 0;
+
 
     private void Awake()
     {
@@ -49,11 +53,13 @@ public class GlobalData : MonoBehaviour
             lEntry.visible = false;
             lEntry.complete = false;
         }
-        reputation = 0;
-        logStage = -2;
-        stage = 0;
-        flashBack = false;
         Debug.Log("Flashback:" + instance.flashBack);
+    }
+    public void ResetStages()
+    {
+        reputation = startingReputation;
+        logStage = startingLogStage;
+        stage = startingStage;
     }
     public string GetMusicInScene(string sceneName)
     {

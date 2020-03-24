@@ -1729,7 +1729,7 @@ PrefabInstance:
     - target: {fileID: 9063160883304019301, guid: 245ced831aab25b48a7175440957cee1,
         type: 3}
       propertyPath: flashbackTimeList.Array.size
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9063160883304019301, guid: 245ced831aab25b48a7175440957cee1,
         type: 3}
@@ -1785,6 +1785,28 @@ PrefabInstance:
       propertyPath: flashbackTimeList.Array.data[4].flashbackTime
       value: 
       objectReference: {fileID: 11400000, guid: e8f7f5b860ab2624cb59b2b4ceb9f80c,
+        type: 2}
+    - target: {fileID: 9063160883304019301, guid: 245ced831aab25b48a7175440957cee1,
+        type: 3}
+      propertyPath: flashbackTimeList.Array.data[5].flashbackName
+      value: ClubFoyerFlashback
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063160883304019301, guid: 245ced831aab25b48a7175440957cee1,
+        type: 3}
+      propertyPath: flashbackTimeList.Array.data[5].flashbackTime
+      value: 
+      objectReference: {fileID: 11400000, guid: 6fe6deaf916c335498e27edd49ebfc4e,
+        type: 2}
+    - target: {fileID: 9063160883304019301, guid: 245ced831aab25b48a7175440957cee1,
+        type: 3}
+      propertyPath: flashbackTimeList.Array.data[6].flashbackName
+      value: ClubFlashback
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063160883304019301, guid: 245ced831aab25b48a7175440957cee1,
+        type: 3}
+      propertyPath: flashbackTimeList.Array.data[6].flashbackTime
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f4b4fc0ff143a340903e32c14b94563,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 245ced831aab25b48a7175440957cee1, type: 3}

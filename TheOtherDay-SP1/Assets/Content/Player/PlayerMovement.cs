@@ -11,15 +11,6 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Animation")]
     public Animator animator = null;
-    public AnimationClip IdleLeft;
-    public AnimationClip IdleRight;
-    public AnimationClip WalkLeft;
-    public AnimationClip WalkRight;
-    [Space]
-    public AnimationClip IdleLeftFresh;
-    public AnimationClip IdleRightFresh;
-    public AnimationClip WalkLeftFresh;
-    public AnimationClip WalkRightFresh;
     private Vector2 lookDirection;
 
     [Space]
@@ -27,13 +18,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private string horizontalAxis = "Horizontal";
 
     [Header("Stats")]
-    [Tooltip("Movement speed of the player (recommended value around 450)")]
+    [Tooltip("Movement speed of the player")]
     [SerializeField] private float movementSpeed = 450;
-    [SerializeField] private float sprintingSpeed = 500;
 
     private Rigidbody2D rb = null;
 
-    private float originalMovementSpeed;
     [Space]
     //[FMODUnity.EventRef] public string footStepEvent;
     //FMOD.Studio.EventInstance footStepInstance;
@@ -56,8 +45,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         // footStepInstance = FMODUnity.RuntimeManager.CreateInstance(footStepEvent); IMPLEMENT SOUND
-
-        originalMovementSpeed = movementSpeed;
 
         //footStepInstance = FMODUnity.RuntimeManager.CreateInstance(footStepEvent);
 
@@ -100,16 +87,6 @@ public class PlayerMovement : MonoBehaviour
     void PlayerInput()
     {
         rb.velocity = Vector2.zero; 
-
-        // Sprinting
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            movementSpeed = sprintingSpeed;
-        }
-        else
-        {
-            movementSpeed = originalMovementSpeed;
-        }
 
         // Right
         if (Input.GetAxisRaw(horizontalAxis) > 0)

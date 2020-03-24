@@ -398,8 +398,8 @@ MonoBehaviour:
   startDelay: 0.6
   waitTimeWhenDone: 1
   startingTime: {fileID: 11400000, guid: 6ce3e9c8b56a6e3448afbb3dd0a94142, type: 2}
-  targetTime: {fileID: 0}
   presentTime: {fileID: 0}
+  currentFlashbackTime: {fileID: 0}
   done: 0
   digitalClockObject: {fileID: 11400000, guid: 3dbb5d5d7b1981a479729c443875b2fe, type: 2}
   minute1: 0
@@ -618,6 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: 0
   flashBack: 0
+  currentFlashbackTime: {fileID: 0}
   sceneDataList:
   - {fileID: 11400000, guid: 040da5b37f89b554da4a82d9b2bd5bf4, type: 2}
   - {fileID: 11400000, guid: b29a67a2f3c5ab84b905cc269cd2d159, type: 2}

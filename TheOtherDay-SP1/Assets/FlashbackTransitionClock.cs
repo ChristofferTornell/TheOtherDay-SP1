@@ -49,6 +49,9 @@ public class FlashbackTransitionClock : MonoBehaviour
     private float speed = 1;
     private bool startClock = false;
     private bool clockDone = false;
+    private float minuteTracker = 0;
+    private float hourTracker = 0;
+    private float hourGoal = 0;
 
     void Awake()
     {
@@ -82,10 +85,7 @@ public class FlashbackTransitionClock : MonoBehaviour
 
     private void Start()
     {
-        minute1 = startingTime.minute1;
-        minute2 = startingTime.minute2;
-        hour1 = startingTime.hour1;
-        hour2 = startingTime.hour2;
+        UpdateStartingTime();
 
         minute1Display.sprite = NumberToImage(minute1);
         minute2Display.sprite = NumberToImage(minute2);
@@ -114,20 +114,32 @@ public class FlashbackTransitionClock : MonoBehaviour
         }
     }
 
+    private void UpdateStartingTime()
+    {
+        minute1 = startingTime.minute1;
+        minute2 = startingTime.minute2;
+        hour1 = startingTime.hour1;
+        hour2 = startingTime.hour2;
+    }
+
     public void SavePresentTime(float minutes, float hours)
     {
         presentTime.minute2 = Mathf.Abs(Mathf.Floor(minutes / 10));
         presentTime.minute1 = Mathf.Abs(minutes - (presentTime.minute2 * 10));
         presentTime.hour2 = Mathf.Abs(Mathf.Floor(hours / 10));
         presentTime.hour1 = Mathf.Abs(hours - (presentTime.hour2 * 10));
-        Debug.Log("Converted digitalClock time:" + hours + ":" + minutes + " to flashbackClock time: " + presentTime.hour2 + presentTime.hour1 + ":" + presentTime.minute2 + presentTime.minute1);
+        Debug.Log("Converted digitalClock time:" + hours + ":" + minutes + " to presentTime: " + presentTime.hour2 + presentTime.hour1 + ":" + presentTime.minute2 + presentTime.minute1);
     }
 
     float CalculateTimeDifference(FlashbackTime targetTime)
     {
         // Difference in virtual hours
         // 1 IRL minute = 1 virtual hour (on speed = 1)
-        float difference = ((Mathf.Abs(hour2 - targetTime.hour2) + 1) * 10) + Mathf.Abs(hour1 - targetTime.hour1 + 1);
+
+        float diff1 = ((Mathf.Abs(hour2 - targetTime.hour2) + 1) * 10);
+        float diff2 = Mathf.Abs(hour1 - targetTime.hour1 + 1);
+
+        float difference = diff1 + diff2;
         Debug.Log("Time difference: " + hour2 + " - " + targetTime.hour2 + " * 10 " + hour1 + " - " + targetTime.hour1 + " = " + difference);
         return difference;
     }
@@ -136,17 +148,18 @@ public class FlashbackTransitionClock : MonoBehaviour
     {
         Debug.Log("FlashbackClock - Starting courotine");
 
-        speed = CalculateTimeDifference(targetTime) * speedFactor;
-
         this.targetTime = targetTime;
+        speed = CalculateTimeDifference(targetTime) * speedFactor;
         Debug.Log("FlashbackClock - StartingTime: " + startingTime.name + " (" + startingTime.hour2 + startingTime.hour1 + ":" + startingTime.minute2
             + startingTime.minute1 + ") || TargetTime: " + targetTime.name + " (" + targetTime.hour2 + targetTime.hour1 + ":" + targetTime.minute2
             + targetTime.minute1 + ")");
 
         if (targetTime.flashback)
         {
-            SavePresentTime(DigitalClockScript.minutes, DigitalClockScript.hours);
             startingTime = presentTime;
+            UpdateStartingTime();
+            hourGoal = CalculateTimeDifference(targetTime);
+            SavePresentTime(DigitalClockScript.minutes, DigitalClockScript.hours);
             currentFlashbackTime = targetTime;
             backInTime = true;
         }
@@ -172,7 +185,7 @@ public class FlashbackTransitionClock : MonoBehaviour
     {
         // Problem: Clock doesnt change if targetTime is same as startingTime
 
-        if (!backInTime && minute1 == targetTime.minute1 && minute2 == targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
+        if (!backInTime && minute1 == targetTime.minute1 && minute2 == targetTime.minute2 && hourTracker == hourGoal)
         {
             DoneClock();
         }
@@ -182,7 +195,7 @@ public class FlashbackTransitionClock : MonoBehaviour
             minute1Display.sprite = NumberToImage(minute1);
         }
 
-        if (backInTime && minute1 <= (targetTime.minute1 + 1) && minute2 <= targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
+        if (backInTime && minute1 <= (targetTime.minute1 + 1) && minute2 <= targetTime.minute2 && hourTracker == hourGoal)
         {
             DoneClock();
         }
@@ -192,6 +205,31 @@ public class FlashbackTransitionClock : MonoBehaviour
             minute1Display.sprite = NumberToImage(minute1);
         }
     }
+
+    //private void RunClock2()
+    //{
+    //    // Problem: Clock doesnt change if targetTime is same as startingTime
+
+    //    if (!backInTime && minute1 == targetTime.minute1 && minute2 == targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
+    //    {
+    //        DoneClock();
+    //    }
+    //    else if (!backInTime)
+    //    {
+    //        minute1 += Time.deltaTime * speed;
+    //        minute1Display.sprite = NumberToImage(minute1);
+    //    }
+
+    //    if (backInTime && minute1 <= (targetTime.minute1 + 1) && minute2 <= targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
+    //    {
+    //        DoneClock();
+    //    }
+    //    else if (backInTime)
+    //    {
+    //        minute1 -= Time.deltaTime * speed;
+    //        minute1Display.sprite = NumberToImage(minute1);
+    //    }
+    //}
 
     void DoneClock()
     {
@@ -250,6 +288,7 @@ public class FlashbackTransitionClock : MonoBehaviour
         if (minute2 < 0)
         {
             hour1--;
+            hourTracker++;
             hour1Display.sprite = NumberToImage(hour1);
             minute2 = 5;
             minute2Display.sprite = NumberToImage(minute2);
@@ -297,6 +336,7 @@ public class FlashbackTransitionClock : MonoBehaviour
         if (minute2 > 5)
         {
             hour1++;
+            hourTracker++;
             hour1Display.sprite = NumberToImage(hour1);
             minute2 = 0;
             minute2Display.sprite = NumberToImage(minute2);

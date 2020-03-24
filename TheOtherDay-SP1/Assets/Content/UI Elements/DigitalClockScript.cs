@@ -31,6 +31,16 @@ public class DigitalClockScript : MonoBehaviour
     {
         if (timeFactor <= 0) { timeFactor = 1; }
 
+        if (GlobalData.instance.flashBack == true)
+        {
+            DisplayFlashbackTime();
+        }
+
+        if (GlobalData.instance.flashBack == false)
+        {
+            DisplayPresentTime();
+        }
+
         hoursDisplay.color = displayColor;
         minutesDisplay.color = displayColor;
 
@@ -54,7 +64,7 @@ public class DigitalClockScript : MonoBehaviour
 
     IEnumerator Delayer()
     {
-        yield return new WaitForSeconds(0.14f);
+        yield return new WaitForSeconds(0.3f);
 
         if (GlobalData.instance.flashBack == true)
         {
@@ -146,7 +156,7 @@ public class DigitalClockScript : MonoBehaviour
         // Unsure if this will work as intended
         if (!GlobalData.instance.flashBack)
         {
-            SaveTime();
+            //SaveTime();
         }
     }
 

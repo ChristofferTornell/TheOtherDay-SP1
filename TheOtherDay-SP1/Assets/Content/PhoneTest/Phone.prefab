@@ -679,6 +679,7 @@ GameObject:
   - component: {fileID: 163767522}
   - component: {fileID: 163767521}
   - component: {fileID: 163767520}
+  - component: {fileID: 8025598219665746725}
   m_Layer: 5
   m_Name: Forward
   m_TagString: Untagged
@@ -797,8 +798,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &8025598219665746725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 163767518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &185438866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,6 +1795,7 @@ GameObject:
   - component: {fileID: 588001301}
   - component: {fileID: 588001300}
   - component: {fileID: 588001299}
+  - component: {fileID: 4740360437439111819}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1888,6 +1914,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 2030686562}
         m_MethodName: AddToList
         m_Mode: 2
@@ -1901,6 +1938,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &4740360437439111819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588001297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &607827823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2378,6 +2428,7 @@ GameObject:
   - component: {fileID: 667485393}
   - component: {fileID: 667485392}
   - component: {fileID: 667485391}
+  - component: {fileID: 7513139122037565153}
   m_Layer: 5
   m_Name: Forward
   m_TagString: Untagged
@@ -2496,8 +2547,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &7513139122037565153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667485390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &672782946
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,6 +2717,7 @@ GameObject:
   - component: {fileID: 679111998}
   - component: {fileID: 679111997}
   - component: {fileID: 679111999}
+  - component: {fileID: 6327742305741345913}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -2760,8 +2836,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &6327742305741345913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679111995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &689919155
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,6 +2913,7 @@ GameObject:
   - component: {fileID: 745467234}
   - component: {fileID: 745467233}
   - component: {fileID: 745467232}
+  - component: {fileID: 7098743463184540903}
   m_Layer: 5
   m_Name: Forward
   m_TagString: Untagged
@@ -2931,8 +3032,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &7098743463184540903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745467230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &747484839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,6 +3453,7 @@ GameObject:
   - component: {fileID: 907788740}
   - component: {fileID: 907788739}
   - component: {fileID: 907788738}
+  - component: {fileID: 5517709596810330585}
   m_Layer: 5
   m_Name: Forward
   m_TagString: Untagged
@@ -3446,8 +3572,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5517709596810330585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907788737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &914817392
 GameObject:
   m_ObjectHideFlags: 0
@@ -3460,6 +3610,7 @@ GameObject:
   - component: {fileID: 914817395}
   - component: {fileID: 914817394}
   - component: {fileID: 914817396}
+  - component: {fileID: 6310436239513154345}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -3578,8 +3729,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &6310436239513154345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914817392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &917435389
 GameObject:
   m_ObjectHideFlags: 0
@@ -3939,6 +4114,7 @@ GameObject:
   - component: {fileID: 1012381547}
   - component: {fileID: 1012381546}
   - component: {fileID: 1012381545}
+  - component: {fileID: 5740270760987576388}
   m_Layer: 5
   m_Name: Forward
   m_TagString: Untagged
@@ -4057,8 +4233,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5740270760987576388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012381544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1068291084
 GameObject:
   m_ObjectHideFlags: 0
@@ -4071,6 +4271,7 @@ GameObject:
   - component: {fileID: 1068291087}
   - component: {fileID: 1068291086}
   - component: {fileID: 1068291085}
+  - component: {fileID: 2567417912542225094}
   m_Layer: 5
   m_Name: Forward
   m_TagString: Untagged
@@ -4189,8 +4390,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2567417912542225094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068291084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1082010244
 GameObject:
   m_ObjectHideFlags: 0
@@ -4746,6 +4971,7 @@ GameObject:
   - component: {fileID: 1210975298}
   - component: {fileID: 1210975297}
   - component: {fileID: 4893098133267401483}
+  - component: {fileID: 4962113704823038038}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -4864,12 +5090,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2058870761}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2030686562}
+        m_MethodName: AddToList
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1411622724}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4901,6 +5138,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myButton: {fileID: 1210975297}
+--- !u!114 &4962113704823038038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210975295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1219145840
 GameObject:
   m_ObjectHideFlags: 0
@@ -5222,6 +5472,7 @@ GameObject:
   - component: {fileID: 1258363104}
   - component: {fileID: 1258363103}
   - component: {fileID: 1258363105}
+  - component: {fileID: 6463436681406156115}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -5340,8 +5591,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &6463436681406156115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258363101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1284322764
 GameObject:
   m_ObjectHideFlags: 0
@@ -5661,6 +5936,7 @@ GameObject:
   - component: {fileID: 1362867685}
   - component: {fileID: 1362867684}
   - component: {fileID: 1362867683}
+  - component: {fileID: 5282460534293076946}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -5779,8 +6055,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5282460534293076946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362867681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1363920707
 GameObject:
   m_ObjectHideFlags: 0
@@ -5793,6 +6093,7 @@ GameObject:
   - component: {fileID: 1363920711}
   - component: {fileID: 1363920710}
   - component: {fileID: 1363920709}
+  - component: {fileID: 4128530989086497623}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -5911,8 +6212,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &4128530989086497623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363920707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1374052106
 GameObject:
   m_ObjectHideFlags: 0
@@ -6172,6 +6497,7 @@ GameObject:
   - component: {fileID: 1447958557}
   - component: {fileID: 1447958556}
   - component: {fileID: 1447958558}
+  - component: {fileID: 4409318447149323635}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -6290,8 +6616,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &4409318447149323635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447958554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1466994556
 GameObject:
   m_ObjectHideFlags: 0
@@ -6498,6 +6848,7 @@ GameObject:
   - component: {fileID: 1501658661}
   - component: {fileID: 1501658660}
   - component: {fileID: 1501658659}
+  - component: {fileID: 6630404260187174311}
   m_Layer: 5
   m_Name: Forward
   m_TagString: Untagged
@@ -6616,8 +6967,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &6630404260187174311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501658658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1538219877
 GameObject:
   m_ObjectHideFlags: 0
@@ -6824,6 +7199,7 @@ GameObject:
   - component: {fileID: 1560345690}
   - component: {fileID: 1560345689}
   - component: {fileID: 1560345691}
+  - component: {fileID: 3106115156693866028}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -6942,8 +7318,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &3106115156693866028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560345687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1572807449
 GameObject:
   m_ObjectHideFlags: 0
@@ -7286,6 +7686,7 @@ GameObject:
   - component: {fileID: 1609515917}
   - component: {fileID: 1609515916}
   - component: {fileID: 1609515915}
+  - component: {fileID: 3950509351501514857}
   m_Layer: 5
   m_Name: Forward
   m_TagString: Untagged
@@ -7404,8 +7805,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &3950509351501514857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609515914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1633118750
 GameObject:
   m_ObjectHideFlags: 0
@@ -7418,6 +7843,7 @@ GameObject:
   - component: {fileID: 1633118753}
   - component: {fileID: 1633118752}
   - component: {fileID: 1633118751}
+  - component: {fileID: 4097217548746394949}
   m_Layer: 5
   m_Name: Forward
   m_TagString: Untagged
@@ -7536,8 +7962,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &4097217548746394949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633118750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1640827388
 GameObject:
   m_ObjectHideFlags: 0
@@ -7550,6 +8000,7 @@ GameObject:
   - component: {fileID: 1640827392}
   - component: {fileID: 1640827391}
   - component: {fileID: 1640827390}
+  - component: {fileID: 5259104553744569873}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -7668,8 +8119,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5259104553744569873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640827388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1642263909
 GameObject:
   m_ObjectHideFlags: 0
@@ -7682,6 +8157,7 @@ GameObject:
   - component: {fileID: 1642263913}
   - component: {fileID: 1642263912}
   - component: {fileID: 1642263911}
+  - component: {fileID: 1354555951393023322}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -7789,9 +8265,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1642263912}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1354555951393023322}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1354555951393023322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642263909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1672468498
 GameObject:
   m_ObjectHideFlags: 0
@@ -7841,6 +8341,7 @@ GameObject:
   - component: {fileID: 1688270672}
   - component: {fileID: 1688270671}
   - component: {fileID: 1688270670}
+  - component: {fileID: 5641084473254305875}
   m_Layer: 5
   m_Name: Forward
   m_TagString: Untagged
@@ -7959,8 +8460,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5641084473254305875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688270669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1695191576
 GameObject:
   m_ObjectHideFlags: 0
@@ -8689,6 +9214,7 @@ GameObject:
   - component: {fileID: 1898067232}
   - component: {fileID: 1898067231}
   - component: {fileID: 1898067230}
+  - component: {fileID: 1757587298882852593}
   m_Layer: 5
   m_Name: Forward
   m_TagString: Untagged
@@ -8807,8 +9333,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1757587298882852593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898067229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1904452826
 GameObject:
   m_ObjectHideFlags: 0
@@ -8896,6 +9446,7 @@ GameObject:
   - component: {fileID: 1944437883}
   - component: {fileID: 1944437882}
   - component: {fileID: 1944437884}
+  - component: {fileID: 6634712453189676566}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -9014,8 +9565,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &6634712453189676566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944437880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &1947145502
 GameObject:
   m_ObjectHideFlags: 0
@@ -9507,6 +10082,7 @@ GameObject:
   - component: {fileID: 1993223189}
   - component: {fileID: 1993223188}
   - component: {fileID: 1993223190}
+  - component: {fileID: 7503180565653611490}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -9625,8 +10201,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &7503180565653611490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993223186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &2008186206
 GameObject:
   m_ObjectHideFlags: 0
@@ -9639,6 +10239,7 @@ GameObject:
   - component: {fileID: 2008186209}
   - component: {fileID: 2008186208}
   - component: {fileID: 2008186210}
+  - component: {fileID: 2809349423235963851}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -9757,8 +10358,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2809349423235963851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008186206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &2052567981
 GameObject:
   m_ObjectHideFlags: 0
@@ -10098,6 +10723,7 @@ GameObject:
   - component: {fileID: 2100397920}
   - component: {fileID: 2100397919}
   - component: {fileID: 2100397918}
+  - component: {fileID: 3928886651632952636}
   m_Layer: 5
   m_Name: Forward
   m_TagString: Untagged
@@ -10216,8 +10842,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &3928886651632952636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100397917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &2122659991
 GameObject:
   m_ObjectHideFlags: 0
@@ -10230,6 +10880,7 @@ GameObject:
   - component: {fileID: 2122659994}
   - component: {fileID: 2122659993}
   - component: {fileID: 2122659995}
+  - component: {fileID: 5262048541574387958}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -10348,8 +10999,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8025598219665746725}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5262048541574387958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122659991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &203513669416283597
 GameObject:
   m_ObjectHideFlags: 0
@@ -10478,6 +11153,7 @@ GameObject:
   - component: {fileID: 2838123699337966291}
   - component: {fileID: 1693009607260007443}
   - component: {fileID: 3279179732449586526}
+  - component: {fileID: 160451843126776920}
   m_Layer: 5
   m_Name: NextPage Button
   m_TagString: Untagged
@@ -10596,6 +11272,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 160451843126776920}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 305357537907511564}
         m_MethodName: SetActive
         m_Mode: 6
@@ -10609,6 +11296,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &160451843126776920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325029750407878567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &404168760836543089
 GameObject:
   m_ObjectHideFlags: 0
@@ -10621,6 +11321,7 @@ GameObject:
   - component: {fileID: 5265029920329178328}
   - component: {fileID: 7286357674033450345}
   - component: {fileID: 727829932}
+  - component: {fileID: 5993946508333031495}
   m_Layer: 5
   m_Name: Home
   m_TagString: Untagged
@@ -10739,8 +11440,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 5993946508333031495}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &5993946508333031495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404168760836543089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &722651088843032494
 GameObject:
   m_ObjectHideFlags: 0
@@ -11293,6 +12018,7 @@ GameObject:
   - component: {fileID: 557267228040529862}
   - component: {fileID: 139335480}
   - component: {fileID: 2030686562}
+  - component: {fileID: 8840055414748095066}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -11411,6 +12137,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8840055414748095066}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2030686562
@@ -11435,6 +12172,19 @@ MonoBehaviour:
   LogMenu: {fileID: 9001126136664251591}
   SettingsMenu: {fileID: 9001126138213167936}
   closePhoneSound: event:/Sounds/UI/SoundsUIPhoneDown
+--- !u!114 &8840055414748095066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3490845222999925033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &3737861834412333016
 GameObject:
   m_ObjectHideFlags: 0
@@ -13000,6 +13750,7 @@ GameObject:
   - component: {fileID: 6527388619585055233}
   - component: {fileID: 9146685193967207982}
   - component: {fileID: 8599483012997638068}
+  - component: {fileID: 2597841477922414917}
   m_Layer: 5
   m_Name: PrevPage Button
   m_TagString: Untagged
@@ -13118,6 +13869,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2597841477922414917}
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6306707090165951013}
         m_MethodName: SetActive
         m_Mode: 6
@@ -13131,6 +13893,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2597841477922414917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417760968817770935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/UI/SoundsUIPhoneClick
 --- !u!1 &7797178407425691148
 GameObject:
   m_ObjectHideFlags: 0

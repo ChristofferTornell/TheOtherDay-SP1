@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 494}
   m_MaxSize: {x: 14002, y: 14044}
   vertical: 0
-  controlID: 2802
+  controlID: 2189
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 2803
+  controlID: 2190
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 222}
   m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 2875
+  controlID: 2191
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -382,25 +382,25 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d83b0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 769bffff74fbffff
+      m_SelectedIDs: e05a0000
+      m_LastClickedID: 23264
+      m_ExpandedIDs: 5cf9ffff7ef9ffff8af9ffff8c560000ce560000f4560000f856000002570000065700000a5700000e57000012570000525700006a5700007a5700008e570000ae570000ee570000f25700001058000024580000665800006a5800007458000082580000a0580000e8580000fe580000025900001e59000032590000685900007a590000a4590000aa590000c8590000245a00004e5a0000945a0000965a00009c5a0000e25a0000e65a0000f25a0000fa5a0000fe5a0000065b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Album
+        m_OriginalName: Album
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 23220
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -437,16 +437,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 291c8211ef293d94d971312802dc7c07
   m_Gizmos: 1
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.8156343, y: -1.5252569, z: -7.490436}
+    m_Target: {x: 292.821, y: -54.25644, z: 0}
     speed: 2
-    m_Value: {x: 7.8156343, y: -1.5252569, z: -7.490436}
+    m_Value: {x: 292.82098, y: -54.25636, z: -0.00000024851454}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -479,9 +479,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 26.572428
+    m_Target: 84.56082
     speed: 2
-    m_Value: 26.572428
+    m_Value: 84.56081
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -560,7 +560,7 @@ MonoBehaviour:
     height: 270
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: main
+    m_NameFilter: ge
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -572,20 +572,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Content/UI Elements
+    - Assets/Graphics/Characters/Erin
   m_ViewMode: 1
   m_StartGridSize: 71
   m_LastFolders:
-  - Assets/Content/UI Elements
+  - Assets/Graphics/Characters/Erin
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Christoffer\Desktop\SpelProjekt 1\TheOtherDay-SP1\TheOtherDay-SP1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 258}
+    scrollPos: {x: 0, y: 450}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000222c00001a2f000022330000143600001c360000ce36000080380000b8380000e6380000103900006e390000fc390000283a0000de3a0000123b0000b23b0000d63b0000ea3b0000b03c0000d23c0000103d0000c63d0000dc3d0000143e0000683e0000923e0000d83e0000e83e0000ea3e0000ec3e0000ee3e00008c4000007241000054420000b8420000ee4200003443000038430000464400004a44000096440000e44400002e4600001c47000000480000804800009a4800005249000074490000aa490000724a00006a4c0000b84e0000184f0000224f00006c5e000000ca9a3b
+    m_ExpandedIDs: 00000000222c00001a2f0000223300002a36000032360000e236000096380000ce380000fc3800002639000084390000123a00003e3a0000f43a0000283b0000c83b0000ec3b0000003c0000c63c0000e83c0000263d0000dc3d0000f23d00002c3e0000803e0000aa3e0000f03e0000003f0000023f0000043f0000063f0000a44000008a4100006c420000d0420000064300004c430000504300005e44000062440000ae440000fc44000046460000344700001848000098480000b24800006a4900008c490000c24900008a4a0000844c0000d24e0000324f00003c4f00005651000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -613,7 +613,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000222c00001a2f000022330000143600001c360000ce36000080380000b8380000e6380000103900006e390000fc390000283a0000de3a0000123b0000b23b0000d63b0000ea3b0000b03c0000d23c0000103d0000c63d0000dc3d0000143e0000683e0000923e0000d83e0000e83e0000ea3e0000ec3e0000ee3e00008c4000007241000054420000b8420000ee4200003443000038430000464400004a44000096440000e44400002e4600001c47000000480000804800009a4800005249000074490000aa490000724a00006a4c0000b84e0000184f0000224f00006c5e000000ca9a3b
+    m_ExpandedIDs: 00000000222c00001a2f0000223300002a36000032360000e236000096380000ce380000fc3800002639000084390000123a00003e3a0000f43a0000283b0000c83b0000ec3b0000003c0000c63c0000e83c0000263d0000dc3d0000f23d00002c3e0000803e0000aa3e0000f03e0000003f0000023f0000043f0000063f0000a44000008a4100006c420000d0420000064300004c430000504300005e44000062440000ae440000fc44000046460000344700001848000098480000b24800006a4900008c490000c24900008a4a0000844c0000d24e0000324f00003c4f00005651000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -665,7 +665,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 174.00024}
     m_GridSize: 71
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 115

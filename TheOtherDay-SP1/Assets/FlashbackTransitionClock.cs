@@ -206,30 +206,30 @@ public class FlashbackTransitionClock : MonoBehaviour
         }
     }
 
-    //private void RunClock2()
-    //{
-    //    // Problem: Clock doesnt change if targetTime is same as startingTime
+    private void RunClock2()
+    {
+        // Problem: Clock doesnt change if targetTime is same as startingTime
 
-    //    if (!backInTime && minute1 == targetTime.minute1 && minute2 == targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
-    //    {
-    //        DoneClock();
-    //    }
-    //    else if (!backInTime)
-    //    {
-    //        minute1 += Time.deltaTime * speed;
-    //        minute1Display.sprite = NumberToImage(minute1);
-    //    }
+        if (!backInTime && minute1 == targetTime.minute1 && minute2 == targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
+        {
+            DoneClock();
+        }
+        else if (!backInTime)
+        {
+            minute1 += Time.deltaTime * speed;
+            minute1Display.sprite = NumberToImage(minute1);
+        }
 
-    //    if (backInTime && minute1 <= (targetTime.minute1 + 1) && minute2 <= targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
-    //    {
-    //        DoneClock();
-    //    }
-    //    else if (backInTime)
-    //    {
-    //        minute1 -= Time.deltaTime * speed;
-    //        minute1Display.sprite = NumberToImage(minute1);
-    //    }
-    //}
+        if (backInTime && minute1 <= (targetTime.minute1 + 1) && minute2 <= targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
+        {
+            DoneClock();
+        }
+        else if (backInTime)
+        {
+            minute1 -= Time.deltaTime * speed;
+            minute1Display.sprite = NumberToImage(minute1);
+        }
+    }
 
     void DoneClock()
     {
@@ -273,7 +273,7 @@ public class FlashbackTransitionClock : MonoBehaviour
     {
         if (startClock)
         {
-            RunClock();
+            RunClock2();
         }
 
         // If going back in time

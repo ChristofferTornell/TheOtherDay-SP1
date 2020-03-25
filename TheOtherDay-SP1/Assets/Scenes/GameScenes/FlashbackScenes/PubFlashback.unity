@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 271888121}
   - component: {fileID: 271888123}
   - component: {fileID: 271888122}
+  - component: {fileID: 271888124}
   m_Layer: 0
   m_Name: Mordechai
   m_TagString: Untagged
@@ -355,6 +356,19 @@ MonoBehaviour:
   exitFlashbackOnClear: 0
   clearDialogue: {fileID: 0}
   wrongItemDialogue: {fileID: 11400000, guid: edbca8e42754b1846bc4c73e5d2d82ac, type: 2}
+--- !u!114 &271888124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271888116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/NPC/Animation/SoundsNPCMordechaiAnimation
 --- !u!1 &370934271
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,6 +606,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.47
       objectReference: {fileID: 0}
+    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: leftBoundary
+      value: 
+      objectReference: {fileID: 1172983415}
+    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: rightBoundary
+      value: 
+      objectReference: {fileID: 519599871}
     - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: sceneData
@@ -607,6 +631,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321846843708220558, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321846843443626412, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToNextDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 4083815747545121426, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
@@ -652,26 +686,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: leftBoundary
-      value: 
-      objectReference: {fileID: 1172983415}
-    - target: {fileID: 7773034242136617109, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: rightBoundary
-      value: 
-      objectReference: {fileID: 519599871}
-    - target: {fileID: 2321846843443626412, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToNextDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 2321846843708220558, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6feaf60f489aa7444a205dbb2b5fbeb6, type: 3}
@@ -833,57 +847,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bag of Nuts
       objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1382176956}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: INV_AddItem
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 11400000, guid: db477e42be6bc8442b21b9b265aab311,
-        type: 2}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 705575210}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: IE_PlayAudio
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: interactSoundEvent
-      value: event:/Sounds/UI/SoundsUIPickUpPlasticBag
-      objectReference: {fileID: 0}
     - target: {fileID: 1574386544078953941, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -938,6 +901,57 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1382176956}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: INV_AddItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: db477e42be6bc8442b21b9b265aab311,
+        type: 2}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 705575210}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: IE_PlayAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: interactSoundEvent
+      value: event:/Sounds/UI/SoundsUIPickUpPlasticBag
       objectReference: {fileID: 0}
     - target: {fileID: 1574386544078953940, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
@@ -1380,57 +1394,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shot Glass
       objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1382176956}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: INV_AddItem
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 11400000, guid: d31c6426951739349ae6303c18336a00,
-        type: 2}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 762180926}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: IE_PlayAudio
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
-        type: 3}
-      propertyPath: interactSoundEvent
-      value: event:/Sounds/UI/SoundsUIPickUpGlass
-      objectReference: {fileID: 0}
     - target: {fileID: 1574386544078953941, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1485,6 +1448,57 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1382176956}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: INV_AddItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: d31c6426951739349ae6303c18336a00,
+        type: 2}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 762180926}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: IE_PlayAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: onMouseInteract.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574386544078953946, guid: b39de3ce01998064db33ff6b4ba73ca7,
+        type: 3}
+      propertyPath: interactSoundEvent
+      value: event:/Sounds/UI/SoundsUIPickUpGlass
       objectReference: {fileID: 0}
     - target: {fileID: 1574386544078953940, guid: b39de3ce01998064db33ff6b4ba73ca7,
         type: 3}

@@ -1857,6 +1857,19 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 260659776631202196}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1203240255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203240253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/NPC/Animation/SoundsNPCErinFootstep
 --- !u!212 &1203240256 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 260659776512054747, guid: 7e293ced32bf0ff40bef3328881fa0fd,
@@ -2095,12 +2108,12 @@ PrefabInstance:
       propertyPath: flashBack
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 139706204, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1712180062, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 139706204, guid: 9f5dde217f7f5a54097d220b2b2c1d96, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7930470850785276738, guid: 9f5dde217f7f5a54097d220b2b2c1d96,

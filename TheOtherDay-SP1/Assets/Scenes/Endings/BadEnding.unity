@@ -174,6 +174,7 @@ MonoBehaviour:
   text: {fileID: 0}
   time: 6.3
   FadeRate: 0.01
+  onFadeCompleteSound: 
 --- !u!114 &37556654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +267,7 @@ MonoBehaviour:
   text: {fileID: 0}
   time: 4
   FadeRate: 0.005
+  onFadeCompleteSound: 
 --- !u!114 &112913228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,8 +336,20 @@ MonoBehaviour:
       \r\n"
     typeDelay: 0.05
     messageSound: 
-  textOBJ: {fileID: 0}
-  nextButton: {fileID: 0}
+  textOBJ: {fileID: 128180899}
+  nextButton: {fileID: 1022890201}
+--- !u!114 &128180899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 971168797752393482, guid: 7a18260cac05ee14c856108d765ae502,
+    type: 3}
+  m_PrefabInstance: {fileID: 1586234196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128180896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &385631694
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,13 +616,15 @@ PrefabInstance:
     - target: {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: messages.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: messages.Array.data[0].text
-      value: '...and so, despite their best efforts, Riley never ended up finding
-        the ring in time for the dress rehearsal.'
+      value: "At first, Erin wasn\u2019t sure what to say, or what to do. As Riley
+        tried to excuse their behaviour by saying they were drunk, however, Erin\u2019s
+        confusion turned to anger. All that she had done for them, and this was how
+        they repaid her? Quite the friend that Riley had turned out to be. "
       objectReference: {fileID: 0}
     - target: {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
@@ -794,6 +810,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1022890201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 971168796714701725, guid: 7a18260cac05ee14c856108d765ae502,
+    type: 3}
+  m_PrefabInstance: {fileID: 1586234196}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1041669076
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,6 +908,7 @@ MonoBehaviour:
   text: {fileID: 0}
   time: 16.6
   FadeRate: 0.005
+  onFadeCompleteSound: 
 --- !u!1 &1142911931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,7 +1307,8 @@ PrefabInstance:
         the ring in time for the dress rehearsal. Unable to lie to Erin, they let
         her know what had happened the night before. '
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a18260cac05ee14c856108d765ae502, type: 3}
 --- !u!1 &1615941413
 GameObject:
@@ -1340,6 +1364,7 @@ MonoBehaviour:
   text: {fileID: 0}
   time: 13.4
   FadeRate: 0.005
+  onFadeCompleteSound: 
 --- !u!114 &1615941416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1957,6 +1982,7 @@ MonoBehaviour:
   text: {fileID: 4932292680342445638}
   time: 2
   FadeRate: 0.001
+  onFadeCompleteSound: 
 --- !u!1 &4932292680342445635
 GameObject:
   m_ObjectHideFlags: 0
@@ -2330,6 +2356,7 @@ MonoBehaviour:
   text: {fileID: 7819680851623025126}
   time: 2
   FadeRate: 0.001
+  onFadeCompleteSound: 
 --- !u!1 &7819680851623025123
 GameObject:
   m_ObjectHideFlags: 0

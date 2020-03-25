@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 271888117}
   - component: {fileID: 271888121}
   - component: {fileID: 271888122}
+  - component: {fileID: 271888123}
   m_Layer: 0
   m_Name: Mordechai
   m_TagString: Untagged
@@ -530,6 +531,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.7}
   m_EdgeRadius: 0
+--- !u!114 &271888123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271888116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1100f45472d5e24899707c2dcbf22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent: event:/Sounds/NPC/Animation/SoundsNPCMordechaiAnimation
 --- !u!1 &411419271
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,27 +681,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: sceneData
-      value: 
-      objectReference: {fileID: 11400000, guid: 5b0b6ff187ddfcd45a7e1282ef7e20b0,
-        type: 2}
     - target: {fileID: 1844750349108326845, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: startingPosition
       value: 
       objectReference: {fileID: 1534729769}
-    - target: {fileID: 1874563062861499967, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1874563062861499967, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3732617407535675623, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -713,10 +711,31 @@ PrefabInstance:
       propertyPath: rightBoundary
       value: 
       objectReference: {fileID: 519599871}
+    - target: {fileID: 3793257613935570239, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: sceneData
+      value: 
+      objectReference: {fileID: 11400000, guid: 5b0b6ff187ddfcd45a7e1282ef7e20b0,
+        type: 2}
+    - target: {fileID: 1874563062861499967, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874563062861499967, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2321846843708220558, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321846843443626412, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToNextDialogue
       objectReference: {fileID: 0}
     - target: {fileID: 4083815747545121426, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
         type: 3}
@@ -763,25 +782,8 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2321846843443626412, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToNextDialogue
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6feaf60f489aa7444a205dbb2b5fbeb6, type: 3}
---- !u!114 &451205182 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4083815749097522912, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
-    type: 3}
-  m_PrefabInstance: {fileID: 451205181}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d6da8328e15cb548949297f2a357be5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &451205183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1874563062861499964, guid: 6feaf60f489aa7444a205dbb2b5fbeb6,
@@ -1424,7 +1426,7 @@ MonoBehaviour:
           m_StringArgument: CityPresent
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 451205182}
+      - m_Target: {fileID: 0}
         m_MethodName: ChangeTime
         m_Mode: 4
         m_Arguments:

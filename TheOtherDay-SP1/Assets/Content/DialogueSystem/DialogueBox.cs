@@ -32,6 +32,8 @@ public class DialogueBox : MonoBehaviour
     private float typeSoundCounter;
     public float typeSoundDelay = 0.1f;
     private bool typeSoundReady;
+    [FMODUnity.EventRef] public string choiceTimerSound;
+    FMOD.Studio.EventInstance choiceTimerSoundInstance;
 
     public void InitializeDialogueUI()
     {
@@ -51,10 +53,12 @@ public class DialogueBox : MonoBehaviour
 
     private void ResetChoiceTimer()
     {
+        choiceTimerSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         choiceTimerCounter = currentDialogue.TimeLimitSeconds;
         choiceTimerInitiated = false;
         typingFinished = false;
         choiceTimerTextObject.gameObject.SetActive(false);
+
     }
 
     public void GoToNextDialogue()
@@ -79,13 +83,13 @@ public class DialogueBox : MonoBehaviour
             }
         }
 
-
         if (currentDialogue.TimeLimitSeconds > 0 && choiceTimerInitiated == false && typingFinished)
         {
             //choiceTimerTextObject.gameObject.SetActive(true);
             choiceTimerInitiated = true;
             choiceTimerCounter = currentDialogue.TimeLimitSeconds;
-
+            choiceTimerSoundInstance = FMODUnity.RuntimeManager.CreateInstance(choiceTimerSound);
+            choiceTimerSoundInstance.start();
         }
         if (choiceTimerInitiated)
         {
@@ -115,23 +119,14 @@ public class DialogueBox : MonoBehaviour
         {
             textObject.fontStyle = FontStyles.Italic;
         }
+        if (currentDialogue.bold)
+        {
+            textObject.fontStyle = FontStyles.Bold;
+        }
         foreach (Message _message in currentDialogue.messages)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(_message.messageSound); //SOUND IMPLEMENTATION
-            /*
-            if (_message.bold)
-            {
-                textObject.fontStyle = FontStyles.Bold;
-            }
-            if (_message.italic)
-            {
-                textObject.fontStyle = FontStyles.Italic;
-            }
-            if (_message.useAlternateColor)
-            {
-                textObject.color = _message.alternateColor;
-            }
-            */
+            FMODUnity.RuntimeManager.PlayOneShot(_message.messageSound);
+
             for (int i = 0; i < _message.text.Length; i++)
             {
                 textObject.text += _message.text[i];
@@ -232,7 +227,6 @@ public class DialogueBox : MonoBehaviour
         {
             PlayerMovement.playerInstance.GetComponent<PlayerInteractivity>().UpdateDialogue();
         }
-        //FMODUnity.RuntimeManager.PlayOneShot(currentDialogue.messageVocalizationSound); IMPLEMENT AUDIO
         if (currentDialogue.changeReputation != 0)
         {
             GlobalData.instance.reputation += currentDialogue.changeReputation;
@@ -252,7 +246,6 @@ public class DialogueBox : MonoBehaviour
         else
         {
             NPCprofile.profileImage.gameObject.SetActive(true);
-
         }
 
         if (currentDialogue.speaker.name == "Riley")
@@ -279,38 +272,27 @@ public class DialogueBox : MonoBehaviour
 
             }
             npcEmotion = currentDialogue.listenerEmotion;
-
-
-
-
             textObject.alignment = TextAlignmentOptions.TopLeft;
-
             rileyProfile.FadeInColor();
-
             leftNameTextObject.text = currentDialogue.speaker.name;
             leftNameTextObject.color = currentDialogue.speaker.color;
 
         }
         else
         {
-
             leftNamePlate.SetActive(false);
             rightNamePlate.SetActive(true);
             rileyEmotion = currentDialogue.listenerEmotion;
             npcEmotion = currentDialogue.speakerEmotion;
             NPCprofile.myCharacter = currentDialogue.speaker;
             rileyProfile.myCharacter = currentDialogue.listener;
-
-
             textObject.alignment = TextAlignmentOptions.TopLeft;
             rileyProfile.FadeOutColor();
-
             NPCprofile.FadeInColor();
             rightNameTextObject.text = currentDialogue.speaker.name;
             rightNameTextObject.color = currentDialogue.speaker.color;
 
         }
-
         rileyProfile.profileImage.sprite = rileyProfile.SpriteFromMood(rileyEmotion);
 
         if (currentDialogue.listener != null)
@@ -322,8 +304,6 @@ public class DialogueBox : MonoBehaviour
         {
             StartCoroutine(AutotypeText());
         }
-
-
     }
 
     public void ResetDialogueUI()

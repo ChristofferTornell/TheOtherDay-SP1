@@ -28,7 +28,7 @@ public class ExitPrompt : MonoBehaviour
 
     public void No()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
     public void GoToMainMenu()
     {

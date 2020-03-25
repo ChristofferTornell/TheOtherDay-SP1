@@ -61,7 +61,7 @@ public class Phone : MonoBehaviour
         LogButton.onClick.AddListener(delegate { EnableLog(true); });
         AlbumButton.onClick.AddListener(delegate { EnableAlbum(true); });
         PullUpButton.onClick.AddListener(PullUp);
-        //PullDownButton.onClick.AddListener(PullDown);
+        ExitBox.transform.position += new Vector3(0, -350, 0);
     }
 
     bool FlashbackChecker()
@@ -170,7 +170,7 @@ public class Phone : MonoBehaviour
 
     public void ExitGame()
     {
-        Instantiate(ExitBox, new Vector3(455, 200, 0), Quaternion.identity).transform.parent = gameObject.transform;
+        ExitBox.SetActive(true);
     }
 
     private void Update()

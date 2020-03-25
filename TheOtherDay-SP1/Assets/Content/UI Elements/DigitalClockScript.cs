@@ -59,7 +59,7 @@ public class DigitalClockScript : MonoBehaviour
         Debug.Log("Flashback:" + GlobalData.instance.flashBack);
         StartCoroutine(Delayer());
 
-        SceneChanger.onChange += OnSceneUnloaded;
+        SceneChanger.onChange += OnSceneChange;
     }
 
     IEnumerator Delayer()
@@ -90,15 +90,15 @@ public class DigitalClockScript : MonoBehaviour
         //seconds = digitalClockObject.seconds;
         //minutes = digitalClockObject.minutes;
         //hours = digitalClockObject.hours;
-        Debug.Log("DigitalClockScript - Displaying present time");
         ConvertFlashbackTime(FlashbackTransitionClock.instance.presentTime.minute1, FlashbackTransitionClock.instance.presentTime.minute2,
             FlashbackTransitionClock.instance.presentTime.hour1, FlashbackTransitionClock.instance.presentTime.hour2);
+        Debug.Log("DigitalClockScript - Displaying present time: " + hours + minutes);
     }
     private void DisplayFlashbackTime()
     {
-        Debug.Log("DigitalClockScript - Displaying flashback time");
         ConvertFlashbackTime(FlashbackTransitionClock.instance.currentFlashbackTime.minute1, FlashbackTransitionClock.instance.currentFlashbackTime.minute2,
             FlashbackTransitionClock.instance.currentFlashbackTime.hour1, FlashbackTransitionClock.instance.currentFlashbackTime.hour2);
+        Debug.Log("DigitalClockScript - Displaying flashback time: " + hours + minutes);
     }
 
     private void Update()
@@ -151,12 +151,11 @@ public class DigitalClockScript : MonoBehaviour
         Debug.Log("Saved present time");
     }
 
-    void OnSceneUnloaded(SceneChanger changer)
+    void OnSceneChange(SceneChanger changer)
     {
-        // Unsure if this will work as intended
         if (!GlobalData.instance.flashBack)
         {
-            //SaveTime();
+            SaveTime();
         }
     }
 

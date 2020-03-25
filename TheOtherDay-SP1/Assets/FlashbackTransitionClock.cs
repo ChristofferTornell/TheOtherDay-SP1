@@ -86,11 +86,6 @@ public class FlashbackTransitionClock : MonoBehaviour
     private void Start()
     {
         UpdateStartingTime();
-
-        minute1Display.sprite = NumberToImage(minute1);
-        minute2Display.sprite = NumberToImage(minute2);
-        hour1Display.sprite = NumberToImage(hour1);
-        hour2Display.sprite = NumberToImage(hour2);
     }
 
     public void Display(bool boolean)
@@ -120,6 +115,11 @@ public class FlashbackTransitionClock : MonoBehaviour
         minute2 = startingTime.minute2;
         hour1 = startingTime.hour1;
         hour2 = startingTime.hour2;
+
+        minute1Display.sprite = NumberToImage(minute1);
+        minute2Display.sprite = NumberToImage(minute2);
+        hour1Display.sprite = NumberToImage(hour1);
+        hour2Display.sprite = NumberToImage(hour2);
     }
 
     public void SavePresentTime(float minutes, float hours)
@@ -144,11 +144,11 @@ public class FlashbackTransitionClock : MonoBehaviour
         return difference;
     }
 
-    public IEnumerator TRAN_StartTransition(FlashbackTime targetTime)
+    public IEnumerator TRAN_StartTransition(FlashbackTime newTargetTime)
     {
         Debug.Log("FlashbackClock - Starting courotine");
 
-        this.targetTime = targetTime;
+        targetTime = newTargetTime;
         speed = CalculateTimeDifference(targetTime) * speedFactor;
         Debug.Log("FlashbackClock - StartingTime: " + startingTime.name + " (" + startingTime.hour2 + startingTime.hour1 + ":" + startingTime.minute2
             + startingTime.minute1 + ") || TargetTime: " + targetTime.name + " (" + targetTime.hour2 + targetTime.hour1 + ":" + targetTime.minute2
@@ -156,12 +156,12 @@ public class FlashbackTransitionClock : MonoBehaviour
 
         if (targetTime.flashback)
         {
+            backInTime = true;
             startingTime = presentTime;
             UpdateStartingTime();
-            hourGoal = CalculateTimeDifference(targetTime);
-            SavePresentTime(DigitalClockScript.minutes, DigitalClockScript.hours);
             currentFlashbackTime = targetTime;
-            backInTime = true;
+            hourGoal = CalculateTimeDifference(targetTime);
+            Debug.Log("FlashbackClock - hourGoal = " + hourGoal);
         }
         else { backInTime = false; }
         
@@ -183,23 +183,25 @@ public class FlashbackTransitionClock : MonoBehaviour
 
     private void RunClock()
     {
-        // Problem: Clock doesnt change if targetTime is same as startingTime
-
-        if (!backInTime && minute1 == targetTime.minute1 && minute2 == targetTime.minute2 && hourTracker == hourGoal)
+        if (!backInTime && hourTracker >= hourGoal)
         {
+            minute1 = targetTime.minute1;
+            minute2 = targetTime.minute2;
             DoneClock();
         }
-        else if (!backInTime)
+        if (!backInTime && !done)
         {
             minute1 += Time.deltaTime * speed;
             minute1Display.sprite = NumberToImage(minute1);
         }
 
-        if (backInTime && minute1 <= (targetTime.minute1 + 1) && minute2 <= targetTime.minute2 && hourTracker == hourGoal)
+        if (backInTime && hourTracker >= hourGoal)
         {
+            minute1 = targetTime.minute1;
+            minute2 = targetTime.minute2;
             DoneClock();
         }
-        else if (backInTime)
+        if (backInTime && !done)
         {
             minute1 -= Time.deltaTime * speed;
             minute1Display.sprite = NumberToImage(minute1);
@@ -220,7 +222,7 @@ public class FlashbackTransitionClock : MonoBehaviour
             minute1Display.sprite = NumberToImage(minute1);
         }
 
-        if (backInTime && minute1 <= (targetTime.minute1 + 1) && minute2 <= targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
+        if (backInTime && minute1 <= (targetTime.minute1 + 1) && minute2 == targetTime.minute2 && hour1 == targetTime.hour1 && hour2 == targetTime.hour2)
         {
             DoneClock();
         }
@@ -238,6 +240,7 @@ public class FlashbackTransitionClock : MonoBehaviour
         startClock = false;
         currentFlashbackTime = null;
         startingTime = targetTime;
+        hourTracker = 0;
         return;
     }
 
@@ -273,7 +276,7 @@ public class FlashbackTransitionClock : MonoBehaviour
     {
         if (startClock)
         {
-            RunClock2();
+            RunClock();
         }
 
         // If going back in time
@@ -287,8 +290,9 @@ public class FlashbackTransitionClock : MonoBehaviour
 
         if (minute2 < 0)
         {
-            hour1--;
             hourTracker++;
+            Debug.Log("HourTracker: " + hourTracker);
+            hour1--;
             hour1Display.sprite = NumberToImage(hour1);
             minute2 = 5;
             minute2Display.sprite = NumberToImage(minute2);
@@ -318,11 +322,11 @@ public class FlashbackTransitionClock : MonoBehaviour
         // If going forward in time
         if (minute2 == 6 && minute1 > 0)
         {
+            hour1++;
             minute1 = 0;
             minute1Display.sprite = NumberToImage(minute1);
             minute2 = 0;
             minute2Display.sprite = NumberToImage(minute2);
-            hour1++;
         }
 
         if (minute1 > 9)
@@ -335,8 +339,9 @@ public class FlashbackTransitionClock : MonoBehaviour
 
         if (minute2 > 5)
         {
-            hour1++;
             hourTracker++;
+            Debug.Log("HourTracker: " + hourTracker);
+            hour1++;
             hour1Display.sprite = NumberToImage(hour1);
             minute2 = 0;
             minute2Display.sprite = NumberToImage(minute2);

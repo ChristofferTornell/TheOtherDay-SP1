@@ -25,6 +25,7 @@ public class Dialogue : ScriptableObject
 
     public int changeReputation;
     public bool italic;
+    public bool bold;
     public Message[] messages;
     [Header("Insertables")]
     public Dialogue nextDialogue = null;

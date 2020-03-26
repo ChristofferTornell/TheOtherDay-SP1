@@ -21,8 +21,10 @@ public class DigitalClockScript : MonoBehaviour
     public Color displayColor;
 
     [Header("Bad Ending")]
-    public string badEndingScene = "BadEnding";
-
+    [SerializeField] private Dialogue badEndingDialogue = null;
+    [SerializeField] private float dialogueDelay = 0.5f;
+    [SerializeField] private float pickupPhoneAnimationDelay = 1;
+    [FMODUnity.EventRef] [SerializeField] private string alarmSoundEvent;
     private bool changingTime = false;
     private float timeChangeAmount = 0;
     private bool triggerEnd = false;
@@ -131,10 +133,10 @@ public class DigitalClockScript : MonoBehaviour
         {
             hours = 0;
         }
-        if (hours == 18 && !GlobalData.instance.flashBack && !triggerEnd)
+        if (hours >= 18 && !GlobalData.instance.flashBack && !triggerEnd && !GameController.pause)
         {
-            SceneChanger.instance.ChangeScene(badEndingScene);
             triggerEnd = true;
+            PlayBadEndingEvents();
         }
     }
 
@@ -166,5 +168,20 @@ public class DigitalClockScript : MonoBehaviour
             timeChangeAmount = minutes;
             changingTime = true;
         }
+    }
+    private void PlayBadEndingEvents()
+    {
+        GameController.pause = true;
+        FMODUnity.RuntimeManager.PlayOneShot(alarmSoundEvent);
+        Invoke("PlayPickupPhoneAnimation", pickupPhoneAnimationDelay);
+    }
+    private void PlayPickupPhoneAnimation()
+    {
+        PlayerMovement.playerInstance.animator.SetBool("phone", true);
+        Invoke("PlayBadEndingDialogue", dialogueDelay);
+    }
+    private void PlayBadEndingDialogue()
+    {
+        DialogueManager.instance.EnterDialogue(badEndingDialogue);
     }
 }

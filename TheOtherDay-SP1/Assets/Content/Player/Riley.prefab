@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8459627566715328546
 RectTransform:
   m_ObjectHideFlags: 0
@@ -281,17 +281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 597207823}
-  IdleLeft: {fileID: 7400000, guid: 588422f8e83f2b647828dc59248cb0b2, type: 2}
-  IdleRight: {fileID: 7400000, guid: 17ca286e71665ea4d9de8701dbb6fca5, type: 2}
-  WalkLeft: {fileID: 7400000, guid: b550f3185be32b44c870b1951632594c, type: 2}
-  WalkRight: {fileID: 7400000, guid: b4d27ad9f53bd5741abe067a16d8fdfb, type: 2}
-  IdleLeftFresh: {fileID: 7400000, guid: f1ff7fd26b04c014a8230d502d1fc0f3, type: 2}
-  IdleRightFresh: {fileID: 7400000, guid: 32352fc5fa77513468c178d7eeb8869e, type: 2}
-  WalkLeftFresh: {fileID: 7400000, guid: 805314028a3416643a1a5c849570161a, type: 2}
-  WalkRightFresh: {fileID: 7400000, guid: ba0984f6a783ff640935561d5b8ad639, type: 2}
   horizontalAxis: Horizontal
   movementSpeed: 450
-  sprintingSpeed: 1000
   animationSound: {fileID: 6847476642799343845}
 --- !u!114 &8567838526866476067
 MonoBehaviour:
@@ -401,6 +392,7 @@ MonoBehaviour:
   - isGiven: 0
     item: {fileID: 11400000, guid: fc2d591c64248a84f893c63066575941, type: 2}
     recievedDialogue: {fileID: 11400000, guid: 3ef3666b1a5180e4b96f2290109be2c0, type: 2}
+  optionalItems: []
   goToSceneOnClear: 
   exitFlashbackOnClear: 0
   clearDialogue: {fileID: 0}

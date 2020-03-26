@@ -176,6 +176,10 @@ public class DialogueBox : MonoBehaviour
             {
                 SceneChanger.instance.ExitFlashback(currentDialogue.triggerScene);
             }
+            if (!currentDialogue.exitFlashback && !currentDialogue.enterFlashback)
+            {
+                SceneChanger.instance.ChangeScene(currentDialogue.triggerScene);
+            }
         }
     }
     private bool dialogueEnded;

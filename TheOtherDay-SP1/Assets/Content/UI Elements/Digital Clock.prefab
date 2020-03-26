@@ -129,12 +129,13 @@ MonoBehaviour:
   digitalClockObject: {fileID: 11400000, guid: 3dbb5d5d7b1981a479729c443875b2fe, type: 2}
   timeFactor: 10
   seconds: 0
-  minutes: 0
-  hours: 0
   hoursDisplay: {fileID: 4083815748422585809}
   minutesDisplay: {fileID: 4083815748350200802}
   displayColor: {r: 0, g: 1, b: 0.046749115, a: 1}
-  displayColorAlpha: 255
+  badEndingDialogue: {fileID: 11400000, guid: 46ba7ea11d329e944a49d2724d648d9b, type: 2}
+  dialogueDelay: 2
+  pickupPhoneAnimationDelay: 0.5
+  alarmSoundEvent: event:/Sounds/UI/SoundsUINotification
 --- !u!1 &4083815748350200800
 GameObject:
   m_ObjectHideFlags: 0

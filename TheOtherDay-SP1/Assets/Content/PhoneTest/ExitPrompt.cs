@@ -34,4 +34,8 @@ public class ExitPrompt : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
     }
+    public void GoToCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }

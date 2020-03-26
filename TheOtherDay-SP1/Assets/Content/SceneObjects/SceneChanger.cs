@@ -169,6 +169,7 @@ public class SceneChanger : MonoBehaviour
         Debug.Log("SceneChanger - Changing Scene to: " + sceneName);
         flashbackTransition = false;
         enteringFlashback = false;
+        FlashbackTransitionClock.instance.flashback = false;
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }
@@ -179,6 +180,7 @@ public class SceneChanger : MonoBehaviour
         FMODUnity.RuntimeManager.PlayOneShot(enterFlashbackSound);
         flashbackTransition = true;
         enteringFlashback = true;
+        FlashbackTransitionClock.instance.flashback = true;
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }
@@ -191,6 +193,7 @@ public class SceneChanger : MonoBehaviour
         Notes.instance.ProgressToNextEntry();
         flashbackTransition = true;
         enteringFlashback = false;
+        FlashbackTransitionClock.instance.flashback = false;
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }

@@ -576,11 +576,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6850956334486887116, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -591,12 +586,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
-    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f837163b04d5839469890f4d14ecf49b,
-        type: 3}
     - target: {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: messages.Array.size
@@ -644,6 +633,17 @@ PrefabInstance:
         type: 3}
       propertyPath: messages.Array.data[2].messageSound
       value: event:/Sounds/Endings/CutsceneFunSea
+      objectReference: {fileID: 0}
+    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f837163b04d5839469890f4d14ecf49b,
+        type: 3}
+    - target: {fileID: 6850956334486887116, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a18260cac05ee14c856108d765ae502, type: 3}
@@ -762,6 +762,11 @@ PrefabInstance:
       value: Event 3
       objectReference: {fileID: 0}
     - target: {fileID: 971168797572620853, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 971168796714701725, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -894,19 +899,13 @@ PrefabInstance:
     - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToMainMenu
+      value: GoToCredits
       objectReference: {fileID: 0}
     - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2c09f3bb524e28e4b8688af41f4b2f60,
-        type: 3}
     - target: {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: messages.Array.data[0].text
@@ -949,10 +948,16 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2c09f3bb524e28e4b8688af41f4b2f60,
+        type: 3}
     - target: {fileID: 971168796822654413, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: m_text
-      value: Click to return to menu
+      value: Click to go to credits
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a18260cac05ee14c856108d765ae502, type: 3}
@@ -1109,12 +1114,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
-    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8141a802d5f72d248b5412176b00f1f4,
-        type: 3}
     - target: {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: messages.Array.data[0].text
@@ -1134,6 +1133,12 @@ PrefabInstance:
       propertyPath: nextButton
       value: 
       objectReference: {fileID: 1945698613}
+    - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8141a802d5f72d248b5412176b00f1f4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a18260cac05ee14c856108d765ae502, type: 3}
 --- !u!114 &971168797349332080 stripped

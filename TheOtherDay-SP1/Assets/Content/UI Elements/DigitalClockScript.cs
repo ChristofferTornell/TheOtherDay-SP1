@@ -105,7 +105,7 @@ public class DigitalClockScript : MonoBehaviour
 
     private void Update()
     {
-        if (!GameController.pause && !GlobalData.instance.flashBack) { seconds += Time.deltaTime * timeFactor; }
+        if (!GameController.pause && !GlobalData.instance.flashBack && GlobalData.instance.clockActivated) { seconds += Time.deltaTime * timeFactor; }
 
         if (hours > 9)
         {
@@ -168,6 +168,11 @@ public class DigitalClockScript : MonoBehaviour
             timeChangeAmount = minutes;
             changingTime = true;
         }
+    }
+
+    public void ActivateClock()
+    {
+        GlobalData.instance.clockActivated = true;
     }
     private void PlayBadEndingEvents()
     {

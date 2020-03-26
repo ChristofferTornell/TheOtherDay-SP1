@@ -16,6 +16,7 @@ public class GlobalData : MonoBehaviour
     public LogEntry[] logEntries;
     public int reputation = 0;
     private int startingReputation = 0;
+    public bool clockActivated = false;
 
 
     private void Awake()
@@ -60,6 +61,7 @@ public class GlobalData : MonoBehaviour
         reputation = startingReputation;
         logStage = startingLogStage;
         stage = startingStage;
+        clockActivated = false;
     }
     public string GetMusicInScene(string sceneName)
     {

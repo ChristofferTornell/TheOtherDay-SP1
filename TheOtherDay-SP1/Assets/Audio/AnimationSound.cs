@@ -10,12 +10,15 @@ public class AnimationSound : MonoBehaviour
     public void PlayFootstepSound()
     {
         FMOD.Studio.EventInstance footStepInstance = FMODUnity.RuntimeManager.CreateInstance(rileyFootstepSound);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(footStepInstance, GetComponent<Transform>(), GetComponent<Rigidbody2D>());
         footStepInstance.setParameterByName(footStepParameter, footstepIndex);
         footStepInstance.start();
     }
     public void PlayVomitSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot(rileyVomitSound);
+        FMOD.Studio.EventInstance rileyVomitInstance = FMODUnity.RuntimeManager.CreateInstance(rileyFootstepSound);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(rileyVomitInstance, GetComponent<Transform>(), GetComponent<Rigidbody2D>());
+        rileyVomitInstance.start();
     }
 }
 

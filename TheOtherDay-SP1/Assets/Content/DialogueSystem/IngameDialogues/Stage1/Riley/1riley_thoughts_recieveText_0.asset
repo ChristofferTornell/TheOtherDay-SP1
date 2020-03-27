@@ -18,11 +18,13 @@ MonoBehaviour:
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
+  bold: 0
   messages:
   - text: '...'
     typeDelay: 0.05
-    messageSound: 
+    messageSound: event:/Sounds/UI/SoundsUINotification
   nextDialogue: {fileID: 11400000, guid: f30fcf028384d5b4599b63d6bd839445, type: 2}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

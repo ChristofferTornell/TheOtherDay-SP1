@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7da568ab4c8984d9ffe4510ce523ec, type: 3}
+  m_Name: 6twins_postPocket_5
+  m_EditorClassIdentifier: 
+  speaker: {fileID: 11400000, guid: 931d8ee79da164545a8170c8f69c77c4, type: 2}
+  speakerEmotion: 0
+  listener: {fileID: 11400000, guid: c146aabf812a2654997b2de12603c86e, type: 2}
+  listenerEmotion: 3
+  changeReputation: 0
+  italic: 0
+  bold: 0
+  messages:
+  - text: "I was right of course! They have the ring! S\xEC?"
+    typeDelay: 0.01
+    messageSound: 
+  nextDialogue: {fileID: 11400000, guid: cc8a8e3796a3e184cbc18be6d988c5bc, type: 2}
+  ignorePhone: 0
+  triggerScene: 
+  enterFlashback: 0
+  exitFlashback: 0
+  item: {fileID: 0}
+  flashbackEvent: 0
+  TimeLimitSeconds: 0
+  noChoiceDialogue: {fileID: 0}
+  choiceButtons: []

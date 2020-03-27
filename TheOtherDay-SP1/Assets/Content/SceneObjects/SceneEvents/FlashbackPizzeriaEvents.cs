@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class FlashbackPizzeriaEvents : SceneEvents
 {
-    public string goodEndingScene;
-    public string weirdEndingScene;
-    [Space]
     public AnimationClip pickUpAnimation;
     public Animator playerAnimator;
 
@@ -18,24 +15,10 @@ public class FlashbackPizzeriaEvents : SceneEvents
     {
         if (eventIndex == 1)
         {
-            Debug.Log("Play Riley puking animation");
             playerAnimator = FindObjectOfType<PlayerMovement>().animator;
             playerAnimator.Play(pickUpAnimation.name);
             pickUpTrigger = true;
             GameController.pause = true;
-        }
-        if (eventIndex == 2)
-        {
-          
-            if (GlobalData.instance.reputation < -1)
-            {
-                SceneChanger.instance.ChangeScene(weirdEndingScene);
-            }
-            else
-            {
-                SceneChanger.instance.ChangeScene(goodEndingScene);
-            }
-            
         }
     }
     void Update()

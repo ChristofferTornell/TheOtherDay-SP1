@@ -49,7 +49,6 @@ public class Notes : MonoBehaviour
             GlobalData.instance.logEntries[i].index = i;
             if (i == 0)
             {
-                Debug.Log("showing first entry");
                 ShowEntry(GlobalData.instance.logEntries[i]);
             }
             if (GlobalData.instance.logEntries[i].complete)

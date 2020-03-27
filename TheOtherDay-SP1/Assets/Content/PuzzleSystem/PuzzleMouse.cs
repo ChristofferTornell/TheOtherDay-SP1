@@ -38,9 +38,15 @@ public class PuzzleMouse : MonoBehaviour
     public static void RemoveItem()
     {
         itemOnMouse = null;
-        itemSprite.enabled = false;
-        itemSprite.sprite = null;
-        hoverText.text = "";
+        if (itemSprite != null)
+        {
+            itemSprite.enabled = false;
+            itemSprite.sprite = null;
+        }
+        if (hoverText != null)
+        {
+            hoverText.text = "";
+        }
         GameController gameController = FindObjectOfType<GameController>();
         gameController.ResetCursor();
     }

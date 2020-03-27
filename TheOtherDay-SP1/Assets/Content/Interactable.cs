@@ -42,7 +42,7 @@ public class Interactable : MonoBehaviour
         {
             return;
         }
-        if (GameController.pause)
+        if (GameController.pause || DialogueManager.dialogueActive)
         {
             return;
         }

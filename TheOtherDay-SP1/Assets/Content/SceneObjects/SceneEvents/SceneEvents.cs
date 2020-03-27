@@ -58,7 +58,10 @@ public class SceneEvents : MonoBehaviour
     }
     void OnDestroy()
     {
-        sceneData.hasVisited = true;
+        if (sceneData != null)
+        {
+            sceneData.hasVisited = true;
+        }
     }
     public virtual void CustomStart()
     {

@@ -18,17 +18,19 @@ MonoBehaviour:
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
+  bold: 0
   messages:
-  - text: "Don\u2019t fall for the bad choices, Riley "
+  - text: "Don\u2019t fall for the bad choices, Riley"
     typeDelay: 0.02
     messageSound: 
   - text: '...'
     typeDelay: 0.08
     messageSound: 
-  - text: "That\u2019s what the player wants you to do.."
+  - text: "That\u2019s what the player wants you to do..."
     typeDelay: 0.02
     messageSound: 
   nextDialogue: {fileID: 11400000, guid: d1d51c215e3e52749b15d93023b23d20, type: 2}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

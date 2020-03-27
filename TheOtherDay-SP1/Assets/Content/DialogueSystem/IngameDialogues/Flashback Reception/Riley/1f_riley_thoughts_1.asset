@@ -18,12 +18,15 @@ MonoBehaviour:
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
+  bold: 0
   messages:
   - text: (Ah, right! I gave my coffee to the receptionist for her to throw away by
-      clicking on it in the inventory and then pressing 'use'.)
+      clicking on it in the inventory and then pressing '!'. I can also examine it
+      by pressing '?'.)
     typeDelay: 0.01
     messageSound: 
   nextDialogue: {fileID: 0}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

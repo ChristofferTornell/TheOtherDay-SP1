@@ -18,12 +18,14 @@ MonoBehaviour:
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
+  bold: 0
   messages:
   - text: Yes, we merely saw you drop it here when paying. You picked it up again,
       though.
     typeDelay: 0.01
     messageSound: 
-  nextDialogue: {fileID: 0}
+  nextDialogue: {fileID: 11400000, guid: 069dceef48d48dc4990f890f45f466fb, type: 2}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

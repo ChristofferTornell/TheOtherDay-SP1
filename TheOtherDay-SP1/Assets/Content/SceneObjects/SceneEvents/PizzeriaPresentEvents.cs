@@ -9,6 +9,15 @@ public class PizzeriaPresentEvents : SceneEvents
     public float minReputationForWeirdEnding = -2;
     public Dialogue stage6initDialogue;
 
+    [Space]
+    public AnimationClip checkPocketAnimation;
+    public Animator playerAnimator;
+
+    private bool checkPocketTrigger;
+    private float checkPocketCounter;
+    public Dialogue postCheckPocketDialogue;
+    public float checkPocketPauseDuration = 3f;
+
     public override void CustomStart()
     {
         if(GlobalData.instance.stage >= 6)
@@ -21,7 +30,13 @@ public class PizzeriaPresentEvents : SceneEvents
     {
         if (eventIndex == 1)
         {
-            //play Hand in pocket animation
+            if (eventIndex == 1)
+            {
+                playerAnimator = FindObjectOfType<PlayerMovement>().animator;
+                playerAnimator.Play(checkPocketAnimation.name);
+                checkPocketTrigger = true;
+                GameController.pause = true;
+            }
         }
         if (eventIndex == 2)
         {
@@ -34,6 +49,19 @@ public class PizzeriaPresentEvents : SceneEvents
                 SceneChanger.instance.ChangeScene(goodEndingScene);
             }
 
+        }
+    }
+    void Update()
+    {
+        if (checkPocketTrigger)
+        {
+            checkPocketCounter += Time.deltaTime;
+            if (checkPocketCounter >= checkPocketAnimation.length + checkPocketPauseDuration)
+            {
+                GameController.pause = false;
+                checkPocketTrigger = false;
+                DialogueManager.instance.EnterDialogue(postCheckPocketDialogue);
+            }
         }
     }
 }

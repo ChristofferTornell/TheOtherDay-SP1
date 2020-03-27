@@ -35,7 +35,6 @@ public class MusicPlayer : MonoBehaviour
     }
     public void ResetToNewMusic(string _sceneMusic)
     {
-        Debug.Log("scene music: " + _sceneMusic);
         if (_sceneMusic == "none")
         {
             Debug.Log("scene music null");
@@ -43,6 +42,7 @@ public class MusicPlayer : MonoBehaviour
         }
         locationMusicInstance = FMODUnity.RuntimeManager.CreateInstance(_sceneMusic);
         locationMusicInstance.start();
+        Debug.Log("New music: " + locationMusicInstance.GetHashCode());
     }
     public void PlaySceneAmbience()
     {

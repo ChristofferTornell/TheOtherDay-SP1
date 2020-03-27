@@ -28,4 +28,8 @@ public class SoundPlayer : MonoBehaviour
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEventInstance, GetComponent<Transform>(), GetComponent<Rigidbody>());
         }
     }
+    private void OnDestroy()
+    {
+        soundEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
 }

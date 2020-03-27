@@ -14,6 +14,7 @@ public class PizzeriaPresentEvents : SceneEvents
         if(GlobalData.instance.stage >= 6)
         {
             DialogueManager.instance.EnterDialogue(stage6initDialogue);
+            sceneData.hasVisited = false;
         }
     }
     public override void PlayEvent(int eventIndex)

@@ -16,7 +16,7 @@ public class AnimationSound : MonoBehaviour
     }
     public void PlayVomitSound()
     {
-        FMOD.Studio.EventInstance rileyVomitInstance = FMODUnity.RuntimeManager.CreateInstance(rileyFootstepSound);
+        FMOD.Studio.EventInstance rileyVomitInstance = FMODUnity.RuntimeManager.CreateInstance(rileyVomitSound);
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(rileyVomitInstance, GetComponent<Transform>(), GetComponent<Rigidbody2D>());
         rileyVomitInstance.start();
     }

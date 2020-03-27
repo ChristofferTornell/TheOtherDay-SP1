@@ -42,7 +42,6 @@ public class MusicPlayer : MonoBehaviour
         }
         locationMusicInstance = FMODUnity.RuntimeManager.CreateInstance(_sceneMusic);
         locationMusicInstance.start();
-        Debug.Log("New music: " + locationMusicInstance.GetHashCode());
     }
     public void PlaySceneAmbience()
     {

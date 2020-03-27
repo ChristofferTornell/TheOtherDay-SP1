@@ -214,7 +214,6 @@ public class SceneChanger : MonoBehaviour
 
                 if (nextMusic != GlobalData.instance.GetMusicInScene(SceneManager.GetActiveScene().name))
                 {
-                    Debug.Log("Stop music: " + MusicPlayer.instance.locationMusicInstance.GetHashCode());
                     MusicPlayer.instance.locationMusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                     MusicPlayer.instance.ResetToNewMusic(nextMusic);
                 }

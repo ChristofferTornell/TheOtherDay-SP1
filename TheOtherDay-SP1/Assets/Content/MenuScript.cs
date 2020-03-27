@@ -16,4 +16,8 @@ public class MenuScript : MonoBehaviour
         Debug.Log("Quitting to main menu");
         SceneManager.LoadScene("Main Menu");
     }
+    public void ResetStages()
+    {
+        GlobalData.instance.ResetStages();
+    }
 }

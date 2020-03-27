@@ -33,6 +33,18 @@ public class GlobalData : MonoBehaviour
     }
     private void Start()
     {
+        ResetData();
+    }
+    public void ResetStages()
+    {
+        ResetData();
+        reputation = startingReputation;
+        logStage = startingLogStage;
+        stage = startingStage;
+        clockActivated = false;
+    }
+    public void ResetData()
+    {
         foreach (SceneData sData in sceneDataList)
         {
             if (sData != null)
@@ -40,7 +52,7 @@ public class GlobalData : MonoBehaviour
                 sData.hasVisited = false;
             }
         }
-        foreach(CharacterData cData in charaters)
+        foreach (CharacterData cData in charaters)
         {
             cData.isDrunk = false;
             foreach (DialogueContainer dContainer in cData.dialogues)
@@ -55,13 +67,6 @@ public class GlobalData : MonoBehaviour
             lEntry.complete = false;
         }
         Debug.Log("Flashback:" + instance.flashBack);
-    }
-    public void ResetStages()
-    {
-        reputation = startingReputation;
-        logStage = startingLogStage;
-        stage = startingStage;
-        clockActivated = false;
     }
     public string GetMusicInScene(string sceneName)
     {

@@ -65,6 +65,11 @@ public class SceneChanger : MonoBehaviour
 
     private IEnumerator CoChangeScene(string sceneName)
     {
+        if (PlayerMovement.playerInstance != null)
+        {
+            SavedPositions.NewPosition(GameController.currentScene, new Vector2(PlayerMovement.playerInstance.gameObject.transform.position.x, PlayerMovement.playerInstance.gameObject.transform.position.y));
+        }
+
         if (!ranOnChange)
         {
             onChange(this);

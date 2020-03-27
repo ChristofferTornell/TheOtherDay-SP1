@@ -93,11 +93,6 @@ public class PlayerInteractivity : MonoBehaviour
             {
                 //Debug.Log("Doing something with " + interactables[0].name);
 
-                if (interactables[0].savePlayerPosition)
-                {
-                    SavedPositions.NewPosition(GameController.currentScene, new Vector2(interactables[0].transform.position.x, gameObject.transform.position.y));
-                }
-
                 interactables[0].Interact();
                 // Do something with the object
             }

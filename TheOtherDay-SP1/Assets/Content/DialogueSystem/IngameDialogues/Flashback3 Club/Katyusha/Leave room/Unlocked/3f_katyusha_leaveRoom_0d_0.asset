@@ -18,11 +18,13 @@ MonoBehaviour:
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
+  bold: 0
   messages:
-  - text: "Are you that gone that you can't \teven keep up with a conversation?"
+  - text: Are you so gone that you can not keep up in conversation?
     typeDelay: 0.01
     messageSound: 
   nextDialogue: {fileID: 11400000, guid: d14494db4d9cac840a7aeaa061dfab0d, type: 2}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

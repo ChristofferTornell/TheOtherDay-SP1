@@ -18,11 +18,13 @@ MonoBehaviour:
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
+  bold: 0
   messages:
-  - text: Hey, where you think you going?
+  - text: Where you think you going?
     typeDelay: 0.02
     messageSound: 
   nextDialogue: {fileID: 11400000, guid: 044825402bafc1745af429fae1cc2110, type: 2}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

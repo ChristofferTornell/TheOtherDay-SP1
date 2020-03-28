@@ -18,13 +18,15 @@ MonoBehaviour:
   listenerEmotion: 0
   changeReputation: 0
   italic: 0
+  bold: 0
   messages:
-  - text: No more alcohol. You're going straight to the bar for water, and I want
-      you and your friends gone within an hour, okay? If I catch you with anything
-      other than water I will personally lift you out. Don't think I can't.
+  - text: No more alcohol. You going straight to bar for water, and I want you and
+      friends gone by hour. If I catch you with drink other than water I lift you
+      out.
     typeDelay: 0.01
     messageSound: 
   nextDialogue: {fileID: 11400000, guid: fd2ddb4dc874b1e43873f9e8575ed1b0, type: 2}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

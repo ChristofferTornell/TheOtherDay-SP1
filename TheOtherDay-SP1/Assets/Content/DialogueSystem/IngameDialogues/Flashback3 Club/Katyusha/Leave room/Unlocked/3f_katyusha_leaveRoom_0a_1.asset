@@ -18,11 +18,13 @@ MonoBehaviour:
   listenerEmotion: 0
   changeReputation: 1
   italic: 0
+  bold: 0
   messages:
-  - text: You just threw up right next to my shoes. I can't let you back in.
+  - text: You throw up right next to shoes. I not let you back in.
     typeDelay: 0.01
     messageSound: 
   nextDialogue: {fileID: 11400000, guid: e1bcc95efcd01654fa2dcf869f55bcd6, type: 2}
+  ignorePhone: 0
   triggerScene: 
   enterFlashback: 0
   exitFlashback: 0

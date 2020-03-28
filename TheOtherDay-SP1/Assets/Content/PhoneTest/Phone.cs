@@ -38,6 +38,9 @@ public class Phone : MonoBehaviour
     [FMODUnity.EventRef] public string messageAppPressSound;
     [FMODUnity.EventRef] public string logAppPressSound;
     [FMODUnity.EventRef] public string pullUpPhoneSound;
+    [FMODUnity.EventRef] public string phoneSnapshot;
+    public static FMOD.Studio.EventInstance phoneSnapshotInstance;
+
 
     private void CheckDay()
     {
@@ -151,7 +154,8 @@ public class Phone : MonoBehaviour
         }
         PullUpButton.gameObject.SetActive(false);
         FMODUnity.RuntimeManager.PlayOneShot(pullUpPhoneSound);
-
+        phoneSnapshotInstance = FMODUnity.RuntimeManager.CreateInstance(phoneSnapshot);
+        phoneSnapshotInstance.start();
     }
 
     public void Zoom(bool state)

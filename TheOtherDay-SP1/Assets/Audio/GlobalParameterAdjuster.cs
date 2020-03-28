@@ -13,6 +13,5 @@ public class GlobalParameterAdjuster : MonoBehaviour
     private void OnDestroy()
     {
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName(InFoyerParameter, 0f);
-
     }
 }

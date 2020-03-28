@@ -34,6 +34,8 @@ public class DescriptionUI : MonoBehaviour
     {
         StopAllCoroutines();
         descriptionBoxDescriptionTextObj.text = "";
+        timerCounter = 0f;
+        timerTrigger = false;
     }
 
     public void ExamineItem(Items _item)
@@ -60,7 +62,7 @@ public class DescriptionUI : MonoBehaviour
     }
     IEnumerator AutotypeText(string inputMessage, float delay)
     {
-
+        currentlyExamining = true;
         for (int i = 0; i < inputMessage.Length; i++)
         {
             descriptionBoxDescriptionTextObj.text = inputMessage.Substring(0, i + 1);
@@ -88,6 +90,8 @@ public class DescriptionUI : MonoBehaviour
             timerTrigger = false;
             timerCounter = 0f;
             ExitExamineMenu();
+            currentlyExamining = false;
+
         }
     }
 }

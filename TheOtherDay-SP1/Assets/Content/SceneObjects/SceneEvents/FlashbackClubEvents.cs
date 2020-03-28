@@ -11,7 +11,7 @@ public class FlashbackClubEvents : SceneEvents
     public int rileyCharIndex;
     private bool pukeTrigger;
     private float pukeCounter;
-    //public Dialogue postPukeDialogue;
+
     public override void PlayEvent(int eventIndex)
     {
         if (eventIndex == 1)

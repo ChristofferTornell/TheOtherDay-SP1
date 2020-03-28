@@ -59,4 +59,10 @@ public class MusicPlayer : MonoBehaviour
         locationAmbienceInstance = FMODUnity.RuntimeManager.CreateInstance(_sceneAmbience);
         locationAmbienceInstance.start();
     }
+    public void AdjustParameterOnCurrentAudio(string parameterName, float parameterValue)
+    {
+        Debug.Log("adjust: " + locationMusicInstance + ", value: " + parameterValue);
+        locationMusicInstance.setParameterByName(parameterName, parameterValue);
+        locationAmbienceInstance.setParameterByName(parameterName, parameterValue);
+    }
 }

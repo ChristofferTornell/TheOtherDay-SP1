@@ -40,6 +40,8 @@ public class DialogueManager : MonoBehaviour
 
     public void ExitDialogue()
     {
+        dialogueBoxUI.DestroyChoiceButtons();
+        dialogueBoxUI.EndDialogue();
         if (GlobalData.instance.flashBack)
         {
             Inventory.instance.INV_Appear();

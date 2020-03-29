@@ -182,7 +182,7 @@ public class DialogueBox : MonoBehaviour
             }
         }
     }
-    private bool dialogueEnded;
+    public bool dialogueEnded;
     void CheckExistingDialogue()
     {
         StopAllCoroutines();
@@ -193,6 +193,28 @@ public class DialogueBox : MonoBehaviour
             SceneEvents.instance.CheckEvent(currentDialogue.flashbackEvent);
         }
 
+        DestroyChoiceButtons();
+
+        if (currentDialogue.nextDialogue == null)
+        {
+            if (currentDialogue.choiceButtons.Length == 0)
+            {
+                EndDialogue();
+                DialogueManager.instance.ExitDialogue();
+                return;
+            }
+
+        }
+    }
+    public void EndDialogue()
+    {
+        CheckSceneTrigger();
+        ResetChoiceTimer();
+        ResetDialogueUI();
+        dialogueEnded = true;
+    }
+    public void DestroyChoiceButtons()
+    {
         if (choiceButtonsExist)
         {
             foreach (Transform child in choiceButtonLayout.transform)
@@ -200,18 +222,6 @@ public class DialogueBox : MonoBehaviour
                 choiceButtons.Remove(child.gameObject);
                 Destroy(child.gameObject);
             }
-        }
-        if (currentDialogue.nextDialogue == null)
-        {
-            if (currentDialogue.choiceButtons.Length == 0)
-            {
-                CheckSceneTrigger();
-                ResetDialogueUI();
-                dialogueEnded = true;
-                DialogueManager.instance.ExitDialogue();
-                return;
-            }
-
         }
     }
     public void UpdateDialogueUI()

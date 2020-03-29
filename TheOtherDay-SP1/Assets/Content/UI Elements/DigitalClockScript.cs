@@ -111,8 +111,12 @@ public class DigitalClockScript : MonoBehaviour
         {
             hours = 0;
         }
-        if (hours >= 18 && !GlobalData.instance.flashBack && !triggerEnd && !GameController.pause)
+        if (hours >= 18 && !GlobalData.instance.flashBack && !triggerEnd && !GameController.pause )
         {
+            if (DialogueManager.dialogueActive)
+            {
+                DialogueManager.instance.ExitDialogue();
+            }
             triggerEnd = true;
             PlayBadEndingEvents();
         }

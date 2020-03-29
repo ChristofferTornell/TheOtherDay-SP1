@@ -170,14 +170,17 @@ public class DialogueBox : MonoBehaviour
         {
             if (currentDialogue.enterFlashback)
             {
+                Debug.Log("Entering flashback from dialogue");
                 SceneChanger.instance.EnterFlashback(currentDialogue.triggerScene);
             }
             if (currentDialogue.exitFlashback)
             {
+                Debug.Log("Exiting flashback from dialogue");
                 SceneChanger.instance.ExitFlashback(currentDialogue.triggerScene);
             }
             if (!currentDialogue.exitFlashback && !currentDialogue.enterFlashback)
             {
+                Debug.Log("Entering scene from dialogue");
                 SceneChanger.instance.ChangeScene(currentDialogue.triggerScene);
             }
         }
@@ -189,7 +192,6 @@ public class DialogueBox : MonoBehaviour
 
         if (currentDialogue.flashbackEvent != 0)
         {
-
             SceneEvents.instance.CheckEvent(currentDialogue.flashbackEvent);
         }
 
@@ -199,7 +201,7 @@ public class DialogueBox : MonoBehaviour
         {
             if (currentDialogue.choiceButtons.Length == 0)
             {
-                EndDialogue();
+                CheckSceneTrigger();
                 DialogueManager.instance.ExitDialogue();
                 return;
             }
@@ -208,7 +210,6 @@ public class DialogueBox : MonoBehaviour
     }
     public void EndDialogue()
     {
-        CheckSceneTrigger();
         ResetChoiceTimer();
         ResetDialogueUI();
         dialogueEnded = true;

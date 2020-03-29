@@ -8,6 +8,7 @@ public class IntroCinematic : MonoBehaviour
     [SerializeField] private string changeSceneTo = "HotelPresent";
     [FMODUnity.EventRef] public string introCinematicAudioEvent;
     FMOD.Studio.EventInstance introCinematicAudioInstance;
+    private float introVideoDelay = 0.5f;
 
     public Sprite[] sprite;
     public float[] duration;
@@ -17,9 +18,9 @@ public class IntroCinematic : MonoBehaviour
     {
         GameController.pause = true;
         introCinematicAudioInstance = FMODUnity.RuntimeManager.CreateInstance(introCinematicAudioEvent);
-        introCinematicAudioInstance.start();
         img = gameObject.GetComponent<Image>();
-        StartCoroutine(Intro());
+        Invoke("StartIntroVideo", introVideoDelay);
+        StartIntroAudio();
     }
     private void OnDestroy()
     {
@@ -32,6 +33,14 @@ public class IntroCinematic : MonoBehaviour
         {
             ChangeScene();
         }
+    }
+    void StartIntroAudio()
+    {
+        introCinematicAudioInstance.start();
+    }
+    void StartIntroVideo()
+    {
+        StartCoroutine(Intro());
     }
 
     void ChangeScene()

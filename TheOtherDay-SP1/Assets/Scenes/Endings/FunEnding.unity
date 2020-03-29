@@ -766,11 +766,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 971168796714701725, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 971168797572620852, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -876,6 +871,36 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 971168796714701725, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 971168797752393482, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 971168797752393482, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 971168797752393482, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 971168797752393482, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 971168797752393482, guid: 7a18260cac05ee14c856108d765ae502,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 971168796714701727, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -923,30 +948,10 @@ PrefabInstance:
       propertyPath: nextButton
       value: 
       objectReference: {fileID: 928755335}
-    - target: {fileID: 971168797752393482, guid: 7a18260cac05ee14c856108d765ae502,
+    - target: {fileID: 971168797752393485, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 971168797752393482, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 971168797752393482, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 971168797752393482, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 971168797752393482, guid: 7a18260cac05ee14c856108d765ae502,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
+      propertyPath: messages.Array.data[0].messageSound
+      value: event:/Sounds/Endings/CutsceneFunPirate
       objectReference: {fileID: 0}
     - target: {fileID: 971168797284594241, guid: 7a18260cac05ee14c856108d765ae502,
         type: 3}

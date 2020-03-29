@@ -33,4 +33,8 @@ public class CreditsHandler : MonoBehaviour
     {
         SceneManager.LoadScene(mainMenuSceneName);
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

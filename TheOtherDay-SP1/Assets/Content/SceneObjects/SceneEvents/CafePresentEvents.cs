@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CafePresentEvents : SceneEvents
 {
+    public override void CustomStart()
+    {
+        sceneData.hasVisited = false;
+    }
     public override void PlayEvent(int eventIndex)
     {
         if(eventIndex == 1)

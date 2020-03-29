@@ -8,7 +8,7 @@ public class IntroCinematic : MonoBehaviour
     [SerializeField] private string changeSceneTo = "HotelPresent";
     [FMODUnity.EventRef] public string introCinematicAudioEvent;
     FMOD.Studio.EventInstance introCinematicAudioInstance;
-    private float introVideoDelay = 0.5f;
+    private float introVideoDelay = 0.8f;
 
     public Sprite[] sprite;
     public float[] duration;

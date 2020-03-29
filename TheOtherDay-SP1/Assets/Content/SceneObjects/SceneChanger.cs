@@ -185,7 +185,10 @@ public class SceneChanger : MonoBehaviour
         flashbackTransition = false;
         enteringFlashback = false;
         FlashbackTransitionClock.instance.flashback = false;
-        FlashbackTransitionClock.instance.SavePresentTime(DigitalClockScript.minutes, DigitalClockScript.hours);
+        if (!GlobalData.instance.flashBack)
+        {
+            FlashbackTransitionClock.instance.SavePresentTime(DigitalClockScript.minutes, DigitalClockScript.hours);
+        }
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }

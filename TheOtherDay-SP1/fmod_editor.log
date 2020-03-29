@@ -4,10 +4,10 @@
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.67ms, DSP buffer: 1024 * 4
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000020E1B8EB6C8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001C82B5B25E8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,10 +15,857 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-014', format=2, channels=1, frequency=48000, lengthbytes=16992, lengthpcm=196842, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.235353.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-035', format=2, channels=1, frequency=48000, lengthbytes=22144, lengthpcm=255475, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.234561.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-021', format=2, channels=1, frequency=48000, lengthbytes=23488, lengthpcm=270199, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.080004.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-034', format=2, channels=1, frequency=48000, lengthbytes=35840, lengthpcm=415397, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.066417.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-037', format=2, channels=1, frequency=48000, lengthbytes=20480, lengthpcm=255475, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.053430.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-023', format=2, channels=1, frequency=48000, lengthbytes=26208, lengthpcm=300018, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.116718.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-017', format=2, channels=1, frequency=48000, lengthbytes=27616, lengthpcm=323802, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.244260.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-024', format=2, channels=1, frequency=48000, lengthbytes=31072, lengthpcm=347570, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.118675.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-031', format=2, channels=1, frequency=48000, lengthbytes=39744, lengthpcm=450161, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.158145.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-007', format=2, channels=1, frequency=48000, lengthbytes=31808, lengthpcm=363582, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.115315.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-006', format=2, channels=1, frequency=48000, lengthbytes=18592, lengthpcm=238940, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.076018.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BottleClink', format=2, channels=1, frequency=48000, lengthbytes=5152, lengthpcm=56142, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.542096.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-022', format=2, channels=1, frequency=48000, lengthbytes=10272, lengthpcm=126388, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.178133.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-038', format=2, channels=1, frequency=48000, lengthbytes=16320, lengthpcm=187134, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.088094.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-019', format=2, channels=1, frequency=48000, lengthbytes=44480, lengthpcm=465628, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.133928.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BottleClink3', format=2, channels=1, frequency=48000, lengthbytes=5088, lengthpcm=56510, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.588336.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-025', format=2, channels=1, frequency=48000, lengthbytes=30272, lengthpcm=356990, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.138428.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-009', format=2, channels=1, frequency=48000, lengthbytes=25376, lengthpcm=299391, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.025815.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BottleClink8', format=2, channels=1, frequency=48000, lengthbytes=4992, lengthpcm=50430, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.482198.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-033', format=2, channels=1, frequency=48000, lengthbytes=18688, lengthpcm=213528, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.092980.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BottleClink6', format=2, channels=1, frequency=48000, lengthbytes=5216, lengthpcm=51600, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.508451.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BottleClink5', format=2, channels=1, frequency=48000, lengthbytes=4864, lengthpcm=54573, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.533450.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BottleClink2', format=2, channels=1, frequency=48000, lengthbytes=5248, lengthpcm=53435, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.504769.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-018', format=2, channels=1, frequency=48000, lengthbytes=35616, lengthpcm=410077, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.125450.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-028', format=2, channels=1, frequency=48000, lengthbytes=37792, lengthpcm=406608, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.219517.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BottleClink9', format=2, channels=1, frequency=48000, lengthbytes=5248, lengthpcm=51266, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.544332.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BottleClink7', format=2, channels=1, frequency=48000, lengthbytes=5216, lengthpcm=51832, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.795164.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-012', format=2, channels=1, frequency=48000, lengthbytes=37088, lengthpcm=452166, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.161742.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-011', format=2, channels=1, frequency=48000, lengthbytes=25696, lengthpcm=274216, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.147487.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-005', format=2, channels=1, frequency=48000, lengthbytes=24608, lengthpcm=271632, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.114516.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-032', format=2, channels=1, frequency=48000, lengthbytes=41408, lengthpcm=468292, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.080672.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BottleClink4', format=2, channels=1, frequency=48000, lengthbytes=5344, lengthpcm=55156, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.536578.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-020', format=2, channels=1, frequency=48000, lengthbytes=22240, lengthpcm=243428, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.137181.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-008', format=2, channels=1, frequency=48000, lengthbytes=8960, lengthpcm=131686, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.073242.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-016', format=2, channels=1, frequency=48000, lengthbytes=22592, lengthpcm=264500, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.133907.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BottleSmash', format=2, channels=1, frequency=48000, lengthbytes=16896, lengthpcm=144003, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.273391.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BottleOpen', format=2, channels=1, frequency=48000, lengthbytes=12288, lengthpcm=95387, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.910026.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-030', format=2, channels=1, frequency=48000, lengthbytes=24512, lengthpcm=303813, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.064519.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-029', format=2, channels=1, frequency=48000, lengthbytes=15744, lengthpcm=193920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.067774.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000004B92AFF23C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFE9F148630
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFE9F148600
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFE9F148700
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFE9F1487C0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C8277DA128
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Club_Scatterer-027', format=2, channels=1, frequency=48000, lengthbytes=28640, lengthpcm=357818, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.072664.
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodBanks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 000001C8579E97C8 : node = 000001C857280020
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C8579D0568.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C8579E97C8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodBanks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C857280130
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Club_Scatterer-010', format=2, channels=1, frequency=48000, lengthbytes=65760, lengthpcm=721595, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.126853.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 49152, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C8579E97C8
+[LOG] SoundI::getSubSound                      : sound 000001C8579E97C8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodBanks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C83219C738 : node = 000001C85727E720
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C8579D0568.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C83219C738
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodBanks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C85727E830
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Club_Scatterer-015', format=2, channels=1, frequency=48000, lengthbytes=50816, lengthpcm=564622, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.155593.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C83219C738
+[LOG] SoundI::getSubSound                      : sound 000001C83219C738.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Club_Scatterer-010 (000001C8579E97C8)
+[LOG] SoundI::release                          :     Club_Scatterer-010 (000001C8579D0758)
+[LOG] SoundI::release                          :     Club_Scatterer-010 (000001C832A78DE8)
+[LOG] SoundI::release                          : Club_Scatterer-015 (000001C83219C738)
+[LOG] SoundI::release                          :     Club_Scatterer-015 (000001C8579D1118)
+[LOG] SoundI::release                          :     Club_Scatterer-015 (000001C82EA9EE98)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodBanks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C832A78DE8 : node = 000001C85727E360
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C8579D0568.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C832A78DE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodBanks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C85727E470
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Club_Scatterer-036', format=2, channels=1, frequency=48000, lengthbytes=70944, lengthpcm=761374, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.151500.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C832A78DE8
+[LOG] SoundI::getSubSound                      : sound 000001C832A78DE8.  Subsound index 0 / 1
+[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
+[LOG] SoundI::release                          : Club_Scatterer-036 (000001C832A78DE8)
+[LOG] SoundI::release                          :     Club_Scatterer-036 (000001C8579D0758)
+[LOG] SoundI::release                          :     Club_Scatterer-036 (000001C8579E97C8)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodBanks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C8579E97C8 : node = 000001C85727E220
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C8579D0568.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C8579E97C8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodBanks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C85727E330
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Club_Scatterer-002', format=2, channels=1, frequency=48000, lengthbytes=44064, lengthpcm=480540, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.114904.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C8579E97C8
+[LOG] SoundI::getSubSound                      : sound 000001C8579E97C8.  Subsound index 0 / 1
+[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
+[LOG] SoundI::release                          : Club_Scatterer-002 (000001C8579E97C8)
+[LOG] SoundI::release                          :     Club_Scatterer-002 (000001C8579D0758)
+[LOG] SoundI::release                          :     Club_Scatterer-002 (000001C832A78DE8)
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodBanks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C832A78DE8 : node = 000001C85727EAE0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C8579D0568.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C832A78DE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodBanks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C85727EBF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Club_Scatterer-001', format=2, channels=1, frequency=48000, lengthbytes=59168, lengthpcm=647340, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.172562.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C832A78DE8
+[LOG] SoundI::getSubSound                      : sound 000001C832A78DE8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = Assets/Audio/FmodBanks/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C83219C738 : node = 000001C85727EEA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C8579D0568.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C83219C738
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/Audio/FmodBanks/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 28241280
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 147520
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C85727EFB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Club_Scatterer-013', format=2, channels=1, frequency=48000, lengthbytes=44992, lengthpcm=485571, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.113947.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C83219C738
+[LOG] SoundI::getSubSound                      : sound 000001C83219C738.  Subsound index 0 / 1
+[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
+[LOG] SoundI::release                          : Club_Scatterer-001 (000001C832A78DE8)
+[LOG] SoundI::release                          :     Club_Scatterer-001 (000001C8579D1AD8)
+[LOG] SoundI::release                          :     Club_Scatterer-001 (000001C8579E97C8)
+[LOG] SoundI::release                          : Club_Scatterer-013 (000001C83219C738)
+[LOG] SoundI::release                          :     Club_Scatterer-013 (000001C8579D0758)
+[LOG] SoundI::release                          :     Club_Scatterer-013 (000001C82EA9F1F8)
+[LOG] SoundI::release                          :  (000001C8579EB188)
+[LOG] SoundI::release                          :     BottleSmash (000001C8579D2638)
+[LOG] SoundI::release                          :  (000001C8579ECB68)
+[LOG] SoundI::release                          :     BottleOpen (000001C8579CFBF8)
+[LOG] SoundI::release                          :  (000001C8579ECCD8)
+[LOG] SoundI::release                          :     BottleClink4 (000001C8579CF578)
+[LOG] SoundI::release                          :  (000001C8579EBB98)
+[LOG] SoundI::release                          :     BottleClink5 (000001C8579D5078)
+[LOG] SoundI::release                          :  (000001C8579EDB38)
+[LOG] SoundI::release                          :     BottleClink6 (000001C8579D5898)
+[LOG] SoundI::release                          :  (000001C8579EC888)
+[LOG] SoundI::release                          :     BottleClink7 (000001C8579D2158)
+[LOG] SoundI::release                          :  (000001C8579ED408)
+[LOG] SoundI::release                          :     BottleClink8 (000001C8579D56F8)
+[LOG] SoundI::release                          :  (000001C8579EB748)
+[LOG] SoundI::release                          :     BottleClink9 (000001C8579D0DD8)
+[LOG] SoundI::release                          :  (000001C8579EC9F8)
+[LOG] SoundI::release                          :     BottleClink (000001C8579D4D38)
+[LOG] SoundI::release                          :  (000001C8579EDCA8)
+[LOG] SoundI::release                          :     BottleClink2 (000001C8579D39B8)
+[LOG] SoundI::release                          :  (000001C8579EABC8)
+[LOG] SoundI::release                          :     BottleClink3 (000001C8579D0C38)
+[LOG] SoundI::release                          :  (000001C8579EA8E8)
+[LOG] SoundI::release                          :     Club_Scatterer-005 (000001C8579D49F8)
+[LOG] SoundI::release                          :  (000001C8579EB8B8)
+[LOG] SoundI::release                          :     Club_Scatterer-006 (000001C8579D0278)
+[LOG] SoundI::release                          :  (000001C8579EB2F8)
+[LOG] SoundI::release                          :     Club_Scatterer-007 (000001C8579D00D8)
+[LOG] SoundI::release                          :  (000001C8579EAD38)
+[LOG] SoundI::release                          :     Club_Scatterer-008 (000001C8579CF8B8)
+[LOG] SoundI::release                          :  (000001C8579EA608)
+[LOG] SoundI::release                          :     Club_Scatterer-009 (000001C8579D2B18)
+[LOG] SoundI::release                          :  (000001C860FBF4D8)
+[LOG] SoundI::release                          :     Club_Scatterer-035 (000001C8579D4B98)
+[LOG] SoundI::release                          :  (000001C8579EB468)
+[LOG] SoundI::release                          :     Club_Scatterer-037 (000001C8579D3678)
+[LOG] SoundI::release                          :  (000001C8579EA1B8)
+[LOG] SoundI::release                          :     Club_Scatterer-038 (000001C8579D4378)
+[LOG] SoundI::release                          :  (000001C8579EDE18)
+[LOG] SoundI::release                          :     Club_Scatterer-011 (000001C8579D5A38)
+[LOG] SoundI::release                          :  (000001C8579ED6E8)
+[LOG] SoundI::release                          :     Club_Scatterer-012 (000001C8579D4858)
+[LOG] SoundI::release                          :  (000001C860FBF368)
+[LOG] SoundI::release                          :     Club_Scatterer-014 (000001C8579D53B8)
+[LOG] SoundI::release                          :  (000001C8579EB018)
+[LOG] SoundI::release                          :     Club_Scatterer-016 (000001C8579CFA58)
+[LOG] SoundI::release                          :  (000001C8579EBD08)
+[LOG] SoundI::release                          :     Club_Scatterer-017 (000001C8579D5558)
+[LOG] SoundI::release                          :  (000001C8579EBE78)
+[LOG] SoundI::release                          :     Club_Scatterer-018 (000001C8579D12B8)
+[LOG] SoundI::release                          :  (000001C8579ED9C8)
+[LOG] SoundI::release                          :     Club_Scatterer-019 (000001C8579D4ED8)
+[LOG] SoundI::release                          :  (000001C8579ED298)
+[LOG] SoundI::release                          :     Club_Scatterer-020 (000001C8579CF718)
+[LOG] SoundI::release                          :  (000001C860FBF7B8)
+[LOG] SoundI::release                          :     Club_Scatterer-021 (000001C8579D2E58)
+[LOG] SoundI::release                          :  (000001C8579EC2C8)
+[LOG] SoundI::release                          :     Club_Scatterer-022 (000001C8579D1798)
+[LOG] SoundI::release                          :  (000001C8579EA778)
+[LOG] SoundI::release                          :     Club_Scatterer-023 (000001C8579D2978)
+[LOG] SoundI::release                          :  (000001C8579EA048)
+[LOG] SoundI::release                          :     Club_Scatterer-024 (000001C8579D41D8)
+[LOG] SoundI::release                          :  (000001C8579EA328)
+[LOG] SoundI::release                          :     Club_Scatterer-025 (000001C8579D22F8)
+[LOG] SoundI::release                          :  (000001C8579EBA28)
+[LOG] SoundI::release                          :     Club_Scatterer-027 (000001C8579D15F8)
+[LOG] SoundI::release                          :  (000001C8579EC5A8)
+[LOG] SoundI::release                          :     Club_Scatterer-028 (000001C8579D46B8)
+[LOG] SoundI::release                          :  (000001C8579EAEA8)
+[LOG] SoundI::release                          :     Club_Scatterer-029 (000001C8579CFD98)
+[LOG] SoundI::release                          :  (000001C8579ECE48)
+[LOG] SoundI::release                          :     Club_Scatterer-030 (000001C8579D1458)
+[LOG] SoundI::release                          :  (000001C8579EA498)
+[LOG] SoundI::release                          :     Club_Scatterer-031 (000001C8579D3818)
+[LOG] SoundI::release                          :  (000001C8579EAA58)
+[LOG] SoundI::release                          :     Club_Scatterer-032 (000001C8579CF3D8)
+[LOG] SoundI::release                          :  (000001C8579EC718)
+[LOG] SoundI::release                          :     Club_Scatterer-033 (000001C8579D4518)
+[LOG] SoundI::release                          :  (000001C8579EC438)
+[LOG] SoundI::release                          :     Club_Scatterer-034 (000001C8579D1FB8)
+[WRN] OutputWASAPI::mixerThread                : Starvation detected in WASAPI output buffer!
+[ERR] OutputWASAPI::mixerThread                : GetCurrentPadding returned 0x88890004.  Device was unplugged!
+[ERR] OutputWASAPI::mixerThread                : GetCurrentPadding returned 0x88890004.  Device was unplugged!
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.

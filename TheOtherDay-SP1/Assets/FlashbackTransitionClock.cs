@@ -180,6 +180,7 @@ public class FlashbackTransitionClock : MonoBehaviour
         anim.SetTrigger("done");
         yield return new WaitForSeconds(anim.runtimeAnimatorController.animationClips[1].length * 2f);
         done = true;
+        clockDone = false;
 
         yield return null;
     }
@@ -245,8 +246,8 @@ public class FlashbackTransitionClock : MonoBehaviour
     void DoneClock()
     {
         Debug.Log("FlashbackClock - Done");
-        clockDone = true;
         startClock = false;
+        clockDone = true;
         //currentFlashbackTime = null;
         startingTime = targetTime;
         hourTracker = 0;
@@ -300,7 +301,6 @@ public class FlashbackTransitionClock : MonoBehaviour
         if (minute2 < 0)
         {
             hourTracker++;
-            Debug.Log("HourTracker: " + hourTracker);
             hour1--;
             hour1Display.sprite = NumberToImage(hour1);
             minute2 = 5;
@@ -349,7 +349,6 @@ public class FlashbackTransitionClock : MonoBehaviour
         if (minute2 > 5)
         {
             hourTracker++;
-            Debug.Log("HourTracker: " + hourTracker);
             hour1++;
             hour1Display.sprite = NumberToImage(hour1);
             minute2 = 0;

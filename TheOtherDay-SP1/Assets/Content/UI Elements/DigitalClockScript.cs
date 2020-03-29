@@ -6,8 +6,6 @@ using TMPro;
 
 public class DigitalClockScript : MonoBehaviour
 {
-    [Tooltip("The digital clock ScriptableObject for saving the time on")] public DigitalClockObject digitalClockObject = null;
-
     [Header("Time")]
     public float timeFactor = 10f;
     [Space]
@@ -130,7 +128,7 @@ public class DigitalClockScript : MonoBehaviour
     {
         if (!FlashbackTransitionClock.instance.flashback)
         {
-            SaveTime();
+            //SaveTime();
         }
     }
 

@@ -40,6 +40,7 @@ public class SceneChanger : MonoBehaviour
     private bool startedTransition = false;
     private FlashbackTime flashbackTime = null;
     private bool ranOnChange = false;
+    private static bool startClockOverride = false;
 
     void Awake()
     {
@@ -65,6 +66,14 @@ public class SceneChanger : MonoBehaviour
 
     private IEnumerator CoChangeScene(string sceneName)
     {
+        if (sceneName == "HotelPresent" && !startClockOverride)
+        {
+            DigitalClockScript.minutes = 0;
+            DigitalClockScript.hours = 13;
+            FlashbackTransitionClock.instance.SavePresentTime(DigitalClockScript.minutes, DigitalClockScript.hours);
+            startClockOverride = true;
+        }
+
         if (PlayerMovement.playerInstance != null)
         {
             SavedPositions.NewPosition(GameController.currentScene, new Vector2(PlayerMovement.playerInstance.gameObject.transform.position.x, PlayerMovement.playerInstance.gameObject.transform.position.y));
@@ -146,6 +155,7 @@ public class SceneChanger : MonoBehaviour
                         Debug.Log("Activating scene: " + sceneName);
                         operation.allowSceneActivation = true;
                         SceneTransition.instance.TRAN_FadeOut(fadeOutColor);
+                        FlashbackTransitionClock.instance.done = false;
                     }
                 }
 
@@ -175,6 +185,7 @@ public class SceneChanger : MonoBehaviour
         flashbackTransition = false;
         enteringFlashback = false;
         FlashbackTransitionClock.instance.flashback = false;
+        FlashbackTransitionClock.instance.SavePresentTime(DigitalClockScript.minutes, DigitalClockScript.hours);
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }
@@ -186,6 +197,7 @@ public class SceneChanger : MonoBehaviour
         flashbackTransition = true;
         enteringFlashback = true;
         FlashbackTransitionClock.instance.flashback = true;
+        FlashbackTransitionClock.instance.SavePresentTime(DigitalClockScript.minutes, DigitalClockScript.hours);
         StartCoroutine(CoChangeScene(sceneName));
         GameController.Pause(true);
     }

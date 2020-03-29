@@ -38,7 +38,7 @@ public class PizzeriaPresentEvents : SceneEvents
                 GameController.pause = true;
             }
         }
-        if (eventIndex == 2)
+        else if (eventIndex == 2)
         {
             if (GlobalData.instance.reputation <= minReputationForWeirdEnding)
             {

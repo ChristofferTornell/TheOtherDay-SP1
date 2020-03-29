@@ -19,11 +19,11 @@ public class FlashbackClubEvents : SceneEvents
             Debug.Log("Make riley drunk");
             GlobalData.instance.charaters[rileyCharIndex].isDrunk = true;
         }
-        if (eventIndex == 2)
+        else if (eventIndex == 2)
         {
             doorToFoyer.lockedByEvent = false;
         }
-        if (eventIndex == 3)
+        else if (eventIndex == 3)
         {
             Debug.Log("Play Riley puking animation");
             playerAnimator = FindObjectOfType<PlayerMovement>().animator;
@@ -31,12 +31,12 @@ public class FlashbackClubEvents : SceneEvents
             pukeTrigger = true;
             GameController.pause = true;
         }
-        if (eventIndex == 4)
+        else if (eventIndex == 4)
         {
             Debug.Log("Unlock door");
             door.lockedByEvent = false;
         }
-        if (eventIndex == 5)
+        else if (eventIndex == 5)
         {
             Debug.Log("Make riley sober");
             GlobalData.instance.charaters[rileyCharIndex].isDrunk = false;

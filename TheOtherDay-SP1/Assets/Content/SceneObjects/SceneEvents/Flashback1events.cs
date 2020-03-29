@@ -25,7 +25,7 @@ public class Flashback1events : SceneEvents
             
             GameController.pause = true;
         }
-        if (eventIndex == 2)
+        else if (eventIndex == 2)
         {
             objectAppear.SetActive(true);
         }
